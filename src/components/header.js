@@ -3,9 +3,9 @@ import logo from "./../images/head.png"
   
 const Header = () => {
   return (
-  <nav class="menu">
-    <ul class="w-100 flex flex-space-b">
-        <img class="inforkom-logo" alt="ИНФОРКОМ" src={logo} />
+  <nav className="menu">
+    <ul className="w-100 flex flex-space-b">
+        <img className="inforkom-logo" alt="ИНФОРКОМ" src={logo} />
         <li><a href="">О компании</a>
         <ul>
             <li><a href="">Новости компании</a></li>
