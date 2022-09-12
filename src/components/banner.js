@@ -10,7 +10,7 @@ import "./../banner.css"
 
 const Banner = () => {
   return (
-    <section id="citi">
+    <section id="city">
        <img className="city-back" src={BgCity} />
        <img className="city-back-light" src={BgCityAdd} />
        <div className="city-img">

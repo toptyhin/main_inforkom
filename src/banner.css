@@ -1,14 +1,84 @@
-#citi {
+#city {
   height: 26vw;
   max-height: 26vw;
   width: 100%;
   overflow: hidden;
 }
-#citi h5 {
+#city h5 {
   display: inline-block;
   text-align: right;
   position: sticky;
   bottom: 10vw;
   margin-left: 10vw;
   z-index: 2;
+}
+.city-back {
+  min-width: 116%;
+  height: 100%;
+  margin-left: -6%;
+}
+.city-back-light {
+  position: sticky;
+  bottom: 0;
+  height: 150%;
+  min-width: 100%;
+  margin-left: -20vw;
+  margin-top: -5vw;
+  z-index: 1;
+}
+.city-img {
+  position: sticky;
+  bottom: 2vw;
+  margin-left: 19vw;
+}
+.gt-l-f {
+  z-index: -1;
+  width: 27vw;
+  margin-bottom: 0.7vw;
+}
+.gt-l {
+  width: 45vw;
+  margin-left: -3vw;
+}
+.m {
+  width: 9.5vw;
+  margin-left: -36.5vw;
+  margin-bottom: -1vw;
+}
+.pc-m {
+  width: 37vw;
+  margin-left: 31.3vw;
+  margin-bottom: -0.3vw;
+}
+.cars-img {
+  width: 38vw;
+  margin-left: 29.5vw;
+  margin-bottom: 1vw;
+}
+.card-img {
+  width: 26vw;
+  margin-left: -54vw;
+  margin-top: 6.5vw;
+}
+.gt-r {
+  width: 37vw;
+  margin-left: 40vw;
+  margin-bottom: 8vw;
+}
+.city-bold-text {
+  position: sticky;
+  bottom: 3vw;
+  margin-left: 13.3vw;
+  z-index: 2;
+}
+.city-p {
+  margin-top: 1.3vw;
+  margin-left: 1vw;
+  font-size: 1.5vw;
+}
+.bold-text {
+  font-size: 4vw;
+  background-image: linear-gradient(to bottom, #eeb35b, #972900);
+  -webkit-background-clip: text;
+  color: transparent;
 }
