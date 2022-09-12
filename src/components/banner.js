@@ -4,11 +4,13 @@ import BgCityAdd from './../images/background-add.png'
 import TankerFaded from './../images/gastanker-left-faded.png'
 import TankerLeft from './../images/gastanker-left.png'
 import Man from './../images/man.png'
+import "./../banner.css"
+
 
 
 const Banner = () => {
   return (
-    <section id="city">
+    <section id="citi">
        <img className="city-back" src={BgCity} />
        <img className="city-back-light" src={BgCityAdd} />
        <div className="city-img">

@@ -1,0 +1,14 @@
+#citi {
+  height: 26vw;
+  max-height: 26vw;
+  width: 100%;
+  overflow: hidden;
+}
+#citi h5 {
+  display: inline-block;
+  text-align: right;
+  position: sticky;
+  bottom: 10vw;
+  margin-left: 10vw;
+  z-index: 2;
+}
