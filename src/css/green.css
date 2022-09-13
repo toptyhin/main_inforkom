@@ -1,0 +1,16 @@
+.green-zone {
+  height: 12vw;
+  margin-top: 4vw;
+  margin-bottom: 10vw;
+  overflow: hidden;
+}
+.green-zone h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: #ffffff;
+}
+.green-zone img {
+  position: sticky;
+}

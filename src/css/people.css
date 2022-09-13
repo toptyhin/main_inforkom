@@ -1,0 +1,26 @@
+#people h2 {
+  padding-left: 2vw;
+  margin-top: 2vw;
+}
+.table-people {
+  display: flex;
+  justify-content: space-between;
+  margin-top: -3vw;
+}
+.people-block {
+  position: relative;
+  width: 33%;
+}
+.people {
+  float: right;
+  width: 50%;
+}
+.people-back {
+  position: absolute;
+  bottom: 0;
+  top: auto;
+  left: 0;
+  right: auto;
+  width: 95%;
+  z-index: -1;
+}

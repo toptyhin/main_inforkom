@@ -1,0 +1,49 @@
+#card {
+  padding-top: 6vw;
+}
+.download {
+  border-radius: 3vw;
+  color: white;
+  width: 15.5vw;
+  height: 4vw;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.download p {
+  font-family: montserrat-regular;
+  font-size: 1.5vw;
+  text-align: left;
+}
+.load-p {
+  text-transform: uppercase;
+  font-size: .7vw!important;
+}
+.orange-load {
+  background-color: #ecb463;
+}
+.purple-load {
+  background-color: #6977c9;
+}
+.load-icon {
+  height: 0%;
+  width: 6%;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.qr {
+  width: 64%;
+  margin-top: 4vw;
+}
+.card {
+  width: 48%;
+  padding-right: 5vw;
+}
+.green-order {
+  font-family: myriadpro-regular;
+  font-size: 1.4vw;
+  width: 20vw;
+  height: 2.8vw;
+  border-radius: 7px;
+  color: white;
+  margin-top: -6vw;
+}

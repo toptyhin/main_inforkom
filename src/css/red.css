@@ -1,0 +1,60 @@
+#red p {
+  color: white;
+}
+#red h2 {
+  color: white;
+}
+.full-red {
+  background: linear-gradient(to right, #f15257, #f38f4a);;
+}
+.red-head p {
+  margin-top: 3vw;
+  font-family: montserrat-regular;
+  font-size: 1.83vw;
+}
+.red-table {
+  width: 64%;
+}
+#red .color-zone {
+  padding-top: 5vw;
+}
+.no-color {
+  background-color: rgba(0, 0, 0, 0.0);
+  height: 100%!important;
+  width: calc((100% - 2vw) / 3);
+}
+.no-color p {
+  margin-top: 18vw;
+  text-align: center;
+  text-transform: lowercase;
+  font-size: 1.46vw;
+}
+.red-zone-height {
+  height: 27vw;
+}
+.red-zone-square {
+  width: 90%;
+  height: 16vw;
+}
+.red-zone-img {
+  position: absolute;
+  margin-left: -1.5vw;
+}
+.red-zone-margin {
+  margin-left: 2vw;
+}
+.oil {
+  width: 160%;
+  margin-top: 1.6vw;
+  margin-left: -11vw;
+  transform: scale(-1, 1);
+}
+.car {
+  width: 160%;
+  margin-top: 1vw;
+}
+.tool {
+  width: 106%;
+  margin-left: -2vw;
+  margin-top: 0.8vw;
+}

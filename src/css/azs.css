@@ -1,0 +1,28 @@
+#azs {
+  padding-top: 7vw;
+}
+.green-p p {
+  margin-top: 0!important;
+  color: #73aa37;
+  font-family: montserrat-regular;
+  font-size: 2.3vw!important;
+  text-align: center;
+  margin-bottom: 3vw;
+}
+#azs p {
+  font-size: 1.85vw;
+  font-family: montserrat-regular;
+  margin-top: 2vw;
+}
+.azs-bttn {
+  font-family: myriadpro-regular;
+  font-size: 1.4vw;
+  width: 15vw;
+  height: 2.8vw;
+  border-radius: 7px;
+  color: white;
+  margin-top: 3vw;
+}
+.logos-bottom img {
+  height: 5vw;
+}

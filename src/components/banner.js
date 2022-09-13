@@ -4,21 +4,21 @@ import BgCityAdd from './../images/background-add.png'
 import TankerFaded from './../images/gastanker-left-faded.png'
 import TankerLeft from './../images/gastanker-left.png'
 import Man from './../images/man.png'
-import "./../banner.css"
+import "./../css/banner.css"
 
 
 
 const Banner = () => {
   return (
     <section id="city">
-       <img className="city-back" src={BgCity} />
-       <img className="city-back-light" src={BgCityAdd} />
-       <div className="city-img">
-        <img className="gt-l-f" src={TankerFaded} />
-        <img className="gt-l" src={TankerLeft} />
-        <img className="m" src={Man} />
-       </div>
-       <h5>Топливо по оптовой цене <br/>собственными<br/>бензовозами</h5>
+      <img className="city-back" alt="" src={BgCity} />
+      <img className="city-back-light" alt="" src={BgCityAdd} />
+      <div className="city-img">
+        <img className="gt-l-f" alt="" src={TankerFaded} />
+        <img className="gt-l" alt="" src={TankerLeft} />
+        <img className="m" alt="" src={Man} />
+     </div>
+     <h5>Топливо по оптовой цене <br/>собственными<br/>бензовозами</h5>
     </section>
   );
 };

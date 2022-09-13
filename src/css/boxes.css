@@ -1,0 +1,60 @@
+#boxes {
+  display: flex;
+  justify-content: space-between;
+}
+#boxes p {
+  font-size: 1.8vw;
+  text-align: left;
+  margin-top: 17%;
+  margin-left: 6%;
+}
+.left-boxes {
+  width: 48%;
+}
+.right-boxes {
+  width: 49.5%;
+  height: 100%;
+}
+.first-raw {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.8vw;
+}
+.second-raw {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.8vw;
+}
+.box {
+  overflow: hidden;
+  width: 29%;
+  height: 12vw;
+  position: relative;
+  border-radius: 20px;
+  background-color: #eaedf0;
+}
+.little-box {
+  position: absolute;
+  margin-left: 20%;
+  margin-top: 20%;
+  width: 89%;
+}
+.big-box {
+  overflow: hidden;
+  width: 100%;
+  height: 39.6vw;
+}
+.box-note {
+  flex-grow: 1;
+  margin-left: 2vw;
+  margin-top: 1vw;
+}
+.pointer {
+  margin-left: 2vw;
+  width: 6%;
+}
+.agr {
+  margin-top: 10%;
+  margin-left: 27%;
+  width: 77%;
+}
