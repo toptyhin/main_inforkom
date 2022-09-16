@@ -28,8 +28,8 @@ const Azs = () => {
             <button className="azs-bttn green-grad">Сеть АЗС</button>
           </div>
           <div className="">
-            <div className="green-p">
-              <p>10 000 АЗС (460) брендов</p>
+            <div>
+              <p className="green-p">10 000 АЗС (460) брендов</p>
             </div>
             <div className="flex">
               <img className="w-25" src={GasBash} alt=""/>

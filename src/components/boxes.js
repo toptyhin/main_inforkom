@@ -31,7 +31,7 @@ const Boxes = () => {
               <img className="little-box" alt="Москва+" src={Moscow}/>
             </div>
             <div className="box-note">
-              <h2>Тарифные<br/>планы
+              <h2 className="point">Тарифные<br/>планы
                 <img className="pointer" src={Pointer}/>
               </h2>
             </div>

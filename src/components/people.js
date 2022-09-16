@@ -3,11 +3,15 @@ import PersonBack from './../images/person-back.png'
 import Person1 from './../images/person-1.png'
 import Person2 from './../images/person-2.png'
 import Person3 from './../images/person-3.png'
+import Button from './../components/button'
 import "./../css/people.css"
 
 const People = () => {
   return (
-    <div  className="main">
+
+
+    <div className="main">
+    <Button>Тест</Button>
       <section id="people">
         <h2>Топливные карты<br/>для юридических<br/>лиц</h2>
         <div className="table-people w-100">
