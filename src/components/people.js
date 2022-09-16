@@ -8,10 +8,9 @@ import "./../css/people.css"
 
 const People = () => {
   return (
-
-
     <div className="main">
-    <Button>Тест</Button>
+    <button className="w-100">Тест</button>
+    <Button bttnWidth="100%">Тест</Button>
       <section id="people">
         <h2>Топливные карты<br/>для юридических<br/>лиц</h2>
         <div className="table-people w-100">
