@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import Button from './../components/button'
 import Avatar from './../images/avatar-icon.png'
 import Icon1  from './../images/icon-1.png'
 import Icon2  from './../images/icon-2.png'
@@ -6,8 +7,6 @@ import Icon3  from './../images/icon-3.png'
 import Icon4  from './../images/icon-4.png'
 import Icon5  from './../images/icon-5.png'
 import Icon6  from './../images/icon-6.png'
-import Button from './../components/button'
-
 import "./../css/form.css"
 
 const Form = () => {
@@ -42,7 +41,7 @@ const Form = () => {
                   <img className="invert avatar" src={Avatar}/>
                 </div>
               </div>
-              <div><Button bttnWidth="100%">Войти</Button></div>
+              <div><Button width="100%" children="Войти"/></div>
             </div>
           </div>
           <div className="icon-table radius-20 white">

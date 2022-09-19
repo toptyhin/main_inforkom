@@ -1,6 +1,7 @@
-import { Link } from "react-router-dom";
+import { Link } from "react-router-dom"
+import Button   from './../components/button'
 import AppStore from './../images/icon-app-store.png'
-import Qr       from './../images/qr.png'
+import Qr from './../images/qr.png'
 import GooglePlay from './../images/icon-google-play.png'
 import CardBig    from './../images/card-big.png'
 import "./../css/card.css"
@@ -54,7 +55,7 @@ const Card = () => {
               <img className="w-100" src={CardBig} alt="топливная карта"/>
             </div>
             <div className="flex flex-center">
-              <button className="green-order green-grad">Заказать</button>
+              <Button width="20vw" marginTop="-6vw" children="Заказать"/>
             </div>
           </div>
         </div>

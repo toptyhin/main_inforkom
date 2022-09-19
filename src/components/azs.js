@@ -1,9 +1,9 @@
-import { Link } from "react-router-dom";
-import GasBash  from './../images/gas-bashneft.png'
+import { Link } from "react-router-dom"
+import Button   from './../components/button'
+import GasBash    from './../images/gas-bashneft.png'
 import GasGasprom from './../images/gas-gasprom.png'
 import GasTat     from './../images/gas-tatneft.png'
 import GasLukoil  from './../images/gas-lukoil.png'
-
 import gasprom  from './../images/logos-green/m-logo-gasprom.png'
 import nm       from './../images/logos-green/m-logo-nm.png'
 import lukoil   from './../images/logos-green/m-logo-lukoil.png'
@@ -25,7 +25,7 @@ const Azs = () => {
           <div className="w">
             <h2>Сеть АЗС<br/>Инфорком</h2>
             <p>по единой карте<br/>Инфорком по<br/>всей территории РФ.</p>
-            <button className="azs-bttn green-grad">Сеть АЗС</button>
+            <Button width="15vw" marginTop="3vw" children="Сеть АЗС"/>
           </div>
           <div className="">
             <div>
