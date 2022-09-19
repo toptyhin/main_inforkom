@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
-import BgCity from './../images/background-city.png'
-import BgCityAdd from './../images/background-add.png'
+import BgCity   from './../images/background-city.png'
+import BgCityAdd   from './../images/background-add.png'
 import TankerFaded from './../images/gastanker-left-faded.png'
-import TankerLeft from './../images/gastanker-left.png'
+import TankerLeft  from './../images/gastanker-left.png'
 import Man from './../images/man.png'
 import "./../css/banner.css"
 

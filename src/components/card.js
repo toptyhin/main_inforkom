@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 import AppStore from './../images/icon-app-store.png'
-import Qr from './../images/qr.png'
+import Qr       from './../images/qr.png'
 import GooglePlay from './../images/icon-google-play.png'
-import CardBig from './../images/card-big.png'
+import CardBig    from './../images/card-big.png'
 import "./../css/card.css"
 
 const Card = () => {

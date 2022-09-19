@@ -1,13 +1,13 @@
 import { Link } from "react-router-dom";
-import Regions from "./../images/box-regions.png"
-import Gasprom from "./../images/box-gasprom.png"
-import Tatneft from "./../images/box-tatneft.png"
+import Regions  from "./../images/box-regions.png"
+import Gasprom  from "./../images/box-gasprom.png"
+import Tatneft  from "./../images/box-tatneft.png"
 import IntNational from "./../images/box-international.png"
-import Max from "./../images/box-max.png"
+import Max       from "./../images/box-max.png"
 import Universal from "./../images/box-universal.png"
 import Agregator from "./../images/box-agregator.png"
-import Moscow from "./../images/box-moscow.png"
-import Pointer from "./../images/pointer.png"
+import Moscow    from "./../images/box-moscow.png"
+import Pointer   from "./../images/pointer.png"
 import "./../css/boxes.css"
 
 const Boxes = () => {

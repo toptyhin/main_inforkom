@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
-import Car from './../images/tech-center.png'
+import Car  from './../images/tech-center.png'
 import Tool from './../images/tool.png'
-import Oil from './../images/oil.png'
+import Oil  from './../images/oil.png'
 import "./../css/red.css"
 
 const Red = () => {

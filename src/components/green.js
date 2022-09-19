@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import LGasprom from './../images/logo-gasprom.png'
 import LRosneft from './../images/logo-rosneft.png'
-import LNm from './../images/logo-nm.png'
+import LNm      from './../images/logo-nm.png'
 import LTatneft from './../images/logo-tatneft.png'
 import "./../css/green.css"
 
