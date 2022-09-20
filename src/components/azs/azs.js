@@ -1,21 +1,21 @@
 import { Link } from "react-router-dom"
-import Button   from './../components/button'
-import GasBash    from './../images/gas-bashneft.png'
-import GasGasprom from './../images/gas-gasprom.png'
-import GasTat     from './../images/gas-tatneft.png'
-import GasLukoil  from './../images/gas-lukoil.png'
-import gasprom  from './../images/logos-green/m-logo-gasprom.png'
-import nm       from './../images/logos-green/m-logo-nm.png'
-import lukoil   from './../images/logos-green/m-logo-lukoil.png'
-import rosneft  from './../images/logos-green/m-logo-rosneft.png'
-import bashneft from './../images/logos-green/m-logo-bashneft.png'
-import shell    from './../images/logos-green/m-logo-shell.png'
-import surgut   from './../images/logos-green/m-logo-surgut.png'
-import tatneft  from './../images/logos-green/m-logo-tatneft.png'
-import ptk from './../images/logos-green/m-logo-ptk.png'
-import eka from './../images/logos-green/m-logo-eka.png'
-import tes from './../images/logos-green/m-logo-tes.png'
-import "./../css/azs.css"
+import Button   from './../../components/button'
+import GasBash    from './../../images/gas-bashneft.png'
+import GasGasprom from './../../images/gas-gasprom.png'
+import GasTat     from './../../images/gas-tatneft.png'
+import GasLukoil  from './../../images/gas-lukoil.png'
+import gasprom  from './../../images/logos-green/m-logo-gasprom.png'
+import nm       from './../../images/logos-green/m-logo-nm.png'
+import lukoil   from './../../images/logos-green/m-logo-lukoil.png'
+import rosneft  from './../../images/logos-green/m-logo-rosneft.png'
+import bashneft from './../../images/logos-green/m-logo-bashneft.png'
+import shell    from './../../images/logos-green/m-logo-shell.png'
+import surgut   from './../../images/logos-green/m-logo-surgut.png'
+import tatneft  from './../../images/logos-green/m-logo-tatneft.png'
+import ptk from './../../images/logos-green/m-logo-ptk.png'
+import eka from './../../images/logos-green/m-logo-eka.png'
+import tes from './../../images/logos-green/m-logo-tes.png'
+import "./azs.css"
 
 const Azs = () => {
   return (

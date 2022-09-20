@@ -22,6 +22,9 @@
   background-color: rgba(0, 0, 0, 0.0);
   height: 100%!important;
   width: calc((100% - 2vw) / 3);
+  overflow: hidden;
+  position: relative;
+  borderRadius: 20px;
 }
 .no-color p {
   margin-top: 18vw;

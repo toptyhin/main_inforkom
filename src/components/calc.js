@@ -11,7 +11,7 @@ const Calc = () => {
             &#9660; Рассчитайте экономию с топливной картой Инфорком &#9660;
           </p>
         </div>
-        <div id="calc" className="w-100 back-grey hidden">
+        <div id="calc" className="w-100 back-grey">
           <div id="main-calc">
             <div className="">
               <div className="geo-zone radius-20 white">
