@@ -1,12 +1,12 @@
 import './App.css';
-	
+
 import {
   BrowserRouter as Router,
   Routes,
   Route,
 } from "react-router-dom";
 
-import Header from './components/header';
+import Header from './components/header/header';
 import Footer from './components/footer';
 import Home from './pages/Home';
 import About from './pages/About';

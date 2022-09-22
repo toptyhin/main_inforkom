@@ -1,5 +1,28 @@
 import { Link } from "react-router-dom";
-import "./../css/calc.css"
+import CalcSlider from './slider';
+import Typography from '@mui/material/Typography';
+import "./calc.css"
+
+
+
+
+const marksFuel = [ {value: 1000}, {value: 1500}, {value: 2000},
+                {value: 2500}, {value: 3000}, {value: 3500},
+                {value: 4000}, {value: 4500}, {value: 5000},
+                {value: 5500}, {value: 6000}, {value: 6500},
+                {value: 7000}, {value: 7500}, {value: 8000},
+                {value: 8500}, {value: 9000}, {value: 9500},
+                {value: 10000},
+              ];
+const marksCars = [ {value: 0},  {value: 5},  {value: 10},
+                    {value: 15}, {value: 20}, {value: 25},
+                    {value: 30}, {value: 35}, {value: 40},
+                    {value: 45}, {value: 50}, {value: 55},
+                    {value: 60}, {value: 65}, {value: 70},
+                    {value: 75}, {value: 80}, {value: 85},
+                    {value: 90}, {value: 95}, {value: 100},
+              ];
+
 
 const Calc = () => {
   return (
@@ -48,6 +71,16 @@ const Calc = () => {
                   <span className="flex-1 text-left">Потребление топлива</span>
                   <span className="calc-value font-bold"></span>
                 </div>
+
+                <CalcSlider
+                marks={marksFuel}
+                defaultValue="3500"
+                  min=  {1000}
+                  step= {500}
+                  max=  {10000}
+                  valueLabelDisplay="on"
+                  />
+
                 <div className="calculate-slider">
                   <div id="slider1"></div>
                 </div>
@@ -57,6 +90,14 @@ const Calc = () => {
                   <span className="flex-1 text-left">Ваш автопарк</span>
                   <span className="calc-value font-bold uppercase"></span>
                 </div>
+
+                <CalcSlider
+                  ariaLabel="fuel slider"
+                  defaultValue="5"
+                  marks={marksCars}
+                  valueLabelDisplay="on"
+                  />
+
                 <div className="calculate-slider">
                   <div id="slider2"></div>
                 </div>
