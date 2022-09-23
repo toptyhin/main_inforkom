@@ -1,10 +1,9 @@
 import { Link } from "react-router-dom";
-import FormSelect from './select'
-import Input  from './../../components/input/input'
-import Button from './../../components/button'
+import FormSelect from './../../../components/UI/select'
+import Input      from './../../../components/UI/input/input'
+import Button     from './../../../components/UI/button'
 
 const OrderForm = ( {} ) => {
-
   return (
     <div className="flex flex-space-b text-left radius-20 white order-note">
       <h2>Заказать<br/>топливную<br/>карту онлайн</h2>

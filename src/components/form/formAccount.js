@@ -1,14 +1,14 @@
 import { Link } from "react-router-dom"
-import OrderForm from './orderForm'
-import Account from './account'
-import Button from './../../components/button'
-import Icon1  from './../../images/icon-1.png'
-import Icon2  from './../../images/icon-2.png'
-import Icon3  from './../../images/icon-3.png'
-import Icon4  from './../../images/icon-4.png'
-import Icon5  from './../../images/icon-5.png'
-import Icon6  from './../../images/icon-6.png'
-import "./form.css"
+import OrderForm from './children/form'
+import Account   from './children/account'
+import Button    from './../../components/UI/button'
+import Icon1 from './../../images/icon-1.png'
+import Icon2 from './../../images/icon-2.png'
+import Icon3 from './../../images/icon-3.png'
+import Icon4 from './../../images/icon-4.png'
+import Icon5 from './../../images/icon-5.png'
+import Icon6 from './../../images/icon-6.png'
+import "./formAccount.css"
 
 const FormAccount = () => {
   return (

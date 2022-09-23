@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-import Button   from './../../components/button'
+import Button   from './../../components/UI/button'
 import GasBash    from './../../images/gas-bashneft.png'
 import GasGasprom from './../../images/gas-gasprom.png'
 import GasTat     from './../../images/gas-tatneft.png'

@@ -1,6 +1,3 @@
-#calc-hide {
-
-}
 #calc {
   /*transition: opacity 1s ease-in;*/
   padding-bottom: 5vw;
@@ -86,20 +83,11 @@ input.field2 {
   justify-content: center;
   margin-top: 3vw;
 }
-.calculate-text {
-  display: flex;
-  margin-top: 5vw;
-  align-items: center;
-  font-size: 1.5vw;
-  font-family: myriadpro-regular;
-}
+
 .calculate-slider {
   margin-top: 2vw;
 }
-.calc-value {
-  color: #636363;
-  font-size: 1.8vw;
-}
+
 .mb-4 {
   margin-bottom: 1rem;
 }
@@ -109,71 +97,7 @@ input.field2 {
   display: flex;
   flex-wrap: nowrap;
 }
-.bttn {
-  height: 5vw;
-  text-align: center;
-  font-size: 2vw;
-  font-family: montserrat-regular;
-  --tw-text-opacity: 1;
-  color: rgba(255, 255, 255, var(--tw-text-opacity));
-  transition-property: all;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-  border-radius:20px;
-}
-/*.bttn:hover, .bttn:active {
-  box-shadow: inset -4px -6px 8px rgba(0, 0, 0, 0.2);
-}*/
-.bttn.grey {
-  background-color: #434343;
-}
-.bttn.grey:hover, .bttn.grey:active {
-  background-color:#686767;
-}
-.bttn.green {
-  background-color:#73aa37;
-}
-.bttn.green:hover {
-  background-color: #FBA834;
-}
-.bttn.grey:hover, .bttn.grey:active {
-  background-color:#686767;
-}
-.bttn.orange {
-  background-color: #FBA834;
-}
-.bttn.orange:hover, .bttn.orange:active {
-  background-color:#E39B36;
-}
-.bttn-block {
-  height: 100%;
-  width: 33.333333%;
-  --tw-bg-opacity: 1;
-  background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
-  font-size: 2.6vw;
-  font-family: montserrat-extra-bold;
-  font-weight: bold;
-  transition-property: all;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-  color: #c4c4c4;
-}
-.bttn-block.left {
-  border-top-left-radius: 1rem;
-  border-bottom-left-radius: 1rem;
-  border-right-width: 2px;
-}
-.bttn-block.right {
-  border-top-right-radius: 1rem;
-  border-bottom-right-radius: 1rem;
-  border-left-width: 2px;
-}
-.bttn-block.active {
-  --tw-bg-opacity: 1;
-  background-color: rgb(115,170,55, var(--tw-bg-opacity));
-  --tw-text-opacity: 1;
-  color: rgba(255, 255, 255, var(--tw-text-opacity));
-}
+
 #vat_select div {
   border-radius: 1rem;
   max-width: 70%;

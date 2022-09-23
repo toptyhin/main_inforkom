@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import PersonBack from './images/person-back.png'
+import PersonBack from './../images/person-back.png'
 import "./person.css"
 
 const Person = ( {img} ) => {

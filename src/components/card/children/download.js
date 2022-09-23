@@ -1,8 +1,7 @@
 import { Link } from "react-router-dom";
-import DownloadButton   from './../../components/downloadButton'
+import DownloadButton   from './../../../components/UI/downloadButton'
 
 const Download = ( {name, color, src, children, qr} ) => {
-
   return (
     <div className="ml-1 flex-col">
       <div>

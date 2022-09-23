@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
-import RedBox   from './redBox'
-import Car  from './images/tech-center.png'
-import Tool from './images/tool.png'
-import Oil  from './images/oil.png'
+import RedBox from './children/redBox'
+import Car    from './images/tech-center.png'
+import Tool   from './images/tool.png'
+import Oil    from './images/oil.png'
 import "./red.css"
 
 const Red = () => {

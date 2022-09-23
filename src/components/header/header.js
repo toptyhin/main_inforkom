@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import logo     from "./../../images/head.png";
-import MenuItem from './menuItem'
+import MenuItem from './children/menuItem'
 
 import "./header.css";
 

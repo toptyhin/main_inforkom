@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-import LittleBox   from './littleBox'
+import LittleBox   from './children/littleBox'
 import Regions     from "./../../images/box-regions.png"
 import Gasprom     from "./../../images/box-gasprom.png"
 import Tatneft     from "./../../images/box-tatneft.png"
