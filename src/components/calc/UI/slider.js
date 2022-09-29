@@ -12,14 +12,14 @@ const Calc = styled(Slider)( ({ theme }) => ({
   padding: '15px 0',
   '&:focus, &.MuiSlider-dragging': {color: "#FBA834",},
   '& .MuiSlider-thumb': {
+    boxShadow: `0px 0px 0px 0px`,
     height: 45,
     width: 45,
     backgroundColor: '#fff',
     border: '5px solid currentColor',
     '&:hover, &.Mui-focusVisible': {
-      boxShadow: `0px 0px 0px 0px`,
+      boxShadow: Shadow,
     },
-
     '&:focus,  &.MuiSlider-dragging': {
       color: "#FBA834",
       boxShadow:

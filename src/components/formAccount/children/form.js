@@ -10,8 +10,8 @@ const OrderForm = ( {} ) => {
       <form>
         <FormSelect value={["юр лицо","вариант 1","вариант 2"]}
                     text={["юр лицо","вариант 1","вариант 2"]}/>
-        <Input plus="plus1" name="phone" text="телефон" textAdd="+7"/>
-        <Input plus="plus2" name="ИНН" text="ИНН"/>
+        <Input plus="plus1" width="17vw" height="2.7vw" mt="0.9vw" name="phone" text="телефон" textAdd="+7"/>
+        <Input plus="plus2" width="17vw" height="2.7vw" mt="0.9vw" name="ИНН" text="ИНН"/>
         <Button children="Оформить" theme="grey"/>
       </form>
     </div>

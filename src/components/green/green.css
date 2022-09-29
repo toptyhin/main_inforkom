@@ -14,3 +14,28 @@
 .green-zone img {
   position: sticky;
 }
+.gp {
+  width: 8vw;
+  margin-top: 1vw;
+  margin-left: 3vw;
+}
+.nm {
+  width: 7vw;
+  margin-top: -2vw;
+  margin-left: 12vw;
+}
+.rn {
+  width: 9vw;
+  margin-top: -9vw;
+  margin-left: 21vw;
+}
+.tn {
+  width: 11vw;
+  margin-top: 2vw;
+  margin-right: 15vw;
+}
+.bn {
+  width: 8vw;
+  margin-top: -1vw;
+  margin-left: 13vw;
+}

@@ -12,7 +12,7 @@ const People = () => {
   let tablePeople = {
     display: "flex",
     justifyContent: "space-between",
-    marginTop: "-3vw",
+    marginTop: "-2vw",
     width: "100%",
   }
   return (

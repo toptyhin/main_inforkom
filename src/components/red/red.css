@@ -43,21 +43,3 @@
   position: absolute;
   margin-left: -1.5vw;
 }
-.red-zone-margin {
-  margin-left: 2vw;
-}
-.oil {
-  width: 160%;
-  margin-top: 1.6vw;
-  margin-left: -11vw;
-  transform: scale(-1, 1);
-}
-.car {
-  width: 160%;
-  margin-top: 1vw;
-}
-.tool {
-  width: 106%;
-  margin-left: -2vw;
-  margin-top: 0.8vw;
-}

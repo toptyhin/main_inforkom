@@ -1,15 +1,21 @@
 import { Link } from "react-router-dom";
 
-const Input = ( {plus, name, text, textAdd} ) => {
+const Input = ( {plus, width, height, mt, name, text, textAdd} ) => {
   let style = {
     borderRadius: "7px",
     fontFamily: "myriadpro-regular",
     fontSize: "1.3vw",
-    width: "17vw",
-    height: "2.7vw",
     minWidth: "180px",
     minHeight: "30px",
-    marginTop: "0.9vw",
+  }
+  if (width) {
+    style.width = width;
+  }
+  if (height) {
+    style.height = height;
+  }
+  if (mt) {
+    style.marginTop = mt;
   }
   let field = {
     textAlign: "center",
@@ -20,7 +26,7 @@ const Input = ( {plus, name, text, textAdd} ) => {
   return (
     <div className="flex" style={style}>
       <input className="field w-100 h-100" type="text" name={name} placeholder={text}/>
-      <div className="h-100 z-2 field inline-block" className={plus}>{textAdd}</div>
+      <div className="" className={plus}>{textAdd}</div>
     </div>
   );
 };

@@ -26,6 +26,7 @@ const Button = ( props ) => {
       minHeight: "30px",
       marginTop: "0.9vw",
       textTransform: "uppercase",
+      cursor:"pointer",
     }
   }
   if (props.width) {

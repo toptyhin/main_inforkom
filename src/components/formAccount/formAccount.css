@@ -29,15 +29,12 @@
 
 }
 .field {
+  font-size: 1.3vw;
   text-align: center;
   border: 1px solid #eaedf0;
   outline-color: rgba(128,128,128,0.54902);
   color: grey;
   border-radius: 7px;
-}
-.field4 {
-  padding-left: 1.2vw;
-  padding-right: 0;
 }
 .plus1 {
   display: flex;
@@ -51,17 +48,20 @@
   outline-color: rgba(128,128,128,0.54902);
   color: grey;
   width: 3.3vw;
-  margin-left: max(-260px, -100%) ;
+  margin-left: max(-261px, -100%);
 }
 .plus2 {
-  font-size: 16pt;
+  font-size: 2vw;
   border-radius: 0px 7px 7px 0px;
   --tw-bg-opacity: 1;
   background-color: rgba(234, 237, 240, var(--tw-bg-opacity));
   outline-color: rgba(128,128,128,0.54902);
   color: grey;
   width: 3.3vw;
+  text-align: center;
   margin-left: -3.3vw;
+  display: inline-block;
+  padding: 0.4vw;
 }
 .order-account {
   width: 32%;
@@ -76,12 +76,6 @@
   width: 70%;
   margin-left: .67vw;
   margin-top: .5vw;
-}
-.enter {
-  font-size: 1.3vw;
-  height: 3vw;
-  border-radius: 7px;
-  color: white;
 }
 .icon-table {
   display: flex;

@@ -37,10 +37,6 @@ ul {
 	list-style: none;
 	position: relative;
 }
-ul li {
-	display:inline-block;
-  margin-top: 3vw;
-}
 ul ul {
   display: none;
 	position: absolute;

@@ -3,12 +3,13 @@ import logo     from "./../../images/head.png";
 import MenuItem from './children/menuItem'
 
 import "./header.css";
+let mt = {marginTop: "2.6vw"}
 
 const Header = () => {
   return (
   <nav className="menu">
     <ul className="w-100 flex flex-space-b">
-      <img className="inforkom-logo" alt="ИНФОРКОМ" src={logo} />
+      <li><img className="inforkom-logo" alt="ИНФОРКОМ" src={logo}/></li>
       <MenuItem mainHref="" mainName="О компании"
         item={[["","Новости компании"],
                ["","История"],
@@ -46,7 +47,8 @@ const Header = () => {
                ["","Мобильная АЗС"],
                ["","Моторные масла"]]}/>
 
-      <li><a href="">Договор online</a></li>
+      <li style={mt}><a href="">Договор online</a></li>
+
       <MenuItem mainHref="" mainName="Контакты"
         item={[["","Контактная информация"],
                ["","Вакансии"]]}/>

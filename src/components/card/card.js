@@ -27,7 +27,7 @@ const Card = () => {
             </div>
             <div className="flex flex-center">
               <Button width="20vw" marginTop="-6vw" children="Заказать"/>
-            </div>
+            </div>  
           </div>
         </div>
       </section>

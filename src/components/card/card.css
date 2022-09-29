@@ -1,21 +1,6 @@
 #card {
   padding-top: 6vw;
 }
-.download {
-  border-radius: 3vw;
-  color: white;
-  width: 15.5vw;
-  height: 4vw;
-  margin-top: auto;
-  margin-bottom: auto;
-}
-
-.orange-load {
-  background-color: #ecb463;
-}
-.purple-load {
-  background-color: #6977c9;
-}
 .load-icon {
   height: 0%;
   width: 6%;

@@ -13,7 +13,7 @@
   margin-left: max(-260px, -100%) ;
 }
 .plus2 {
-  font-size: 16pt;
+  font-size: 2vw;
   border-radius: 0px 7px 7px 0px;
   --tw-bg-opacity: 1;
   background-color: rgba(234, 237, 240, var(--tw-bg-opacity));
@@ -21,4 +21,8 @@
   color: grey;
   width: 3.3vw;
   margin-left: -3.3vw;
+  height: 3.2vw;
+  text-align: center;
+  margin: 0px;
+  text-transform: uppercase;
 }
