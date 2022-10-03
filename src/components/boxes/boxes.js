@@ -16,29 +16,29 @@ const Boxes = () => {
     <div  className="main">
       <section id="boxes">
         <div className="left-boxes">
-          <div className="first-raw">
+          <div className="raw">
             <LittleBox img={Regions} alt="Все регионы"/>
             <LittleBox img={Gasprom} alt="Газпром"/>
             <LittleBox img={Tatneft} alt="Татнефть"/>
           </div>
-          <div className="second-raw">
+          <div className="raw">
             <LittleBox img={Moscow} alt="Москва+"/>
             <div className="box-note">
-              <h2 className="point">Тарифные<br/>планы
+              <h2 className="point tarif">Тарифные<br/>планы
                 <img className="pointer" src={Pointer}/>
               </h2>
             </div>
           </div>
-          <div class="first-raw">
+          <div className="raw">
             <LittleBox img={IntNational} alt="Международный"/>
             <LittleBox img={Max}         alt="Максимальный"/>
             <LittleBox img={Universal}   alt="Универсальный"/>
           </div>
         </div>
-        <div class="right-boxes">
-          <div class="big-box">
-            <img class="agr" alt="Агрегатор скидок" src={Agregator}/>
-            <p>Подберем<br/>тариф<br/>на Ваших<br/>условиях!</p>
+        <div className="right-boxes">
+          <div className="big-box">
+            <img className="agr" alt="Агрегатор скидок" src={Agregator}/>
+            <p>Подберем <br className="br-hide"/>тариф<br/>на Ваших <br className="br-hide"/>условиях!</p>
           </div>
         </div>
       </section>

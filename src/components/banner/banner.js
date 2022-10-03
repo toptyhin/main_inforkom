@@ -1,7 +1,4 @@
-import React from "react";
 import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import BgCity      from './../../images/background-city.png'
 import BgCityAdd   from './../../images/background-add.png'
 import TankerFaded from './../../images/gastanker-left-faded.png'
@@ -11,16 +8,13 @@ import Man   from './../../images/man.png'
 import Pcmap from './../../images/pc-map.png'
 import Cars  from './../../images/cars.png'
 import Card  from './../../images/card.png'
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import "./banner.css"
 
 function Banner() {
   let settings = {
     dots: true,
-    appendDots: dots => (
-       <div >
-         <ul style={{ margin: "calc(19px + 1.5vw)" }}> {dots} </ul>
-       </div>
-     ),
     arrows: false,
     infinite: true,
     speed: 500,
@@ -29,16 +23,21 @@ function Banner() {
     autoplaySpeed: 4500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    pauseOnFocus: false,
+    //pauseOnFocus: false,
     draggable: false,
-    pauseOnHover: false,
+    //pauseOnHover: false,
+    appendDots: dots => (
+      <div>
+        <ul className="dots"> {dots} </ul>
+      </div>
+    ),
   };
   return (
     <Slider {...settings}>
-      <section id="city">
+      <section className="city">
         <img className="city-back" alt="" src={BgCity} />
         <img className="city-back-light" alt="" src={BgCityAdd} />
-        <div className="city-img1">
+        <div className="city-img0">
           <img className="gt-l-f" alt="" src={TankerFaded} />
           <img className="gt-l" alt="" src={TankerLeft} />
           <img className="m" alt="" src={Man} />
@@ -46,7 +45,7 @@ function Banner() {
         <h5>Топливо по оптовой цене <br/>собственными<br/>бензовозами</h5>
       </section>
 
-      <section id="city">
+      <section className="city">
         <img className="city-back" alt="" src={BgCity} />
         <img className="city-back-light" alt="" src={BgCityAdd} />
         <img className="city-back-light opacity" alt="" src={BgCityAdd} />
@@ -56,7 +55,7 @@ function Banner() {
         <h5>Собственный процессинг<br/>топливных карт</h5>
       </section>
 
-      <section id="city">
+      <section className="city">
         <img className="city-back" alt="" src={BgCity} />
         <img className="city-back-light" alt="" src={BgCityAdd} />
         <img className="city-back-light opacity" alt="" src={BgCityAdd} />
@@ -66,11 +65,11 @@ function Banner() {
         <h5>Крупнейший независимый<br/>поставщик топлива<br/>по гос. контрактам</h5>
       </section>
 
-      <section id="city">
+      <section className="city">
         <img className="city-back" alt="" src={BgCity} />
         <img className="city-back-light" alt="" src={BgCityAdd} />
         <img className="city-back-light opacity" alt="" src={BgCityAdd} />
-        <div class="city-img3 z-2">
+        <div class="city-img3">
           <img class="gt-r" src={TankerRight}/>
           <img class="card-img" src={Card}/>
         </div>

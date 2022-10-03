@@ -3,10 +3,9 @@ import { Link } from "react-router-dom";
 const LittleBox = ( {img, alt} ) => {
   let box = {
     overflow: "hidden",
-    width: "29%",
-    height: "12vw",
+    width: "28.5%",
     position: "relative",
-    borderRadius: "20px",
+    borderRadius: "2vw",
     backgroundColor: "#eaedf0",
     cursor: "pointer",
   }

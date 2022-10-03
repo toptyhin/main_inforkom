@@ -1,0 +1,60 @@
+.order-account {
+  width: 32%;
+  padding: 3vw;
+}
+.avatar-circle {
+  border-radius: 10vw;
+  width: 5vw;
+  height: 5vw;
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+}
+.avatar {
+  width: 70%;
+}
+.account-flex {
+  flex-wrap: wrap;
+}
+#card-order p {
+  font-size: 2.3vw;
+  text-transform: lowercase;
+  line-height: 2.3vw;
+}
+@media (max-width: 1024px) {
+  #card-order p {
+    width: 100%;
+    text-align: center;
+  }
+  .avatar-circle {
+    display: flex;
+    width: 9vw;
+    height: 9vw;
+    margin-top: 2vw;
+    align-items: center;
+    justify-content: center;
+  }
+  .avatar-circle-parent {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+  .acc-hide {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  .order-account {
+    width: 39%;
+    padding: 3vw;
+    margin-top: 4vw;
+  }
+}
+@media (max-width: 426px) {
+  .order-account {
+    width: 100%;
+    padding: 3vw;
+    margin-top: 4vw;
+  }
+}

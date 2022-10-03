@@ -3,7 +3,9 @@ import logo     from "./../../images/head.png";
 import MenuItem from './children/menuItem'
 
 import "./header.css";
-let mt = {marginTop: "2.6vw"}
+let style = {
+  marginTop: "1.6vw",
+}
 
 const Header = () => {
   return (
@@ -47,12 +49,13 @@ const Header = () => {
                ["","Мобильная АЗС"],
                ["","Моторные масла"]]}/>
 
-      <li style={mt}><a href="">Договор online</a></li>
+      <li className="menu-text"><a href="">Договор online</a></li>
 
-      <MenuItem mainHref="" mainName="Контакты"
+      <MenuItem mainHref="" mainName={["Контакты"]}
         item={[["","Контактная информация"],
                ["","Вакансии"]]}/>
     </ul>
+    <div className="gor-menu">&#9776;</div>
   </nav>
   );
 };

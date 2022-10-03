@@ -6,7 +6,6 @@ import Person3 from './images/person-3.png'
 
 const People = () => {
   let style = {
-    paddingLeft: "2vw",
     marginTop: "2vw",
   }
   let tablePeople = {

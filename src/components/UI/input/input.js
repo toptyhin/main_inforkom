@@ -1,21 +1,13 @@
 import { Link } from "react-router-dom";
 
-const Input = ( {plus, width, height, mt, name, text, textAdd} ) => {
+const Input = ( {plus, name, text, textAdd} ) => {
   let style = {
     borderRadius: "7px",
     fontFamily: "myriadpro-regular",
-    fontSize: "1.3vw",
     minWidth: "180px",
     minHeight: "30px",
-  }
-  if (width) {
-    style.width = width;
-  }
-  if (height) {
-    style.height = height;
-  }
-  if (mt) {
-    style.marginTop = mt;
+    width: "100%",
+    height: "100%",
   }
   let field = {
     textAlign: "center",

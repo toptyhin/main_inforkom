@@ -9,12 +9,11 @@ const FormSelect = ( {value, text} ) => {
     color: "grey",
     borderRadius: "7px",
     fontFamily: "myriadpro-regular",
-    fontSize: "1.3vw",
-    width: "17vw",
-    height: "2.7vw",
+    
+    width: "100%",
+    height: "100%",
     minWidth: "180px",
     minHeight: "30px",
-    marginTop: "0.9vw",
   }
   return (
     <select className="back-grey" style={style}>

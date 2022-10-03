@@ -19,18 +19,17 @@ const Button = ( props ) => {
       color: "grey",
       borderRadius: "7px",
       fontFamily: "myriadpro-regular",
-      fontSize: "1.3vw",
-      width: "17vw",
-      height: "2.7vw",
-      minWidth: "180px",
-      minHeight: "30px",
-      marginTop: "0.9vw",
+      width: "100%",
+      height: "100%",
       textTransform: "uppercase",
       cursor:"pointer",
     }
   }
   if (props.width) {
     style.width = props.width;
+  }
+  if (props.height) {
+    style.height = props.height;
   }
   if (props.marginTop) {
     style.marginTop = props.marginTop;

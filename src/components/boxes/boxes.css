@@ -1,6 +1,7 @@
 #boxes {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 #boxes p {
   font-size: 1.8vw;
@@ -9,35 +10,35 @@
   margin-left: 6%;
 }
 .left-boxes {
-  width: 48%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 42vw;
+  height: 42vw;
+  min-width: 370px;
+  min-height: 370px;
 }
 .right-boxes {
-  width: 49.5%;
-  height: 100%;
+  width: 42vw;
 }
-.first-raw {
+.raw {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 1.8vw;
-}
-.second-raw {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 1.8vw;
+  height: 28.5%;
 }
 .box-note {
   flex-grow: 1;
-  margin-left: 2vw;
+  margin-left: 3vw;
   margin-top: 1vw;
 }
 .big-box {
   position: relative;
-  border-radius: 20px;
+  border-radius: 2vw;
   background-color: #eaedf0;
   cursor: pointer;
   overflow: hidden;
   width: 100%;
-  height: 39.6vw;
+  height: 100%;
 }
 .pointer {
   margin-left: 2vw;
@@ -45,7 +46,64 @@
 }
 .agr {
   position: absolute;
-  margin-top: 10%;
-  margin-left: 27%;
-  width: 77%;
+  margin-top: 11%;
+  margin-left: 26%;
+  width: 81%;
+}
+@media (max-width: 768px) {
+  .right-boxes {
+    width: 272px;
+  }
+  .tarif {
+    font-size: 3vw;
+    line-height: 3.5vw;
+  }
+  .agr {
+    position: absolute;
+    margin-top: 39%;
+    margin-left: 3%;
+    width: 100%;
+  }
+  #boxes p {
+    font-size: 2.4vw;
+    text-align: left;
+    margin-top: 13%;
+    margin-left: 12%;
+  }
+  .br-hide {
+    display: none;
+  }
+}
+@media (max-width: 426px) {
+  .right-boxes {
+    margin-top: 6vw;
+    min-width: 87vw;
+    min-height: 87vw;
+  }
+  .left-boxes {
+    min-width: 87vw;
+    min-height: 87vw;
+  }
+  .tarif {
+    font-size: 7vw;
+    line-height: 8.5vw;
+  }
+  .box-note {
+    margin-left: 5vw;
+  }
+  .br-hide {
+    display: inherit;
+  }
+  .agr {
+    position: absolute;
+    margin-top: 11%;
+    margin-left: 26%;
+    width: 81%;
+  }
+  #boxes p {
+    font-size: 4.3vw;
+    text-align: left;
+    margin-top: 18%;
+    margin-left: 7%;
+  }
 }
