@@ -9,12 +9,9 @@ const Geo = () => {
         <div className="flex flex-col">
           <div className="flex inline-block">
              <Input plus="plus2" text="Введите регион" width="24vw" height="3.2vw" textAdd="+"/>
-              <input type="text" id="geo1" placeholder="Введите регион"
-                className="field field1"/>
-
-            <div className="inline-block">
-              <button role="button" id="geoplus" className="field plus2 inline-block"
-                onclick="plusGeo(this)">+</button>
+             <div className="inline-block">
+               <button role="button" id="geoplus" className="field plus2 inline-block"
+                  onclick="plusGeo(this)"></button>
             </div>
           </div>
           <div>

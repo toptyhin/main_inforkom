@@ -115,62 +115,36 @@
     margin: 0 2px;
   }
 }
-@media (max-width: 426px) {
+@media (max-width: 650px) {
   .city {
-    height: 42vw;
-    max-height: 42vw;
-    width: 100%;
-    overflow: hidden;
+    height: 33vw;
+    max-height: 33vw;
   }
   .city h5 {
-    font-size: 3.9vw;
+    font-size: 3.6vw;
     line-height: 4.5vw;
-    display: inline-block;
-    text-align: right;
-    position: sticky;
-    bottom: 16vw;
-    margin-left: 6vw;
-    z-index: 2;
+    bottom: 13vw;
+    margin-left: 7vw;
   }
   .city-back {
-    min-width: 116%;
-    height: 100%;
     margin-left: -25%;
   }
   .city-back-light {
-    position: sticky;
-    bottom: 0;
-    height: 150%;
-    min-width: 100%;
     margin-left: -32vw;
-    margin-top: -5vw;
-    z-index: 1;
   }
   .city-img0 {
-    position: sticky;
-    bottom: 5vw;
-    margin-left: 19vw;
+    bottom: 2vw;
   }
   .city-img1 {
-    position: sticky;
-    bottom: 7vw;
-    margin-left: 19vw;
-    z-index: 2;
+    bottom: 4vw;
   }
   .city-img2 {
-    position: sticky;
-    bottom: 6vw;
-    margin-left: 19vw;
-    z-index: 2;
+    bottom: 3vw;
   }
   .city-img3 {
-    position: sticky;
-    bottom:-4vw;
-    margin-left: 19vw;
-    z-index: 2;
+    bottom: -7vw;
   }
   .gt-l-f {
-    z-index: -1;
     width: 43vw;
     margin-bottom: -27.3vw;
   }
@@ -187,7 +161,6 @@
   .pc-m {
     width: 44vw;
     margin-left: 40.3vw;
-    margin-bottom: -0.3vw;
   }
   .cars-img {
     width: 62vw;
@@ -197,24 +170,16 @@
   .card-img {
     width: 39vw;
     margin-left: 37vw;
-    margin-bottom: -22.5vw;
   }
   .city-bold-text {
-    position: sticky;
-    bottom: 8vw;
-    margin-left: 11.3vw;
-    z-index: 2;
+    bottom: 5vw;
+    margin-left: 9.3vw;
   }
   .city-p {
-    margin-top: 1.3vw;
-    margin-left: 1vw;
     font-size: 2.5vw;
   }
   .bold-text {
     font-size: 6vw;
-    background-image: linear-gradient(to bottom, #eeb35b, #972900);
-    -webkit-background-clip: text;
-    color: transparent;
   }
   .dots {
     margin: calc(19px + 2.5vw);
@@ -223,109 +188,75 @@
     margin: 0 1px;
   }
 }
+@media (max-width: 500px) {
+  .city {
+    height: 42vw;
+    max-height: 42vw;
+  }
+  .city h5 {
+    font-size: 3.9vw;
+    bottom: 16vw;
+    margin-left: 6vw;
+  }
+  .city-img0 {
+    bottom: 5vw;
+  }
+  .city-img1 {
+    bottom: 7vw;
+  }
+  .city-img2 {
+    bottom: 6vw;
+  }
+  .city-img3 {
+    bottom: -4vw;
+  }
+  .city-bold-text {
+    bottom: 8vw;
+    margin-left: 11.3vw;
+  }
+}
 @media (max-width: 320px) {
   .city {
     height: 48vw;
     max-height: 48vw;
-    width: 100%;
-    overflow: hidden;
   }
   .city h5 {
     font-size: 5.1vw;
     line-height: 5.7vw;
-    display: inline-block;
-    text-align: right;
-    position: sticky;
     bottom: 18vw;
     margin-left: 8vw;
-    z-index: 2;
-  }
-  .city-back {
-    min-width: 116%;
-    height: 100%;
-    margin-left: -25%;
-  }
-  .city-back-light {
-    position: sticky;
-    bottom: 0;
-    height: 150%;
-    min-width: 100%;
-    margin-left: -32vw;
-    margin-top: -5vw;
-    z-index: 1;
   }
   .city-img0 {
-    position: sticky;
     bottom: 6vw;
-    margin-left: 19vw;
   }
   .city-img1 {
-    position: sticky;
     bottom: 6vw;
-    margin-left: 19vw;
     z-index: 0;
   }
   .city-img2 {
-    position: sticky;
     bottom: 7vw;
-    margin-left: 19vw;
     z-index: 0;
   }
   .city-img3 {
-    position: sticky;
     bottom: 2vw;
-    margin-left: 19vw;
     z-index: 0;
-  }
-  .gt-l-f {
-    z-index: -1;
-    width: 43vw;
-    margin-bottom: -27.3vw;
-  }
-  .gt-l {
-    width: 77vw;
-    margin-left: 41vw;
-    margin-bottom: -15vw;
-  }
-  .m {
-    width: 15.5vw;
-    margin-left: 55.5vw;
-    margin-bottom: 0vw;
   }
   .pc-m {
     width: 55vw;
     margin-left: 43.3vw;
-    margin-bottom: -0.3vw;
   }
   .cars-img {
     width: 73vw;
     margin-left: 43.5vw;
-    margin-bottom: 0vw;
-  }
-  .card-img {
-    width: 39vw;
-    margin-left: 37vw;
-    margin-bottom: -22.5vw;
   }
   .city-bold-text {
-    position: sticky;
-    bottom: 8vw;
     margin-left: 21.3vw;
-    z-index: 2;
   }
   .city-p {
-    margin-top: 1.3vw;
-    margin-left: 1vw;
     font-size: 2.9vw;
   }
   .bold-text {
     font-size: 7.2vw;
-    background-image: linear-gradient(to bottom, #eeb35b, #972900);
-    -webkit-background-clip: text;
-    color: transparent;
-  }
-  .dots {
-    margin: calc(19px + 2.5vw);
   }
   .slick-dots li {
     margin: 0 0.5px;

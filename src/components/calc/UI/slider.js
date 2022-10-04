@@ -7,16 +7,16 @@ const Shadow =
 
 const Calc = styled(Slider)( ({ theme }) => ({
   color: "#73aa37",
-  height: 13,
+  height: "32%",
   borderRadius:4,
   padding: '15px 0',
   '&:focus, &.MuiSlider-dragging': {color: "#FBA834",},
   '& .MuiSlider-thumb': {
     boxShadow: `0px 0px 0px 0px`,
-    height: 45,
-    width: 45,
+    height: "45px",
+    width: "6%",
     backgroundColor: '#fff',
-    border: '5px solid currentColor',
+    border: '0.35vw solid currentColor',
     '&:hover, &.Mui-focusVisible': {
       boxShadow: Shadow,
     },

@@ -7,8 +7,8 @@ const Button = ( props ) => {
   style = {
     fontFamily: "myriadpro-regular",
     cursor: "pointer",
-    fontSize: "1.3vw",
-    height: "3vw",
+    fontSize: "13pt",
+    height: "40px",
     borderRadius: "7px",
     color: "white",
     cursor: "pointer",

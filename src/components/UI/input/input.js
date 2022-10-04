@@ -4,8 +4,6 @@ const Input = ( {plus, name, text, textAdd} ) => {
   let style = {
     borderRadius: "7px",
     fontFamily: "myriadpro-regular",
-    minWidth: "180px",
-    minHeight: "30px",
     width: "100%",
     height: "100%",
   }

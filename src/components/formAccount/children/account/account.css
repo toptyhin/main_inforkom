@@ -29,8 +29,8 @@
   }
   .avatar-circle {
     display: flex;
-    width: 9vw;
-    height: 9vw;
+    width: 8vw;
+    height: 8vw;
     margin-top: 2vw;
     align-items: center;
     justify-content: center;
@@ -44,17 +44,56 @@
     display: none;
   }
 }
-@media (max-width: 768px) {
+
+@media (max-width: 850px) {
   .order-account {
     width: 39%;
-    padding: 3vw;
+    padding: 3.5vw;
     margin-top: 4vw;
+  }
+  #card-order p {
+    width: 100%;
+    text-align: center;
+    font-size: 2.7vw;
+  }
+  .avatar-circle {
+    width: 11vw;
+    height: 11vw;
+    margin-top: 3vw;
   }
 }
 @media (max-width: 426px) {
   .order-account {
     width: 100%;
-    padding: 3vw;
-    margin-top: 4vw;
+    padding: 8vw;
+    margin-top: 6vw;
+    height: 56vw;
+  }
+  .acc-hide {
+    display: inherit;
+  }
+  #card-order p {
+    font-size: 7vw;
+    text-transform: lowercase;
+    line-height: 7vw;
+    width: 50%;
+    text-align: left;
+  }
+  .avatar-circle-parent {
+    display: inherit;
+    width: 50%;
+    justify-content: flex-end;
+  }
+  .avatar-circle {
+    width: 16vw;
+    height: 16vw;
+    margin-top: 0vw;
+  }
+}
+@media (max-width: 320px) {
+  .avatar-circle {
+    width: 17vw;
+    height: 17vw;
+    margin-top: 0vw;
   }
 }

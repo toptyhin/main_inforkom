@@ -43,27 +43,13 @@
 @media (max-width: 768px) {
   .green-zone {
     height: 14vw;
-    margin-top: 4vw;
-    margin-bottom: 10vw;
-    overflow: hidden;
   }
   .green-zone h2 {
     font-size: 3vw;
     line-height: 3.1vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    color: #ffffff;
-
-  }
-  .green-zone img {
-    position: sticky;
   }
   .gp {
     width: 10vw;
-    margin-top: 1vw;
-    margin-left: 3vw;
   }
   .nm {
     width: 9vw;
@@ -91,21 +77,10 @@
     height: 22vw;
     min-height: 95px;
     margin-top: 7vw;
-    margin-bottom: 10vw;
-    overflow: hidden;
   }
   .green-zone h2 {
     font-size: 4vw;
     line-height: 3.6vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    color: #ffffff;
-
-  }
-  .green-zone img {
-    position: sticky;
   }
   .gp {
     width: 14vw;
@@ -134,25 +109,9 @@
   }
 }
 @media (max-width: 320px) {
-  .green-zone {
-    height: 22vw;
-    min-height: 95px;
-    margin-top: 7vw;
-    margin-bottom: 10vw;
-    overflow: hidden;
-  }
   .green-zone h2 {
     font-size: 4.5vw;
     line-height: 4.6vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    color: #ffffff;
-
-  }
-  .green-zone img {
-    position: sticky;
   }
   .gp {
     width: 17vw;

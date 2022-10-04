@@ -19,19 +19,43 @@
 }
 .inforkom-logo {
   height: 4vw;
+  margin-bottom: 0.5vw;
 }
-
 @media (max-width: 1024px) {
   .menu a {
     font-size: 1.1vw;
   }
 }
-
 @media (max-width: 768px) {
   .menu a {
     display: none;
   }
   .gor-menu {
-    display: inherit;
+    display: flex;
+    align-items: center;
+  }
+  .inforkom-logo {
+    height: 5vw;
+    margin-top: 2vw;
+  }
+  .menu {
+    padding-top: 0vw;
+  }
+}
+@media (max-width: 426px) {
+  .inforkom-logo {
+    height: 8vw;
+    margin-top: 3vw;
+    margin-bottom: 1vw;
+  }
+}
+@media (max-width: 376px) {
+  .inforkom-logo {
+    height: 10vw;
+  }
+}
+@media (max-width: 320px) {
+  .inforkom-logo {
+    height: 12vw;
   }
 }
