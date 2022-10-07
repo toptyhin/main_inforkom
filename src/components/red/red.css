@@ -5,7 +5,12 @@
   color: white;
 }
 .full-red {
+  padding-top: 2vw;
+  padding-bottom: 87px;
   background: linear-gradient(to right, #f15257, #f38f4a);;
+}
+.red-head {
+  flex-direction: column;
 }
 .red-head p {
   margin-top: 3vw;
@@ -15,19 +20,15 @@
 .red-table {
   width: 64%;
 }
-#red .color-zone {
-  padding-top: 5vw;
-}
 .no-color {
   background-color: rgba(0, 0, 0, 0.0);
-  height: 100%!important;
+  height: 120%!important;
   width: calc((100% - 2vw) / 3);
   overflow: hidden;
   position: relative;
-  borderRadius: 20px;
 }
 .no-color p {
-  margin-top: 18vw;
+  margin-top: 110%;
   text-align: center;
   text-transform: lowercase;
   font-size: 1.46vw;
@@ -41,5 +42,51 @@
 }
 .red-zone-img {
   position: absolute;
-  margin-left: -1.5vw;
+  margin-left: -8%;
+}
+@media (max-width: 768px) {
+  .red-head {
+    margin-left: 3vw;
+    flex-direction: row;
+  }
+  .red-head p {
+    margin-top: 0vw;
+    margin-left: 3vw;
+    font-size: 2.4vw;
+  }
+  .red-table {
+    margin-top: 5vw;
+    width: 100%;
+  }
+  .red-zone-square {
+    width: 90%;
+    height: 25vw;
+  }
+  .no-color {
+    background-color: rgba(0, 0, 0, 0.0);
+    height: 120%!important;
+    width: calc((100% - 2vw) / 3);
+    overflow: hidden;
+    position: relative;
+  }
+  .red-hide {
+    display: none;
+  }
+  .no-color p {
+    margin-top: 109%;
+    font-size: 2.2vw;
+  }
+}
+@media (max-width: 426px) {
+  .red-table {
+    flex-direction: column;
+  }
+  .no-color {
+    height: 120%!important;
+    width: 90%;
+  }
+  .red-zone-square {
+    width: 90%;
+    height: 68vw;
+  }
 }

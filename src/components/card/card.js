@@ -11,7 +11,7 @@ const Card = () => {
   return (
     <div className="main">
       <section id="card">
-        <div className="flex flex-space-b mt-3">
+        <div className="flex wrap flex-space-b mt-3">
           <div className="flex-col mt-1">
             <div>
               <h2>Твоя карта<br/>в мобильном приложении</h2>
@@ -27,7 +27,7 @@ const Card = () => {
             </div>
             <div className="flex flex-center">
               <Button width="20vw" marginTop="-6vw" children="Заказать"/>
-            </div>  
+            </div>
           </div>
         </div>
       </section>

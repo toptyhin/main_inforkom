@@ -21,7 +21,7 @@ const Azs = () => {
   return (
     <div className="main">
       <section id="azs">
-        <div className="flex flex-space-b">
+        <div className="flex wrap flex-space-b">
           <div className="w">
             <h2>Сеть АЗС<br/>Инфорком</h2>
             <p>по единой карте<br/>Инфорком по<br/>всей территории РФ.</p>

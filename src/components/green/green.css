@@ -40,9 +40,17 @@
   margin-top: -1vw;
   margin-left: 13vw;
 }
+@media (max-width: 1024px) {
+  .green-zone {
+    margin-top: 5vw;
+    margin-bottom: 11vw;
+  }
+}
 @media (max-width: 768px) {
   .green-zone {
     height: 14vw;
+    margin-top: 6vw;
+    margin-bottom: 12vw;
   }
   .green-zone h2 {
     font-size: 3vw;
@@ -76,7 +84,8 @@
   .green-zone {
     height: 22vw;
     min-height: 95px;
-    margin-top: 7vw;
+    margin-top: 10vw;
+    margin-bottom: 15vw;
   }
   .green-zone h2 {
     font-size: 4vw;

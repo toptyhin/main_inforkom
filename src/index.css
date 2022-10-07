@@ -58,9 +58,9 @@ a {
   text-decoration: none;
 }
 h2 {
-  font-size: 2.3vw;
+  font-size: 30px;
   text-align: left;
-  line-height: 2.3vw;
+  line-height: 33px;
   text-transform: uppercase;
   margin: 0;
 }
@@ -103,10 +103,10 @@ canvas {
   height: 34.5vw!important;
 }
 hr {
-  margin: 1vw auto 0 auto;
+  margin: 0 auto;
 	padding: 0;
 	height: 0;
-  width: 90%;
+  width: 100%;
 	border: none;
 	border-top: 2px solid #a1a1a1;
 }
@@ -173,6 +173,9 @@ hr {
 .flex-space-b {
   justify-content: space-between;
 }
+.flex-space-a {
+  justify-content: space-around;
+}
 .flex-col {
   flex-direction: column;
 }
@@ -184,6 +187,9 @@ hr {
 }
 .flex-box {
   flex-grow: 1;
+}
+.wrap {
+  flex-wrap: wrap;
 }
 .hidden {
   display: none!important;
@@ -200,10 +206,7 @@ hr {
 .f-grey {
   color: #a1a1a1;
 }
-.f-green {
-  color: #73aa37;
-  font-family: myriadpro-semibold;
-}
+
 .uppercase {
 text-transform: uppercase;
 }
@@ -226,4 +229,59 @@ text-transform: uppercase;
 }
 .point {
   cursor: pointer;
+}
+@media (max-width: 1100px) {
+  h2 {
+    font-size: 29px;
+    line-height: 29px;
+  }
+}
+@media (max-width: 1050px) {
+  h2 {
+    font-size: 28px;
+    line-height: 29px;
+  }
+}
+@media (max-width: 1027px) {
+  h2 {
+    font-size: 27px;
+    line-height: 29px;
+  }
+}
+@media (max-width: 900px) {
+  h2 {
+    font-size: 25.5px;
+    line-height: 29px;
+  }
+}
+@media (max-width: 768px) {
+  h2 {
+    font-size: 27px;
+    line-height: 30px;
+  }
+}
+@media (max-width: 560px) {
+  h2 {
+    font-size: 25px;
+    line-height: 30px;
+  }
+
+}
+@media (max-width: 500px) {
+  h2 {
+    font-size: 30px;
+    line-height: 30px;
+  }
+  hr {
+    width: 94%;
+  }
+}
+@media (max-width: 320px) {
+  h2 {
+    font-size: 24px;
+    line-height: 25px;
+  }
+  hr {
+    width: 89%;
+  }
 }

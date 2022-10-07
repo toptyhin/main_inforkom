@@ -6,8 +6,9 @@ const RedBox = ( {img, text, style, margin, marginw} ) => {
       <div className="helping div"></div>
       <div className="white radius-20 red-zone-square" style={marginw}>
         <img className="red-zone-img" src={img} style={style}/>
-        <p>{text}</p>
+<p>{text}</p>
       </div>
+
     </div>
   );
 };

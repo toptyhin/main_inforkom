@@ -12,29 +12,29 @@ const Red = () => {
   }
   let oil = {
     width: "160%",
-    marginTop: "1.6vw",
-    marginLeft: "-11vw",
+    marginTop: "6%",
+    marginLeft: "-63%",
     transform: "scale(-1, 1)",
   }
   let tool = {
     width: "106%",
-    marginLeft: "-2vw",
-    marginTop: "0.8vw",
+    marginLeft: "-12%",
+    marginTop: "4%",
   }
   let margin = {
-    marginLeft: "1.75vw",
+    marginLeft: "3%",
   }
   let marginw = {
-    marginRight: "2vw",
+    marginRight: "10%",
   }
   return (
     <div className="w-100">
       <section id="red" className="red-section">
         <div className="full-red">
-          <div className="color-zone red-zone-height flex flex-space-b">
-            <div className="red-head">
+          <div className="color-zone wrap flex flex-space-b">
+            <div className="flex red-head">
               <h2>Направления<br/>деятельности</h2>
-              <p>Полезные продукты<br/>и сервисы для Вашего<br/>грузового автопарка</p>
+              <p>Полезные продукты <br class="red-hide"/>и сервисы для Вашего <br class="red-hide"/>грузового автопарка</p>
             </div>
             <div className="flex red-table">
               <RedBox img={Car}  text="Техцентр/запчасти" style={car}/>

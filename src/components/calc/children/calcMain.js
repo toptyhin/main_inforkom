@@ -61,7 +61,7 @@ const CalcMain = () => {
       </div>
 
       <div>
-        <CalcButton id="showResults" className="w-100 bttn green"
+        <CalcButton id="showResults" type="button"
           onclick="showResults()" children="Рассчитать экономию" theme="full"/>
       </div>
     </div>

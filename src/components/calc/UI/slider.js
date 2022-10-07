@@ -1,33 +1,28 @@
 import * as React from 'react';
 import Slider, { SliderThumb } from '@mui/material/Slider';
 import { styled } from '@mui/material/styles';
+import "./slider.css"
 
-const Shadow =
-  '0 3px 1px rgba(0,0,0,0.1), 0 4px 8px rgba(0,0,0,0.13), 0 0 0 1px rgba(0,0,0,0.02)';
 
 const Calc = styled(Slider)( ({ theme }) => ({
   color: "#73aa37",
-  height: "32%",
+  height: "16px",
   borderRadius:4,
-  padding: '15px 0',
+  padding: '2% 0!important',
   '&:focus, &.MuiSlider-dragging': {color: "#FBA834",},
   '& .MuiSlider-thumb': {
     boxShadow: `0px 0px 0px 0px`,
-    height: "45px",
-    width: "6%",
+    height: "calc(2vw + 18px)",
+    width: "calc(2vw + 18px)",
     backgroundColor: '#fff',
-    border: '0.35vw solid currentColor',
-    '&:hover, &.Mui-focusVisible': {
-      boxShadow: Shadow,
-    },
+    border: '4px solid currentColor',
+    '&:hover, &.Mui-focusVisible': {},
     '&:focus,  &.MuiSlider-dragging': {
       color: "#FBA834",
       boxShadow:
         '0 3px 1px rgba(0,0,0,0.1),0 4px 8px rgba(0,0,0,0.3),0 0 0 1px rgba(0,0,0,0.02)',
       // Reset on touch devices, it doesn't add specificity
-      '@media (hover: none)': {
-        boxShadow: Shadow,
-      },
+      '@media (hover: none)': {},
     },
   },
   '& .MuiSlider-valueLabel': {
@@ -73,19 +68,6 @@ function valueLabelFormat(value, unit) {
 
 function CalcSlider({header, unit, marks, ariaLabel, defaultValue, min,
                      step, max, valueLabelDisplay}) {
-  let CalcValue = {
-    color: "#636363",
-    fontSize: "1.8vw",
-    fontWeight: "bold",
-  }
-  let CalcText = {
-    display: "flex",
-    marginTop: "5vw",
-    alignItems: "center",
-    fontSize: "1.5vw",
-    fontFamily: "myriadpro-regular",
-    color: "#a1a1a1",
-  }
   const [value, setValue] = React.useState(defaultValue);
   const handleChange = (event, newValue) => {
     if (typeof newValue === 'number') {
@@ -95,9 +77,9 @@ function CalcSlider({header, unit, marks, ariaLabel, defaultValue, min,
 
   return (
     <div>
-    <div style={CalcText}>
+    <div className="CalcText">
       <span className="flex-1 text-left">{header}</span>
-      <span style={CalcValue}>{valueLabelFormat(value,unit)}</span>
+      <span className="CalcValue">{valueLabelFormat(value,unit)}</span>
     </div>
     <Calc value = {value}
           aria-label = {ariaLabel}
