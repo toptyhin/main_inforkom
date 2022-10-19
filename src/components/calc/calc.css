@@ -186,7 +186,7 @@ input.field2 {
   color: #73aa37!important;
   font-family: myriadpro-semibold!important;
 }
-@media (max-width: 1200px) {
+@media (max-width: 1100px) {
   #main-calc {
     width: 740px;
   }
@@ -334,7 +334,7 @@ input.field2 {
     font-size: 20px;
   }
 }
-@media (max-width: 380px) {
+@media (max-width: 320px) {
   #calc {
     padding-bottom: 45px;
   }

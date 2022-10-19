@@ -1,11 +1,19 @@
 import { Link } from "react-router-dom";
 import PersonBack from './../images/person-back.png'
-import "./person.css"
+import "./../people.css"
 
-const Person = ( {img} ) => {
+const Person = ( {img, extra, children} ) => {
+  let clName;
+  if (extra) {
+    clName = "people-block pi"
+  } else {
+    clName = "people-block"
+  }
   return (
-    <div className="people-block">
-      <img className="people-back" alt="" src={PersonBack}/>
+    <div className={clName}>
+      <div className="people-back">
+        <p>{children}</p>
+      </div>
       <img className="people" alt="" src={img}/>
     </div>
   );

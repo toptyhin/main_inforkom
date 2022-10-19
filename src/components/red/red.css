@@ -4,9 +4,13 @@
 #red h2 {
   color: white;
 }
+.color-height {
+  height: auto;
+}
 .full-red {
+  height: auto;
   padding-top: 2vw;
-  padding-bottom: 87px;
+  padding-bottom: 43px;
   background: linear-gradient(to right, #f15257, #f38f4a);;
 }
 .red-head {
@@ -22,7 +26,7 @@
 }
 .no-color {
   background-color: rgba(0, 0, 0, 0.0);
-  height: 120%!important;
+  height: 100%;
   width: calc((100% - 2vw) / 3);
   overflow: hidden;
   position: relative;
@@ -38,13 +42,21 @@
 }
 .red-zone-square {
   width: 90%;
-  height: 16vw;
+  height: 76%;
 }
 .red-zone-img {
   position: absolute;
   margin-left: -8%;
 }
+@media (max-width: 1027px) {
+  .red-table {
+    width: 70%;
+  }
+}
 @media (max-width: 768px) {
+  .no-color {
+    height: 33vw;
+  }
   .red-head {
     margin-left: 3vw;
     flex-direction: row;
@@ -62,31 +74,28 @@
     width: 90%;
     height: 25vw;
   }
-  .no-color {
-    background-color: rgba(0, 0, 0, 0.0);
-    height: 120%!important;
-    width: calc((100% - 2vw) / 3);
-    overflow: hidden;
-    position: relative;
-  }
   .red-hide {
     display: none;
   }
   .no-color p {
-    margin-top: 109%;
+    margin-top: 104%;
     font-size: 2.2vw;
   }
 }
-@media (max-width: 426px) {
+@media (max-width: 500px) {
   .red-table {
     flex-direction: column;
   }
   .no-color {
-    height: 120%!important;
-    width: 90%;
+    width: 91%;
+    height: 90vw;
   }
   .red-zone-square {
     width: 90%;
-    height: 68vw;
+    height: 71vw;
+  }
+  .no-color p {
+    margin-top: 101%;
+    font-size: 5.2vw;
   }
 }

@@ -11,12 +11,12 @@ const Card = () => {
   return (
     <div className="main">
       <section id="card">
-        <div className="flex wrap flex-space-b mt-3">
+        <div className="flex wrap flex-space-b mt-3 load">
           <div className="flex-col mt-1">
-            <div>
-              <h2>Твоя карта<br/>в мобильном приложении</h2>
+            <div className="head-card">
+              <h2 className="inline-block">Твоя карта <br className="card-hide"/>в мобильном <br/>приложении</h2>
             </div>
-            <div className="mt-6 flex">
+            <div className="mt-1 flex wrap flex-center">
             <Download name="app-store" color="orange" src={AppStore} children="App Store" qr={Qr}/>
             <Download name="google-play" color="purple" src={GooglePlay} children="Google Play" qr={Qr}/>
             </div>
@@ -26,7 +26,7 @@ const Card = () => {
               <img className="w-100" src={CardBig} alt="топливная карта"/>
             </div>
             <div className="flex flex-center">
-              <Button width="20vw" marginTop="-6vw" children="Заказать"/>
+              <Button width="326px" marginTop="-6vw" children="Заказать"/>
             </div>
           </div>
         </div>

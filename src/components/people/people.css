@@ -1,0 +1,97 @@
+.people-block {
+  position: relative;
+  width: 33%;
+  align-items: flex-end;
+  margin-top: 1vw;
+}
+.people {
+  float: right;
+  width: 50%;
+  margin-top: 2vw;
+}
+.people-back {
+  position: absolute;
+  bottom: 0;
+  top: auto;
+  left: 0;
+  right: auto;
+  height: 63%;
+  width: 95%;
+  z-index: -1;
+  background-color: rgb(234, 237, 240);
+  border-radius: 20px 20px 0 0;
+  padding-top: 4%;
+  padding-left: 4%;
+}
+.people-back p {
+  width: 54%;
+  font-size: 1.6vw;
+  line-height: 1.8vw;
+}
+.tablePeople {
+  display: flex;
+  justify-content: space-between;
+  margin-top: -3vw;
+  width: 100%;
+  flex-wrap: wrap;
+}
+.head-people {
+  width: 29vw;
+}
+@media (max-width: 1186px) {
+  .head-people {
+    width: 35vw;
+  }
+  .people-back p {
+    width: 54%;
+    line-height: 1.8vw;
+  }
+}
+@media (max-width: 900px) {
+  .head-people {
+    margin-top: 13vw;
+    margin-left: 46vw;
+    width: 30vw;
+    font-size: 4.5vw;
+    line-height: 4.4vw;
+  }
+  .pi {
+    margin-right: 44vw;
+    margin-top: -6vw;
+  }
+  .tablePeople {
+    margin-top: -24vw;
+  }
+  .people-block {
+    width: 49%;
+  }
+  .people-back p {
+    width: 54%;
+    line-height: 2.5vw;
+    font-size: 2.5vw;
+  }
+}
+@media (max-width: 500px) {
+  .head-people {
+    margin-top: 6vw;
+    margin-left: 0;
+    width: 100%;
+    font-size: 7.5vw;
+    line-height: 8.4vw;
+  }
+  .tablePeople {
+    margin-top: 0;
+  }
+  .people-block {
+    width: 100%;
+  }
+  .pi {
+    margin-right: 0;
+    margin-top: -6vw;
+  }
+  .people-back p {
+    width: 54%;
+    line-height: 5.5vw;
+    font-size: 5vw;
+  }
+}

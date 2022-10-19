@@ -143,6 +143,9 @@ hr {
 .mt-3 {
   margin-top: 3vw;
 }
+.mt-4 {
+  margin-top: 4vw;
+}
 .mt-6 {
   margin-top: 6vw;
 }
@@ -224,9 +227,6 @@ text-transform: uppercase;
 .w-25 {
   width: 25.5%;
 }
-.w {
-  width: 30vw;
-}
 .point {
   cursor: pointer;
 }
@@ -240,6 +240,12 @@ text-transform: uppercase;
   h2 {
     font-size: 28px;
     line-height: 29px;
+  }
+  .color-zone {
+    width: 89%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 4vw;
   }
 }
 @media (max-width: 1027px) {

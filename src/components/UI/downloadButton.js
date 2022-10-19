@@ -2,22 +2,22 @@ import { Link } from "react-router-dom";
 
 const DownloadButton = ( {name, color, src, children} ) => {
   let style = {
-    borderRadius: "3vw",
-    width: "15.5vw",
-    height: "4vw",
+    borderRadius: "30px",
+    width: "224px",
+    height: "57px",
     marginTop: "auto",
     marginBottom: "auto",
     color: "white",
   }
   let loadP = {
     textTransform: "uppercase",
-    fontSize: "0.7vw",
+    fontSize: "10px",
     fontFamily: "montserrat-regular",
     textAlign: "left",
   }
   let p = {
     fontFamily: "montserrat-regular",
-    fontSize: "1.5vw",
+    fontSize: "22px",
     textAlign: "left",
   }
   if (color=="orange") {

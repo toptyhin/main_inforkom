@@ -105,7 +105,7 @@
   margin: calc(19px + 1.5vw);
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1050px) {
   .slick-dots li {
     margin: 0 4px;
   }
@@ -115,7 +115,7 @@
     margin: 0 2px;
   }
 }
-@media (max-width: 650px) {
+@media (max-width: 740px) {
   .city {
     height: 33vw;
     max-height: 33vw;

@@ -40,7 +40,7 @@
   margin-top: -1vw;
   margin-left: 13vw;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1027px) {
   .green-zone {
     margin-top: 5vw;
     margin-bottom: 11vw;
@@ -80,11 +80,11 @@
     margin-left: 12vw;
   }
 }
-@media (max-width: 426px) {
+@media (max-width: 560px) {
   .green-zone {
     height: 22vw;
     min-height: 95px;
-    margin-top: 10vw;
+    margin-top: 8vw;
     margin-bottom: 15vw;
   }
   .green-zone h2 {

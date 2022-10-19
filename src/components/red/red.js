@@ -23,6 +23,7 @@ const Red = () => {
   }
   let margin = {
     marginLeft: "3%",
+    alignSelf: "flex-end",
   }
   let marginw = {
     marginRight: "10%",
@@ -31,13 +32,13 @@ const Red = () => {
     <div className="w-100">
       <section id="red" className="red-section">
         <div className="full-red">
-          <div className="color-zone wrap flex flex-space-b">
+          <div className="color-zone wrap flex flex-space-b ">
             <div className="flex red-head">
-              <h2>Направления<br/>деятельности</h2>
+              <h2>Инфорком <br/>техцентр</h2>
               <p>Полезные продукты <br class="red-hide"/>и сервисы для Вашего <br class="red-hide"/>грузового автопарка</p>
             </div>
             <div className="flex red-table">
-              <RedBox img={Car}  text="Техцентр/запчасти" style={car}/>
+              <RedBox img={Car}  text="Техцентр /запчасти /разборка" style={car}/>
               <RedBox img={Tool} text="Инструмент"        style={tool}/>
               <RedBox img={Oil}  text="Масло" style={oil} margin={margin} marginw={marginw}/>
             </div>

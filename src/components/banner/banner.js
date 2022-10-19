@@ -12,6 +12,16 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./banner.css"
 
+fetch('http://localhost:1337/api/banners', {
+  method: 'GET',
+  headers: {
+    'Content-Type': 'application/json',
+  },
+})
+  .then(response => response.json())
+  .then(data => console.log(data));
+
+
 function Banner() {
   let settings = {
     dots: true,

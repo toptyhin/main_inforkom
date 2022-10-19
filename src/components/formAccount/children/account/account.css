@@ -22,7 +22,7 @@
   text-transform: lowercase;
   line-height: 2.3vw;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1027px) {
   #card-order p {
     width: 100%;
     text-align: center;
@@ -45,7 +45,7 @@
   }
 }
 
-@media (max-width: 850px) {
+@media (max-width: 881px) {
   .order-account {
     width: 39%;
     padding: 3.5vw;
