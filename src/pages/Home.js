@@ -8,7 +8,12 @@ import Red    from "../components/red/red";
 import Card   from "../components/card/card";
 import Azs    from "../components/azs/azs";
 
+import { useEffect, useState } from 'react';
+
+
 const Home = () => {
+
+
     return (
         <>
         <Banner/>

@@ -9,8 +9,9 @@
   text-align: right;
   position: sticky;
   bottom: 10vw;
-  margin-left: 10vw;
+  margin-left: 5vw;
   z-index: 2;
+  width: 36%;
 }
 .city-back {
   min-width: 116%;
