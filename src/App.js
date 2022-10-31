@@ -1,6 +1,4 @@
 import './App.css';
-
-
 import {
   BrowserRouter as Router,
   Routes,
@@ -13,12 +11,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Name1 from './pages/Name1';
 
-
-
 function App() {
-
-
-
   return (
     <div className="App">
       <Router>
@@ -33,7 +26,6 @@ function App() {
         <Footer />
       </Router>
     </div>
-
   );
 }
 
