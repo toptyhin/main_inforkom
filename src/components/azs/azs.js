@@ -27,7 +27,7 @@ const Azs = () => {
               <p className="azs-p">по единой карте <br className="azs-hide"/>Инфорком по <br class="azs-hide"/>всей территории РФ.</p>
             </div>
             <div className="azs-button1">
-              <Button width="222px" marginTop="3vw" children="Сеть АЗС"/>
+              <Button type='button' width="222px" marginTop="3vw" children="Сеть АЗС"/>
             </div>
           </div>
           <div>

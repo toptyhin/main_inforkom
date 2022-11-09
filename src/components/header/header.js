@@ -11,7 +11,11 @@ const Header = () => {
   return (
   <nav className="menu">
     <ul className="w-100 flex flex-space-b">
-      <li><img className="inforkom-logo" alt="ИНФОРКОМ" src={logo}/></li>
+      <li>
+        <Link to={`/`}>
+          <img className="inforkom-logo" alt="ИНФОРКОМ" src={logo}/>
+        </Link>
+      </li>
       <MenuItem mainHref="" mainName="О компании"
         item={[["","Новости компании"],
                ["","История"],
@@ -48,8 +52,6 @@ const Header = () => {
                ["","Топливо оптом"],
                ["","Мобильная АЗС"],
                ["","Моторные масла"]]}/>
-
-      <li className="menu-text"><a href="">Договор online</a></li>
 
       <MenuItem mainHref="" mainName={["Контакты"]}
         item={[["","Контактная информация"],

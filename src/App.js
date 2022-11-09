@@ -7,8 +7,8 @@ import {
 
 import Header from './components/header/header';
 import Footer from './components/footer';
-import Home from './pages/Home';
-import About from './pages/About';
+import Home  from './pages/Home';
+import MapStation from './pages/MapStation';
 import Name1 from './pages/Name1';
 
 function App() {
@@ -19,7 +19,7 @@ function App() {
         <main className="container">
           <Routes>
               <Route path="/" element={<Home />} />
-              <Route path="/dashboard" element={<About />} />
+              <Route path="/map-stations/map-station" element={<MapStation />} />
               <Route path="/banners/Name1" element={<Name1 />} />
           </Routes>
         </main>

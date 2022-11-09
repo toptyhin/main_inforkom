@@ -14,7 +14,7 @@ const Account = ( {} ) => {
           </div>
         </div>
       </div>
-      <div><Button width="100%" children="Войти"/></div>
+      <div><Button type='button' width="100%" children="Войти"/></div>
     </div>
   );
 };

@@ -8,7 +8,8 @@ const MenuItem = ( {mainHref, mainName, item} ) => {
     });
 
   return (
-    <li className="menu-text"><a href="">{mainName} &#9660;</a>
+    <li className="menu-text">
+      <Link to={`/map-stations/map-station`}>{mainName} &#9660;</Link>
       <ul>{itemArr}</ul>
     </li>
   );

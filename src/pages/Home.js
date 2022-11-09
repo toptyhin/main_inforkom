@@ -7,13 +7,11 @@ import Calc   from "../components/calc/calc";
 import Red    from "../components/red/red";
 import Card   from "../components/card/card";
 import Azs    from "../components/azs/azs";
+import { Link } from 'react-router-dom';
 
 import { useEffect, useState } from 'react';
 
-
 const Home = () => {
-
-
     return (
         <>
         <Banner/>

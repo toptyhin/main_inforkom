@@ -1,10 +1,13 @@
 import { useState } from "react";
 import CalcButton from './children/calcButton'
 import Geo from './children/geo'
-import FuelType from './children/fuelType'
-import CalcSlider from './children/slider/slider'
 import Nds from './children/nds'
 import Res from './children/res'
+import Charts from './children/charts'
+import FuelType from './children/fuelType'
+import CalcSlider from './children/slider/slider'
+import Button     from './../../components/UI/button'
+
 import "./calc.css"
 
 const marksFuel = [ {value: 1000}, {value: 1500}, {value: 2000}, {value: 2500},
@@ -20,7 +23,8 @@ const marksCars = [ {value:0}, {value:5}, {value:10}, {value:15}, {value:20},
                     {value:100},
                   ];
 
-const Count = async (setAmount, geo1, geo2, fuelType, fuelSlider, carSlider, nds ) => {
+const Count = async (setFuel, setDiscount, setVat, setManage,
+  setTotal, geo1, geo2, fuelType, fuelSlider, carSlider, nds ) => {
   const reg1 = 'region[0]='+ geo1;
   const reg2 = '&region[1]=' + geo2;
   let region;
@@ -30,36 +34,31 @@ const Count = async (setAmount, geo1, geo2, fuelType, fuelSlider, carSlider, nds
     region = reg1;
   }
   const url = 'https://data.inforkom.ru/api/v1/Base/Calculator?' + region + '&fuel=' + fuelType;
-
   const amount_l = fuelSlider * carSlider;
   const calcResponse = await fetch(url);
   const resp = await calcResponse.json();
-
-  let amounts = {};
+  let resFuel;
+  let resDiscount;
+  let resManage;
+  let resTotal;
+  let resVat;
   if (nds==true) {
-    amounts = [
-      ['fuel', amount_l * resp.minPrice - amount_l * resp.maxVal - amount_l * resp.minPrice / 6 - amount_l * resp.minPrice * 0.017],
-      ['discount', amount_l * resp.maxVal],
-      ['vat', amount_l * resp.minPrice / 6],
-      ['manage', amount_l * resp.minPrice * 0.017],
-      ['total', amount_l * resp.minPrice],
-    ];
-
+    resFuel = amount_l * resp.minPrice - amount_l * resp.maxVal - amount_l * resp.minPrice / 6 - amount_l * resp.minPrice * 0.017;
+    resDiscount = amount_l * resp.maxVal;
+    resManage = amount_l * resp.minPrice * 0.017;
+    resTotal = amount_l * resp.minPrice;
+    resVat = amount_l * resp.minPrice / 6;
   } else {
-    amounts = [
-      ['fuel', amount_l * resp.minPrice - amount_l * resp.maxVal - amount_l * resp.minPrice * 0.017],
-      ['discount', amount_l * resp.maxVal],
-      ['manage', amount_l * resp.minPrice * 0.017],
-      ['total', amount_l * resp.minPrice],
-    ];
-
+    resFuel = amount_l * resp.minPrice - amount_l * resp.maxVal - amount_l * resp.minPrice * 0.017;
+    resDiscount = amount_l * resp.maxVal;
+    resManage = amount_l * resp.minPrice * 0.017;
+    resTotal = amount_l * resp.minPrice;
   };
-
-
-  const newAm = amounts;
-
-  setAmount(newAm);
-  console.log(setAmount);
+  setFuel(resFuel.toFixed(2));
+  setDiscount(resDiscount.toFixed(2));
+  setManage(resManage.toFixed(2));
+  setTotal(resTotal.toFixed(2));
+  setVat(resVat.toFixed(2));
 };
 
 const Calc = () => {
@@ -72,8 +71,13 @@ const Calc = () => {
   const [nds, setNds] = useState(true);
   const [ready, setReady] = useState(false);
   const [show, setShow] = useState(false);
-  const [amount, setAmount] = useState();
   const read = ready;
+
+  const [fuel, setFuel] = useState(0);
+  const [discount, setDiscount] = useState(0);
+  const [vat, setVat] = useState(0);
+  const [manage, setManage] = useState(0);
+  const [total, setTotal] = useState(0);
   return (
     <div className="w-100">
       <div id="calc-hide" className="back-grey">
@@ -82,7 +86,7 @@ const Calc = () => {
           <p className="point f-grey show-text" onClick={() => setHidden(false)}>
             &#9660; Рассчитайте экономию с топливной картой Инфорком &#9660;
           </p>
-          <p className="point f-grey calc-head" onClick="showCalc()">
+          <p className="point f-grey calc-head">
             Рассчитайте экономию<br/>&#9660; с топливной картой Инфорком &#9660;
           </p>
         </div>
@@ -91,10 +95,6 @@ const Calc = () => {
           <div id="main-calc">
             <Geo setGeo1={setGeo1} setGeo2={setGeo2} setReady={setReady}/>
             <FuelType setFuelType={setFuelType}/>
-
-            <div>{fuelType}</div> <div>{fuelSlider}</div> <div>{carSlider}</div>
-             <div>{geo1}</div> <div>{geo2}</div> <div>{ready}</div>
-
             <CalcSlider setSlider={setFuelSlider}
                       ariaLabel ='fuel slider'
                       header ='Потребление топлива'
@@ -115,38 +115,35 @@ const Calc = () => {
                       valueLabelDisplay ='off'
                       />
             <Nds setNds={setNds}/>
-            <button id='showResults' onClick = {() => {setShow(read); Count(setAmount, geo1, geo2, fuelType, fuelSlider, carSlider, nds)}}
-                children='Рассчитать экономию' theme='full'></button>
+            <div onClick = {() => {setShow(read);
+              Count(setFuel, setDiscount, setVat, setManage,
+              setTotal, geo1, geo2, fuelType, fuelSlider, carSlider, nds)}}>
+              <Button type='button'
+                children='Рассчитать экономию' theme='calc'/>
 
+            </div>
             <div id='calcResult' className={show ? '' : 'hidden'}>
-              <div>
-                <div id='charts' className='height-pie'>
-
-                </div>
-              </div>
-
-              <Res/>
+              <Charts fuel={fuel} vat={vat} discount={discount} manage={manage}/>
+              <Res card={fuel} nocard={total}/>
 
               <div className='mt-20 pb-9'>
-              <div>{amount}</div>
                 <div id='legend' className='flex flex-col xl:px-10'>
                   <span className='legend_record mb-4 f-green'>Экономия на топливе</span>
                   <span className='legend_record mb-4 f-grey'>
                     <span className='label yellow'></span>Скидка на топливо
-                    <span id='total_discount' className='amount'>{amount[0][1]} &#8381;</span>
+                    <span id='total_discount' className='amount'>{discount} &#8381;</span>
                   </span>
                   <span className='legend_record mb-4 f-grey'>
                     <span className='label green'></span>НДС 20%
-                    <span id='total_vat' className='amount'>0.00 &#8381;</span>
+                    <span id='total_vat' className='amount'>{vat} &#8381;</span>
                   </span>
                   <span className='legend_record mb-4 f-grey'>
                     <span className='label orange'></span>Выбор лучших цен 1,7%
-                    <span id='total_manage' className='amount'>0.00 &#8381;</span>
+                    <span id='total_manage' className='amount'>{manage} &#8381;</span>
                   </span>
                 </div>
                 <form action='https://inforkom.ru/images/docs/kp_2.pdf' target='_blank'>
-                  <CalcButton id='com-offer'
-                    type='submit' children='Коммерческое предложение' theme='full'/>
+                  <Button type='submit' children='Коммерческое предложение' theme='calc'/>
                 </form>
               </div>
             </div>

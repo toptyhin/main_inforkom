@@ -10,24 +10,25 @@ function Geo ({setGeo1, setGeo2, setReady}) {
       <h2>Регион <br className='geo-hide'/>перевозок</h2>
       <div className='search'>
         <div className='flex-search'>
-          <div className='flex item inline-block'>
+          <div className='flex item inline-block w-100'>
             <DadataSuggestions
+                  className='field w-100'
                   token='09b36502f2fd994fb02fcd541c18b4cbffe47f99'
                   onSelect={suggestion => {setGeo1(suggestion.data.region); setReady(true)}}
                   placeholder={'Введите регион'}
                   onChange={suggestion => console.log(suggestion)}
             />
-            <div className='inline-block'>
-            <button type='button' onClick={() => setPlus(true)}>+</button>
+            <button id='geoplus' type='button' className='plus2' onClick={() => setPlus(true)}>+</button>
+            <div className="inline-block">
             </div>
           </div>
-          <div className={plus ? "" : "hidden"}>
-            <DadataSuggestions
+            <div className={plus ? "item field1" : "hidden"}>
+              <DadataSuggestions
                   token='09b36502f2fd994fb02fcd541c18b4cbffe47f99'
                   onSelect={suggestion => setGeo2(suggestion.data.region)}
                   placeholder={'Дополнительный регион'}
                   onChange={suggestion => console.log(suggestion)}
-            />
+              />
           </div>
         </div>
       </div>

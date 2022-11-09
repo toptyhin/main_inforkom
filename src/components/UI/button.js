@@ -1,30 +1,57 @@
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 const Button = ( props ) => {
   const text = props.children;
   const theme = props.theme;
+  const type = props.type;
   let style = {};
   style = {
-    fontFamily: "myriadpro-regular",
-    cursor: "pointer",
-    fontSize: "13pt",
-    height: "40px",
-    borderRadius: "7px",
-    color: "white",
-    cursor: "pointer",
+    fontFamily: 'myriadpro-regular',
+    cursor: 'pointer',
+    fontSize: '13pt',
+    height: '40px',
+    borderRadius: '7px',
+    color: 'white',
+    cursor: 'pointer',
     background: 'linear-gradient(to bottom, #76bf71, #21832e)',
   };
-  if (theme=="grey") {
+  if (theme=='grey') {
     style = {
-      color: "grey",
-      borderRadius: "7px",
-      fontFamily: "myriadpro-regular",
-      width: "100%",
-      height: "100%",
-      textTransform: "uppercase",
-      cursor:"pointer",
+      color: 'grey',
+      borderRadius: '7px',
+      fontFamily: 'myriadpro-regular',
+      width: '100%',
+      height: '100%',
+      textTransform: 'uppercase',
+      cursor:'pointer',
     }
-  }
+  };
+  if (theme=='calc') {
+    style = {
+      width: '100%',
+      height: '5vw',
+      color: 'white',
+      fontSize: '2vw',
+      borderRadius: '1.3vw',
+      marginTop: '6vw',
+      fontFamily: 'myriadpro-regular',
+      backgroundColor: '#73aa37',
+      textTransform: 'uppercase',
+      cursor:'pointer',
+    }
+  };
+  if (theme=='map') {
+    style = {
+      height: '54px',
+      color: 'white',
+      fontSize: '16px',
+      borderRadius: 0,
+      fontFamily: 'montserrat-regular',
+      backgroundColor: '#d27a33',
+      textTransform: 'uppercase',
+      cursor:'pointer',
+    }
+  };
   if (props.width) {
     style.width = props.width;
   }
@@ -35,7 +62,7 @@ const Button = ( props ) => {
     style.marginTop = props.marginTop;
   }
   return (
-    <button type="button" style={style}>
+    <button type={type} style={style}>
       {text}
     </button>
   );
