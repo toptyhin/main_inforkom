@@ -1,7 +1,7 @@
 const MapPoint = () => {
     return (
       <div>
-        <div className='point'>
+        <div className='map-point'>
           <div className='point-field'>
             <div className='point-red'>
               <p>20 км</p>
