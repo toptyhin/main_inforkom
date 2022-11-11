@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 import logo     from "./../../images/head.png";
 import MenuItem from './children/menuItem'
-
 import "./header.css";
+
 let style = {
   marginTop: "1.6vw",
 }
@@ -10,7 +10,7 @@ let style = {
 const Header = () => {
   return (
   <nav className="menu">
-    <ul className="w-100 flex flex-space-b">
+    <ul className="menu-flex">
       <li>
         <Link to={`/`}>
           <img className="inforkom-logo" alt="ИНФОРКОМ" src={logo}/>

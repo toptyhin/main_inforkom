@@ -1,16 +1,20 @@
 import { Link } from "react-router-dom";
 
 const MenuItem = ( {mainHref, mainName, item} ) => {
-
-
   let itemArr = item.map(function(element, index) {
-       return <li><Link to={element[0]}>{element[1]}</Link></li>
+       return <li>
+                <Link to={element[0]}>{element[1]}</Link>
+                <hr className='dotted'/>
+              </li>
     });
 
   return (
     <li className="menu-text">
+      <div className='menu-decor'></div>
       <Link to={item[0][0]}>{mainName} &#9660;</Link>
-      <ul>{itemArr}</ul>
+      <ul>
+        {itemArr}
+      </ul>
     </li>
   );
 };

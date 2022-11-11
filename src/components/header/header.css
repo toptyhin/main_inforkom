@@ -1,25 +1,92 @@
 .menu {
   display: flex;
   justify-content: space-between;
-  padding-top: 2vw;
-  padding-bottom: 0.6vw;
   width: 87%;
+  height: 110px;
   margin-left: auto;
   margin-right: auto;
 }
+.menu-flex {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+.menu-decor {
+  width: calc(100% + 10px);
+  height: 4px;
+  margin-left: -5px;
+  margin-bottom: 45px;
+}
 .menu-text {
-  margin-top: 1.6vw;
+  margin-left: 0.7vw;
+  margin-right: 0.7vw;
+  font-size: 13px!important;
+  text-transform: uppercase;
+  font-family: montserrat-bold;
+}
+.menu ul {
+  z-index: 10;
+  padding:0;
+	margin:0;
+	list-style: none;
+	position: relative;
+}
+.menu ul ul {
+  display: none;
+	position: absolute;
+  width: 19vw;
+  background: rgba(26,29,35,0.98);
+  box-shadow: 0 3px 5px 0 rgb(0 0 0 / 20%);
+  margin-top: 45px;
+  margin-left: -5px;
+  border-top: 4px solid #d27a33;
+  padding: 15px;
+
+}
+.menu ul li:hover > ul {
+	display:inherit;
+}
+.menu ul ul li {
+	float: none;
+	display: list-item;
+	position: relative;
+  padding-top: 15px;
+  padding-left: 10px;
+
+}
+.menu ul ul li a {
+  color: #969ba2!important;
+}
+.menu a {
+  color: #4a4848;
+  text-decoration: none;
+}
+.menu ul li:hover .menu-decor {
+	background-color: #d27a33;
+}
+.menu ul li:hover > a {
+	color: #d27a33;
+}
+
+.menu ul ul li:hover {
+  background-color: #d27a33;
+}
+.menu ul ul li:hover > a {
+  color: white!important;
 }
 .gor-menu {
   display: none;
 }
-.menu a {
-  font-size: 1vw;
-  text-transform: uppercase;
+.dotted {
+  margin-top: 15px;
+  border-top: 1px dotted #4a4848;
+  padding: 0;
+	height: 0;
 }
 .inforkom-logo {
   height: 4vw;
-  margin-bottom: 0.5vw;
+  margin-top: 25px;
+  padding-right: 2.2vw;
 }
 @media (max-width: 1024px) {
   .menu a {

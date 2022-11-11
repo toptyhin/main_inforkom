@@ -30,39 +30,18 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-ul {
-  z-index: 10;
-  padding:0;
-	margin:0;
-	list-style: none;
-	position: relative;
-}
-ul ul {
-  display: none;
-	position: absolute;
-  background-color: white;
-  padding: 1vw;
-  width: 19vw;
-}
-ul li:hover > ul {
-	display:inherit;
-}
-ul ul li {
-	float:none;
-	display:list-item;
-	position: relative;
-  margin-top: 1vw;
-}
-a {
-  font-size: 1vw;
-  text-decoration: none;
-}
+
+
 h2 {
   font-size: 30px;
   text-align: left;
   line-height: 33px;
   text-transform: uppercase;
   margin: 0;
+}
+h3 {
+  font-size: 18px;
+  text-transform: uppercase;
 }
 h4 {
   font-size: 3.3vw;
@@ -75,6 +54,12 @@ h5 {
   margin: 0;
   font-size: 2.3vw;
   line-height: 2.4vw;
+}
+h6 {
+  font-size: 20px;
+  margin-top: 0;
+  margin-bottom: 20px;
+  line-height: 30px;
 }
 p {
   margin: 0;
@@ -117,7 +102,13 @@ hr {
 .h-100 {
   height: 100%;
 }
-
+.basic-page {
+  width: 70%;
+  margin-top: 60px;
+  margin-bottom: 120px;
+  margin-left: auto;
+  margin-right: auto;
+}
 .white {
   background-color: #ffffff!important;
 }

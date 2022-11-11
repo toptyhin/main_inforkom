@@ -1,0 +1,57 @@
+.footer {
+  background-color: #343d43;
+  color: #a7b0b7;
+  font-size: 14px;
+  padding-top: 40px;
+}
+.footer-block {
+    width: 65%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.about {
+  width: 40%;
+}
+.footer-part {
+  margin-right: 35px;
+  margin-bottom: 50px;
+}
+.footer p {
+  font-family: montserrat-regular;
+  line-height: 24px;
+}
+.footer-list {
+  margin-right: 45px;
+}
+.footer-list ul {
+  padding: 0;
+	margin: 0;
+	list-style: none;
+}
+.footer-list li {
+	margin-bottom: 10px;
+	list-style: none;
+}
+.footer-list a {
+  color: #a7b0b7;
+  text-decoration: none;
+  font-family: montserrat-regular;
+}
+.footer hr {
+  margin-top: 10px;
+  border-top: 1px dotted #4a4848;
+  padding: 0;
+	height: 0;
+}
+.house-icon {
+  width: 14px;
+}
+.footer-info p {
+  margin-bottom: 19px!important;
+}
+.footer-floor {
+
+  text-align: center;
+  width: 100%;
+  background: #30383E;
+}

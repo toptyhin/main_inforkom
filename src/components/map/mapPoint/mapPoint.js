@@ -10,7 +10,7 @@ const MapPoint = () => {
             <p className='point-p-extra'>text</p>
           </div>
           <div>
-            <p className='adress-p'>Адрес адрес адрес</p>
+            <p className='address-p'>Адрес адрес адрес</p>
           </div>
           <div className='flex flex-center'>
             <div className='tail'></div>
