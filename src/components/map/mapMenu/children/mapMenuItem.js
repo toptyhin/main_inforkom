@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState } from 'react';
 
 const MapMenuItem = ({children, img, whiteImg}) => {
   const [state, setState] = useState(true);

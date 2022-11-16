@@ -4,9 +4,9 @@ import * as echarts from 'echarts';
 
 const Charts = ({fuel, vat, discount, manage}) => {
   const priceDisplayconfig = {
-  style: "currency",
-  currency: "RUB",
-  currencyDisplay: "symbol",
+  style: 'currency',
+  currency: 'RUB',
+  currencyDisplay: 'symbol',
 };
 
 
@@ -47,10 +47,10 @@ const Charts = ({fuel, vat, discount, manage}) => {
       show: false
     },
     color: [
-      "#d2df97",
-      "#73aa37",
-      "#fbc91b",
-      "#FBA834"
+      '#d2df97',
+      '#73aa37',
+      '#fbc91b',
+      '#FBA834'
     ],
     data: [ { value: fuel, name: 'Расходы на топливо р/мес' },
             { value: vat,  name: ' НДС' },

@@ -1,0 +1,56 @@
+.side-area {
+  align-self: flex-start;
+  display: block;
+  margin-left: 30px;
+  margin-bottom: 30px;
+  text-align: center;
+  padding: 30px;
+  width: calc(26vw - 30px);
+  border-radius: 20px;
+}
+.side-menu {
+  text-align: left;
+}
+.side-area-extra {
+  padding: 1px 30px;
+}
+.side-area p {
+  font-family: myriadpro-semibold;
+    font-size: 20px;
+    line-height: 26px;
+}
+.side-area-red {
+  color: #d27a33;
+  font-size: 26px;
+}
+.side-area-red-big {
+  color: #d27a33;
+  font-size: 32px;
+}
+.side-area-info-block {
+  background-color: white;
+  border-radius: 20px;
+  padding: 20px;
+  margin: 30px 0;
+}
+.side-area ul {
+  padding: 0;
+	margin: 0;
+	list-style: none;
+}
+.side-area li {
+	margin-bottom: 10px;
+	list-style: none;
+}
+.side-area a {
+  color: #a7b0b7;
+  font-family: myriadpro-regular;
+  font-size: 16px;
+}
+.side-area hr {
+  margin-top: 10px;
+  border-top: 2px solid #a7b0b7;
+  padding: 0;
+	height: 0;
+  opacity: 18%;
+}

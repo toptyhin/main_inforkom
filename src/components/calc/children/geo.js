@@ -1,28 +1,27 @@
 import Input from './../../../components/UI/input/input'
-import DadataSuggestions from "react-dadata-suggestions";
-import "react-dadata-suggestions/dist/styles.css";
+import DadataSuggestions from 'react-dadata-suggestions';
+import 'react-dadata-suggestions/dist/styles.css';
 import { useState } from 'react';
 
 function Geo ({setGeo1, setGeo2, setReady}) {
   const [plus, setPlus] = useState(false);
   return (
     <div className='geo-zone radius-20 white'>
-      <h2>Регион <br className='geo-hide'/>перевозок</h2>
+      <h2>Регион перевозок</h2>
       <div className='search'>
         <div className='flex-search'>
           <div className='flex item inline-block w-100'>
             <DadataSuggestions
-                  className='field w-100'
                   token='09b36502f2fd994fb02fcd541c18b4cbffe47f99'
                   onSelect={suggestion => {setGeo1(suggestion.data.region); setReady(true)}}
                   placeholder={'Введите регион'}
                   onChange={suggestion => console.log(suggestion)}
             />
             <button id='geoplus' type='button' className='plus2' onClick={() => setPlus(true)}>+</button>
-            <div className="inline-block">
+            <div className='inline-block'>
             </div>
           </div>
-            <div className={plus ? "item field1" : "hidden"}>
+            <div className={plus ? 'item field1' : 'hidden'}>
               <DadataSuggestions
                   token='09b36502f2fd994fb02fcd541c18b4cbffe47f99'
                   onSelect={suggestion => setGeo2(suggestion.data.region)}

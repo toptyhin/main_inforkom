@@ -53,8 +53,8 @@ function FuelType(props) {
         aria-label='fueltype'
     >
         <ToggleButton value='dt' onClick={() => props.setFuelType('dt')}>ДТ</ToggleButton>
-        <ToggleButton value='petrol' onClick={() => props.setFuelType("petrol")}>Бензин</ToggleButton>
-        <ToggleButton value='gaz' onClick={() => props.setFuelType("gaz")}>Газ</ToggleButton>
+        <ToggleButton value='petrol' onClick={() => props.setFuelType('petrol')}>Бензин</ToggleButton>
+        <ToggleButton value='gaz' onClick={() => props.setFuelType('gaz')}>Газ</ToggleButton>
     </StyledToggleButtonGroup>
   );
 }

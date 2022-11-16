@@ -7,7 +7,7 @@ const Account = ( {} ) => {
   return (
     <div className="flex flex-col flex-space-b text-left radius-20 white order-account">
       <div className="flex flex-space-b account-flex">
-        <p>Личный <br className="acc-hide"/>кабинет</p>
+        <p>Личный кабинет</p>
         <div className="avatar-circle-parent">
           <div className="avatar-circle green-grad">
             <img className="invert avatar" src={Avatar}/>

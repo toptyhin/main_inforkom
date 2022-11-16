@@ -23,18 +23,17 @@
 .footer-list {
   margin-right: 45px;
 }
-.footer-list ul {
+.footer ul {
   padding: 0;
 	margin: 0;
 	list-style: none;
 }
-.footer-list li {
+.footer li {
 	margin-bottom: 10px;
 	list-style: none;
 }
 .footer-list a {
   color: #a7b0b7;
-  text-decoration: none;
   font-family: montserrat-regular;
 }
 .footer hr {

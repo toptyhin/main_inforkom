@@ -1,29 +1,29 @@
 import * as React from 'react';
 import Slider, { SliderThumb } from '@mui/material/Slider';
 import { styled } from '@mui/material/styles';
-import "./slider.css"
+import './slider.css'
 
 
 const Calc = styled(Slider)( ({ theme }) => ({
-  color: "#73aa37",
-  height: "16px",
+  color: '#73aa37',
+  height: '16px',
   borderRadius:4,
   boxShadow: `0px 0px 0px 0px!important`,
   padding: '2% 0!important',
   '&:focus, &.MuiSlider-dragging': {
-      color: "#FBA834",
+      color: '#FBA834',
       '& .MuiSlider-thumb': {
           boxShadow: `0 0 0 0`,},
       },
   '& .MuiSlider-thumb': {
       boxShadow: `0px 0px 0px 0px`,
-      height: "calc(2vw + 18px)",
-      width: "calc(2vw + 18px)",
+      height: 'calc(2vw + 18px)',
+      width: 'calc(2vw + 18px)',
       backgroundColor: '#fff',
       border: '4px solid currentColor',
       '&:hover, &.Mui-focusVisible': {boxShadow: `0 0 0 0`,},
       '&:focus,  &.MuiSlider-dragging': {
-          color: "#FBA834",
+          color: '#FBA834',
           boxShadow:
             '0 3px 1px rgba(0,0,0,0.1),0 4px 8px rgba(0,0,0,0.3),0 0 0 1px rgba(0, 0, 0,0.02)',
           // Reset on touch devices, it doesn't add specificity
@@ -84,9 +84,9 @@ function CalcSlider({setSlider, header, unit, marks, ariaLabel, defaultValue, mi
 
   return (
     <div>
-    <div className="CalcText">
-      <span className="flex-1 text-left">{header}</span>
-      <span className="CalcValue">{valueLabelFormat(value,unit)}</span>
+    <div className='CalcText'>
+      <span className='flex-1 text-left'>{header}</span>
+      <span className='CalcValue'>{valueLabelFormat(value,unit)}</span>
     </div>
     <Calc setSlider = {value}
           value = {value}

@@ -24,6 +24,9 @@
   min-height: 20vw;
   padding: 2vw 3vw 2vw 4vw;
 }
+.order-text {
+  width: 18vw;
+}
 .reg-form-field input {
   font-size: 1.3vw;
 }

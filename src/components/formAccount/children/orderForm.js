@@ -6,7 +6,7 @@ import Button     from './../../../components/UI/button'
 const OrderForm = ( {} ) => {
   return (
     <div className="flex flex-space-b text-left radius-20 white order-note">
-      <h2 className="order-text">Заказать <br/>топливную<br/>карту онлайн</h2>
+      <h2 className="order-text">Заказать топливную карту онлайн</h2>
       <form className="order-form">
         <div className="form-item"><FormSelect value={["юр лицо","вариант 1","вариант 2"]}
              text={["юр лицо","вариант 1","вариант 2"]}/></div>

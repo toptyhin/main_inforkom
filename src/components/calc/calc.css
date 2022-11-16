@@ -37,9 +37,10 @@
   height: 100%;
   border-radius: 7px;
   border: 0px;
+  text-align: center;
 }
 .suggestions-container {
-  height: 100%;
+  height: 3.2vw;
   width: 100%;
   text-align: center;
   border: 1px solid #eaedf0;
@@ -59,7 +60,6 @@
   width: 20%;
   text-align: center;
   margin-left: -20%;
-  margin-top: 1px;
   padding: 0.4vw;
 }
 input.field.alert {
@@ -79,6 +79,7 @@ input.field1 {
   font-size: 1.3vw;
   border-radius: 7px;
   height: 3.2vw;
+  margin-top: 2vw;
 }
 input.field2 {
   margin-top: 2vw;
@@ -90,7 +91,7 @@ input.field2 {
   background-color: rgba(234, 237, 240, var(--tw-bg-opacity));
   outline-color: rgba(128,128,128,0.54902);
   color: grey;
-  height: 48px;
+  height: 49px;
 }
 #geoplus[disabled] {
   box-shadow:none
@@ -108,7 +109,6 @@ input.field2 {
   flex-direction: column;
   justify-content: space-between;
   width: 23vw;
-  height: 8.5vw;
 }
 .calculate-slider {
   margin-top: 2vw;
@@ -118,9 +118,6 @@ input.field2 {
 }
 .item {
   flex-basis: 40%;
-}
-.geo-hide {
-  display: none;
 }
 .button-block {
   margin-top: 5vw;
@@ -350,9 +347,6 @@ input.field2 {
   }
   .geo-zone {
     padding: 8vw 0 11vw 0;
-  }
-  .geo-hide {
-    display: inherit;
   }
   .search {
     margin-top: 6vw;

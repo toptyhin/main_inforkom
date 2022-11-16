@@ -1,6 +1,6 @@
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 import FooterItem from './children/footerItem'
-import "./footer.css";
+import './footer.css';
 import House from './../../images/home.png'
 
 const Footer = () => {
@@ -21,10 +21,10 @@ const Footer = () => {
           </div>
           <div className='footer-part footer-list'>
             <h3>Топливные карты</h3>
-              <FooterItem item={[["","О компании"],
-                                 [`/map-stations/map-station`,"Сеть АЗС"],
-                                 ["","Цены на топливо"],
-                                 ["","Топливные карты"]]}/>
+              <FooterItem item={[['','О компании'],
+                                 [`/map-stations/map-station`,'Сеть АЗС'],
+                                 ['','Цены на топливо'],
+                                 ['','Топливные карты']]}/>
           </div>
           <div className='footer-part footer-info'>
             <h3>Адрес компании</h3>

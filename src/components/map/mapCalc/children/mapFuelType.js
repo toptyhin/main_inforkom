@@ -56,10 +56,10 @@ function MapFuelType(props) {
         aria-label='fuel'
       >
         <ToggleButton value='1' onClick={() => props.setFuel('1')}>1</ToggleButton>
-        <ToggleButton value='2' onClick={() => props.setFuel("2")}>2</ToggleButton>
-        <ToggleButton value='3' onClick={() => props.setFuel("3")}>3</ToggleButton>
-        <ToggleButton value='4' onClick={() => props.setFuel("4")}>4</ToggleButton>
-        <ToggleButton value='5+' onClick={() => props.setFuel("5+")}>5+</ToggleButton>
+        <ToggleButton value='2' onClick={() => props.setFuel('2')}>2</ToggleButton>
+        <ToggleButton value='3' onClick={() => props.setFuel('3')}>3</ToggleButton>
+        <ToggleButton value='4' onClick={() => props.setFuel('4')}>4</ToggleButton>
+        <ToggleButton value='5+' onClick={() => props.setFuel('5+')}>5+</ToggleButton>
       </StyledToggleButtonGroup>
      </div>
   );

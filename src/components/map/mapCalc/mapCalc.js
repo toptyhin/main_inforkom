@@ -1,7 +1,7 @@
 import Button from '../../UI/button';
 import MapCalcSlider from './children/mapSlider';
 import MapFuelType from './children/mapFuelType';
-import { useState } from "react";
+import { useState } from 'react';
 
 const MapCalc = () => {
   const [discountSlider, setDiscountSlider] = useState('9');

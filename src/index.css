@@ -90,6 +90,13 @@ hr {
 	border: none;
 	border-top: 2px solid #a1a1a1;
 }
+a {
+  text-decoration: none;
+}
+.text-area {
+  width: 87vw;
+}
+
 .text-left {
   text-align: left;
 }

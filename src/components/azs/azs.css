@@ -13,6 +13,7 @@
 .azs-head {
   display: flex;
   flex-direction: column;
+  width: 17vw;
 }
 .azs-p {
   font-size: 1.85vw;
@@ -46,9 +47,6 @@
   .azs-head {
     display: flex;
     flex-direction: column;
-  }
-  .azs-hide {
-    display: none;
   }
   .azs-p {
     font-size: 2.7vw;
@@ -91,9 +89,6 @@
   }
   .azs-button1 {
     display: inherit;
-  }
-  .azs-hide {
-    display: none;
   }
   .azs-p {
     font-size: 4.7vw;

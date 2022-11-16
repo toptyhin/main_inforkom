@@ -1,5 +1,4 @@
-import { useState } from "react";
-import CalcButton from './children/calcButton'
+import { useState } from 'react';
 import Geo from './children/geo'
 import Nds from './children/nds'
 import Res from './children/res'
@@ -8,7 +7,7 @@ import FuelType from './children/fuelType'
 import CalcSlider from './children/slider/slider'
 import Button     from './../../components/UI/button'
 
-import "./calc.css"
+import './calc.css'
 
 const marksFuel = [ {value: 1000}, {value: 1500}, {value: 2000}, {value: 2500},
                     {value: 3000}, {value: 3500}, {value: 4000}, {value: 4500},
@@ -79,20 +78,20 @@ const Calc = () => {
   const [manage, setManage] = useState(0);
   const [total, setTotal] = useState(0);
   return (
-    <div className="w-100">
-      <div id="calc-hide" className="back-grey">
-        <div className="pb-4">
-          <h4>Топливный <br className="calc-head"/>калькулятор</h4>
-          <p className="point f-grey show-text" onClick={() => setHidden(false)}>
+    <div className='w-100'>
+      <div id='calc-hide' className='back-grey'>
+        <div className='pb-4'>
+          <h4>Топливный калькулятор</h4>
+          <p className='point f-grey show-text' onClick={() => setHidden(false)}>
             &#9660; Рассчитайте экономию с топливной картой Инфорком &#9660;
           </p>
-          <p className="point f-grey calc-head">
+          <p className='point f-grey calc-head'>
             Рассчитайте экономию<br/>&#9660; с топливной картой Инфорком &#9660;
           </p>
         </div>
 
-        <div id="calc" className={isHidden ? "w-100 back-grey hidden" : "w-100 back-grey"}>
-          <div id="main-calc">
+        <div id='calc' className={isHidden ? 'w-100 back-grey hidden' : 'w-100 back-grey'}>
+          <div id='main-calc'>
             <Geo setGeo1={setGeo1} setGeo2={setGeo2} setReady={setReady}/>
             <FuelType setFuelType={setFuelType}/>
             <CalcSlider setSlider={setFuelSlider}
@@ -114,7 +113,9 @@ const Calc = () => {
                       defaultValue ='5'
                       valueLabelDisplay ='off'
                       />
-            <Nds setNds={setNds}/>
+            <div className='flex flex-center'>
+              <Nds setNds={setNds}/>
+            </div>
             <div onClick = {() => {setShow(read);
               Count(setFuel, setDiscount, setVat, setManage,
               setTotal, geo1, geo2, fuelType, fuelSlider, carSlider, nds)}}>
@@ -133,7 +134,7 @@ const Calc = () => {
                     <span className='label yellow'></span>Скидка на топливо
                     <span id='total_discount' className='amount'>{discount} &#8381;</span>
                   </span>
-                  <span className='legend_record mb-4 f-grey'>
+                  <span className={nds ? 'legend_record mb-4 f-grey' : 'hidden'}>
                     <span className='label green'></span>НДС 20%
                     <span id='total_vat' className='amount'>{vat} &#8381;</span>
                   </span>

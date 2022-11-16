@@ -51,6 +51,9 @@
   margin-left: 26%;
   width: 81%;
 }
+.big-box p {
+  width: 16vw;
+}
 @media (max-width: 881px) {
   .right-boxes {
     margin-left: 3.5vw;
@@ -72,9 +75,6 @@
     font-size: 2.4vw;
     margin-top: 13%;
     margin-left: 12%;
-  }
-  .br-hide {
-    display: none;
   }
 }
 @media (max-width: 768px) {
@@ -101,9 +101,6 @@
   }
   .box-note {
     margin-left: 5vw;
-  }
-  .br-hide {
-    display: inherit;
   }
   .agr {
     position: absolute;

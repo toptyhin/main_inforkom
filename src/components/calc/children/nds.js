@@ -7,7 +7,7 @@ import { styled } from '@mui/material/styles';
 const StyledToggleButtonGroup = styled(ToggleButtonGroup)(({ theme }) => ({
   backgroundColor:'white',
   borderRadius: '15px',
-  marginTop: "60px",
+  marginTop: '60px',
   height: '80px',
   width: '70%',
 
@@ -30,6 +30,7 @@ const StyledToggleButtonGroup = styled(ToggleButtonGroup)(({ theme }) => ({
     '&:last-of-type': {
         borderRadius: '0 15px 15px 0',
         width: '50%',
+        marginLeft: '1px',
     },
     '&:first-of-type': {
         borderRadius: '15px 0 0 15px',
@@ -51,7 +52,7 @@ function Nds(props) {
         value={value}
         exclusive
         onChange={handleChange}
-        aria-label="nds"
+        aria-label='nds'
         >
           <ToggleButton value='true' onClick={() => props.setNds(true)}>НДС</ToggleButton>
           <ToggleButton value='false' onClick={() => props.setNds(false)}>Без НДС</ToggleButton>

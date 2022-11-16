@@ -1,9 +1,62 @@
-.text-area {
-  width: 65%;
-}
-.text-area p {
+.text-area-p {
   font-family: myriadpro-regular;
   color: grey;
   font-size: 16px;
   line-height: 26px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+.text-area-p-first {
+  font-family: myriadpro-regular;
+  color: grey;
+  font-size: 16px;
+  line-height: 26px;
+  margin-top: 20px;
+}
+.text-area-p-middle {
+  font-family: myriadpro-regular;
+  color: grey;
+  font-size: 16px;
+  line-height: 26px;
+}
+.text-area-p-last {
+  font-family: myriadpro-regular;
+  color: grey;
+  font-size: 16px;
+  line-height: 26px;
+  margin-bottom: 20px;
+}
+.v-line-page {
+    border: .5px solid #d27a33;
+    border-width: 1.5px;
+    background-color: #d27a33;
+}
+.special-p {
+  font-family: myriadpro-regular;
+  font-size: 20px;
+  margin-left: 45px;
+  font-style: italic;
+  letter-spacing: 3px;
+  line-height: 31px;
+  color: grey;
+}
+.header-p {
+  font-family: myriadpro-semibold;
+  font-size: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  line-height: 30px;
+  color: #d27a33;
+}
+.list-p {
+  display: flex;
+  font-family: myriadpro-regular;
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: grey;
+}
+.list-point {
+  font-size: 30px;
+  margin-top: -11px;
+  padding-right: 10px;
 }

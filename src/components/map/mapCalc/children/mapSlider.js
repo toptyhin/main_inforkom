@@ -3,26 +3,26 @@ import Slider, { SliderThumb } from '@mui/material/Slider';
 import { styled } from '@mui/material/styles';
 
 const MapCalc = styled(Slider)( ({ theme }) => ({
-  color: "#73aa37",
-  height: "4px",
+  color: '#73aa37',
+  height: '4px',
   borderRadius:4,
   boxShadow: `0px 0px 0px 0px!important`,
   padding: '2% 0!important',
   marginTop: '10px',
   '&:focus, &.MuiSlider-dragging': {
-      color: "#FBA834",
+      color: '#FBA834',
       '& .MuiSlider-thumb': {
           boxShadow: `0 0 0 0`,},
       },
   '& .MuiSlider-thumb': {
       boxShadow: `0px 0px 0px 0px`,
-      height: "calc(1vw + 8px)",
-      width: "calc(1vw + 8px)",
+      height: 'calc(1vw + 8px)',
+      width: 'calc(1vw + 8px)',
       backgroundColor: '#fff',
       border: '4px solid currentColor',
       '&:hover, &.Mui-focusVisible': {boxShadow: `0 0 0 0`,},
       '&:focus,  &.MuiSlider-dragging': {
-          color: "#FBA834",
+          color: '#FBA834',
           boxShadow:
             '0 0 0 rgb(0,0,0),0 0 0 rgb(0,0,0),0 0 0 0 rgb(0, 0, 0)',
           // Reset on touch devices, it doesn't add specificity
@@ -77,7 +77,7 @@ function MapCalcSlider({setSlider, header, unit, marks, ariaLabel, getAriaLabel,
   }
   return (
     <div>
-    <div className="map-header">
+    <div className='map-header'>
       <span>{header}</span>
     </div>
     <MapCalc setSlider = {value}
@@ -93,7 +93,7 @@ function MapCalcSlider({setSlider, header, unit, marks, ariaLabel, getAriaLabel,
           valueLabelFormat = {valueLabelFormat}
           onChange = {handleChange}
     />
-    <span className="map-p">{valueLabelFormat(showValue,unit)}</span>
+    <span className='map-p'>{valueLabelFormat(showValue,unit)}</span>
     </div>
   );
 };
