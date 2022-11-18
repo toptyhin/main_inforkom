@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <div className='footer'>
       <div className='footer-block'>
-        <div className='flex'>
+        <div className='flex flex-space-b wrap'>
           <div className='footer-part about'>
             <h3>О нас</h3>
             <p>
@@ -16,7 +16,7 @@ const Footer = () => {
               решений для того, чтобы дать Вам возможность управлять затратами на топливо.
               <br/><br/>
               Мы всегда открыты для общения, для поиска компромиссов. Доверьте заправку
-              профессионалам. Для нас это не только бизнес, для нас это - жизнь.
+              профессионалам. Для нас это не только бизнес, для нас это – жизнь.
             </p>
           </div>
           <div className='footer-part footer-list'>
@@ -29,7 +29,7 @@ const Footer = () => {
           <div className='footer-part footer-info'>
             <h3>Адрес компании</h3>
             <p><img className='house-icon' src={House}/> 108851, РФ, г. Москва, г. Щербинка,
-               <br/> ул. Спортивная, дом 7</p>
+               ул. Спортивная, дом 7</p>
             <p>&#9742; +7 (495) 785-24-44</p>
             <p>&#9993; info@inforkom.ru</p>
           </div>

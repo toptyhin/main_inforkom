@@ -23,6 +23,7 @@
   font-size: 13px!important;
   text-transform: uppercase;
   font-family: montserrat-bold;
+  cursor: pointer;
 }
 .menu ul {
   z-index: 10;
@@ -46,32 +47,34 @@
 .menu ul li:hover > ul {
 	display:inherit;
 }
+.menu-show {
+	display:inherit!important;
+}
 .menu ul ul li {
 	float: none;
 	display: list-item;
 	position: relative;
   padding-top: 15px;
   padding-left: 10px;
-
 }
-.menu ul ul li a {
+.menu ul ul a li {
   color: #969ba2!important;
 }
-.menu a {
+.menu p {
   color: #4a4848;
   text-decoration: none;
 }
 .menu ul li:hover .menu-decor {
 	background-color: #d27a33;
 }
-.menu ul li:hover > a {
+.menu ul li:hover > p {
 	color: #d27a33;
 }
 
-.menu ul ul li:hover {
+.menu ul ul a li:hover {
   background-color: #d27a33;
 }
-.menu ul ul li:hover > a {
+.menu ul ul a li:hover  {
   color: white!important;
 }
 .gor-menu {
@@ -84,9 +87,23 @@
 	height: 0;
 }
 .inforkom-logo {
-  height: 4vw;
+  height: 60px;
   margin-top: 25px;
   padding-right: 2.2vw;
+}
+@media (max-width: 1108px) {
+  .inforkom-logo {
+    height: 52px;
+    margin-top: 22px;
+    padding-right: 2vw;
+  }
+  .menu {
+    width: 92%;
+    height: 96px;
+  }
+  .menu-decor {
+    margin-bottom: 36px;
+  }
 }
 @media (max-width: 1024px) {
   .menu a {
@@ -94,7 +111,7 @@
   }
 }
 @media (max-width: 768px) {
-  .menu a {
+  .menu-text {
     display: none;
   }
   .gor-menu {
@@ -102,27 +119,35 @@
     align-items: center;
   }
   .inforkom-logo {
-    height: 5vw;
+    height: 52px;
     margin-top: 2vw;
+    margin-left: 2vw;
   }
   .menu {
     padding-top: 0vw;
+    height: 82px;
   }
 }
 @media (max-width: 426px) {
   .inforkom-logo {
-    height: 8vw;
+    height: 46px;
     margin-top: 3vw;
     margin-bottom: 1vw;
+  }
+  .menu {
+    height: 72px;
   }
 }
 @media (max-width: 376px) {
   .inforkom-logo {
-    height: 10vw;
+    height: 50px;
   }
 }
 @media (max-width: 320px) {
   .inforkom-logo {
-    height: 12vw;
+    height: 42px;
+  }
+  .menu {
+    height: 67px;
   }
 }

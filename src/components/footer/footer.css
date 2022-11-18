@@ -5,7 +5,7 @@
   padding-top: 40px;
 }
 .footer-block {
-    width: 65%;
+    width: 78%;
     margin-left: auto;
     margin-right: auto;
 }
@@ -13,7 +13,7 @@
   width: 40%;
 }
 .footer-part {
-  margin-right: 35px;
+  margin-right: 22px;
   margin-bottom: 50px;
 }
 .footer p {
@@ -45,6 +45,9 @@
 .house-icon {
   width: 14px;
 }
+.footer-info {
+  width: 18.6vw;
+}
 .footer-info p {
   margin-bottom: 19px!important;
 }
@@ -53,4 +56,27 @@
   text-align: center;
   width: 100%;
   background: #30383E;
+}
+@media (max-width: 1100px) {
+  .about {
+    width: 29vw;
+  }
+}
+@media (max-width: 1024px) {
+  .footer-list {
+    width: 14vw;
+  }
+}
+@media (max-width: 768px) {
+  .about {
+    width: 70vw;
+  }
+  .footer-list, .footer-info  {
+    width: 32vw;
+  }
+}
+@media (max-width: 500px) {
+  .footer-list, .footer-info {
+    width: 70vw;
+  }
 }

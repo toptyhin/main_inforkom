@@ -16,7 +16,7 @@ const Header = () => {
           <img className='inforkom-logo' alt='ИНФОРКОМ' src={logo}/>
         </Link>
       </li>
-      <MenuItem mainHref='' mainName='О компании'
+      <MenuItem mainName='О компании'
         item={[[`/about/news`,'Новости компании'],
                [`/about/history`,'История'],
                [`/about/social`,'Социальная ответственность'],
