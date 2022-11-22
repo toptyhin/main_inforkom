@@ -120,10 +120,13 @@
     display: none;
   }
   .gor-menu {
+    font-size: 20px;
     display: flex;
     align-items: center;
   }
+  .gor-menu-text {
 
+  }
   .gor-menu-text:hover > ul {
    display: block;
    left: auto;
@@ -133,7 +136,7 @@
   .gor-submenu {
     display: none;
   }
-  .menu-list-item:hover > .gor-submenu {
+  .menu-list-item-main:hover > .gor-submenu {
     display: inherit;
   }
   .menu-list {
@@ -146,8 +149,18 @@
     border-top: none;
     padding: 15px;
   }
-  .menu-list-item:hover {
+  .menu-list-item {
+  	font-size: 18px;
+  }
+  .menu-list-item-main:hover {
   	border-top: 3px solid #d27a33;
+    background: none;
+    color: #d27a33;
+  }
+  .menu-list-item-main a {
+    font-size: 18px;
+  }
+  .menu-list-item:hover {
     background: none;
   }
   .inforkom-logo {

@@ -1,23 +1,24 @@
 import { useState } from 'react';
+import { Link } from "react-router-dom";
 
-const MobMenu = ( {mainHref, mainName, item} ) => {
+const MobMenu = ( {mainName, item} ) => {
   let itemArr = item.map(function(element, index) {
-       return <li className='menu-list-item'>
-                <a>{element}</a>
-                <div className='gor-submenu'>
-                  <a>1</a>
-                </div>
-                <hr className='dotted'/>
-              </li>
+      return (
+        <Link to={element[0]}>
+          <li className='menu-list-item'>
+            {element[1]}
+            <hr className='dotted'/>
+          </li>
+        </Link>
+       )
     });
 
   return (
-    <li className='gor-menu-text'>
-    <ul className='menu-list flex'>
-      {itemArr}
-    </ul>
-      <p>{mainName}</p>
-
+    <li className='menu-list-item-main'>
+       <a>{mainName}</a>
+       <div className='gor-submenu'>
+         {itemArr}
+       </div>
     </li>
   );
 };
