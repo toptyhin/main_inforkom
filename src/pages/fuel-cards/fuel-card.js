@@ -5,6 +5,7 @@ import TextAreaList    from '../../components/basicPage/textArea/textAreaList'
 import TextAreaSpecial from '../../components/basicPage/textArea/textAreaSpecial'
 
 import SideAreaMenu       from '../../components/basicPage/sideArea/sideAreaMenu'
+import SideAreaImg        from '../../components/basicPage/sideArea/sideAreaImg'
 import SideArea           from '../../components/basicPage/sideArea/sideArea'
 import SideAreaInfo       from '../../components/basicPage/sideArea/sideAreaInfo'
 import SideAreaWithButton from '../../components/basicPage/sideArea/sideAreaWithButton'
@@ -12,13 +13,22 @@ import SideAreaWithButton from '../../components/basicPage/sideArea/sideAreaWith
 import PageHeader from '../../components/basicPage/pageHeader/pageHeader'
 import Button     from '../../components/UI/button'
 import LittleBox  from '../../components/home/boxes/children/littleBox'
-import Tatneft    from '../../images/box-tatneft.png'
+
+
+import Regions     from './../../images/box-regions.png'
+import Gasprom     from './../../images/box-gasprom.png'
+import Tatneft     from './../../images/box-tatneft.png'
+import IntNational from './../../images/box-international.png'
+import Max         from './../../images/box-max.png'
+import Universal   from './../../images/box-universal.png'
+import Agregator   from './../../images/box-agregator.png'
+import Moscow      from './../../images/box-moscow.png'
 
 const FuelCard = () => {
   return (
     <div>
-      <PageHeader head='Топливные карты'/>
-      <div className='basic-page flex'>
+      <PageHeader head='Топливные карты' imgs={Regions}/>
+      <div className='basic-page flex wrap'>
         <div className='text-area'>
           <TextAreaHead children='Топливная карта «ИНФОРКОМ»' />
           <TextAreaSpecial children='Топливная карта – незаменимый инструмент в
@@ -103,7 +113,7 @@ const FuelCard = () => {
               документов для уменьшения налоговых платежей. Отсутствие задержек
               в выставлении отчетных документов.' />
         </div>
-        <div>
+        <div className='s-a-width'>
           <SideAreaWithButton head='Подберём тариф для вас и бесплатно доставим
             карты' button='Начать' width='200px'/>
 
@@ -111,9 +121,15 @@ const FuelCard = () => {
           <SideAreaInfo item={[['10 000 АЗС','по всей Европе'],
             ['7 стран','широкая география работы'],
             [['0₽'],'сервисный сбор']]}/>
-          <SideAreaMenu head='О компании' item={[[`/about/news`,'Новости компании'],
-            [`/about/social`,'Социальная ответственность'],
-            [`/about/projects`,'Наши проекты']]}/>
+
+          <SideAreaImg item={[Regions,Gasprom,Tatneft, IntNational, Max, Universal, Agregator, Moscow ]} pic_heigth='170px' width='80px' margin='0 0px 0 -39px'/>
+          <SideAreaMenu head='А также:' item={[[`fuel-cards/oil-talons`,'Топливные талоны'],
+                 [`fuel-cards/dkv-fuel-cards`,'Топливная карта DKV'],
+                 [`fuel-cards/card-euroshell`,'Карта Euroshell'],
+                 [`fuel-cards/com-proposal`,'Коммерческое предложение'],
+                 [`fuel-cards/operation-online`,'Онлайн-управление картой'],
+                 [`fuel-cards/44-fz-goszakazy`,'Поставки топлива по 44-ФЗ']
+          ]}/>
         </div>
       </div>
     </div>

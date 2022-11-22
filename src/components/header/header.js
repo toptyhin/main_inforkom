@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import logo     from './../../images/head.png';
 import MenuItem from './children/menuItem'
+import MobMenu from './children/mobMenu'
 import './header.css';
 
 let style = {
@@ -9,7 +10,8 @@ let style = {
 
 const Header = () => {
   return (
-  <nav className='menu'>
+    <div className='menu'>
+  <nav>
     <ul className='menu-flex'>
       <li>
         <Link to={`/`}>
@@ -22,7 +24,7 @@ const Header = () => {
                [`/about/social`,'Социальная ответственность'],
                [`/about/projects`,'Наши проекты']]}/>
 
-      <MenuItem mainHref='' mainName='Тарифы'
+      <MenuItem mainName='Тарифы'
         item={[[`tarify/tatneft`,'Тариф Татнефть'],
                [`tarify/gazprom`,'Тариф Газпром'],
                [`tarify/max`,'Тариф Максимальный'],
@@ -30,7 +32,7 @@ const Header = () => {
                [`tarify/svoi-region`,'Тариф Все регионы'],
                [`tarify/agregator`,'Тариф Агрегатор']]}/>
 
-      <MenuItem mainHref='' mainName='Топливные карты'
+      <MenuItem mainName='Топливные карты'
         item={[[`fuel-cards/fuel-card`,'Топливная карта'],
                [`fuel-cards/oil-talons`,'Топливные талоны'],
                [`fuel-cards/dkv-fuel-cards`,'Топливная карта DKV'],
@@ -39,26 +41,31 @@ const Header = () => {
                [`fuel-cards/operation-online`,'Онлайн-управление картой'],
                [`fuel-cards/44-fz-goszakazy`,'Поставки топлива по 44-ФЗ']]}/>
 
-      <MenuItem mainHref='' mainName='Сеть АЗС'
+      <MenuItem mainName='Сеть АЗС'
         item={[[`/map-stations/map-station`,'Сеть АЗС Инфорком'],
-               [``,'Проложить маршрут'],
-               [``,'Мобильное приложение'],
-               [``,'АЗС с Adblue'],
-               [``,'Изменения АЗС'],
-               [``,'Предложения для АЗС']]}/>
+               [`/map-stations/mobile`,'Мобильное приложение'],
+               [`/map-stations/adblue`,'АЗС с Adblue'],
+               [`/map-stations/azs-changes`,'Изменения АЗС'],
+               [`/map-stations/proposal-for-petrol`,'Предложения для АЗС']]}/>
 
-      <MenuItem mainHref='' mainName='Топливо'
-        item={[[``,'Цены на топливо'],
-               [``,'Топливо оптом'],
-               [``,'Мобильная АЗС'],
-               [``,'Моторные масла']]}/>
+      <MenuItem mainName='Топливо'
+        item={[[`/fuel-prices-interactive-map/fuel-prices`,'Цены на топливо'],
+               [`/fuel-prices-interactive-map/special-offer`,'Топливо оптом'],
+               [`/fuel-prices-interactive-map/mobile-azs`,'Мобильная АЗС'],
+               [`/fuel-prices-interactive-map/motor-oil`,'Моторные масла']]}/>
 
-      <MenuItem mainHref='' mainName={['Контакты']}
-        item={[[``,'Контактная информация'],
-               [``,'Вакансии']]}/>
+      <MenuItem mainName={['Контакты']}
+        item={[[`/contacts/contacts`,'Контактная информация'],
+               [`/contacts/jobs`,'Вакансии']]}/>
     </ul>
-    <div className='gor-menu'>&#9776;</div>
-  </nav>
+</nav>
+    <nav className='gor-menu'>
+      <ul className='menu-flex'>
+        <MobMenu mainName='☰' item={['О компании', 'Тарифы','Топливные карты',
+          'Сеть АЗС','Топливо','Контакты']}/>
+      </ul>
+    </nav>
+  </div>
   );
 };
 

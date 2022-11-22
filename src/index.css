@@ -94,7 +94,7 @@ a {
   text-decoration: none;
 }
 .text-area {
-  width: 87vw;
+  width: 62%;
 }
 
 .text-left {
@@ -244,6 +244,9 @@ text-transform: uppercase;
     font-size: 29px;
     line-height: 29px;
   }
+  .basic-page {
+    width: 90%;
+  }
 }
 @media (max-width: 1050px) {
   h2 {
@@ -262,6 +265,7 @@ text-transform: uppercase;
     font-size: 27px;
     line-height: 29px;
   }
+
 }
 @media (max-width: 900px) {
   h2 {
@@ -289,6 +293,9 @@ text-transform: uppercase;
   }
   hr {
     width: 94%;
+  }
+  .text-area {
+    width: 100%;
   }
 }
 @media (max-width: 320px) {

@@ -18,7 +18,7 @@ const OilTalons = () => {
   return (
     <div>
       <PageHeader head='Топливные талоны'/>
-      <div className='basic-page flex'>
+      <div className='basic-page flex wrap'>
         <div className='text-area'>
           <TextAreaHead children='Электронные топливные талоны' />
           <TextAreaSpecial children='Электронный топливный талон – это одноразовая карта
@@ -43,7 +43,7 @@ const OilTalons = () => {
             и подходит для решения типовых задач, но может бесконечно варьироваться
             для решения сложных и нестандартных ситуаций.' />
         </div>
-        <div>
+        <div  className='s-a-width'>
           <SideAreaWithButton head='Универсальное решение для всех'
             button='Коммерческое предложение'/>
 

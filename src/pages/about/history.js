@@ -11,7 +11,7 @@ const History = () => {
     return (
       <div>
         <PageHeader head='О компании'/>
-        <div className='basic-page flex'>
+        <div className='basic-page flex wrap'>
         <div className='text-area'>
           <TextAreaHead children='История компании «Инфорком»' />
 
@@ -38,7 +38,7 @@ const History = () => {
             дистрибьютор таких мировых компаний как euroShell и DKV в РФ.'/>
 
         </div>
-        <div>
+        <div  className='s-a-width'>
         <SideAreaMenu head='О компании' item={[[`/about/news`,'Новости компании'],
                                        [`/about/social`,'Социальная ответственность'],
                                        [`/about/projects`,'Наши проекты']]}/>

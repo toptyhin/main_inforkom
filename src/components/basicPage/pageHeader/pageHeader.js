@@ -2,7 +2,7 @@ import Landscape from './../../../images/pages/landscape.png'
 import Blackout from './../../../images/pages/blackout.png'
 import './pageHeader.css'
 
-const PageHeader = ({head, children}) => {
+const PageHeader = ({head, children, imgs}) => {
   return (
     <div className='page'>
       <img className='page-back' src={Landscape}/>

@@ -1,11 +1,14 @@
+.s-a-width {
+  width: calc(40% - 30px);
+}
 .side-area {
   align-self: flex-start;
   display: block;
   margin-left: 30px;
   margin-bottom: 30px;
   text-align: center;
+  width: 100%;
   padding: 30px;
-  width: calc(26vw - 30px);
   border-radius: 20px;
 }
 .side-menu {
@@ -29,7 +32,7 @@
 }
 .side-area-info-block {
   background-color: white;
-  border-radius: 20px;
+  border-radius: 15px;
   padding: 20px;
   margin: 30px 0;
 }
@@ -53,4 +56,12 @@
   padding: 0;
 	height: 0;
   opacity: 18%;
+}
+@media (max-width: 500px) {
+  .s-a-width {
+    width:100%;
+  }
+  .side-area {
+    margin-left: 0px;
+  }
 }

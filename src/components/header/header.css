@@ -1,15 +1,30 @@
 .menu {
   display: flex;
   justify-content: space-between;
-  width: 87%;
+  width: 90%;
   height: 110px;
   margin-left: auto;
-  margin-right: auto;
 }
 .menu-flex {
   display: flex;
   width: 100%;
   height: 100%;
+  z-index: 10;
+  padding:0;
+	margin:0;
+	position: relative;
+}
+.gor-menu-flex {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  padding:0;
+	margin:0;
+	position: relative;
+}
+.menu ul {
+  list-style: none;
 }
 .menu-decor {
   width: calc(100% + 10px);
@@ -25,14 +40,10 @@
   font-family: montserrat-bold;
   cursor: pointer;
 }
-.menu ul {
-  z-index: 10;
-  padding:0;
-	margin:0;
-	list-style: none;
-	position: relative;
+.mob-menu-text {
+  display: none;
 }
-.menu ul ul {
+.menu-list {
   display: none;
 	position: absolute;
   width: 19vw;
@@ -42,39 +53,33 @@
   margin-left: -5px;
   border-top: 4px solid #d27a33;
   padding: 15px;
-
 }
-.menu ul li:hover > ul {
+.menu-text:hover > ul {
 	display:inherit;
 }
 .menu-show {
 	display:inherit!important;
 }
-.menu ul ul li {
+.menu-list-item {
 	float: none;
 	display: list-item;
 	position: relative;
   padding-top: 15px;
   padding-left: 10px;
-}
-.menu ul ul a li {
   color: #969ba2!important;
 }
 .menu p {
   color: #4a4848;
   text-decoration: none;
 }
-.menu ul li:hover .menu-decor {
+.menu-text:hover .menu-decor {
 	background-color: #d27a33;
 }
-.menu ul li:hover > p {
+.menu-text:hover > p {
 	color: #d27a33;
 }
-
-.menu ul ul a li:hover {
+.menu-list-item:hover {
   background-color: #d27a33;
-}
-.menu ul ul a li:hover  {
   color: white!important;
 }
 .gor-menu {
@@ -98,7 +103,7 @@
     padding-right: 2vw;
   }
   .menu {
-    width: 92%;
+    width: 95%;
     height: 96px;
   }
   .menu-decor {
@@ -117,6 +122,33 @@
   .gor-menu {
     display: flex;
     align-items: center;
+  }
+
+  .gor-menu-text:hover > ul {
+   display: block;
+   left: auto;
+   right: 0;
+   position: absolute;
+  }
+  .gor-submenu {
+    display: none;
+  }
+  .menu-list-item:hover > .gor-submenu {
+    display: inherit;
+  }
+  .menu-list {
+    display:none;
+
+    width: 40vw;
+    background: rgba(26,29,35,0.98);
+    box-shadow: 0 3px 5px 0 rgb(0 0 0 / 20%);
+    margin-top: 0px;
+    border-top: none;
+    padding: 15px;
+  }
+  .menu-list-item:hover {
+  	border-top: 3px solid #d27a33;
+    background: none;
   }
   .inforkom-logo {
     height: 52px;

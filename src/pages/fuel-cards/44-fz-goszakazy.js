@@ -5,6 +5,7 @@ import TextAreaList    from '../../components/basicPage/textArea/textAreaList'
 import TextAreaSpecial from '../../components/basicPage/textArea/textAreaSpecial'
 
 import SideAreaMenu       from '../../components/basicPage/sideArea/sideAreaMenu'
+import SideAreaImg        from '../../components/basicPage/sideArea/sideAreaImg'
 import SideArea           from '../../components/basicPage/sideArea/sideArea'
 import SideAreaInfo       from '../../components/basicPage/sideArea/sideAreaInfo'
 import SideAreaWithButton from '../../components/basicPage/sideArea/sideAreaWithButton'
@@ -14,11 +15,16 @@ import Button     from '../../components/UI/button'
 import LittleBox  from '../../components/home/boxes/children/littleBox'
 import Tatneft    from '../../images/box-tatneft.png'
 
+import edt   from './../../images/logos/logo-edt.png'
+import mmvb  from './../../images/logos/logo-mmvb.png'
+import rts   from './../../images/logos/logo-rts.png'
+import sbact from './../../images/logos/logo-sbact.png'
+
 const Goszakaz = () => {
   return (
     <div>
       <PageHeader head='Госзаказ'/>
-      <div className='basic-page flex'>
+      <div className='basic-page flex wrap'>
         <div className='text-area'>
         <TextAreaHead children='Госзаказы' />
           <TextAreaText children='Топливная компания «ИНФОРКОМ» – с 1991 года
@@ -71,10 +77,12 @@ const Goszakaz = () => {
           <TextAreaText children='Коллектив компании «ИНФОРКОМ» – команда
             профессионалов. Каждый клиент сопровождается персональным менеджером,
             что позволяет в кратчайшие сроки прийти к наилучшему результату.' />
-
         </div>
-        <div>
-          <SideArea head='Контактный телефон:' text='+7 (495) 781-4444 доб. 4260: Сорокин Владимир Владимирович'/>
+        <div  className='s-a-width'>
+          <SideArea head='Контактный телефон:'
+            text='+7 (495) 781-4444 доб. 4260: Сорокин Владимир Владимирович'/>
+
+          <SideAreaImg item={[sbact, edt, mmvb, rts, ]} />
 
           <SideAreaMenu head='О компании' item={[[`/about/news`,'Новости компании'],
             [`/about/social`,'Социальная ответственность'],

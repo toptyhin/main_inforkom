@@ -31,7 +31,7 @@ const Azs = () => {
           </div>
           <div>
             <div>
-              <p className='green-p'>10 000 АЗС (460) брендов</p>
+              <p className='green-p'>10 000 АЗС (460 брендов)</p>
             </div>
             <div className='flex azs-pics'>
               <img className='azs-pic' src={GasBash} alt=''/>

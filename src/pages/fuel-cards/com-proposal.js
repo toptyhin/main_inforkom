@@ -5,6 +5,7 @@ import TextAreaList    from '../../components/basicPage/textArea/textAreaList'
 import TextAreaSpecial from '../../components/basicPage/textArea/textAreaSpecial'
 
 import SideAreaMenu       from '../../components/basicPage/sideArea/sideAreaMenu'
+import SideAreaImg        from '../../components/basicPage/sideArea/sideAreaImg'
 import SideArea           from '../../components/basicPage/sideArea/sideArea'
 import SideAreaInfo       from '../../components/basicPage/sideArea/sideAreaInfo'
 import SideAreaWithButton from '../../components/basicPage/sideArea/sideAreaWithButton'
@@ -14,11 +15,21 @@ import Button     from '../../components/UI/button'
 import LittleBox  from '../../components/home/boxes/children/littleBox'
 import Tatneft    from '../../images/box-tatneft.png'
 
+import gasprom    from './../../images/logos/m-logo-gasprom.png'
+import nm         from './../../images/logos/m-logo-nm.png'
+import lukoil     from './../../images/logos/m-logo-lukoil.png'
+import rosneft    from './../../images/logos/m-logo-rosneft.png'
+import bashneft   from './../../images/logos/m-logo-bashneft.png'
+import surgut     from './../../images/logos/m-logo-surgut.png'
+import tatneft    from './../../images/logos/m-logo-tatneft.png'
+import ptk        from './../../images/logos/m-logo-ptk.png'
+import tes        from './../../images/logos/m-logo-tes.png'
+
 const ComProposal = () => {
   return (
     <div>
       <PageHeader head='Коммерческое предложение'/>
-      <div className='basic-page flex'>
+      <div className='basic-page flex wrap'>
         <div className='text-area'>
         <TextAreaHead children='Коммерческое предложение' />
           <TextAreaSpecial children='Компания «ИНФОРКОМ» предлагает заправку
@@ -77,13 +88,16 @@ const ComProposal = () => {
             На часть АЗС сети «ИНФОРКОМ» мы поставляем собственное топливо качества
             ГОСТ с МНПЗ.' />
         </div>
-        <div>
+        <div  className='s-a-width'>
           <SideAreaInfo item={[['10 000 АЗС','по всей Европе'],
              ['7 стран','широкая география работы'],
              [['24/7'],'техническая помощь на дорогах']]}/>
 
           <SideAreaWithButton head='Коммерческое предложение'
              button='Скачать' width='200px'/>
+
+          <SideAreaImg head='Наши партнеры' item={[gasprom, tatneft, ptk, lukoil, rosneft,
+            bashneft, surgut, tes, nm,]} padding='0 10px'/>
 
           <SideAreaMenu head='О компании' item={[[`/about/news`,'Новости компании'],
             [`/about/social`,'Социальная ответственность'],
