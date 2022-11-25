@@ -10,35 +10,42 @@
   align-items: center;
   height: 100%;
   color: #ffffff;
-  width: 21vw;
+  width: 24vw;
 }
-.green-zone img {
+.green-img {
   position: sticky;
+  top:0;
+  left:0;
 }
 .gp {
+  position: absolute;
   width: 8vw;
-  margin-top: 1vw;
-  margin-left: 3vw;
+  top: 1vw;
+  left: 3vw;
 }
 .nm {
+  position: absolute;
   width: 7vw;
-  margin-top: -2vw;
-  margin-left: 12vw;
+  top: 4vw;
+  left: 12vw;
 }
 .rn {
+  position: absolute;
   width: 9vw;
-  margin-top: -9vw;
-  margin-left: 21vw;
+  top: 2vw;
+  left: 21vw;
 }
 .tn {
+  position: absolute;
   width: 11vw;
-  margin-top: 2vw;
-  margin-right: 15vw;
+  top: 6vw;
+  right: 3vw;
 }
 .bn {
+  position: absolute;
   width: 8vw;
-  margin-top: -1vw;
-  margin-left: 13vw;
+  top: 2vw;
+  right: 18vw;
 }
 @media (max-width: 1027px) {
   .green-zone {
@@ -64,24 +71,24 @@
     width: 10vw;
   }
   .nm {
-    width: 9vw;
-    margin-top: -3.5vw;
-    margin-left: 13vw;
+    width: 8vw;
+    top: 4.5vw;
+    left: 12vw;
   }
   .rn {
-    width: 11vw;
-    margin-top: -11vw;
-    margin-left: 23vw;
+    width: 10vw;
+    top: 2vw;
+    left: 20vw;
   }
   .tn {
     width: 13vw;
-    margin-top: 2vw;
-    margin-right: 13vw;
+    top: 8vw;
+    right: 3vw;
   }
   .bn {
     width: 10vw;
-    margin-top: -1vw;
-    margin-left: 12vw;
+    top: 2vw;
+    right: 19vw;
   }
 }
 @media (max-width: 560px) {
@@ -98,28 +105,28 @@
   }
   .gp {
     width: 14vw;
-    margin-top: 1vw;
-    margin-left: 3vw;
+    top: 1vw;
+    left: 3vw;
   }
   .nm {
     width: 11vw;
-    margin-top: -5.5vw;
-    margin-left: 18vw;
+    top: 4.5vw;
+    left: 16vw;
   }
   .rn {
     width: 14vw;
-    margin-top: -4vw;
-    margin-left: 5vw;
+    top: 11vw;
+    left: 3vw;
   }
   .tn {
     width: 17vw;
-    margin-top: 2vw;
-    margin-right: 8vw;
+    top: 14vw;
+    right: 4vw;
   }
   .bn {
     width: 13vw;
-    margin-top: 3vw;
-    margin-left: 6vw;
+    top: 3vw;
+    right: 13vw;
   }
 }
 @media (max-width: 320px) {
@@ -129,28 +136,28 @@
     width: 34vw;
   }
   .gp {
-    width: 17vw;
-    margin-top: 17vw;
-    margin-left: 3vw;
+    width: 16vw;
+    top: 17vw;
+    left: 3vw;
   }
   .nm {
-    width: 13vw;
-    margin-top: -20.5vw;
-    margin-left: 16vw;
+    width: 12vw;
+    top: 8.5vw;
+    left: 13vw;
   }
   .rn {
-    width: 16vw;
-    margin-top: -18vw;
-    margin-left: 1vw;
+    width: 14vw;
+    top: 2vw;
+    left: 2vw;
   }
   .tn {
     width: 19vw;
-    margin-top: 3vw;
-    margin-right: 3vw;
+    top: 17vw;
+    right: 4vw;
   }
   .bn {
     width: 16vw;
-    margin-top: 3vw;
-    margin-left: 2vw;
+    top: 4vw;
+    right: 5vw;
   }
 }

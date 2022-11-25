@@ -1,25 +1,45 @@
 import { useState } from 'react';
 import { Link } from "react-router-dom";
+import ClickAwayListener from 'react-click-away-listener';
 
-const MobMenu = ( {mainName, item} ) => {
+const MobMenu = ( {mainName, item, setPopup} ) => {
+  const [submenu, setSubmenu] = useState(false);
+  let style1 = {
+    height: '0px',
+    transitionProperty: 'height',
+    transitionDuration: '1s',
+    overflow:'hidden',
+  }
+  let style2 = {
+    transitionProperty: 'height',
+    transitionDuration: '1s',
+    overflow:'hidden',
+  }
+  const count = item.length * 37.4;
+  style2.height = count;
   let itemArr = item.map(function(element, index) {
       return (
-        <Link to={element[0]}>
-          <li className='menu-list-item'>
+        <li className='menu-list-item' onClick={() => {setPopup(false)}}>
+          <Link to={element[0]}>
             {element[1]}
-            <hr className='dotted'/>
-          </li>
-        </Link>
+          </Link>
+        </li>
        )
     });
 
   return (
-    <li className='menu-list-item-main'>
-       <a>{mainName}</a>
-       <div className='gor-submenu'>
-         {itemArr}
-       </div>
-    </li>
+    <ClickAwayListener onClickAway={() => {setSubmenu(false)}}>
+      <li className={submenu ? 'menu-list-item-main mob-menu-a' : 'mob-menu-a'}
+          onTouchEnd={() => setSubmenu(true)} onClick={() => setSubmenu(true)}>
+        <div>
+          <a>{mainName}</a>
+        </div>
+        <div style={submenu ? style2 : style1}>
+          {itemArr}
+        </div>
+        <hr className='dotted'/>
+      </li>
+    </ClickAwayListener>
   );
 };
 

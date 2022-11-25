@@ -93,6 +93,7 @@ hr {
 a {
   text-decoration: none;
 }
+
 .text-area {
   width: 62%;
 }
@@ -155,7 +156,9 @@ a {
 .z-2 {
   z-index: 2;
 }
-
+.back-white {
+  background-color: white;
+}
 .back-grey {
   background-color: #eaedf0;
 }

@@ -1,6 +1,6 @@
 import { gql }    from '@apollo/client'
 import {useQuery} from '@apollo/client';
-import Slider from 'react-slick';
+import Slider     from 'react-slick';
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import BgCity      from './../../../images/background-city.png'
@@ -40,9 +40,9 @@ function Banner() {
     autoplaySpeed: 4500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    //pauseOnFocus: false,
+    pauseOnFocus: true,
     draggable: false,
-    //pauseOnHover: false,
+    pauseOnHover: true,
     appendDots: dots => (
       <div>
         <ul className='dots'> {dots} </ul>
@@ -52,54 +52,54 @@ function Banner() {
 
 if(error) return `Oops there has been an error: ${error}`
   return (
-   <div>
-    <Slider {...settings}>
-      <section className='city'>
-        <img className='city-back' alt='' src={BgCity} />
-        <img className='city-back-light' alt='' src={BgCityAdd} />
-        <div className='city-img0'>
-          <img className='gt-l-f' alt='' src={TankerFaded} />
-          <img className='gt-l' alt='' src={TankerLeft} />
-          <img className='m' alt='' src={Man} />
-        </div>
-        <h5>{b1}</h5>
-      </section>
+    <div>
+      <Slider {...settings}>
+        <section className='city'>
+          <img className='city-back' alt='' src={BgCity} />
+          <img className='city-back-light' alt='' src={BgCityAdd} />
+          <div className='city-img0'>
+            <img className='gt-l-f' alt='' src={TankerFaded} />
+            <img className='gt-l' alt='' src={TankerLeft} />
+            <img className='m' alt='' src={Man} />
+          </div>
+          <h5>{b1}</h5>
+        </section>
 
-      <section className='city'>
-        <img className='city-back' alt='' src={BgCity} />
-        <img className='city-back-light' alt='' src={BgCityAdd} />
-        <img className='city-back-light opacity' alt='' src={BgCityAdd} />
-        <div class='city-img1'>
-          <img class='pc-m' alt='' src={Pcmap}/>
-        </div>
-        <h5>{b2}</h5>
-      </section>
+        <section className='city'>
+          <img className='city-back' alt='' src={BgCity} />
+          <img className='city-back-light' alt='' src={BgCityAdd} />
+          <img className='city-back-light opacity' alt='' src={BgCityAdd} />
+          <div class='city-img1'>
+            <img class='pc-m' alt='' src={Pcmap}/>
+          </div>
+          <h5>{b2}</h5>
+        </section>
 
-      <section className='city'>
-        <img className='city-back' alt='' src={BgCity} />
-        <img className='city-back-light' alt='' src={BgCityAdd} />
-        <img className='city-back-light opacity' alt='' src={BgCityAdd} />
-        <div class='city-img2'>
-          <img class='cars-img' alt='' src={Cars}/>
-        </div>
-        <h5>{b3}</h5>
-      </section>
+        <section className='city'>
+          <img className='city-back' alt='' src={BgCity} />
+          <img className='city-back-light' alt='' src={BgCityAdd} />
+          <img className='city-back-light opacity' alt='' src={BgCityAdd} />
+          <div class='city-img1'>
+            <img class='cars-img' alt='' src={Cars}/>
+          </div>
+          <h5>{b3}</h5>
+        </section>
 
-      <section className='city'>
-        <img className='city-back' alt='' src={BgCity} />
-        <img className='city-back-light' alt='' src={BgCityAdd} />
-        <img className='city-back-light opacity' alt='' src={BgCityAdd} />
-        <div class='city-img3'>
-          <img class='gt-r' alt='' src={TankerRight}/>
-          <img class='card-img' alt='' src={Card}/>
-        </div>
-        <div class='flex city-bold-text'>
-          <div class='bold-text'>31 год</div>
-          <p class='city-p'>мы заправляем<br/>на дорогах</p>
-        </div>
-        <h5>{b4}</h5>
-      </section>
-    </Slider>
+        <section className='city'>
+          <img className='city-back' alt='' src={BgCity} />
+          <img className='city-back-light' alt='' src={BgCityAdd} />
+          <img className='city-back-light opacity' alt='' src={BgCityAdd} />
+          <div class='city-img1'>
+            <img class='gt-r' alt='' src={TankerRight}/>
+            <img class='card-img' alt='' src={Card}/>
+          </div>
+          <div class='flex city-bold-text'>
+            <div class='bold-text'>31 год</div>
+            <p class='city-p'>мы заправляем<br/>на дорогах</p>
+          </div>
+          <h5>{b4}</h5>
+        </section>
+      </Slider>
     </div>
   );
 }

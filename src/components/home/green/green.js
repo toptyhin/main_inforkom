@@ -10,7 +10,7 @@ const Green = () => {
     <div className='main'>
       <section id='green'>
         <div className=' flex flex-space-b green-zone green-grad w-100 radius-20'>
-          <div>
+          <div className='green-img'>
             <div className='gp'>
               <img className='w-100' alt='газпром' src={LGasprom}/>
             </div>
@@ -22,12 +22,12 @@ const Green = () => {
             </div>
           </div>
           <h2>10 000 АЗС со скидкой от 2% до 9%</h2>
-          <div>
-            <div className='tn'>
-              <img className='w-100' alt='татнефть' src={LTatneft}/>
-            </div>
+          <div className='green-img'>
             <div className='bn'>
               <img className='w-100' alt='башнефть' src={LBashneft}/>
+            </div>
+            <div className='tn'>
+              <img className='w-100' alt='татнефть' src={LTatneft}/>
             </div>
           </div>
         </div>

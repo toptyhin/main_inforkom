@@ -1,20 +1,8 @@
 const LittleBox = ( {img, alt} ) => {
-  let box = {
-    overflow: 'hidden',
-    width: '28.5%',
-    position: 'relative',
-    borderRadius: '2vw',
-    backgroundColor: '#eaedf0',
-    cursor: 'pointer',
-  }
-  let littleBox = {
-    marginLeft: '20%',
-    marginTop: '20%',
-    width: '89%',
-  }
+
   return (
-    <div style={box}>
-      <img style={littleBox} alt={alt} src={img}/>
+    <div className='box'>
+      <img className='littleBox' alt={alt} src={img}/>
     </div>
   );
 };

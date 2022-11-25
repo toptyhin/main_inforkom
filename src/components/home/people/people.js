@@ -22,18 +22,7 @@ const People = () => {
 const {data, error, loading} = useQuery(GET_TEST)
 console.log(data);
   return (
-
     <div className='main'>
-    <ul>
-    {data?.banners.data.map(({attributes}) =>
-    <li>
-      <Link to={`/banners/${attributes.name}`}>
-        {attributes.name}</Link>
-        </li>)}
-    </ul>
-
-
-
       <section id='people'>
         <h2 className='head-people'>Топливные карты для юридических лиц</h2>
         <div className='tablePeople'>

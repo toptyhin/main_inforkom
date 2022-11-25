@@ -1,3 +1,9 @@
+.menu-parent {
+  background: white;
+  position: sticky;
+  top:0;
+  z-index: 100;
+}
 .menu {
   display: flex;
   justify-content: space-between;
@@ -9,16 +15,6 @@
   display: flex;
   width: 100%;
   height: 100%;
-  z-index: 10;
-  padding:0;
-	margin:0;
-	position: relative;
-}
-.gor-menu-flex {
-  display: flex;
-  width: 100%;
-  height: 100%;
-  z-index: 10;
   padding:0;
 	margin:0;
 	position: relative;
@@ -40,9 +36,6 @@
   font-family: montserrat-bold;
   cursor: pointer;
 }
-.mob-menu-text {
-  display: none;
-}
 .menu-list {
   display: none;
 	position: absolute;
@@ -53,14 +46,20 @@
   margin-left: -5px;
   border-top: 4px solid #d27a33;
   padding: 15px;
+  z-index: 200;
 }
 .menu-text:hover > ul {
 	display:inherit;
 }
-.menu-show {
-	display:inherit!important;
+.menu-list-item-big {
+	float: none;
+	display: list-item;
+	position: relative;
+  padding-top: 15px;
+  padding-left: 10px;
+  color: #969ba2!important;
 }
-.menu-list-item {
+.menu-list-item a {
 	float: none;
 	display: list-item;
 	position: relative;
@@ -82,7 +81,16 @@
   background-color: #d27a33;
   color: white!important;
 }
-.gor-menu {
+.cross {
+  display: inline-block;
+  position: absolute;
+  right: 15px;
+  top: 5px;
+  font-size: 30px;
+  font-style: normal;
+  font-family: myriadpro-regular;
+}
+.mob-menu-button {
   display: none;
 }
 .dotted {
@@ -109,69 +117,94 @@
   .menu-decor {
     margin-bottom: 36px;
   }
+  .menu-list {
+    margin-top: 40px;
+  }
 }
 @media (max-width: 1024px) {
   .menu a {
     font-size: 1.1vw;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 962px) {
+  .menu-list {
+    margin-top: 24px;
+  }
+}
+@media (max-width: 870px) {
+
+  .menu {
+    padding-top: 0vw;
+    height: 82px;
+  }
   .menu-text {
     display: none;
   }
-  .gor-menu {
-    font-size: 20px;
-    display: flex;
-    align-items: center;
-  }
-  .gor-menu-text {
-
-  }
-  .gor-menu-text:hover > ul {
-   display: block;
-   left: auto;
-   right: 0;
-   position: absolute;
-  }
-  .gor-submenu {
-    display: none;
-  }
-  .menu-list-item-main:hover > .gor-submenu {
-    display: inherit;
-  }
   .menu-list {
-    display:none;
-
-    width: 40vw;
-    background: rgba(26,29,35,0.98);
+    overflow: scroll;
+    position: fixed;
+    display: block;
+    height: 100vh;
+    width: 335px;
+    right: 0;
+    left: auto;
+    top: 0;
+    background: rgba(255,255,255,0.96);
     box-shadow: 0 3px 5px 0 rgb(0 0 0 / 20%);
     margin-top: 0px;
     border-top: none;
-    padding: 15px;
+    padding: 1px 15px 5px 15px;
+
   }
   .menu-list-item {
   	font-size: 18px;
   }
-  .menu-list-item-main:hover {
+  .menu-list-item-main {
   	border-top: 3px solid #d27a33;
+    padding-top: 10px;
+    margin-top: -1px!important;
     background: none;
     color: #d27a33;
   }
-  .menu-list-item-main a {
+  .mob-menu-a {
+    margin-top: 15px;
+  }
+  .mob-menu-a a {
     font-size: 18px;
   }
   .menu-list-item:hover {
     background: none;
+    color: #969ba2!important;
+  }
+  .menu-list-item:active {
+    color: #4a4848!important;
   }
   .inforkom-logo {
     height: 52px;
     margin-top: 2vw;
     margin-left: 2vw;
   }
-  .menu {
-    padding-top: 0vw;
-    height: 82px;
+  .mob-menu-button {
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
   }
+  .mob-menu-button:hover ~ body {
+    overflow: hidden;
+  }
+  .overlay {
+    display: block;
+    position: fixed;
+    top: 0;
+    bottom:0;
+    width: calc(100vw - 335px);
+    left: 0;
+    background: rgba(0,0,0,0.4);
+  }
+  .mob-submenu.hover {
+    display: inherit;
+  }
+
 }
 @media (max-width: 426px) {
   .inforkom-logo {
@@ -194,5 +227,9 @@
   }
   .menu {
     height: 67px;
+  }
+  .menu-list {
+    width: 328px;
+    padding-right: 10px;
   }
 }
