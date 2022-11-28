@@ -2,6 +2,20 @@
   padding-bottom: 80px;
   margin-top: -4vw;
 }
+.calc {
+  animation: appearing 0.5s;
+}
+@keyframes appearing {
+  0% {
+    display: none;
+    transform: scaleY(0);
+  }
+  100% {
+    display: inherit;
+    transform: scaleY(1);
+    transform-origin: top;
+  }
+}
 .calc-head {
   display: none;
 }

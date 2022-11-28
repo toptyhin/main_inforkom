@@ -15,17 +15,10 @@ const Button = ( props ) => {
     cursor: 'pointer',
     background: 'linear-gradient(to bottom, #76bf71, #21832e)',
   };
-  if (theme=='grey') {
-    style = {
-      color: 'grey',
-      borderRadius: '7px',
-      fontFamily: 'myriadpro-regular',
-      width: '100%',
-      height: '100%',
-      textTransform: 'uppercase',
-      cursor:'pointer',
-    }
-  };
+  if (theme=='unactive') {
+    style.color = 'grey';
+    style.background='#f0f0f0';
+  }
   if (theme=='calc') {
     style = {
       width: '100%',

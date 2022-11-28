@@ -87,7 +87,7 @@ const Calc = () => {
           </p>
         </div>
 
-        <div id='calc' className={isHidden ? 'w-100 back-grey hidden' : 'w-100 back-grey'}>
+        <div id='calc' className={isHidden ? 'w-100 back-grey hidden' : 'w-100 calc back-grey'}>
           <div id='main-calc'>
             <Geo setGeo1={setGeo1} setGeo2={setGeo2} setReady={setReady}/>
             <FuelType setFuelType={setFuelType}/>

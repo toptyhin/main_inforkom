@@ -14,9 +14,11 @@ const MenuItem = ( {mainName, item} ) => {
 
   return (
     <li className='menu-text'>
-      <div className='menu-decor'></div>
+      <div className='menu-decor-block'>
+        <div className='menu-decor'></div>
+      </div>
       <p>{mainName} &#9660;</p>
-      <ul className='menu-list'>
+      <ul className='menu-list-big'>
         {itemArr}
       </ul>
     </li>

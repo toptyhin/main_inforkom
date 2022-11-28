@@ -11,7 +11,7 @@ const OrderForm = () => {
              text={["юр лицо","вариант 1","вариант 2"]}/></div>
         <div className="form-item"><Input plus="plus1" name="phone" text="телефон" textAdd="+7"/></div>
         <div className="form-item"><Input plus="plus2" name="ИНН" text="ИНН"/></div>
-        <div className="form-item"><Button width="100%" height="100%" children="Оформить" theme="grey"/></div>
+        <div className="form-item"><Button width="100%" children="Оформить" theme="unactive"/></div>
       </form>
     </div>
   );
