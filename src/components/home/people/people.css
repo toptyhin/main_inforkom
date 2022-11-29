@@ -42,6 +42,15 @@
 .head-people {
   width: 29vw;
 }
+@media (min-width: 1921px) {
+  .head-people {
+    width: 482px;
+  }
+  .people-back p {
+    font-size: 33px;
+    line-height: 35px;
+  }
+}
 @media (max-width: 1186px) {
   .head-people {
     width: 35vw;

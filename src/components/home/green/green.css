@@ -47,6 +47,43 @@
   top: 2vw;
   right: 18vw;
 }
+@media (min-width: 1921px) {
+  .green-zone {
+    height: 250px;
+    margin-top: 70px;
+    margin-bottom: 150px;
+  }
+  .green-zone h2 {
+    width: 500px;
+    font-size: 65px;
+    line-height: 65px;
+  }
+  .gp {
+    width: 160px;
+    top: 22px;
+    left: 38px;
+  }
+  .nm {
+    width: 140px;
+    top: 90px;
+    left: 180px;
+  }
+  .rn {
+    width: 160px;
+    top: 35px;
+    left: 325px;
+  }
+  .tn {
+    width: 240px;
+    top: 140px;
+    right: 240px;
+  }
+  .bn {
+    width: 170px;
+    top: 30px;
+    right: 45px;
+  }
+}
 @media (max-width: 1027px) {
   .green-zone {
     margin-top: 5vw;

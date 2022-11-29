@@ -1,22 +1,24 @@
 .menu-parent {
+  display: flex;
   background: white;
   position: sticky;
   top:0;
   z-index: 200;
+  justify-content: center;
 }
 .menu {
   display: flex;
   justify-content: space-between;
-  width: 90%;
+  width: 60%;
+  min-width: 1016px;
   height: 110px;
-  margin-left: auto;
 }
 .menu-flex {
   display: flex;
   width: 100%;
   height: 100%;
-  padding:0;
-	margin:0;
+  padding: 0;
+	margin: 0;
 	position: relative;
 }
 .menu ul {
@@ -142,6 +144,17 @@
   margin-top: 25px;
   padding-right: 2.2vw;
 }
+@media (min-width: 1921px) {
+  .inforkom-logo {
+    height: 75px;
+  }
+  .menu-text {
+    font-size: 18px!important;
+  }
+  .menu {
+    height: 115px;
+  }
+}
 @media (max-width: 1108px) {
   .inforkom-logo {
     height: 52px;
@@ -151,6 +164,7 @@
   .menu {
     width: 95%;
     height: 96px;
+    min-width: 0;
   }
   .menu-decor {
     margin-bottom: 36px;
