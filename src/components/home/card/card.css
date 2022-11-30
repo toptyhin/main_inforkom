@@ -18,6 +18,11 @@
   width: 48%;
   padding-right: 5vw;
 }
+@media (min-width: 1921px) {
+  .head-card {
+    width: 631px;
+  }
+}
 @media (max-width: 1027px) {
   .card {
     width: 45%;

@@ -1,9 +1,9 @@
 import { useState } from 'react';
-import Geo from        './children/geo'
-import Nds from        './children/nds'
-import Res from        './children/res'
-import Charts from     './children/charts'
-import FuelType from   './children/fuelType'
+import Geo        from './children/geo'
+import Nds        from './children/nds'
+import Res        from './children/res'
+import Charts     from './children/charts'
+import FuelType   from './children/fuelType'
 import CalcSlider from './children/slider/slider'
 import Button     from './../../../components/UI/button'
 import './calc.css'
@@ -118,12 +118,11 @@ const Calc = () => {
               setTotal, geo1, geo2, fuelType, fuelSlider, carSlider, nds)}}>
               <Button type='button'
                 children='Рассчитать экономию' theme='calc'/>
-
             </div>
+
             <div id='calcResult' className={show ? '' : 'hidden'}>
               <Charts fuel={fuel} vat={vat} discount={discount} manage={manage}/>
               <Res card={fuel} nocard={total}/>
-
               <div className='mt-20 pb-9'>
                 <div id='legend' className='flex flex-col xl:px-10'>
                   <span className='legend_record mb-4 f-green'>Экономия на топливе</span>

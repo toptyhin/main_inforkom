@@ -1,0 +1,53 @@
+.select {
+  padding-left: 1.2vw;
+  text-align: center;
+  border: 1px solid #eaedf0;
+  outline-color: rgba(128,128,128,0.54902);
+  color: grey;
+  border-radius: 7px;
+  font-family: myriadpro-regular;
+  width: 100%;
+  height: 100%;
+  background-color: #eaedf0;
+}
+.button {
+  font-family: myriadpro-regular;
+  height: 40px;
+  cursor: pointer;
+  font-size: 13pt;
+  border-radius: 7px;
+  color: white;
+  cursor: pointer;
+  background: linear-gradient(to bottom, #76bf71, #21832e);
+}
+.unactive {
+  color: grey;
+  background: #f0f0f0;
+}
+.calc-button {
+  width: 100%;
+  color: white;
+  font-size: 2vw;
+  border-radius: 1.3vw;
+  margin-top: 6vw;
+  font-family: myriadpro-regular;
+  background-color: #73aa37;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.map-button {
+  height: 54px;
+  color: white;
+  font-size: 16px;
+  border-radius: 0;
+  font-family: montserrat-regular;
+  background-color: #d27a33;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+@media (min-width: 1921px) {
+  .button {
+    height: 45px;
+    font-size: 20pt;
+  }
+}

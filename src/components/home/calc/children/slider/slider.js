@@ -60,6 +60,15 @@ const Calc = styled(Slider)( ({ theme }) => ({
           backgroundColor: 'currentColor',
       },
   },
+  '@media (min-width: 1921px)': {
+     height: '23px',
+     padding: '3% 0!important',
+     '& .MuiSlider-mark': {
+         marginTop: 23,
+         height: 17,
+         width: 2,
+     }
+  }
 }
 ));
 
@@ -76,18 +85,18 @@ function CalcSlider({setSlider, header, unit, marks, ariaLabel, defaultValue, mi
   const fuel = valueLabelFormat(value);
   const handleChange = (event, newValue) => {
     if (typeof newValue === 'number') {
-        setValue(newValue);
-        setSlider(newValue);
+      setValue(newValue);
+      setSlider(newValue);
     }
   };
 
   return (
     <div>
-    <div className='CalcText'>
-      <span className='flex-1 text-left'>{header}</span>
-      <span className='CalcValue'>{valueLabelFormat(value,unit)}</span>
-    </div>
-    <Calc setSlider = {value}
+      <div className='CalcText'>
+        <span className='flex-1 text-left'>{header}</span>
+        <span className='CalcValue'>{valueLabelFormat(value,unit)}</span>
+      </div>
+      <Calc setSlider = {value}
           value = {value}
           aria-label = {ariaLabel}
           marks = {marks}
@@ -98,7 +107,7 @@ function CalcSlider({setSlider, header, unit, marks, ariaLabel, defaultValue, mi
           getAriaValueText = {valueLabelFormat}
           valueLabelFormat = {valueLabelFormat}
           onChange = {handleChange}
-    />
+      />
     </div>
   );
 };

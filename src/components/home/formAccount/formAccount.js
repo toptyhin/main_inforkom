@@ -25,7 +25,6 @@ const FormAccount = () => {
               <img className='icons' alt='' src={Icon6}/>
             </div>
           </div>
-
         </div>
       </section>
     </div>

@@ -20,45 +20,45 @@ const Azs = () => {
       <div className='main'>
         <section id='azs' className='w-100'>
           <div className='flex azs-wrap flex-space-b'>
-          <div>
-            <div className='azs-head'>
-              <h2>Сеть АЗС Инфорком</h2>
-              <p className='azs-p'>по единой карте Инфорком по всей территории РФ.</p>
-            </div>
-            <div className='azs-button1'>
-              <Button type='button' width='222px' marginTop='3vw' children='Сеть АЗС'/>
-            </div>
-          </div>
-          <div>
             <div>
-              <p className='green-p'>10 000 АЗС (460 брендов)</p>
+              <div className='azs-head'>
+                <h2>Сеть АЗС Инфорком</h2>
+                <p className='azs-p'>по единой карте Инфорком по всей территории РФ.</p>
+              </div>
+              <div className='azs-button1'>
+                <Button type='button' width='222px' marginTop='3vw' children='Сеть АЗС'/>
+              </div>
             </div>
-            <div className='flex azs-pics'>
-              <img className='azs-pic' src={GasBash} alt=''/>
-              <img className='azs-pic' src={GasGasprom} alt=''/>
-              <img className='azs-pic' src={GasTat} alt=''/>
-              <img className='azs-pic' src={GasLukoil} alt=''/>
+            <div>
+              <div>
+                <p className='green-p'>10 000 АЗС (460 брендов)</p>
+              </div>
+              <div className='flex azs-pics'>
+                <img className='azs-pic' src={GasBash} alt=''/>
+                <img className='azs-pic' src={GasGasprom} alt=''/>
+                <img className='azs-pic' src={GasTat} alt=''/>
+                <img className='azs-pic' src={GasLukoil} alt=''/>
+              </div>
             </div>
           </div>
-        </div>
-        <div className='logos-change'>
-          <div className='logos-bottom'>
-            <img src={gasprom} alt='газпром'/>
-            <img src={nm} alt='нефть-магистраль'/>
-            <img src={lukoil} alt='лукойл'/>
-            <img src={rosneft} alt='роснефть'/>
-            <img src={bashneft} alt='башнефть'/>
-            <img src={surgut} alt='сургутнефтегаз'/>
-            <img src={tatneft} alt='tatneft'/>
-            <img src={ptk} alt='птк'/>
-            <img src={tes} alt='tes'/>
+          <div className='logos-change'>
+            <div className='logos-bottom'>
+              <img src={gasprom} alt='газпром'/>
+              <img src={nm} alt='нефть-магистраль'/>
+              <img src={lukoil} alt='лукойл'/>
+              <img src={rosneft} alt='роснефть'/>
+              <img src={bashneft} alt='башнефть'/>
+              <img src={surgut} alt='сургутнефтегаз'/>
+              <img src={tatneft} alt='tatneft'/>
+              <img src={ptk} alt='птк'/>
+              <img src={tes} alt='tes'/>
+            </div>
+            <div class='azs-button2'>
+              <Button width='222px' marginTop='3vw' children='Сеть АЗС'/>
+            </div>
           </div>
-          <div class='azs-button2'>
-            <Button width='222px' marginTop='3vw' children='Сеть АЗС'/>
-          </div>
-        </div>
-      </section>
-    </div>
+        </section>
+      </div>
     </div>
   );
 };

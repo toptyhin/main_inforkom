@@ -40,13 +40,8 @@ const item_fuel = [[`/fuel-prices-interactive-map/fuel-prices`,'Цены на т
 const item_contacts = [[`/contacts/contacts`,'Контактная информация'],
                       [`/contacts/jobs`,'Вакансии']];
 
-let style = {
-  marginTop: '1.6vw',
-}
-
 const Header = () => {
   const [popup, setPopup] = useState(false);
-  console.log (popup);
   return (
     <div className='menu-parent'>
       <div className='menu'>

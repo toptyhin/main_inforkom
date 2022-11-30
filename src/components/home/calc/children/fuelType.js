@@ -8,7 +8,6 @@ const StyledToggleButtonGroup = styled(ToggleButtonGroup)(({ theme }) => ({
   backgroundColor:'white',
   borderRadius: '15px',
   marginTop: '60px',
-  height: '80px',
 
   '& .MuiToggleButtonGroup-grouped': {
       fontSize: '3vw',
@@ -34,6 +33,12 @@ const StyledToggleButtonGroup = styled(ToggleButtonGroup)(({ theme }) => ({
           borderRadius: '15px 0 0 15px',
           minWidth: '15px',
       },
+      '@media (min-width: 1921px)': {
+         height: '100px',
+         '& .MuiToggleButtonGroup-grouped': {
+             fontSize: '70px',
+          }
+      },
   },
 }));
 
@@ -44,18 +49,15 @@ function FuelType(props) {
       setValue(newValue);
     }
   };
+
   return (
-    <StyledToggleButtonGroup
-        value={value}
-        fullWidth
-        exclusive
-        onChange={handleChange}
-        aria-label='fueltype'
-    >
-        <ToggleButton value='dt' onClick={() => props.setFuelType('dt')}>ДТ</ToggleButton>
-        <ToggleButton value='petrol' onClick={() => props.setFuelType('petrol')}>Бензин</ToggleButton>
-        <ToggleButton value='gaz' onClick={() => props.setFuelType('gaz')}>Газ</ToggleButton>
+    <StyledToggleButtonGroup value={value} fullWidth exclusive
+        onChange={handleChange} aria-label='fueltype'>
+      <ToggleButton value='dt' onClick={() => props.setFuelType('dt')}>ДТ</ToggleButton>
+      <ToggleButton value='petrol' onClick={() => props.setFuelType('petrol')}>Бензин</ToggleButton>
+      <ToggleButton value='gaz' onClick={() => props.setFuelType('gaz')}>Газ</ToggleButton>
     </StyledToggleButtonGroup>
   );
 }
+
 export default FuelType;

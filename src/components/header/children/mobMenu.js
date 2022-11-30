@@ -18,14 +18,14 @@ const MobMenu = ( {mainName, item, setPopup} ) => {
   const count = item.length * 37.4;
   style2.height = count;
   let itemArr = item.map(function(element, index) {
-      return (
-        <li className='menu-list-item' onClick={() => {setPopup(false)}}>
-          <Link to={element[0]}>
-            {element[1]}
-          </Link>
-        </li>
-       )
-    });
+    return (
+      <li className='menu-list-item' onClick={() => {setPopup(false)}}>
+        <Link to={element[0]}>
+          {element[1]}
+        </Link>
+      </li>
+    )
+  });
 
   return (
     <ClickAwayListener onClickAway={() => {setSubmenu(false)}}>

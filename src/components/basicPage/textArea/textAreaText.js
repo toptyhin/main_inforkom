@@ -12,10 +12,9 @@ const TextAreaText = ({theme, children}) => {
   if (theme=='last') {
     className = 'text-area-p-last'
   }
-    return (
-      <p className={className}>{children}</p>
+  return (
+    <p className={className}>{children}</p>
+  );
+}
 
-    );
-  }
-
-  export default TextAreaText;
+export default TextAreaText;

@@ -9,7 +9,7 @@
 .menu {
   display: flex;
   justify-content: space-between;
-  width: 60%;
+  width: 64%;
   min-width: 1016px;
   height: 110px;
 }

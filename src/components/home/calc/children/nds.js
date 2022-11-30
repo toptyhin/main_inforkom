@@ -8,7 +8,6 @@ const StyledToggleButtonGroup = styled(ToggleButtonGroup)(({ theme }) => ({
   backgroundColor:'white',
   borderRadius: '15px',
   marginTop: '60px',
-  height: '80px',
   width: '70%',
 
   '& .MuiToggleButtonGroup-grouped': {
@@ -37,6 +36,12 @@ const StyledToggleButtonGroup = styled(ToggleButtonGroup)(({ theme }) => ({
         width: '50%',
     },
   },
+  '@media (min-width: 1921px)': {
+     height: '100px',
+     '& .MuiToggleButtonGroup-grouped': {
+         fontSize: '70px',
+      }
+  },
 }));
 
 function Nds(props) {
@@ -48,15 +53,12 @@ function Nds(props) {
   };
 
   return (
-      <StyledToggleButtonGroup
-        value={value}
-        exclusive
-        onChange={handleChange}
-        aria-label='nds'
-        >
-          <ToggleButton value='true' onClick={() => props.setNds(true)}>НДС</ToggleButton>
-          <ToggleButton value='false' onClick={() => props.setNds(false)}>Без НДС</ToggleButton>
-      </StyledToggleButtonGroup>
+    <StyledToggleButtonGroup value={value} exclusive
+        onChange={handleChange} aria-label='nds' >
+      <ToggleButton value='true' onClick={() => props.setNds(true)}>НДС</ToggleButton>
+      <ToggleButton value='false' onClick={() => props.setNds(false)}>Без НДС</ToggleButton>
+    </StyledToggleButtonGroup>
   );
 }
+
 export default Nds;

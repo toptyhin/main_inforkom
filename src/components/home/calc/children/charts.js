@@ -4,7 +4,6 @@ import * as echarts from 'echarts';
 
 const Charts = ({fuel, vat, discount, manage}) => {
   const priceDisplayconfig = {
-  style: 'currency',
   currency: 'RUB',
   currencyDisplay: 'symbol',
 };
@@ -21,7 +20,7 @@ const Charts = ({fuel, vat, discount, manage}) => {
     type: 'pie',
     radius: ['80%', '90%'],
     avoidLabelOverlap: false,
-    height: '500',
+    height: '100%',
 
     itemStyle: {
       borderColor: '#eaedf0',
@@ -61,9 +60,7 @@ const Charts = ({fuel, vat, discount, manage}) => {
 
   return (
     <div>
-    <ReactECharts
-      option={chartOptions}
-    />
+      <ReactECharts option={chartOptions}/>
     </div>
   )
 };

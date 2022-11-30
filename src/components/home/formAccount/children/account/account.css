@@ -22,6 +22,16 @@
   line-height: 2.3vw;
   width: 11vw;
 }
+@media (min-width: 1921px) {
+  #card-order p {
+    font-size: 42px;
+    line-height: 46px;
+    width: 26px;
+  }
+  .order-account {
+    padding: 50px;
+  }
+}
 @media (max-width: 1027px) {
   #card-order p {
     width: 100%;

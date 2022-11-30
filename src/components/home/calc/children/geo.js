@@ -16,11 +16,10 @@ function Geo ({setGeo1, setGeo2, setReady}) {
                   placeholder={'Введите регион'}
                   onChange={suggestion => console.log(suggestion)}
             />
-            <button id='geoplus' type='button' className='plus2' onClick={() => setPlus(true)}>+</button>
-            <div className='inline-block'>
-            </div>
+            <button id='geoplus' type='button' height='100%' className='plus2' onClick={() => setPlus(true)}>+</button>
+            <div className='inline-block'></div>
           </div>
-            <div className={plus ? 'item field1' : 'hidden'}>
+          <div className={plus ? 'item field1' : 'hidden'}>
               <DadataSuggestions
                   token='09b36502f2fd994fb02fcd541c18b4cbffe47f99'
                   onSelect={suggestion => setGeo2(suggestion.data.region)}

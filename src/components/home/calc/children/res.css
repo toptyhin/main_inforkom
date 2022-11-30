@@ -15,6 +15,20 @@
 #total_fuel, #total_total {
   font-size: 30px;
 }
+@media (min-width: 1921px) {
+  .total-zone {
+    margin-top: 40px;
+    padding: 0 50px 50px 50px;
+  }
+  .total-zone h5 {
+    padding-top: 26px;
+    padding-bottom: 10px;
+    font-size: 36px;
+  }
+  #total_fuel, #total_total {
+    font-size: 40px;
+  }
+}
 @media (max-width: 426px) {
   .total-zone {
     padding-left: 21px;

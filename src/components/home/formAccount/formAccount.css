@@ -61,6 +61,18 @@
   .order-text {
     width: 360px;
   }
+  .order-note {
+    min-height: 350px;
+    padding: 35px 50px 35px 55px;
+  }
+  .order-form {
+    width: 360px;
+    height: 100%;
+    padding: 10px 0;
+  }
+  .form-item select, .form-item input {
+    font-size: 28px;
+  }
 }
 @media (max-width: 1300px) {
   .order-note {

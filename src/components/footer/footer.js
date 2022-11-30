@@ -21,15 +21,18 @@ const Footer = () => {
           </div>
           <div className='footer-part footer-list'>
             <h3>Топливные карты</h3>
-              <FooterItem item={[['','О компании'],
-                                 [`/map-stations/map-station`,'Сеть АЗС'],
-                                 ['','Цены на топливо'],
-                                 ['','Топливные карты']]}/>
+            <FooterItem item={[['','О компании'],
+                          [`/map-stations/map-station`,'Сеть АЗС'],
+                          ['','Цены на топливо'],
+                          ['','Топливные карты']]}/>
           </div>
           <div className='footer-part footer-info'>
             <h3>Адрес компании</h3>
-            <p><img className='house-icon' src={House}/> 108851, РФ, г. Москва, г. Щербинка,
-               ул. Спортивная, дом 7</p>
+            <p>
+              <img className='house-icon' src={House}/>
+                108851, РФ, г. Москва, г. Щербинка,
+                ул. Спортивная, дом 7
+            </p>
             <p>&#9742; +7 (495) 785-24-44</p>
             <p>&#9993; info@inforkom.ru</p>
           </div>
