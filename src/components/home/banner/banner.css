@@ -1,0 +1,236 @@
+.city {
+  height: 26vw;
+  max-height: 26vw;
+  width: 100%;
+  overflow: hidden;
+}
+.city h5 {
+  display: inline-block;
+  text-align: right;
+  position: sticky;
+  bottom: 10vw;
+  left: 9vw;
+  z-index: 2;
+  width: 36%;
+}
+.city-back {
+  min-width: 116%;
+  height: 100%;
+  margin-left: -6%;
+}
+.city-back-light {
+  position: sticky;
+  bottom: 0;
+  height: 150%;
+  min-width: 100%;
+  margin-left: -20vw;
+  margin-top: -5vw;
+  z-index: 1;
+}
+.city-img0 {
+  position: sticky;
+  left: 0;
+  bottom: 0;
+}
+.city-img1 {
+  position: sticky;
+  left: 0;
+  bottom: 0;
+  z-index: 2;
+}
+.gt-l-f {
+  position: absolute;
+  z-index: -1;
+  width: 27vw;
+  left: 19vw;
+  bottom: 3vw;
+}
+.gt-l {
+  position: absolute;
+  width: 45vw;
+  left: 44vw;
+  bottom: 3vw;
+}
+.m {
+  position: absolute;
+  width: 9.5vw;
+  left: 52.5vw;
+  bottom: 2vw;
+}
+.pc-m {
+  position: absolute;
+  width: 37vw;
+  left: 46vw;
+  bottom: 2vw;
+}
+.cars-img {
+  position: absolute;
+  width: 38vw;
+  left: 46vw;
+  bottom: 4vw;
+}
+.card-img {
+  position: absolute;
+  width: 26vw;
+  left: 47vw;
+  bottom: -5vw;
+}
+.gt-r {
+  position: absolute;
+  width: 37vw;
+  left: 61vw;
+  bottom: 4vw;
+}
+.city-bold-text {
+  position: sticky;
+  bottom: 5vw;
+  left: 18vw;
+  z-index: 2;
+}
+.city-p {
+  margin-top: 1.3vw;
+  margin-left: 1vw;
+  font-size: 1.5vw;
+}
+.bold-text {
+  font-size: 4vw;
+  background-image: linear-gradient(to bottom, #eeb35b, #972900);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.dots {
+  margin: calc(19px + 1.5vw);
+}
+
+@media (max-width: 1050px) {
+  .slick-dots li {
+    margin: 0 4px;
+  }
+}
+@media (max-width: 768px) {
+  .slick-dots li {
+    margin: 0 2px;
+  }
+}
+@media (max-width: 740px) {
+  .city {
+    height: 33vw;
+    max-height: 33vw;
+  }
+  .city h5 {
+    width: 43%;
+    font-size: 3.6vw;
+    line-height: 4.5vw;
+    bottom: 13vw;
+    left: 7vw;
+  }
+  .city-back {
+    margin-left: -25%;
+  }
+  .city-back-light {
+    margin-left: -32vw;
+  }
+  .gt-l-f {
+    width: 43vw;
+    bottom: 5vw;
+    left: 10vw;
+  }
+  .gt-l {
+    width: 77vw;
+    left: 48vw;
+    bottom: 2vw;
+  }
+  .m {
+    width: 15.5vw;
+    left: 63.5vw;
+    bottom: 1vw;
+  }
+  .pc-m {
+    width: 49vw;
+    left: 46vw;
+    bottom: 2vw;
+  }
+  .cars-img {
+    width: 62vw;
+    left: 49vw;
+    bottom: 3vw;
+  }
+  .card-img {
+    width: 41vw;
+    left: 55vw;
+    bottom: -9vw;
+  }
+  .city-bold-text {
+    bottom: 5vw;
+    left: 9.3vw;
+  }
+  .city-p {
+    font-size: 2.5vw;
+  }
+  .bold-text {
+    font-size: 6vw;
+  }
+  .dots {
+    margin: calc(19px + 2.5vw);
+  }
+  .slick-dots li {
+    margin: 0 1px;
+  }
+}
+@media (max-width: 500px) {
+  .city {
+    height: 42vw;
+    max-height: 42vw;
+  }
+  .city h5 {
+    font-size: 3.9vw;
+    bottom: 16vw;
+    margin-left: 6vw;
+    width: 47vw;
+  }
+  .city-img0 {
+    bottom: 5vw;
+  }
+  .city-img1 {
+    bottom: 5vw;
+    z-index: 0;
+}
+  .city-bold-text {
+    bottom: 8vw;
+    margin-left: 11.3vw;
+  }
+}
+@media (max-width: 320px) {
+  .city {
+    height: 48vw;
+    max-height: 48vw;
+  }
+  .city h5 {
+    font-size: 5.1vw;
+    line-height: 5.7vw;
+    bottom: 18vw;
+    margin-left: 8vw;
+    width: 60vw;
+  }
+
+  .pc-m {
+    width: 55vw;
+    margin-left: 43.3vw;
+  }
+  .cars-img {
+    width: 73vw;
+    margin-left: 43.5vw;
+  }
+  .city-bold-text {
+    margin-left: 21.3vw;
+  }
+  .city-p {
+    font-size: 2.9vw;
+  }
+  .bold-text {
+    font-size: 7.2vw;
+  }
+  .slick-dots li {
+    margin: 0 0.5px;
+  }
+}

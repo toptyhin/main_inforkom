@@ -1,0 +1,82 @@
+.footer {
+  background-color: #343d43;
+  color: #a7b0b7;
+  font-size: 14px;
+  padding-top: 40px;
+}
+.footer-block {
+    width: 78%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.about {
+  width: 40%;
+}
+.footer-part {
+  margin-right: 22px;
+  margin-bottom: 50px;
+}
+.footer p {
+  font-family: montserrat-regular;
+  line-height: 24px;
+}
+.footer-list {
+  margin-right: 45px;
+}
+.footer ul {
+  padding: 0;
+	margin: 0;
+	list-style: none;
+}
+.footer li {
+	margin-bottom: 10px;
+	list-style: none;
+}
+.footer-list a {
+  color: #a7b0b7;
+  font-family: montserrat-regular;
+}
+.footer hr {
+  margin-top: 10px;
+  border-top: 1px dotted #4a4848;
+  padding: 0;
+	height: 0;
+}
+.house-icon {
+  width: 14px;
+}
+.footer-info {
+  width: 18.6vw;
+}
+.footer-info p {
+  margin-bottom: 19px!important;
+}
+.footer-floor {
+
+  text-align: center;
+  width: 100%;
+  background: #30383E;
+}
+@media (max-width: 1100px) {
+  .about {
+    width: 29vw;
+  }
+}
+@media (max-width: 1024px) {
+  .footer-list {
+    width: 14vw;
+  }
+}
+@media (max-width: 768px) {
+  .about {
+    width: 70vw;
+  }
+  .footer-list, .footer-info  {
+    width: 32vw;
+  }
+}
+@media (max-width: 500px) {
+  .footer-list, .footer-info {
+    width: 70vw;
+  }
+}

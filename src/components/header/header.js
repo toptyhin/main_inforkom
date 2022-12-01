@@ -1,62 +1,83 @@
-import { Link } from "react-router-dom";
-import logo     from "./../../images/head.png";
+import { Link }          from 'react-router-dom';
+import { useState }      from 'react';
+import ClickAwayListener from 'react-click-away-listener';
+import logo     from './../../images/head.png';
 import MenuItem from './children/menuItem'
+import MobMenu  from './children/mobMenu'
+import './header.css';
 
-import "./header.css";
-let style = {
-  marginTop: "1.6vw",
-}
+const item_company = [[`/about/news`,'Новости компании'],
+       [`/about/history`,'История'],
+       [`/about/social`,'Социальная ответственность'],
+       [`/about/projects`,'Наши проекты']];
+
+const item_tarif = [[`tarify/tatneft`,'Тариф Татнефть'],
+       [`tarify/gazprom`,'Тариф Газпром'],
+       [`tarify/max`,'Тариф Максимальный'],
+       [`tarify/universalny`,'Тариф Универсальный'],
+       [`tarify/svoi-region`,'Тариф Все регионы'],
+       [`tarify/agregator`,'Тариф Агрегатор']];
+
+const item_cards = [[`fuel-cards/fuel-card`,'Топливная карта'],
+       [`fuel-cards/oil-talons`,'Топливные талоны'],
+       [`fuel-cards/dkv-fuel-cards`,'Топливная карта DKV'],
+       [`fuel-cards/card-euroshell`,'Карта Euroshell'],
+       [`fuel-cards/com-proposal`,'Коммерческое предложение'],
+       [`fuel-cards/operation-online`,'Онлайн-управление картой'],
+       [`fuel-cards/44-fz-goszakazy`,'Поставки топлива по 44-ФЗ']];
+
+const item_azs = [[`/map-stations/map-station`,'Сеть АЗС Инфорком'],
+       [`/map-stations/mobile`,'Мобильное приложение'],
+       [`/map-stations/adblue`,'АЗС с Adblue'],
+       [`/map-stations/azs-changes`,'Изменения АЗС'],
+       [`/map-stations/proposal-for-petrol`,'Предложения для АЗС']];
+
+const item_fuel = [[`/fuel-prices-interactive-map/fuel-prices`,'Цены на топливо'],
+       [`/fuel-prices-interactive-map/special-offer`,'Топливо оптом'],
+       [`/fuel-prices-interactive-map/mobile-azs`,'Мобильная АЗС'],
+       [`/fuel-prices-interactive-map/motor-oil`,'Моторные масла']];
+
+const item_contacts = [[`/contacts/contacts`,'Контактная информация'],
+                      [`/contacts/jobs`,'Вакансии']];
 
 const Header = () => {
+  const [popup, setPopup] = useState(false);
   return (
-  <nav className="menu">
-    <ul className="w-100 flex flex-space-b">
-      <li><img className="inforkom-logo" alt="ИНФОРКОМ" src={logo}/></li>
-      <MenuItem mainHref="" mainName="О компании"
-        item={[["","Новости компании"],
-               ["","История"],
-               ["","Социальная ответственность"],
-               ["","Наши проекты"]]}/>
-
-      <MenuItem mainHref="" mainName="Тарифы"
-        item={[["","Тариф Татнефть"],
-               ["","Тариф Газпром"],
-               ["","Тариф Максимальный"],
-               ["","Тариф Универсальный"],
-               ["","Тариф Все регионы"],
-               ["","Тариф Агрегатор"]]}/>
-
-      <MenuItem mainHref="" mainName="Топливные карты"
-        item={[["","Топливная карта"],
-               ["","Топливные талоны"],
-               ["","Топливная карта DKV"],
-               ["","Карта Euroshell"],
-               ["","Коммерческое предложение"],
-               ["","Онлайн-управление картой"],
-               ["","Поставки топлива по 44-ФЗ"]]}/>
-
-      <MenuItem mainHref="" mainName="Сеть АЗС"
-        item={[["","Сеть АЗС Инфорком"],
-               ["","Проложить маршрут"],
-               ["","Мобильное приложение"],
-               ["","АЗС с Adblue"],
-               ["","Изменения АЗС"],
-               ["","Предложения для АЗС"]]}/>
-
-      <MenuItem mainHref="" mainName="Топливо"
-        item={[["","Цены на топливо"],
-               ["","Топливо оптом"],
-               ["","Мобильная АЗС"],
-               ["","Моторные масла"]]}/>
-
-      <li className="menu-text"><a href="">Договор online</a></li>
-
-      <MenuItem mainHref="" mainName={["Контакты"]}
-        item={[["","Контактная информация"],
-               ["","Вакансии"]]}/>
-    </ul>
-    <div className="gor-menu">&#9776;</div>
-  </nav>
+    <div className='menu-parent'>
+      <div className='menu'>
+        <nav>
+          <ul className='menu-flex'>
+            <li>
+              <Link to={`/`}>
+                <img className='inforkom-logo' alt='ИНФОРКОМ' src={logo}/>
+              </Link>
+            </li>
+            <MenuItem mainName='О компании' item={item_company}/>
+            <MenuItem mainName='Тарифы' item={item_tarif}/>
+            <MenuItem mainName='Топливные карты' item={item_cards}/>
+            <MenuItem mainName='Сеть АЗС' item={item_azs}/>
+            <MenuItem mainName='Топливо' item={item_fuel}/>
+            <MenuItem mainName='Контакты' item={item_contacts}/>
+          </ul>
+        </nav>
+        <ClickAwayListener onClickAway={() => {setPopup(false)}}>
+          <div className='mob-menu-button' >
+            <p onClick={() => setPopup(true)}>☰</p>
+            <nav className={popup ? '':'hidden'}>
+              <ul className='menu-list flex'>
+                <div className='cross' onClick={() => setPopup(false)}>×</div>
+                <MobMenu mainName='О компании'      item={item_company}  setPopup={setPopup}/>
+                <MobMenu mainName='Тарифы'          item={item_tarif}    setPopup={setPopup}/>
+                <MobMenu mainName='Топливные карты' item={item_cards}    setPopup={setPopup}/>
+                <MobMenu mainName='Сеть АЗС'        item={item_azs}      setPopup={setPopup}/>
+                <MobMenu mainName='Контакты'        item={item_contacts} setPopup={setPopup}/>
+              </ul>
+            </nav>
+          </div>
+        </ClickAwayListener>
+      <div className={popup ? 'overlay':'hidden'}></div>
+    </div>
+  </div>
   );
 };
 

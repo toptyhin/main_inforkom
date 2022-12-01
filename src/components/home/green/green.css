@@ -1,0 +1,200 @@
+.green-zone {
+  height: 12vw;
+  margin-top: 4vw;
+  margin-bottom: 10vw;
+  overflow: hidden;
+}
+.green-zone h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: #ffffff;
+  width: 24vw;
+}
+.green-img {
+  position: sticky;
+  top:0;
+  left:0;
+}
+.gp {
+  position: absolute;
+  width: 8vw;
+  top: 1vw;
+  left: 3vw;
+}
+.nm {
+  position: absolute;
+  width: 7vw;
+  top: 4vw;
+  left: 12vw;
+}
+.rn {
+  position: absolute;
+  width: 9vw;
+  top: 2vw;
+  left: 21vw;
+}
+.tn {
+  position: absolute;
+  width: 11vw;
+  top: 6vw;
+  right: 3vw;
+}
+.bn {
+  position: absolute;
+  width: 8vw;
+  top: 2vw;
+  right: 18vw;
+}
+@media (min-width: 1921px) {
+  .green-zone {
+    height: 250px;
+    margin-top: 70px;
+    margin-bottom: 150px;
+  }
+  .green-zone h2 {
+    width: 425px;
+    font-size: 56px;
+    line-height: 56px;
+  }
+  .gp {
+    width: 160px;
+    top: 22px;
+    left: 38px;
+  }
+  .nm {
+    width: 140px;
+    top: 90px;
+    left: 180px;
+  }
+  .rn {
+    width: 160px;
+    top: 35px;
+    left: 325px;
+  }
+  .tn {
+    width: 240px;
+    top: 140px;
+    right: 240px;
+  }
+  .bn {
+    width: 170px;
+    top: 30px;
+    right: 45px;
+  }
+}
+@media (max-width: 1027px) {
+  .green-zone {
+    margin-top: 5vw;
+    margin-bottom: 11vw;
+  }
+  .green-zone h2 {
+    width: 24vw;
+  }
+}
+@media (max-width: 768px) {
+  .green-zone {
+    height: 14vw;
+    margin-top: 6vw;
+    margin-bottom: 12vw;
+  }
+  .green-zone h2 {
+    font-size: 3vw;
+    line-height: 3.1vw;
+    width: 23vw;
+  }
+  .gp {
+    width: 10vw;
+  }
+  .nm {
+    width: 8vw;
+    top: 4.5vw;
+    left: 12vw;
+  }
+  .rn {
+    width: 10vw;
+    top: 2vw;
+    left: 20vw;
+  }
+  .tn {
+    width: 13vw;
+    top: 8vw;
+    right: 3vw;
+  }
+  .bn {
+    width: 10vw;
+    top: 2vw;
+    right: 19vw;
+  }
+}
+@media (max-width: 560px) {
+  .green-zone {
+    height: 22vw;
+    min-height: 95px;
+    margin-top: 8vw;
+    margin-bottom: 15vw;
+  }
+  .green-zone h2 {
+    font-size: 4vw;
+    line-height: 3.6vw;
+    width: 30vw;
+  }
+  .gp {
+    width: 14vw;
+    top: 1vw;
+    left: 3vw;
+  }
+  .nm {
+    width: 11vw;
+    top: 4.5vw;
+    left: 16vw;
+  }
+  .rn {
+    width: 14vw;
+    top: 11vw;
+    left: 3vw;
+  }
+  .tn {
+    width: 17vw;
+    top: 14vw;
+    right: 4vw;
+  }
+  .bn {
+    width: 13vw;
+    top: 3vw;
+    right: 13vw;
+  }
+}
+@media (max-width: 320px) {
+  .green-zone h2 {
+    font-size: 4.5vw;
+    line-height: 4.6vw;
+    width: 34vw;
+  }
+  .gp {
+    width: 16vw;
+    top: 17vw;
+    left: 3vw;
+  }
+  .nm {
+    width: 12vw;
+    top: 8.5vw;
+    left: 13vw;
+  }
+  .rn {
+    width: 14vw;
+    top: 2vw;
+    left: 2vw;
+  }
+  .tn {
+    width: 19vw;
+    top: 17vw;
+    right: 4vw;
+  }
+  .bn {
+    width: 16vw;
+    top: 4vw;
+    right: 5vw;
+  }
+}

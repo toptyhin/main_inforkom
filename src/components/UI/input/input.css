@@ -9,26 +9,26 @@
   outline-color: rgba(128,128,128,0.54902);
   color: grey;
   width: 20%;
-  margin-left: max(-276px, -100%);
+  margin-left: max(-364px, -100%);
 }
-.plus2 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 0px 7px 7px 0px;
-  --tw-bg-opacity: 1;
-  background-color: rgba(234, 237, 240, var(--tw-bg-opacity));
-  outline-color: rgba(128,128,128,0.54902);
-  color: grey;
-  width: 20%;
-  text-align: center;
-  margin-left: -20%;
-  padding: 0.4vw;
-}
+
 .field {
   text-align: center;
   border: 1px solid #eaedf0;
   outline-color: rgba(128,128,128,0.54902);
   color: grey;
   border-radius: 7px;
+}
+.field_class {
+  border-radius: 20px;
+  background-color: rgb(234, 237, 240);
+  text-align: left;
+  padding-left: 54px;
+  font-size: 16px;
+}
+.input_class {
+  border-radius: 7px;
+  font-family: myriadpro-regular;
+  width: 100%;
+  height: 100%;
 }
