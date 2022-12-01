@@ -26,6 +26,7 @@
 }
 .calc-button {
   width: 100%;
+  height: 5vw;
   color: white;
   font-size: 2vw;
   border-radius: 1.3vw;
@@ -45,9 +46,59 @@
   text-transform: uppercase;
   cursor: pointer;
 }
+.download-button {
+  border-radius: 30px;
+  width: 224px;
+  height: 57px;
+  margin-top: auto;
+  margin-bottom: auto;
+  color: white;
+}
+.loadP {
+  text-transform: uppercase;
+  font-size: 10px;
+  font-family: montserrat-regular;
+  text-align: left;
+}
+.download-p {
+  font-family: montserrat-regular;
+  font-size: 22px;
+  text-align: left;
+}
 @media (min-width: 1921px) {
   .button {
     height: 45px;
     font-size: 20pt;
+  }
+  .download-button {
+    border-radius: 44px;
+    width: 290px;
+    height: 75px;
+  }
+  .loadP {
+    font-size: 13px;
+  }
+  .download-p {
+    font-size: 27px;
+  }
+}
+@media (max-width: 1100px) {
+  .calc-button {
+    height: 5vw;
+  }
+}
+@media (max-width: 900px) {
+  .calc-button {
+    height: 5vw;
+  }
+}
+@media (max-width: 500px) {
+  .calc-button {
+    height: 5vw;
+  }
+}
+@media (max-width: 376px) {
+  .calc-button {
+    height: 5vw;
   }
 }

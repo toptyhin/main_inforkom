@@ -36,6 +36,18 @@
 .azs-pic {
   width: 25%;
 }
+@media (min-width: 1921px) {
+  #azs {
+    margin-top: 120px;
+    padding-top: 90px;
+    padding-bottom: 100px;
+  }
+  .azs-p {
+    font-size: 40px;
+    margin-top: 20px;
+    width: 400px;
+  }
+}
 @media (max-width: 768px) {
   #azs {
     margin-top: 70px;

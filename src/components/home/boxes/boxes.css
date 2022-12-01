@@ -66,20 +66,19 @@
 }
 .tarif {
   width: 80%;
-  font-size: 30px;
-  line-height: 33px;
-  transition-property: font-size, line-height;
+  font-size: 2vw;
+  transition-property: font-size;
   transition-duration: .4s;
 }
 .tarif:hover {
-  font-size: 40px;
-  line-height: 40px;
-  transition-property: font-size, line-height;
+  font-size: 2.5vw;
+  transition-property: font-size;
   transition-duration: .4s;
 }
 .box {
   overflow: hidden;
   width: 28.5%;
+  min-width: 28.5%;
   height: 100%;
   position: relative;
   border-radius: 2vw;
@@ -91,6 +90,7 @@
 }
 .box:hover {
   width: 35%;
+  min-width: 35%;
   height: 120%;
   margin-top: -1vw;
   transition-property: width, height, margin-top;

@@ -10,7 +10,7 @@
   align-items: center;
   height: 100%;
   color: #ffffff;
-  width: 24vw;
+  width: 17vw;
 }
 .green-img {
   position: sticky;
@@ -84,13 +84,18 @@
     right: 45px;
   }
 }
+@media (max-width: 1100px) {
+  .green-zone h2 {
+    width: 20vw;
+  }
+}
 @media (max-width: 1027px) {
   .green-zone {
     margin-top: 5vw;
     margin-bottom: 11vw;
   }
   .green-zone h2 {
-    width: 24vw;
+    width: 20vw;
   }
 }
 @media (max-width: 768px) {
@@ -137,7 +142,7 @@
   }
   .green-zone h2 {
     font-size: 4vw;
-    line-height: 3.6vw;
+    line-height: 4.6vw;
     width: 30vw;
   }
   .gp {

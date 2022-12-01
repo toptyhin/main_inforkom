@@ -1,5 +1,3 @@
-import { gql }    from '@apollo/client'
-import {useQuery} from '@apollo/client';
 import Slider     from 'react-slick';
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
@@ -15,20 +13,10 @@ import Card  from './../../../images/card.png'
 import './banner.css'
 
 function Banner() {
-  const GET_BANNERS = gql`
-    query { main { data { attributes { banner {
-      banner_1
-      banner_2
-      banner_3
-      banner_4
-    } } } }
-    }`
-
-  const {data, error, loading} = useQuery(GET_BANNERS)
-  const b1 = data?.main.data.attributes.banner.banner_1
-  const b2 = data?.main.data.attributes.banner.banner_2
-  const b3 = data?.main.data.attributes.banner.banner_3
-  const b4 = data?.main.data.attributes.banner.banner_4
+  const b1 = 'Топливо по оптовой цене собственными бензовозами'
+  const b2 = 'Собственный процессинг топливных карт'
+  const b3 = 'Крупнейший независимый поставщик топлива по гос. контрактам'
+  const b4 = 'Профессиональный подход к заправке по топливным картам'
 
   let settings = {
     dots: true,
@@ -50,7 +38,6 @@ function Banner() {
     ),
   };
 
-if(error) return `Oops there has been an error: ${error}`
   return (
     <div>
       <Slider {...settings}>

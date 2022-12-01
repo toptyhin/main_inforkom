@@ -13,7 +13,6 @@ const Button = ( props ) => {
   }
   if (theme==='calc') {
     button = 'calc-button';
-    style.height = '5vw';
   };
   if (theme==='map') {
     button = 'map-button';

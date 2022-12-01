@@ -16,8 +16,8 @@ const Calc = styled(Slider)( ({ theme }) => ({
       },
   '& .MuiSlider-thumb': {
       boxShadow: `0px 0px 0px 0px`,
-      height: 'calc(2vw + 18px)',
-      width: 'calc(2vw + 18px)',
+      height: '3.2vw',
+      width: '3.2vw',
       backgroundColor: '#fff',
       border: '4px solid currentColor',
       '&:hover, &.Mui-focusVisible': {boxShadow: `0 0 0 0`,},
@@ -68,7 +68,35 @@ const Calc = styled(Slider)( ({ theme }) => ({
          height: 17,
          width: 2,
      }
-  }
+  },
+  '@media (max-width: 1100px)': {
+     padding: '3% 0!important',
+
+     '& .MuiSlider-thumb': {
+       height: '4.4vw',
+       width: '4.4vw',
+     },
+  },
+  '@media (max-width: 900px)': {
+    height: '2vw',
+     '& .MuiSlider-thumb': {
+       height: '5vw',
+       width: '5vw',
+     },
+     '& .MuiSlider-mark': {
+         height: 10,
+      },
+  },
+  '@media (max-width: 500px)': {
+    height: '3vw',
+     '& .MuiSlider-thumb': {
+       height: '8vw',
+       width: '8vw',
+     },
+     '& .MuiSlider-mark': {
+         height: 10,
+      },
+  },
 }
 ));
 

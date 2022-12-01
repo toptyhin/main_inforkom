@@ -18,9 +18,15 @@
   width: 48%;
   padding-right: 5vw;
 }
+.card-button {
+  margin-top: -6vw;
+}
 @media (min-width: 1921px) {
   .head-card {
-    width: 631px;
+    width: 700px;
+  }
+  .card-button {
+    margin-top: -2vw;
   }
 }
 @media (max-width: 1027px) {

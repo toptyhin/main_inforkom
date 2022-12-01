@@ -1,6 +1,6 @@
 #card-order {
   padding-bottom: 6vw;
-  margin-top: 15vw;
+  margin-top: 12vw;
 }
 .form-flex {
   display: flex;
@@ -14,18 +14,21 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 275px;
+  width: 320px;
   height: 100%;
   padding: 0.5vw 0;
 }
 .order-note {
   flex-wrap: wrap;
   width: 66%;
-  min-height: 20vw;
+  min-height: 18vw;
   padding: 2vw 3vw 2vw 4vw;
 }
 .order-text {
   width: 24vw;
+}
+.form-item select, .form-item input {
+  font-size: 1.2vw;
 }
 .reg-form-field input {
   font-size: 1.3vw;
@@ -107,6 +110,9 @@
   .order-note {
     padding: 2.5vw 3vw;
   }
+  .form-item select, .form-item input {
+    font-size: 1.7vw;
+  }
 }
 @media (max-width: 881px) {
   .order-form {
@@ -134,7 +140,9 @@
     padding-bottom: 5vw;
     width: 32vw;
   }
-
+  .form-item select, .form-item input {
+    font-size: 2.4vw;
+  }
 }
 @media (max-width: 500px) {
   #card-order {
@@ -158,7 +166,7 @@
   }
   .plus1 {
     width: 20%;
-    margin-left: max(-359px, -100%);
+    margin-left: max(-380px, -100%);
   }
   .icon-table {
     padding: 4vw 1vw 4vw 2vw;
@@ -170,6 +178,9 @@
     width: 25vw;
     padding: 1.5vw;
     display: inline-block;
+  }
+  .form-item select, .form-item input {
+    font-size: 4vw;
   }
 }
 @media (max-width: 376px) {

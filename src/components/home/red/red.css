@@ -49,6 +49,16 @@
   position: absolute;
   margin-left: -8%;
 }
+@media (min-width: 1921px) {
+  .red-head p {
+    margin-top: 50px;
+    font-size: 40px;
+  }
+  .red-table {
+    width: 72%;
+    height: 560px;
+  }
+}
 @media (max-width: 1027px) {
   .red-table {
     width: 70%;

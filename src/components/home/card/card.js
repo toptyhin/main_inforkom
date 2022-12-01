@@ -24,8 +24,8 @@ const Card = () => {
             <div>
               <img className='w-100' src={CardBig} alt='топливная карта'/>
             </div>
-            <div className='flex flex-center'>
-              <Button type='button' width='326px' marginTop='-6vw' children='Заказать'/>
+            <div className='flex flex-center card-button'>
+              <Button type='button' width='326px' children='Заказать'/>
             </div>
           </div>
         </div>

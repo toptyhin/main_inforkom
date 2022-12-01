@@ -5,22 +5,7 @@ import Person2 from './images/person-2.png'
 import Person3 from './images/person-3.png'
 import './people.css'
 
-import { useEffect, useState } from 'react';
-import { gql } from '@apollo/client'
-import {useQuery} from '@apollo/client';
-
 const People = () => {
-
-  const GET_TEST = gql`
-    query { banners { data {
-      id
-      attributes {
-        header
-        name } } }
-    }`
-
-const {data, error, loading} = useQuery(GET_TEST)
-console.log(data);
   return (
     <div className='main'>
       <section id='people'>

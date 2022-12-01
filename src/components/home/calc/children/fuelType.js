@@ -33,11 +33,35 @@ const StyledToggleButtonGroup = styled(ToggleButtonGroup)(({ theme }) => ({
           borderRadius: '15px 0 0 15px',
           minWidth: '15px',
       },
+      '@media (max-width: 1920px)': {
+         height: '6vw',
+         fontSize: '3.5vw',
+      },
       '@media (min-width: 1921px)': {
          height: '100px',
          '& .MuiToggleButtonGroup-grouped': {
              fontSize: '70px',
           }
+      },
+      '@media (max-width: 1100px)': {
+         height: '7vw',
+         fontSize: '4.5vw',
+      },
+      '@media (max-width: 900px)': {
+         height: '8vw',
+         fontSize: '5vw',
+      },
+      '@media (max-width: 500px)': {
+         height: '12vw',
+         fontSize: '6vw',
+      },
+      '@media (max-width: 375px)': {
+         height: '15vw',
+         fontSize: '7vw',
+      },
+      '@media (max-width: 320px)': {
+         height: '17vw',
+         fontSize: '8vw',
       },
   },
 }));

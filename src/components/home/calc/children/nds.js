@@ -36,10 +36,45 @@ const StyledToggleButtonGroup = styled(ToggleButtonGroup)(({ theme }) => ({
         width: '50%',
     },
   },
+  '@media (max-width: 1920px)': {
+     height: '6vw',
+     fontSize: '3.5vw',
+  },
   '@media (min-width: 1921px)': {
      height: '100px',
      '& .MuiToggleButtonGroup-grouped': {
          fontSize: '70px',
+      }
+  },
+  '@media (max-width: 1100px)': {
+     height: '7vw',
+     '& .MuiToggleButtonGroup-grouped': {
+         fontSize: '4.5vw',
+      }
+  },
+  '@media (max-width: 900px)': {
+     height: '8vw',
+     '& .MuiToggleButtonGroup-grouped': {
+        fontSize: '5vw',
+      }
+  },
+  '@media (max-width: 500px)': {
+     height: '12vw',
+     '& .MuiToggleButtonGroup-grouped': {
+        fontSize: '6vw',
+        lineHeight: '6vw',
+     }
+  },
+  '@media (max-width: 375px)': {
+     height: '15vw',
+     '& .MuiToggleButtonGroup-grouped': {
+        fontSize: '7vw',
+      }
+  },
+  '@media (max-width: 320px)': {
+     height: '17vw',
+     '& .MuiToggleButtonGroup-grouped': {
+        fontSize: '8vw',
       }
   },
 }));

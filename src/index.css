@@ -33,9 +33,9 @@ body {
 
 
 h2 {
-  font-size: 30px;
+  font-size: 2.3vw;
   text-align: left;
-  line-height: 33px;
+  line-height: 2.3vw;
   text-transform: uppercase;
   margin: 0;
 }
@@ -93,7 +93,11 @@ hr {
 a {
   text-decoration: none;
 }
-
+input:focus-visible, input:focus  {
+  outline-style: solid;
+  outline-color: rgba(128,128,128,0.54902);
+  outline-width: 2px;
+}
 .text-area {
   width: 62%;
 }
@@ -247,15 +251,15 @@ text-transform: uppercase;
 @media (min-width: 1921px) {
   h2 {
     font-size: 40px;
-    line-height: 40px;
+    line-height: 50px;
   }
   .color-zone {
-    max-width: 2140px;
+    max-width: 1950px;
   }
 }
 @media (max-width: 1100px) {
   h2 {
-    font-size: 29px;
+    font-size: 2.6vw;
     line-height: 29px;
   }
   .basic-page {
@@ -263,10 +267,6 @@ text-transform: uppercase;
   }
 }
 @media (max-width: 1050px) {
-  h2 {
-    font-size: 28px;
-    line-height: 29px;
-  }
   .color-zone {
     width: 89%;
     margin-left: auto;
@@ -274,17 +274,9 @@ text-transform: uppercase;
     padding-top: 4vw;
   }
 }
-@media (max-width: 1027px) {
-  h2 {
-    font-size: 27px;
-    line-height: 29px;
-  }
-
-}
 @media (max-width: 900px) {
   h2 {
-    font-size: 25.5px;
-    line-height: 29px;
+    line-height: 3vw;
   }
 }
 @media (max-width: 768px) {

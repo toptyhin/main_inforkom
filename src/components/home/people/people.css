@@ -73,7 +73,7 @@
     margin-top: -6vw;
   }
   .tablePeople {
-    margin-top: -24vw;
+    margin-top: -20vw;
   }
   .people-block {
     width: 49%;
@@ -81,6 +81,12 @@
   .people-back p {
     line-height: 2.5vw;
     font-size: 2.9vw;
+  }
+  .people {
+    width: 40%;
+  }
+  .people-back {
+    height: 73%;
   }
 }
 @media (max-width: 500px) {

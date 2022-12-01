@@ -1,13 +1,12 @@
 .CalcValue {
   color: #636363!important;
-  font-size: 1.8vw!important;
+  font-size: 1.8vw;
   font-weight: bold;
 }
 .CalcText {
   display: flex;
   margin-top: 5vw;
   align-items: center;
-
 }
 @media (max-width: 1024px) {
   .CalcValue {
