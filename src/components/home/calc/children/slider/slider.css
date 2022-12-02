@@ -7,6 +7,17 @@
   display: flex;
   margin-top: 5vw;
   align-items: center;
+  margin-bottom: 1vw;
+}
+.CalcText span {
+  font-size: calc( 15px + 1vw);
+  font-family: myriadpro-regular;
+  color: #a1a1a1;
+}
+@media (min-width: 1921px) {
+  .CalcText span {
+    font-size: 37px;
+  }
 }
 @media (max-width: 1024px) {
   .CalcValue {
@@ -29,8 +40,16 @@
     margin-top: 12vw;
   }
 }
+@media (max-width: 376px) {
+  .CalcText span {
+    font-size: 20px;
+  }
+}
 @media (max-width: 320px) {
   .CalcValue {
     font-size: 6.1vw;
+  }
+  .CalcText span {
+    font-size: 17px;
   }
 }

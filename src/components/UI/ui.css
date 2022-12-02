@@ -86,10 +86,20 @@
   .calc-button {
     height: 5vw;
   }
+  .download-button {
+    border-radius: 44px;
+    width: 200px;
+    height: 53px;
+  }
 }
 @media (max-width: 900px) {
   .calc-button {
     height: 5vw;
+  }
+  .download-button {
+    border-radius: 44px;
+    width: 200px;
+    height: 53px;
   }
 }
 @media (max-width: 500px) {

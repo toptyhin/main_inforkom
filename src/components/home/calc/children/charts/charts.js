@@ -1,6 +1,7 @@
 import ReactECharts from 'echarts-for-react';
 import { PieChart } from 'echarts/charts';
 import * as echarts from 'echarts';
+import './charts.css'
 
 const Charts = ({fuel, vat, discount, manage}) => {
   const priceDisplayconfig = {

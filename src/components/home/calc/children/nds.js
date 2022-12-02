@@ -49,7 +49,7 @@ const StyledToggleButtonGroup = styled(ToggleButtonGroup)(({ theme }) => ({
   '@media (max-width: 1100px)': {
      height: '7vw',
      '& .MuiToggleButtonGroup-grouped': {
-         fontSize: '4.5vw',
+         fontSize: '3.5vw',
       }
   },
   '@media (max-width: 900px)': {

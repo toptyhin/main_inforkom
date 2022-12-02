@@ -1,8 +1,8 @@
 import { useState } from 'react';
-import Geo        from './children/geo'
+import Geo        from './children/geo/geo'
 import Nds        from './children/nds'
-import Res        from './children/res'
-import Charts     from './children/charts'
+import Res        from './children/res/res'
+import Charts     from './children/charts/charts'
 import FuelType   from './children/fuelType'
 import CalcSlider from './children/slider/slider'
 import Button     from './../../../components/UI/button'

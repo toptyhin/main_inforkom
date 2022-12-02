@@ -1,6 +1,7 @@
 import DadataSuggestions from 'react-dadata-suggestions';
 import 'react-dadata-suggestions/dist/styles.css';
 import { useState } from 'react';
+import './geo.css'
 
 function Geo ({setGeo1, setGeo2, setReady}) {
   const [plus, setPlus] = useState(false);

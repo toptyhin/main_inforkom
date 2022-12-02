@@ -19,10 +19,6 @@
 .calc-head {
   display: none;
 }
-.echarts-for-react {
-  height: 480px!important;
-  margin-top: 3vw;
-}
 #calc-hide p, #calc p {
   font-size: 1.5vw;
   font-family: myriadpro-regular;
@@ -36,16 +32,6 @@
   width: 888px;
   margin-left: auto;
   margin-right: auto;
-}
-.geo-zone {
-  padding-top: 4vw;
-  padding-bottom: 4vw;
-  margin-top: 3.6vw;
-}
-.geo-zone h2 {
-  text-align: center;
-  margin: 0px;
-  text-transform: uppercase;
 }
 .suggestions-container input {
   font-size: 1.2vw;
@@ -74,21 +60,6 @@
   border-left: 0;
   outline-width: 2px;
 }
-.plus2 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 0px 7px 7px 0px;
-  --tw-bg-opacity: 1;
-  background-color: rgba(234, 237, 240, var(--tw-bg-opacity));
-  outline-color: rgba(128,128,128,0.54902);
-  color: grey;
-  width: 20%;
-  text-align: center;
-  margin-left: -20%;
-  padding: 0.4vw;
-  z-index: 100;
-}
 input.field.alert {
   border: 2px solid #ffadad;
 }
@@ -96,55 +67,15 @@ input.field:hover,  input.field:focus,  input.field:active {
   outline-style: solid;
   outline-width: 2px;
 }
-input.field1 {
-  font-size: 1.3vw;
-  border-radius: 7px;
-  width: 24vw;
-  height: 3.2vw;
-}
-.field1 {
-  font-size: 1.3vw;
-  border-radius: 7px;
-  height: 3.2vw;
-  margin-top: 2vw;
-}
 input.field2 {
   margin-top: 2vw;
 }
-#geoplus {
-  font-size: 2vw;
-  border-radius: 0px 7px 7px 0px;
-  --tw-bg-opacity: 1;
-  background-color: rgba(234, 237, 240, var(--tw-bg-opacity));
-  outline-color: rgba(128,128,128,0.54902);
-  color: grey;
-}
-#geoplus[disabled] {
-  box-shadow:none
-}
-#geoplus:active:not([disabled]) {
-  box-shadow: inset 0px 0px 8px rgba(0, 0, 0, 0.2);
-}
-.search {
-  display: flex;
-  justify-content: center;
-  margin-top: 3vw;
-}
-.flex-search {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 23vw;
-  min-width: 40px;
-}
+
 .calculate-slider {
   margin-top: 2vw;
 }
 .mb-4 {
   margin-bottom: 1rem;
-}
-.item {
-  flex-basis: 40%;
 }
 .button-block {
   margin-top: 5vw;
@@ -180,9 +111,6 @@ input.field2 {
 .height-pie {
   height: 35vw;
 }
-#legend {
-  margin-top: 60px;
-}
 .legend_record {
   display: flex;
   align-items: center;
@@ -199,6 +127,27 @@ input.field2 {
   --tw-bg-opacity: 1;
   background-color: rgba(71, 85, 105, var(--tw-bg-opacity));
 }
+.label.gradient {
+  --tw-bg-opacity: 1;
+  background: conic-gradient(rgb(210, 223, 151) 0 60%, rgb(115, 170, 55) 0 80%, rgb(251, 201, 27) 0 90%, rgb(251, 168, 52) 0 100%);
+}
+.label.l-green {
+  --tw-bg-opacity: 1;
+  background-color: rgba(210, 223, 151, var(--tw-bg-opacity));
+}
+.label.green {
+  --tw-bg-opacity: 1;
+  background-color: rgba(115, 170, 55, var(--tw-bg-opacity));
+}
+.label.yellow {
+  --tw-bg-opacity: 1;
+  background-color: rgba(251, 201, 27, var(--tw-bg-opacity));
+}
+.label.orange {
+  --tw-bg-opacity: 1;
+  background-color: rgba(251, 168, 52, var(--tw-bg-opacity));
+}
+
 *,
 ::before,
 ::after {
@@ -217,29 +166,11 @@ input.field2 {
   font-family: myriadpro-regular;
   text-transform: uppercase;
 }
-
-.label.gradient {
-  --tw-bg-opacity: 1;
-  background: conic-gradient(rgb(210, 223, 151) 0 60%, rgb(115, 170, 55) 0 80%, rgb(251, 201, 27) 0 90%, rgb(251, 168, 52) 0 100%);
-}
-.label.l-green {
-  --tw-bg-opacity: 1;
-  background-color: rgba(210, 223, 151, var(--tw-bg-opacity));
-}
-.label.green {
-  --tw-bg-opacity: 1;
-  background-color: rgba(115, 170, 55, var(--tw-bg-opacity));
-}
-.label.yellow {
-  --tw-bg-opacity: 1;
-  background-color: rgba(251, 201, 27, var(--tw-bg-opacity));
+#legend {
+  margin-top: 60px;
 }
 
-.label.orange {
-  --tw-bg-opacity: 1;
-  background-color: rgba(251, 168, 52, var(--tw-bg-opacity));
-}
-.CalcText span, #legend span {
+#legend span {
   font-size: 22px;
   font-family: myriadpro-regular;
   color: #a1a1a1;
@@ -248,19 +179,13 @@ input.field2 {
   color: #73aa37!important;
   font-family: myriadpro-semibold!important;
 }
-.charts {
-  height: 480px;
-}
+
 @media (min-width: 1921px) {
-  .CalcText span, #legend span {
+  #legend span {
     font-size: 37px;
   }
   #main-calc {
     width: 1182px;
-  }
-  .echarts-for-react {
-    height: 800px!important;
-    font-size: 20px;
   }
   .suggestions-container input {
     font-size: 25px;
@@ -276,17 +201,6 @@ input.field2 {
   }
   #calc-hide p, #calc p {
     font-size: 2vw;
-  }
-  .geo-zone {
-    margin-top: 4.6vw;
-    padding: 5vw 0;
-  }
-  .flex-search {
-    width: 31vw;
-    height: 11vw;
-  }
-  .search {
-    margin-top: 4vw;
   }
   .button-block {
     height: 6.5vw;
@@ -305,9 +219,6 @@ input.field2 {
   .suggestions-container input {
     font-size: 1.6vw;
   }
-  #geoplus {
-    font-size: 2.6vw;
-  }
 }
 @media (max-width: 900px) {
   #calc {
@@ -321,17 +232,6 @@ input.field2 {
   }
   #calc-hide p, #calc p {
     font-size: 2.5vw;
-  }
-  .geo-zone {
-    margin-top: 6.6vw;
-    padding: 7vw 0;
-  }
-  .flex-search {
-    width: 41vw;
-    height: 15vw;
-  }
-  .search {
-    margin-top: 6vw;
   }
   .button-block {
     height: 8vw;
@@ -349,9 +249,6 @@ input.field2 {
   }
   .suggestions-container input {
     font-size: 2.2vw;
-  }
-  #geoplus {
-    font-size: 4.2vw;
   }
 }
 @media (max-width: 500px) {
@@ -371,20 +268,6 @@ input.field2 {
   .show-text {
     display: none;
   }
-  .geo-zone {
-    margin-top: 9.6vw;
-    padding: 10vw 0 11vw 0;
-  }
-  .flex-search {
-    width: 68vw;
-    height: 25vw;
-  }
-  .item {
-    flex-basis: 42%;
-  }
-  .search {
-    margin-top: 9vw;
-  }
   .button-block {
     height: 13vw;
     margin-top: 10vw;
@@ -397,11 +280,11 @@ input.field2 {
   #showResults {
     margin-top: 12vw;
   }
-  .legend_record .label {
-    margin-right: 13px;
-  }
   #legend {
     margin-top: 50px;
+  }
+  .legend_record .label {
+    margin-right: 13px;
   }
   .suggestions-container {
     height: 10.5vw;
@@ -409,22 +292,10 @@ input.field2 {
   .suggestions-container input {
     font-size: 4vw;
   }
-  #geoplus {
-    font-size: 4vw;
-  }
 }
 @media (max-width: 376px) {
   #calc-hide p, #calc p {
     font-size: 4.5vw;
-  }
-  .geo-zone {
-    padding: 8vw 0 11vw 0;
-  }
-  .search {
-    margin-top: 6vw;
-  }
-  .item {
-    flex-basis: 44%;
   }
   .button-block {
     height: 15vw;
@@ -434,7 +305,7 @@ input.field2 {
     height: 15vw;
     max-width: 90%;
   }
-  .CalcText span, #legend span {
+  #legend span {
     font-size: 20px;
   }
 }
@@ -448,26 +319,16 @@ input.field2 {
   #calc-hide p, #calc p {
     font-size: 5vw;
   }
-  .flex-search {
-    width: 70vw;
-    height: 33vw;
-  }
-  .item {
-    flex-basis: 43%;
-  }
-  .geo-zone {
-    padding: 9vw 0 11vw 0;
-  }
   #vat_select div {
     max-width: 100%;
   }
-  .legend_record .label {
-    margin-right: 7px;
-  }
-  .CalcText span, #legend span {
+  #legend span {
     font-size: 17px;
   }
   #legend {
     margin-top: 40px;
+  }
+  .legend_record .label {
+    margin-right: 7px;
   }
 }

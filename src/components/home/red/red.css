@@ -36,7 +36,7 @@
   margin-top: 110%;
   text-align: center;
   text-transform: lowercase;
-  font-size: 1.4vw;
+  font-size: 1.3vw;
 }
 .red-zone-height {
   height: 27vw;
@@ -52,11 +52,11 @@
 @media (min-width: 1921px) {
   .red-head p {
     margin-top: 50px;
-    font-size: 40px;
+    font-size: 36px;
   }
   .red-table {
-    width: 72%;
-    height: 560px;
+    width: 1200px;
+    height: 480px;
   }
 }
 @media (max-width: 1027px) {

@@ -15,6 +15,7 @@
 #total_fuel, #total_total {
   font-size: 30px;
 }
+
 @media (min-width: 1921px) {
   .total-zone {
     margin-top: 40px;
@@ -29,7 +30,7 @@
     font-size: 40px;
   }
 }
-@media (max-width: 426px) {
+@media (max-width: 500px) {
   .total-zone {
     padding-left: 21px;
     padding-right: 21px;
@@ -55,4 +56,6 @@
     padding-left: 6px;
     padding-right: 6px;
   }
+
+
 }
