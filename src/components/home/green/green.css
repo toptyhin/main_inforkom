@@ -23,6 +23,14 @@
   top: 1vw;
   left: 3vw;
 }
+.nm:hover, .tn:hover {
+  animation: up-20 .4s;
+  animation-fill-mode: forwards;
+}
+.gp:hover, .rn:hover, .bn:hover {
+  animation: down-20 .4s;
+  animation-fill-mode: forwards;
+}
 .nm {
   position: absolute;
   width: 7vw;
