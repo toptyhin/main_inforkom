@@ -41,10 +41,7 @@ const item_contacts = [[`/contacts/contacts`,'Контактная информ�
                       [`/contacts/jobs`,'Вакансии']];
 
 const Header = ({test}) => {
-  console.log(test);
-
-  const item_tarif = test;
-
+  
   const [popup, setPopup] = useState(false);
   return (
     <div className='menu-parent'>
@@ -57,7 +54,7 @@ const Header = ({test}) => {
               </Link>
             </li>
             <MenuItem mainName='О компании' item={item_company}/>
-            <MenuItem mainName='Тарифы' item={item_tarif}/>
+            <MenuItem mainName='Тарифы' item={test}/>
             <MenuItem mainName='Топливные карты' item={item_cards}/>
             <MenuItem mainName='Сеть АЗС' item={item_azs}/>
             <MenuItem mainName='Топливо' item={item_fuel}/>

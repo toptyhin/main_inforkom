@@ -33,10 +33,8 @@ function App() {
   const {data, error, loading} = useQuery(GET_TEST)
   if(error) return `Oops there has been an error: ${error}`
 
-let tariff_arr = data?.tarifs.data.map(({attributes}) => [`tarify/${attributes.address}`,`Тариф ${attributes.head}`]);
-console.log(tariff_arr);
-
-
+  let tariff_arr = data?.tarifs.data.map(({attributes}) => [`/tarify/${attributes.address}`,`Тариф ${attributes.head}`]);
+   
   return (
     <div className='App'>
       <Router>

@@ -1,7 +1,13 @@
 import { Link } from "react-router-dom";
 
 const MenuItem = ( {mainName, item} ) => {
-  let itemArr = item.map(function(element, index) {
+  let item_fix;
+  if (item===undefined) {
+    item_fix = [[`test`,'test']];
+  } else {
+    item_fix = item;
+  }
+  let itemArr = item_fix.map(function(element, index) {
     return (
       <Link to={element[0]}>
         <li className='menu-list-item-big'>

@@ -11,21 +11,11 @@ import { gql }     from '@apollo/client'
 import {useQuery}  from '@apollo/client';
 
 const Home = () => {
-  const GET_TEST = gql`
-    query { tarifs { data {
-    attributes {
-      head
-      description
-      address } } }
-    }`
-
-  const {data, error, loading} = useQuery(GET_TEST)
-  if(error) return `Oops there has been an error: ${error}`
 
   return (
     <>
       <Banner/>
-      <People data={data}/>
+      <People/>
       <Green/>
       <Boxes/>
       <FormAccount/>

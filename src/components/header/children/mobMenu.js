@@ -2,7 +2,15 @@ import { useState } from 'react';
 import { Link } from "react-router-dom";
 import ClickAwayListener from 'react-click-away-listener';
 
+
+
 const MobMenu = ( {mainName, item, setPopup} ) => {
+  let item_fix;
+  if (item===undefined) {
+    item_fix = [[`test`,'test']];
+  } else {
+    item_fix = item;
+  }
   const [submenu, setSubmenu] = useState(false);
   let style1 = {
     height: '0px',
@@ -15,9 +23,9 @@ const MobMenu = ( {mainName, item, setPopup} ) => {
     transitionDuration: '1s',
     overflow:'hidden',
   }
-  const count = item.length * 37.4;
+  const count = item_fix.length * 37.4;
   style2.height = count;
-  let itemArr = item.map(function(element, index) {
+  let itemArr = item_fix.map(function(element, index) {
     return (
       <li className='menu-list-item' onClick={() => {setPopup(false)}}>
         <Link to={element[0]}>
@@ -30,7 +38,7 @@ const MobMenu = ( {mainName, item, setPopup} ) => {
   return (
     <ClickAwayListener onClickAway={() => {setSubmenu(false)}}>
       <li className={submenu ? 'menu-list-item-main mob-menu-a' : 'mob-menu-a'}
-          onTouchEnd={() => setSubmenu(true)} onClick={() => setSubmenu(true)}>
+        onTouchEnd={() => setSubmenu(true)} onClick={() => setSubmenu(true)}>
         <div>
           <a>{mainName}</a>
         </div>
