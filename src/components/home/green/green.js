@@ -4,10 +4,18 @@ import LNm       from './../../../images/logo-nm.png'
 import LBashneft from './../../../images/logo-bashneft.png'
 import LTatneft  from './../../../images/logo-tatneft.png'
 import './green.css'
+import { Link } from 'react-router-dom';
 
-const Green = () => {
+const Green = ({data}) => {
   return (
     <div className='main'>
+       <ul>
+    {data?.banners.data.map(({attributes}) =>
+    <li>
+      <Link to={`/banners/${attributes.name}`}>
+        {attributes.name}</Link>
+        </li>)}
+    </ul>
       <section id='green'>
         <div className=' flex flex-space-b green-zone green-grad w-100 radius-20'>
           <div className='green-img'>

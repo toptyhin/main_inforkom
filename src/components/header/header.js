@@ -40,7 +40,11 @@ const item_fuel = [[`/fuel-prices-interactive-map/fuel-prices`,'Цены на т
 const item_contacts = [[`/contacts/contacts`,'Контактная информация'],
                       [`/contacts/jobs`,'Вакансии']];
 
-const Header = () => {
+const Header = ({test}) => {
+  console.log(test);
+
+  const item_tarif = test;
+
   const [popup, setPopup] = useState(false);
   return (
     <div className='menu-parent'>
@@ -66,6 +70,7 @@ const Header = () => {
             <nav className={popup ? '':'hidden'}>
               <ul className='menu-list flex'>
                 <div className='cross' onClick={() => setPopup(false)}>×</div>
+                
                 <MobMenu mainName='О компании'      item={item_company}  setPopup={setPopup}/>
                 <MobMenu mainName='Тарифы'          item={item_tarif}    setPopup={setPopup}/>
                 <MobMenu mainName='Топливные карты' item={item_cards}    setPopup={setPopup}/>

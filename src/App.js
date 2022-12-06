@@ -1,6 +1,8 @@
 import './App.css';
 import { BrowserRouter as Router, Routes, Route,
        } from 'react-router-dom';
+       import { gql } from '@apollo/client'
+import {useQuery} from '@apollo/client';
 import ScrollToTop from './components/scrollToTop'
 
 import Header from './components/header/header';
@@ -16,30 +18,45 @@ import Goszakaz from './pages/fuel-cards/44-fz-goszakazy'
 
 import MapStation from './pages/map-stations/map-station/MapStation';
 import BasicPage  from './pages/basicPage';
-import Name1 from './pages/Name1';
+import Tariff from './pages/Tariff';
 
 function App() {
+  const GET_TEST = gql`
+  query { tarifs { data {
+    id
+    attributes {
+      head
+      description
+      address } } }
+  }`
+
+  const {data, error, loading} = useQuery(GET_TEST)
+  if(error) return `Oops there has been an error: ${error}`
+
+let tariff_arr = data?.tarifs.data.map(({attributes}) => [`tarify/${attributes.address}`,`Тариф ${attributes.head}`]);
+console.log(tariff_arr);
+
+
   return (
     <div className='App'>
       <Router>
-      <ScrollToTop />
-        <Header></Header>
+        <ScrollToTop />
+        <Header test={tariff_arr}></Header>
         <main className='container'>
           <Routes>
-              <Route path='/' element={<Home />} />
+            <Route path='/' element={<Home />} />          
+            {data?.tarifs.data.map(({attributes}) =>
+              <Route path={`/tarify/${attributes.address}`} 
+              element={<Tariff head={attributes.head} text={attributes.description}/>} />
+            )}
+            <Route path='/about/history' element={<History />} />
+            <Route path='/fuel-cards/fuel-card' element={<FuelCard />} />
+            <Route path='/fuel-cards/oil-talons' element={<OilTalons />} />
+            <Route path='/fuel-cards/com-proposal' element={<ComProposal />} />
+            <Route path='/fuel-cards/44-fz-goszakazy' element={<Goszakaz />} />
 
-                <Route path='/about/history' element={<History />} />
-
-                <Route path='/fuel-cards/fuel-card' element={<FuelCard />} />
-                <Route path='/fuel-cards/oil-talons' element={<OilTalons />} />
-                <Route path='/fuel-cards/com-proposal' element={<ComProposal />} />
-                <Route path='/fuel-cards/44-fz-goszakazy' element={<Goszakaz />} />
-
-              <Route path='/map-stations/map-station' element={<MapStation />} />
-              <Route path='/basic-page' element={<BasicPage />} />
-
-
-
+            <Route path='/map-stations/map-station' element={<MapStation />} />
+            <Route path='/basic-page' element={<BasicPage />} />
           </Routes>
         </main>
         <Footer />

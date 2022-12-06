@@ -5,24 +5,20 @@ import Person2 from './images/person-2.png'
 import Person3 from './images/person-3.png'
 import './people.css'
 
-import { useEffect, useState } from 'react';
-import { gql } from '@apollo/client'
-import {useQuery} from '@apollo/client';
 
-const People = () => {
 
-  const GET_TEST = gql`
-    query { banners { data {
-      id
-      attributes {
-        header
-        name } } }
-    }`
+const People = ({data}) => {
 
-const {data, error, loading} = useQuery(GET_TEST)
-console.log(data);
+ 
   return (
     <div className='main'>
+      <ul>
+    {data?.tarifs.data.map(({attributes}) =>
+    <li>
+      <Link to={`/banners/${attributes.address}`}>
+        {attributes.head}</Link>
+        </li>)}
+    </ul>
       <section id='people'>
         <h2 className='head-people'>Топливные карты для юридических лиц</h2>
         <div className='tablePeople'>
