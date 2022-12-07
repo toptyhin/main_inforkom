@@ -20,7 +20,7 @@ const errorLink = onError(({ graphQLErrors, networkError }) => {
 });
 
 const httpLink = createHttpLink({
-  uri: 'http://localhost:1337/graphql',
+  uri: 'http://bite2.inforkom.ru/graphql',
 });
 
 const link = ApolloLink.from([errorLink, httpLink]);
