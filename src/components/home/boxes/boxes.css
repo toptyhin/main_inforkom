@@ -44,6 +44,7 @@
   animation: wh-110 .7s;
   animation-fill-mode: forwards;
   box-shadow: 3px 3px 10px 2px grey;
+  
 }
 
 .pointer {
@@ -76,11 +77,12 @@
   border-radius: 2vw;
   background-color: #eaedf0;
   cursor: pointer;
+  animation: wh-120-alt .5s;
 }
 .box:hover {
   animation-play-state: initial;
   box-shadow: 3px 3px 10px 2px grey;
-  animation: wh-120 .7s;
+  animation: wh-120 .5s;
   animation-fill-mode: forwards;
 }
 .littleBox {
