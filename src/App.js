@@ -1,7 +1,7 @@
 import './App.css';
 import { BrowserRouter as Router, Routes, Route,
        } from 'react-router-dom';
-       import { gql } from '@apollo/client'
+import { gql } from '@apollo/client'
 import {useQuery} from '@apollo/client';
 import ScrollToTop from './components/scrollToTop'
 
@@ -19,6 +19,7 @@ import Goszakaz from './pages/fuel-cards/44-fz-goszakazy'
 import MapStation from './pages/map-stations/map-station/MapStation';
 import BasicPage  from './pages/basicPage';
 import Tariff from './pages/Tariff';
+import Test from './pages/test';
 
 function App() {
   const GET_TEST = gql`
@@ -34,7 +35,7 @@ function App() {
   if(error) return `Oops there has been an error: ${error}`
 
   let tariff_arr = data?.tarifs.data.map(({attributes}) => [`/tarify/${attributes.address}`,`Тариф ${attributes.head}`]);
-   
+  console.log(data); 
   return (
     <div className='App'>
       <Router>
@@ -47,6 +48,8 @@ function App() {
               <Route path={`/tarify/${attributes.address}`} 
               element={<Tariff head={attributes.head} text={attributes.description}/>} />
             )}
+            <Route path='/test' element={<Test />} />
+
             <Route path='/about/history' element={<History />} />
             <Route path='/fuel-cards/fuel-card' element={<FuelCard />} />
             <Route path='/fuel-cards/oil-talons' element={<OilTalons />} />

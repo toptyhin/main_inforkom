@@ -9,7 +9,8 @@ import './header.css';
 const item_company = [[`/about/news`,'Новости компании'],
        [`/about/history`,'История'],
        [`/about/social`,'Социальная ответственность'],
-       [`/about/projects`,'Наши проекты']];
+       [`/about/projects`,'Наши проекты'],
+       [`/test`,'тест']];
 
 const item_tarif = [[`tarify/tatneft`,'Тариф Татнефть'],
        [`tarify/gazprom`,'Тариф Газпром'],
