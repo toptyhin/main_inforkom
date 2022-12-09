@@ -1,8 +1,6 @@
-import { gql }    from '@apollo/client'
-import {useQuery} from '@apollo/client';
-import Slider     from 'react-slick';
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
+import Slider      from 'react-slick';
 import BgCity      from './../../../images/background-city.png'
 import BgCityAdd   from './../../../images/background-add.png'
 import TankerFaded from './../../../images/gastanker-left-faded.png'
@@ -14,22 +12,7 @@ import Cars  from './../../../images/cars.png'
 import Card  from './../../../images/card.png'
 import './banner.css'
 
-function Banner() {
-  const GET_BANNERS = gql`
-    query { main { data { attributes { banner {
-      banner_1
-      banner_2
-      banner_3
-      banner_4
-    } } } }
-    }`
-
-  const {data, error, loading} = useQuery(GET_BANNERS)
-  const b1 = data?.main.data.attributes.banner.banner_1
-  const b2 = data?.main.data.attributes.banner.banner_2
-  const b3 = data?.main.data.attributes.banner.banner_3
-  const b4 = data?.main.data.attributes.banner.banner_4
-
+function Banner({banner1, banner2, banner3, banner4}) {
   let settings = {
     dots: true,
     arrows: false,
@@ -49,8 +32,6 @@ function Banner() {
       </div>
     ),
   };
-
-if(error) return `Oops there has been an error: ${error}`
   return (
     <div>
       <Slider {...settings}>
@@ -62,7 +43,7 @@ if(error) return `Oops there has been an error: ${error}`
             <img className='gt-l' alt='' src={TankerLeft} />
             <img className='m' alt='' src={Man} />
           </div>
-          <h5>{b1}</h5>
+          <h5>{banner1}</h5>
         </section>
 
         <section className='city'>
@@ -72,7 +53,7 @@ if(error) return `Oops there has been an error: ${error}`
           <div class='city-img1'>
             <img class='pc-m' alt='' src={Pcmap}/>
           </div>
-          <h5>{b2}</h5>
+          <h5>{banner2}</h5>
         </section>
 
         <section className='city'>
@@ -82,7 +63,7 @@ if(error) return `Oops there has been an error: ${error}`
           <div class='city-img1'>
             <img class='cars-img' alt='' src={Cars}/>
           </div>
-          <h5>{b3}</h5>
+          <h5>{banner3}</h5>
         </section>
 
         <section className='city'>
@@ -97,7 +78,7 @@ if(error) return `Oops there has been an error: ${error}`
             <div class='bold-text'>31 год</div>
             <p class='city-p'>мы заправляем<br/>на дорогах</p>
           </div>
-          <h5>{b4}</h5>
+          <h5>{banner4}</h5>
         </section>
       </Slider>
     </div>

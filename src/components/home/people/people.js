@@ -4,15 +4,17 @@ import Person2 from './images/person-2.png'
 import Person3 from './images/person-3.png'
 import './people.css'
 
-const People = () => {
+const People = ({header_people, person_1, person_2, person_3}) => {
+  console.log (person_1[1])
+  
   return (
     <div className='main'>
       <section id='people'>
-        <h2 className='head-people'>Топливные карты для юридических лиц</h2>
+        <h2 className='head-people'>{header_people}</h2>
         <div className='tablePeople'>
-          <Person img={Person1} extra='yes' children='Заправляем коммерческий транспорт по топливным картам и талонам'/>
-          <Person img={Person2} children='Управляй затратами на топливо в режиме Online'/>
-          <Person img={Person3} children='Подходит для ИП и предприятий, где есть свой транспорт'/>
+          <Person img={person_1[1]} extra='yes' children={person_1[0]}/>
+          <Person img={person_2[1]} children={person_2[0]}/>
+          <Person img={person_3[1]} children={person_3[0]}/>
         </div>
       </section>
     </div>
