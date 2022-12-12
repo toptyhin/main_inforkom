@@ -98,44 +98,126 @@ input:focus-visible, input:focus  {
   outline-color: rgba(128,128,128,0.54902);
   outline-width: 2px;
 }
+@keyframes shadow {
+  0% {
+    box-shadow: 0 0 0 0 grey;
+  }
+  90% {
+    box-shadow: 3px 3px 10px 2px grey;
+  }
+  100% {
+    box-shadow: 3px 3px 10px 2px grey;
+  }
+}
+@keyframes shadow-alt {
+  0% {
+    box-shadow: 3px 3px 10px 2px grey;
+  }
+  80% {
+    box-shadow: 0 0 0 0 grey;
+  }
+  100% {
+    box-shadow: 0 0 0 0 grey;
+  }
+}
+@keyframes drop-shadow {
+  0% {
+    filter: drop-shadow(0 0 0  grey);
+  }
+  90% {
+    filter: drop-shadow(3px 3px 7px  grey);
+  }
+  100% {
+    filter: drop-shadow(3px 3px 7px  grey);
+  }
+}
+@keyframes drop-shadow-alt {
+  0% {
+    filter: drop-shadow(3px 3px 7px  grey);
+  }
+  100% {
+    filter: drop-shadow(0 0 0 grey);
+  }
+}
+@keyframes wh-103 {
+  0% {
+    transform: scale(100%);
+  }
+  100% {
+    transform: scale(103%);
+    
+  }
+}
+@keyframes wh-103-alt {
+  0% {
+    transform: scale(103%);
+  }
+  100% {
+    transform: scale(100%);
+  }
+}
+@keyframes wh-106 {
+  0% {
+    transform: scale(100%);
+  }
+  100% {
+    transform: scale(106%);
+  }
+}
+@keyframes wh-106-alt {
+  0% {
+    transform: scale(106%);
+  }
+  100% {
+    transform: scale(100%);
+  }
+}
 @keyframes wh-110 {
   0% {
     transform: scale(100%);
-    transform-origin: center center;
   }
   100% {
     transform: scale(110%);
-    transform-origin: center center;
+  }
+}
+@keyframes wh-110-alt {
+  0% {
+    transform: scale(110%);
+  }
+  100% {
+    transform: scale(100%);
   }
 }
 @keyframes wh-115 {
   0% {
     transform: scale(100%);
-    transform-origin: center center;
   }
   100% {
     transform: scale(115%);
-    transform-origin: center center;
+  }
+}
+@keyframes wh-115-alt {
+  0% {
+    transform: scale(115%);
+  }
+  100% {
+    transform: scale(100%);
   }
 }
 @keyframes wh-120 {
   0% {
     transform: scale(100%);
-    transform-origin: center center;
   }
   100% {
     transform: scale(120%);
-    transform-origin: center center;
   }
 }
 @keyframes wh-120-alt {
   0% {
     transform: scale(120%);
-    transform-origin: center center;
   }
   100% {
     transform: scale(100%);
-    transform-origin: center center;
   }
 }
 @keyframes down-20 {

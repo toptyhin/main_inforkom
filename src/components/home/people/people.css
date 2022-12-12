@@ -7,10 +7,21 @@
   align-items: flex-end;
   margin-top: 1vw;
 }
+.people-block:hover > .people-back {
+  animation: wh-103 .5s;
+  animation-fill-mode: forwards;
+}
+.people-block:hover > .people {
+  animation: wh-106 .5s, drop-shadow .5s;
+  animation-fill-mode: forwards;
+  transform-origin: bottom right;
+}
 .people {
   float: right;
   width: 50%;
   margin-top: 2vw;
+  animation: wh-106-alt .5s, drop-shadow-alt .3s;
+  transform-origin: bottom right;
 }
 .people-back {
   position: absolute;
@@ -25,6 +36,8 @@
   border-radius: 20px 20px 0 0;
   padding-top: 6%;
   padding-left: 7%;
+  animation: wh-103-alt .5s;
+  transform-origin: center center;
 }
 .people-back p {
   width: 50%;

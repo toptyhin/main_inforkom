@@ -39,12 +39,11 @@
   overflow: hidden;
   width: 100%;
   height: 100%;
+  animation: wh-106-alt .5s, shadow-alt .5s;
 }
 .big-box:hover {
-  animation: wh-110 .7s;
+  animation: wh-106 .5s, shadow .5s;
   animation-fill-mode: forwards;
-  box-shadow: 3px 3px 10px 2px grey;
-  
 }
 
 .pointer {
@@ -63,10 +62,13 @@
 .tarif {
   width: 80%;
   font-size: 2vw;
+  animation: wh-115-alt .5s;
+  transform-origin: top left;
 }
 .tarif:hover {
-  animation: wh-115 .7s;
+  animation: wh-115 .5s;
   animation-fill-mode: forwards;
+  transform-origin: top left;
 }
 .box {
   overflow: hidden;
@@ -77,18 +79,39 @@
   border-radius: 2vw;
   background-color: #eaedf0;
   cursor: pointer;
-  animation: wh-120-alt .5s;
+  animation: wh-120-alt .5s, shadow-alt .5s;
 }
 .box:hover {
-  animation-play-state: initial;
-  box-shadow: 3px 3px 10px 2px grey;
-  animation: wh-120 .5s;
+  animation: wh-120 .5s, shadow .5s;
   animation-fill-mode: forwards;
 }
 .littleBox {
   margin-left: 20%;
   margin-top: 20%;
   width: 89%;
+  animation: wh-106-alt .5s, tarif-right .5s;
+  transform-origin: bottom right;
+}
+.box:hover > .littleBox {
+  animation: wh-106 .5s, tarif-left .5s;
+  animation-fill-mode: forwards;
+  transform-origin: bottom right;
+}
+@keyframes tarif-left {
+  0% {
+    margin-left: 20%;
+  }
+  100% {
+    margin-left: 15%;
+  }
+}
+@keyframes tarif-right {
+  0% {
+    margin-left: 15%;
+  }
+  100% {
+    margin-left: 20%;
+  }
 }
 @media (min-width: 1921px) {
   .left-boxes {

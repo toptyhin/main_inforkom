@@ -16,7 +16,6 @@ import Goszakaz from './pages/fuel-cards/44-fz-goszakazy'
 
 import MapStation from './pages/map-stations/map-station/MapStation';
 import BasicPage  from './pages/basicPage';
-import Name1 from './pages/Name1';
 
 function App() {
   return (
