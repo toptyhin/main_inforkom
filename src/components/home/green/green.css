@@ -1,3 +1,6 @@
+#green {
+  cursor: pointer;
+}
 .green-zone {
   height: 12vw;
   margin-top: 4vw;
@@ -22,6 +25,14 @@
   width: 8vw;
   top: 1vw;
   left: 3vw;
+}
+.nm:hover, .tn:hover {
+  animation: up-20 .4s;
+  animation-fill-mode: forwards;
+}
+.gp:hover, .rn:hover, .bn:hover {
+  animation: down-20 .4s;
+  animation-fill-mode: forwards;
 }
 .nm {
   position: absolute;

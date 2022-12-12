@@ -98,6 +98,150 @@ input:focus-visible, input:focus  {
   outline-color: rgba(128,128,128,0.54902);
   outline-width: 2px;
 }
+@keyframes shadow {
+  0% {
+    box-shadow: 0 0 0 0 grey;
+  }
+  90% {
+    box-shadow: 3px 3px 10px 2px grey;
+  }
+  100% {
+    box-shadow: 3px 3px 10px 2px grey;
+  }
+}
+@keyframes shadow-alt {
+  0% {
+    box-shadow: 3px 3px 10px 2px grey;
+  }
+  80% {
+    box-shadow: 0 0 0 0 grey;
+  }
+  100% {
+    box-shadow: 0 0 0 0 grey;
+  }
+}
+@keyframes drop-shadow {
+  0% {
+    filter: drop-shadow(0 0 0  grey);
+  }
+  90% {
+    filter: drop-shadow(3px 3px 7px  grey);
+  }
+  100% {
+    filter: drop-shadow(3px 3px 7px  grey);
+  }
+}
+@keyframes drop-shadow-alt {
+  0% {
+    filter: drop-shadow(3px 3px 7px  grey);
+  }
+  100% {
+    filter: drop-shadow(0 0 0 grey);
+  }
+}
+@keyframes wh-103 {
+  0% {
+    transform: scale(100%);
+  }
+  100% {
+    transform: scale(103%);
+    
+  }
+}
+@keyframes wh-103-alt {
+  0% {
+    transform: scale(103%);
+  }
+  100% {
+    transform: scale(100%);
+  }
+}
+@keyframes wh-106 {
+  0% {
+    transform: scale(100%);
+  }
+  100% {
+    transform: scale(106%);
+  }
+}
+@keyframes wh-106-alt {
+  0% {
+    transform: scale(106%);
+  }
+  100% {
+    transform: scale(100%);
+  }
+}
+@keyframes wh-110 {
+  0% {
+    transform: scale(100%);
+  }
+  100% {
+    transform: scale(110%);
+  }
+}
+@keyframes wh-110-alt {
+  0% {
+    transform: scale(110%);
+  }
+  100% {
+    transform: scale(100%);
+  }
+}
+@keyframes wh-115 {
+  0% {
+    transform: scale(100%);
+  }
+  100% {
+    transform: scale(115%);
+  }
+}
+@keyframes wh-115-alt {
+  0% {
+    transform: scale(115%);
+  }
+  100% {
+    transform: scale(100%);
+  }
+}
+@keyframes wh-120 {
+  0% {
+    transform: scale(100%);
+  }
+  100% {
+    transform: scale(120%);
+  }
+}
+@keyframes wh-120-alt {
+  0% {
+    transform: scale(120%);
+  }
+  100% {
+    transform: scale(100%);
+  }
+}
+@keyframes down-20 {
+  0% {
+    margin-top: 0;
+  }
+  50% {
+    margin-top: 20px;
+  }
+  100% {
+    margin-top: 0;
+  }
+}
+@keyframes up-20 {
+  0% {
+    margin-top: 0;
+  }
+  50% {
+    margin-top: -20px;
+  }
+  100% {
+    margin-top: 0;
+  }
+}
 .text-area {
   width: 62%;
 }
@@ -216,7 +360,7 @@ input:focus-visible, input:focus  {
 text-transform: uppercase;
 }
 .main {
-  width: 87%;
+  width: 80%;
   max-width: 1552px;
   margin-left: auto;
   margin-right: auto;

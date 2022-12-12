@@ -12,17 +12,57 @@
 }
 .button {
   font-family: myriadpro-regular;
-  height: 40px;
+  height: 46px;
   cursor: pointer;
-  font-size: 13pt;
+  font-size: 16pt;
   border-radius: 7px;
   color: white;
   cursor: pointer;
   background: linear-gradient(to bottom, #76bf71, #21832e);
+  animation: button-alt .3s;
+}
+.button:hover {
+  animation: button .3s;
+  animation-fill-mode: forwards;
+}
+.button:active {
+  filter: brightness(110%)!important;
+}
+@keyframes button {
+  0% {
+    box-shadow: 0 0 0 0 #456f17;
+    filter: brightness(100%);
+  }
+  90% {
+    box-shadow: 1px 1px 5px 1px #456f17;
+  }
+  100% {
+    box-shadow: 1px 1px 5px 1px #456f17;
+    filter: brightness(106%);
+  }
+}
+@keyframes button-alt {
+  0% {
+    box-shadow: 1px 1px 5px 1px #456f17;
+    filter: brightness(106%);
+  }
+  80% {
+    box-shadow: 0 0 0 0 #456f17;
+  }
+  100% {
+    box-shadow: 0 0 0 0 #456f17;
+    filter: brightness(100%);
+  }
 }
 .unactive {
   color: grey;
   background: #f0f0f0;
+  animation: button-unactive;
+}
+.unactive:hover, .unactive:active {
+  filter: brightness(100%)!important;
+  box-shadow: 0 0 0 0 #456f17!important;
+  cursor:inherit;
 }
 .calc-button {
   width: 100%;
@@ -35,6 +75,13 @@
   background-color: #73aa37;
   text-transform: uppercase;
   cursor: pointer;
+}
+.calc-button:hover {
+  animation: button .3s;
+  animation-fill-mode: forwards;
+}
+.calc-button:active {
+  filter: brightness(110%)!important;
 }
 .map-button {
   height: 54px;
@@ -53,6 +100,11 @@
   margin-top: auto;
   margin-bottom: auto;
   color: white;
+  animation: wh-110-alt .5s;
+}
+.download-button:hover {
+  animation: wh-110 .5s;
+  animation-fill-mode: forwards;
 }
 .loadP {
   text-transform: uppercase;
