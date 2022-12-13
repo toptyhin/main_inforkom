@@ -1,8 +1,8 @@
-import { Link } from 'react-router-dom';
-import PersonBack from './../images/person-back.png'
+import { useNavigate } from 'react-router-dom';
 import './../people.css'
 
-const Person = ( {img, extra, children} ) => {
+const Person = ( {img, extra, href, children} ) => {
+  const navigate = useNavigate();
   let clName;
   if (extra) {
     clName = 'people-block pi'
@@ -10,7 +10,7 @@ const Person = ( {img, extra, children} ) => {
     clName = 'people-block'
   }
   return (
-    <div className={clName}>
+    <div className={clName} onClick={() => navigate(href)}>
       <div className='people-back'>
         <p>{children}</p>
       </div>

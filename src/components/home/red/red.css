@@ -32,6 +32,7 @@
   overflow: hidden;
   position: relative;
   animation: wh-110-alt .5s;
+  cursor: pointer;
 }
 .no-color:hover {
   animation: wh-110 .5s;

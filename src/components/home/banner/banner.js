@@ -1,6 +1,7 @@
 import Slider     from 'react-slick';
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
+import { useNavigate } from "react-router-dom";
 import BgCity      from './../../../images/background-city.png'
 import BgCityAdd   from './../../../images/background-add.png'
 import TankerFaded from './../../../images/gastanker-left-faded.png'
@@ -17,10 +18,11 @@ function Banner() {
   const b2 = 'Собственный процессинг топливных карт'
   const b3 = 'Крупнейший независимый поставщик топлива по гос. контрактам'
   const b4 = 'Профессиональный подход к заправке по топливным картам'
+  const navigate = useNavigate();
 
   let settings = {
     dots: true,
-    arrows: false,
+    arrows: true,
     infinite: true,
     speed: 500,
     fade: true,
@@ -41,38 +43,8 @@ function Banner() {
   return (
     <div>
       <Slider {...settings}>
-        <section className='city'>
-          <img className='city-back' alt='' src={BgCity} />
-          <img className='city-back-light' alt='' src={BgCityAdd} />
-          <div className='city-img0'>
-            <img className='gt-l-f' alt='' src={TankerFaded} />
-            <img className='gt-l' alt='' src={TankerLeft} />
-            <img className='m' alt='' src={Man} />
-          </div>
-          <h5>{b1}</h5>
-        </section>
-
-        <section className='city'>
-          <img className='city-back' alt='' src={BgCity} />
-          <img className='city-back-light' alt='' src={BgCityAdd} />
-          <img className='city-back-light opacity' alt='' src={BgCityAdd} />
-          <div class='city-img1'>
-            <img class='pc-m' alt='' src={Pcmap}/>
-          </div>
-          <h5>{b2}</h5>
-        </section>
-
-        <section className='city'>
-          <img className='city-back' alt='' src={BgCity} />
-          <img className='city-back-light' alt='' src={BgCityAdd} />
-          <img className='city-back-light opacity' alt='' src={BgCityAdd} />
-          <div class='city-img1'>
-            <img class='cars-img' alt='' src={Cars}/>
-          </div>
-          <h5>{b3}</h5>
-        </section>
-
-        <section className='city'>
+      
+      <section className='city' onClick={() => navigate('/about/history')}>
           <img className='city-back' alt='' src={BgCity} />
           <img className='city-back-light' alt='' src={BgCityAdd} />
           <img className='city-back-light opacity' alt='' src={BgCityAdd} />
@@ -86,6 +58,38 @@ function Banner() {
           </div>
           <h5>{b4}</h5>
         </section>
+
+        <section className='city' onClick={() => navigate('/fuel-prices-interactive-map/special-offer')}>
+          <img className='city-back' alt='' src={BgCity} />
+          <img className='city-back-light' alt='' src={BgCityAdd} />
+          <div className='city-img0'>
+            <img className='gt-l-f' alt='' src={TankerFaded} />
+            <img className='gt-l' alt='' src={TankerLeft} />
+            <img className='m' alt='' src={Man} />
+          </div>
+          <h5>{b1}</h5>
+        </section>
+
+        <section className='city' onClick={() => window.open('http://it.inforkom.ru/')}>
+          <img className='city-back' alt='' src={BgCity} />
+          <img className='city-back-light' alt='' src={BgCityAdd} />
+          <img className='city-back-light opacity' alt='' src={BgCityAdd} />
+          <div class='city-img1'>
+            <img class='pc-m' alt='' src={Pcmap}/>
+          </div>
+          <h5>{b2}</h5>
+        </section>
+
+        <section className='city' onClick={() => navigate('/fuel-cards/44-fz-goszakazy')}>
+          <img className='city-back' alt='' src={BgCity} />
+          <img className='city-back-light' alt='' src={BgCityAdd} />
+          <img className='city-back-light opacity' alt='' src={BgCityAdd} />
+          <div class='city-img1'>
+            <img class='cars-img' alt='' src={Cars}/>
+          </div>
+          <h5>{b3}</h5>
+        </section>
+
       </Slider>
     </div>
   );

@@ -11,9 +11,12 @@ const People = () => {
       <section id='people'>
         <h2 className='head-people'>Топливные карты для юридических лиц</h2>
         <div className='tablePeople'>
-          <Person img={Person1} extra='yes' children='Заправляем коммерческий транспорт по топливным картам и талонам'/>
-          <Person img={Person2} children='Управляй затратами на топливо в режиме Online'/>
-          <Person img={Person3} children='Подходит для ИП и предприятий, где есть свой транспорт'/>
+          <Person img={Person1} extra='yes' href='/fuel-cards/fuel-card' 
+            children='Заправляем коммерческий транспорт по топливным картам и талонам'/>
+          <Person img={Person2}  href='/fuel-cards/operation-online'
+            children='Управляй затратами на топливо в режиме Online'/>
+          <Person img={Person3} href='/fuel-cards/com-proposal'
+            children='Подходит для ИП и предприятий, где есть свой транспорт'/>
         </div>
       </section>
     </div>

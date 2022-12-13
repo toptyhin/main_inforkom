@@ -3,6 +3,7 @@
   max-height: 26vw;
   width: 100%;
   overflow: hidden;
+  cursor: pointer;
 }
 .city h5 {
   display: inline-block;
@@ -101,7 +102,21 @@
 .dots {
   margin: calc(19px + 1.5vw);
 }
-
+.slick-next {
+  right: 60px;
+  top: 340px;
+  z-index: 3;
+}
+.slick-prev {
+  left: 30px;
+  top: 340px;
+  z-index: 3;
+}
+.slick-prev:before, .slick-next:before {
+  font-size: 50px;
+  opacity: 1;
+  color: #eeb35b;
+}
 @media (max-width: 1050px) {
   .slick-dots li {
     margin: 0 4px;

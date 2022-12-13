@@ -6,6 +6,7 @@
   width: 33%;
   align-items: flex-end;
   margin-top: 1vw;
+  cursor: pointer;
 }
 .people-block:hover > .people-back {
   animation: wh-103 .5s;

@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import LGasprom  from './../../../images/logo-gasprom.png'
 import LRosneft  from './../../../images/logo-rosneft.png'
 import LNm       from './../../../images/logo-nm.png'
@@ -6,9 +7,10 @@ import LTatneft  from './../../../images/logo-tatneft.png'
 import './green.css'
 
 const Green = () => {
+  const navigate = useNavigate();
   return (
     <div className='main'>
-      <section id='green'>
+      <section id='green' onClick={() => navigate('/map-stations/map-station')}>
         <div className=' flex flex-space-b green-zone green-grad w-100 radius-20'>
           <div className='green-img'>
             <div className='gp'>

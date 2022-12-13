@@ -16,8 +16,10 @@ const Card = () => {
               <h2 className='inline-block'>Твоя карта в мобильном приложении</h2>
             </div>
             <div className='mt-1 flex wrap flex-center'>
-              <Download name='app-store' color='orange' src={AppStore} children='App Store' qr={Qr}/>
-              <Download name='google-play' color='purple' src={GooglePlay} children='Google Play' qr={Qr}/>
+              <Download name='app-store' href='https://apps.apple.com/ru/app/inforkom/id1015298636' 
+                color='orange' src={AppStore} children='App Store' qr={Qr}/>
+              <Download name='google-play' href='https://play.google.com/store/apps/details?id=ru.inforkom.InforkomApp' 
+                color='purple' src={GooglePlay} children='Google Play' qr={Qr}/>
             </div>
           </div>
           <div className='card'>

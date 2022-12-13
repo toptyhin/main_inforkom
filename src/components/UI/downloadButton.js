@@ -1,7 +1,7 @@
-import { Link } from 'react-router-dom';
+
 import './ui.css'
 
-const DownloadButton = ( {name, color, src, children} ) => {
+const DownloadButton = ( {name, href, color, src, children} ) => {
   let style = {};
   const download = 'download-button';
   const loadP = 'loadP'
@@ -13,7 +13,8 @@ const DownloadButton = ( {name, color, src, children} ) => {
     style.backgroundColor = '#6977c9'
   }
   return (
-    <button type='button' name={name} className={download} style={style}>
+    <button type='button' onClick={() => window.open(href)} 
+      name={name} className={download} style={style}>
       <div className='flex flex-center'>
         <img className='load-icon' src={src}/>
         <div className='ml-1'>

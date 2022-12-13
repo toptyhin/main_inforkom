@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import RedBox from './children/redBox'
 import Car    from './images/tech-center.png'
 import Tool   from './images/tool.png'
@@ -38,9 +37,11 @@ const Red = () => {
               <p>Полезные продукты <br class='red-hide'/>и сервисы для Вашего <br class='red-hide'/>грузового автопарка</p>
             </div>
             <div className='flex red-table'>
-              <RedBox img={Car}  text='Техцентр /запчасти /разборка' style={car}/>
-              <RedBox img={Tool} text='Инструмент'        style={tool}/>
-              <RedBox img={Oil}  text='Масло' style={oil} margin={margin} marginw={marginw}/>
+              <RedBox img={Car} href='https://inforkom-abcp.ru/' 
+                text='Техцентр /запчасти /разборка' style={car}/>
+              <RedBox img={Tool} text='Инструмент' style={tool}/>
+              <RedBox img={Oil} href='https://inforkom-oil.ru/' 
+                text='Масло' style={oil} margin={margin} marginw={marginw}/>
             </div>
           </div>
         </div>
