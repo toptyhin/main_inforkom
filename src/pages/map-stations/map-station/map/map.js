@@ -1,11 +1,15 @@
 import MapPoint from './mapPoint/mapPoint';
+import { Map, ObjectManager } from '@pbe/react-yandex-maps';
 
-const Map = () => {
+const InforkomMap = () => {
     return (
-      <div className='map'>
-        <MapPoint />
-      </div>
+        <Map 
+          className={'map'}
+          defaultState={{ center: [55.75, 37.57], zoom: 9 }} 
+          width="100%"
+          height="100vh"
+        />
     );
   }
 
-  export default Map;
+  export default InforkomMap;

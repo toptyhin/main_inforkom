@@ -1,12 +1,15 @@
 import MapSide from './map/mapSide';
-import Map from './map/map';
+import InforkomMap from './map/map';
+import { YMaps } from '@pbe/react-yandex-maps';
 
 const MapStation = () => {
     return (
+      <YMaps>
       <div className='flex flex-space-b'>
         <MapSide />
-        <Map />
+        <InforkomMap />
       </div>
+      </YMaps>
     );
   }
 
