@@ -2,17 +2,23 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
+import './App.css';
+import { BrowserRouter as Router } from 'react-router-dom';
+import ScrollToTop from './components/scrollToTop'
 
+import Header from './components/header/header';
+import Footer from './components/footer/footer';
 import reportWebVitals from './reportWebVitals';
-
-
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    
-
-      <App />
+    <Router>
+      <ScrollToTop />
+      <Header></Header>
+        <App />
+      <Footer />
+    </Router>
   </React.StrictMode>
 );
 

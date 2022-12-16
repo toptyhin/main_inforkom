@@ -1,21 +1,9 @@
-
-
-/*people area*/
-
-/*green area*/
-
-/*boxes area*/
-
-
-/*card-order area*/
-
-/*calc area*/
-
-
-/*red area*/
-
-
-/*card area*/
-
-
-/*azs area*/
+.transition {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #000;
+    z-index: 200;
+  }
