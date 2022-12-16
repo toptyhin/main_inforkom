@@ -11,12 +11,21 @@ import { motion, useIsPresent } from "framer-motion";
 import { Link } from 'react-router-dom';
 
 
+
 import { useEffect, useState } from 'react';
+const visible = { opacity: 1, y: 0, transition: { duration: 0.5 } };
 
 const Home = () => {
-    const isPresent = useIsPresent();
     return (
         <>
+        <motion.div
+        initial="hidden"
+        animate="visible"
+        exit={{ opacity: 0, transition: { duration: 1 } }}
+        variants={{
+          hidden: { opacity: 0, y: -20 },
+          visible
+        }}>
         <Banner/>
         <People/>
         <Green/>
@@ -26,13 +35,7 @@ const Home = () => {
         <Red/>
         <Card/>
         <Azs/>
-        <motion.div
-          initial={{ scaleX: 1 }}
-          animate={{ scaleX: 0, transition: { duration: 0.5, ease: "circOut" } }}
-          exit={{ scaleX: 1, transition: { duration: 0.5, ease: "circIn" } }}
-          style={{ originX: isPresent ? 0 : 1 }}
-          className='transition'
-        />
+        </motion.div>
         </>
     );
   }

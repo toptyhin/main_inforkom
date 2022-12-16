@@ -1,6 +1,6 @@
 
 import { Routes, Route, useLocation } from 'react-router-dom';
-import { AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import Home        from './pages/Home';
 import History     from './pages/about/history'
 import FuelCard    from './pages/fuel-cards/fuel-card'
@@ -10,11 +10,12 @@ import Goszakaz    from './pages/fuel-cards/44-fz-goszakazy'
 import MapStation  from './pages/map-stations/map-station/MapStation';
 import BasicPage   from './pages/basicPage';
 
+
 function App() {
   const location = useLocation();
   return (
-    <AnimatePresence mode="wait" initial={false}>
-      <div>
+    <AnimatePresence mode="wait">
+      
     <Routes key={location.pathname}>
       <Route path='/' element={<Home />} />
       <Route path='/about/history' element={<History />} />
@@ -27,7 +28,7 @@ function App() {
       <Route path='/map-stations/map-station' element={<MapStation />} />
       <Route path='/basic-page' element={<BasicPage />} />
     </Routes>  
-    </div>
+    
     </AnimatePresence> 
   );
 }
