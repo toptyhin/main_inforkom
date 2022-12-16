@@ -7,24 +7,16 @@
   margin-top: 20px;
 }
 .text-area-p-first {
-  font-family: myriadpro-regular;
-  color: grey;
-  font-size: 16px;
-  line-height: 26px;
   margin-top: 20px;
 }
-.text-area-p-middle {
-  font-family: myriadpro-regular;
-  color: grey;
-  font-size: 16px;
-  line-height: 26px;
-}
 .text-area-p-last {
+  margin-bottom: 20px;
+}
+.text-area-p-first, .text-area-p-middle, .text-area-p-last {
   font-family: myriadpro-regular;
   color: grey;
   font-size: 16px;
   line-height: 26px;
-  margin-bottom: 20px;
 }
 .v-line-page {
     border: .5px solid #d27a33;
@@ -59,4 +51,35 @@
   font-size: 30px;
   margin-top: -11px;
   padding-right: 10px;
+}
+@media (min-width: 1921px) {
+  .s-a-width {
+    width: calc(35% - 30px);
+  }
+  .special-p {
+    font-size: 28px;
+    line-height: 41px;
+  }
+  .text-area-p-first {
+    margin-top: 30px;
+  }
+  .text-area-p-last {
+    margin-bottom: 30px;
+  }
+  .text-area-p-first, .text-area-p-middle, .text-area-p-last {
+    font-size: 24px;
+    line-height: 37px;
+  }
+  .header-p {
+    font-size: 26px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  .list-p {
+    font-size: 24px;
+  }
+  .list-point {
+    font-size: 43px;
+    padding-right: 16px;
+  }
 }

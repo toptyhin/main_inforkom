@@ -35,6 +35,11 @@
   margin-top: -5vw;
   z-index: 1;
 }
+@media (min-width: 1921px) {
+  .page h5 {
+    font-size: 66px;
+  }
+}
 @media (max-width: 500px) {
   .page h5 {
     font-size: 26px;

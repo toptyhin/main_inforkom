@@ -57,6 +57,34 @@
 	height: 0;
   opacity: 18%;
 }
+@media (min-width: 1921px) {
+  .s-a-width {
+    width: calc(35% - 30px);
+  }
+  .side-area-red {
+    font-size: 36px;
+  }
+  .side-area-red-big {
+    font-size: 52px;
+  }
+  .side-area p {
+      font-size: 28px;
+      line-height: 56px;
+  }
+  .side-area-info-block {
+    padding: 29px;
+    margin: 40px 0;
+  }
+  .side-area {
+    padding: 40px;
+  }
+  .side-area-extra {
+    padding: 1px 40px;
+  }
+  .side-area a {
+    font-size: 24px;
+  }
+}
 @media (max-width: 500px) {
   .s-a-width {
     width:100%;
@@ -64,4 +92,5 @@
   .side-area {
     margin-left: 0px;
   }
+ 
 }
