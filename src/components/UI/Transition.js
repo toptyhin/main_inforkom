@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import ScrollToTop from './../scrollToTop'
 
 const Transition = ({children}) => {
   return (
@@ -10,6 +11,7 @@ const Transition = ({children}) => {
         hidden: { opacity: 0, y: 0 },
         visible: { opacity: 1, y: 0, transition: { duration: 0.5 }}
       }}>
+      <ScrollToTop/>
       {children}
     </motion.div>
   );
