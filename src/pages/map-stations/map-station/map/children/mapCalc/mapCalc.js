@@ -1,4 +1,4 @@
-import Button from '../../../../../components/UI/button';
+import Button from '../../../../../../components/UI/button';
 import MapCalcSlider from './children/mapSlider';
 import MapFuelType from './children/mapFuelType';
 import { useState } from 'react';

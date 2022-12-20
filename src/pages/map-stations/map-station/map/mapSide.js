@@ -1,11 +1,11 @@
-import MapMenu from './mapMenu/mapMenu';
+import MapMenu from './children/mapMenu/mapMenu';
 import Input from '../../../../components/UI/input/input';
-import MapCalc from './mapCalc/mapCalc';
+import MapCalc from './children/mapCalc/mapCalc';
 import Search from './../../../../images/map/search.png'
 import Appstore from './../../../../images/map/appstore.png'
 import Google from './../../../../images/map/google.png'
 import Button from '../../../../components/UI/button';
-import './mapSide.css';
+
 
 const MapSide = () => {
   let Glass = <img src={Search}/>;
