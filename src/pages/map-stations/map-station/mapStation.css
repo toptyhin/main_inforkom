@@ -144,3 +144,42 @@
   background-image: url('./../../../images/map/minus-map.png')!important;
   width: 67%;
 }
+.ymaps-2-1-79-search {
+  height: 35px!important;
+  width: 345px!important;
+  overflow: hidden;
+}
+.ymaps-2-1-79-searchbox__button-cell {
+  width: 50px;
+  height: 35px!important;
+  border-radius: 0 30px 30px 0;
+}
+.ymaps-2-1-79-searchbox-button {
+  height: 100%!important;
+  background-image: url('./../../../images/map/search.png')!important;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 0 30px 30px 0!important;
+  background-color: #f1efef!important;
+  border: 3px solid #a1a1a1!important;
+}
+.ymaps-2-1-79-searchbox__input-cell {
+  height: 35px!important;
+  width: calc(345px - 50px)!important;
+  
+}
+.ymaps-2-1-79-searchbox-input {
+  height: 100%;
+  background: #f1efef!important;
+  border-radius: 30px 0 0 30px;
+}
+input.ymaps-2-1-79-searchbox-input__input {
+  font-size: 17px!important;
+  height: 100%!important;
+}
+.ymaps-2-1-79-searchbox-button-text {
+  display: none!important;
+}
+.ymaps-2-1-79-_focused {
+  box-shadow:inset 0 0 0 2px #a1a1a1!important;
+}
