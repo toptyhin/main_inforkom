@@ -21,16 +21,16 @@ const Footer = () => {
           </div>
           <div className='footer-part footer-list'>
             <h3>Топливные карты</h3>
-            <FooterItem item={[['','О компании'],
+            <FooterItem item={[['/about/history','О компании'],
                           [`/map-stations/map-station`,'Сеть АЗС'],
-                          ['','Цены на топливо'],
-                          ['','Топливные карты']]}/>
+                          ['/fuel-prices-interactive-map/fuel-prices','Цены на топливо'],
+                          ['fuel-cards/fuel-card','Топливные карты']]}/>
           </div>
           <div className='footer-part footer-info'>
             <h3>Адрес компании</h3>
             <p>
               <img className='house-icon' src={House}/>
-                108851, РФ, г. Москва, г. Щербинка,
+                &nbsp;108851, РФ, г. Москва, г. Щербинка,
                 ул. Спортивная, дом 7
             </p>
             <p>&#9742; +7 (495) 785-24-44</p>

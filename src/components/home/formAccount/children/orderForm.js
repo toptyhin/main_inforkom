@@ -7,8 +7,8 @@ const OrderForm = () => {
     <div className="flex flex-space-b text-left radius-20 white order-note">
       <h2 className="order-text">Заказать топливную карту онлайн</h2>
       <form className="order-form">
-        <div className="form-item"><FormSelect value={["юр лицо","вариант 1","вариант 2"]}
-             text={["юр лицо","вариант 1","вариант 2"]}/></div>
+        <div className="form-item"><FormSelect value={["юр лицо"]}
+             text={["юр лицо"]}/></div>
         <div className="form-item"><Input plus="plus1" name="phone" text="телефон" textAdd="+7"/></div>
         <div className="form-item"><Input plus="plus2" name="ИНН" text="ИНН"/></div>
         <div className="form-item"><Button width="100%" children="Оформить" theme="unactive"/></div>

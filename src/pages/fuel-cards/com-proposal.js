@@ -8,7 +8,6 @@ import SideAreaMenu       from '../../components/basicPage/sideArea/sideAreaMenu
 import SideAreaImg        from '../../components/basicPage/sideArea/sideAreaImg'
 import SideArea           from '../../components/basicPage/sideArea/sideArea'
 import SideAreaInfo       from '../../components/basicPage/sideArea/sideAreaInfo'
-import SideAreaWithButton from '../../components/basicPage/sideArea/sideAreaWithButton'
 
 import PageHeader from '../../components/basicPage/pageHeader/pageHeader'
 import Button     from '../../components/UI/button'
@@ -32,12 +31,13 @@ const ComProposal = () => {
       <div className='basic-page flex wrap'>
         <div className='text-area'>
         <TextAreaHead children='Коммерческое предложение' />
-          <TextAreaSpecial children='Компания «ИНФОРКОМ» предлагает заправку
-            коммерческого автотранспорта по единой пластиковой смарт-карте на
-            10 000 АЗС по России, странам СНГ и Европы.' />
-          <TextAreaSpecial children='На все виды топлива предоставляются скидки,
-            отсрочка по оплате, гарантии качества, бесплатное круглосуточное
-            сервисное сопровождение и онлайн-отчетность.' />
+          <TextAreaSpecial>
+            Компания «ИНФОРКОМ» предлагает заправку коммерческого автотранспорта по 
+            единой пластиковой смарт-карте на 10 000 АЗС по России, странам СНГ и Европы.
+            <br/>
+            На все виды топлива предоставляются скидки, отсрочка по оплате, гарантии 
+            качества, бесплатное круглосуточное сервисное сопровождение и онлайн-отчетность.
+          </TextAreaSpecial>
 
           <TextAreaHeadL children='Преимущества' />
           <TextAreaList children='нет сервисных сборов, платы за транзакции и
@@ -67,15 +67,17 @@ const ComProposal = () => {
             выбранный вами вид услуг.' />
 
           <TextAreaHead children='О компании' />
-          <TextAreaText theme='first' children='«Инфорком» за 30 лет работы
+          <TextAreaText>«Инфорком» за 30 лет работы
             объединил лучшие предложения сетей АЗС и поставщиков топлива России
             и Европы. 10 000 АЗС (460 брендов) по единой карте «ИНФОРКОМ» на всей
-            территории РФ.' />
-          <TextAreaText theme='last' children='Собственные технологии процессинга
+            территории РФ.
+            <br/>
+            Собственные технологии процессинга
             топливных карт позволяют работать без сервисного сбора. Большие объемы
             операций с топливом позволяют иметь высокие скидки от поставщиков. В
             большинстве случаев совокупные условия заправки по картам «ИНФОРКОМ»
-            выгоднее, чем предложения от монобрендовых карт от отдельных сетей АЗС.'/>
+            выгоднее, чем предложения от монобрендовых карт от отдельных сетей АЗС.
+          </TextAreaText>
 
           <TextAreaHead children='Наши партнеры' />
           <TextAreaText theme='first' children='Ведущие топливные компании:
@@ -93,8 +95,11 @@ const ComProposal = () => {
              ['7 стран','широкая география работы'],
              [['24/7'],'техническая помощь на дорогах']]}/>
 
-          <SideAreaWithButton head='Коммерческое предложение'
-             button='Скачать' width='200px'/>
+          <SideArea head='Коммерческое предложение'>
+              <div className='flex flex-center'>
+              <Button children='Скачать' width='200px'/>
+            </div>
+          </SideArea>
 
           <SideAreaImg head='Наши партнеры' item={[gasprom, tatneft, ptk, lukoil, rosneft,
             bashneft, surgut, tes, nm,]} padding='0 10px'/>

@@ -7,7 +7,6 @@ import TextAreaSpecial from '../../components/basicPage/textArea/textAreaSpecial
 import SideAreaMenu       from '../../components/basicPage/sideArea/sideAreaMenu'
 import SideArea           from '../../components/basicPage/sideArea/sideArea'
 import SideAreaInfo       from '../../components/basicPage/sideArea/sideAreaInfo'
-import SideAreaWithButton from '../../components/basicPage/sideArea/sideAreaWithButton'
 
 import PageHeader from '../../components/basicPage/pageHeader/pageHeader'
 import Button     from '../../components/UI/button'
@@ -29,27 +28,32 @@ const OilTalons = () => {
           <TextAreaList children='АИ-92: 10, 15, 20 литров;' />
           <TextAreaList children='АИ-95: 10, 15, 20 литров;' />
           <TextAreaList children='АИ-98: 10, 15, 20 литров.' />
-          <TextAreaText theme='first' children='Каждый топливный талон имеет уникальный
-            номер, который считывается при подключении к терминалу и передает все данные
-            в базу данных «Инфорком», что позволяет производить автоматический электронный
-            учет в онлайн-режиме.' />
-          <TextAreaText theme='middle' children='Благодаря онлайн-режиму и
-            функциональным возможностям личного кабинета осуществляется полный контроль
-            за движением электронных талонов, имеется возможность мгновенной блокировки
-            в случае их утери.' />
-          <TextAreaText theme='middle' children='Таким образом, к электронным талонам
-            применим практически весь функционал топливных карт.'/>
-          <TextAreaText theme='last' children='Набор базовых функций стандартен
-            и подходит для решения типовых задач, но может бесконечно варьироваться
-            для решения сложных и нестандартных ситуаций.' />
+          <TextAreaText>
+            Каждый топливный талон имеет уникальный номер, который считывается при 
+            подключении к терминалу и передает все данные в базу данных «Инфорком», что 
+            позволяет производить автоматический электронный учет в онлайн-режиме.
+            <br/>
+            Благодаря онлайн-режиму и функциональным возможностям личного кабинета 
+            осуществляется полный контроль за движением электронных талонов, имеется 
+            возможность мгновенной блокировки в случае их утери.
+            <br/>
+            Таким образом, к электронным талонам применим практически весь функционал 
+            топливных карт.
+            <br/>
+            Набор базовых функций стандартен и подходит для решения типовых задач, но 
+            может бесконечно варьироваться для решения сложных и нестандартных ситуаций.
+          </TextAreaText>
         </div>
         <div  className='s-a-width'>
-          <SideAreaWithButton head='Универсальное решение для всех'
-            button='Коммерческое предложение'/>
+          <SideArea head='Универсальное решение для всех'>
+          <div className='flex flex-center'>
+              <Button children='Коммерческое предложение'/>
+            </div>
+          </SideArea>
 
-          <SideAreaMenu head='О компании' item={[[`/about/news`,'Новости компании'],
-            [`/about/social`,'Социальная ответственность'],
-            [`/about/projects`,'Наши проекты']]}/>
+          <SideAreaMenu head='О компании' item={[['/about/news','Новости компании'],
+            ['/about/social','Социальная ответственность'],
+            ['/about/projects','Наши проекты']]}/>
         </div>
       </div>
     </div>

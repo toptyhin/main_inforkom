@@ -107,7 +107,6 @@
 }
 .slick-prev {
   left: 30px;
-  
 }
 .slick-next, .slick-prev {
   top: 22.5vw;
@@ -117,6 +116,17 @@
   font-size: 50px;
   opacity: 1;
   color: #eeb35b;
+}
+.slick-arrow {
+  width: 20px;
+  height: 20px;
+  animation: drop-shadow-alt .5s;
+}
+.slick-arrow:hover {
+  width: 23px;
+  height: 23px;
+  animation: drop-shadow .5s;
+  animation-fill-mode: forwards;
 }
 @media (min-width: 1921px) {
   .slick-next {

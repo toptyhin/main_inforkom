@@ -26,7 +26,7 @@ const Azs = () => {
                 <p className='azs-p'>по единой карте Инфорком по всей территории РФ.</p>
               </div>
               <div className='azs-button1'>
-                <Button type='button' width='222px' marginTop='3vw' children='Сеть АЗС'/>
+                <Button type='button' width='222px' marginTop='3vw' children='Сеть АЗС' href='/map-stations/map-station'/>
               </div>
             </div>
             <div>
@@ -54,7 +54,7 @@ const Azs = () => {
               <img src={tes} alt='tes'/>
             </div>
             <div class='azs-button2'>
-              <Button width='222px' marginTop='3vw' children='Сеть АЗС'/>
+              <Button type='button' width='222px' marginTop='3vw' children='Сеть АЗС' href='/map-stations/map-station'/>
             </div>
           </div>
         </section>

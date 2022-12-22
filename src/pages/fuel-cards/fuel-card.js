@@ -8,7 +8,6 @@ import SideAreaMenu       from '../../components/basicPage/sideArea/sideAreaMenu
 import SideAreaImg        from '../../components/basicPage/sideArea/sideAreaImg'
 import SideArea           from '../../components/basicPage/sideArea/sideArea'
 import SideAreaInfo       from '../../components/basicPage/sideArea/sideAreaInfo'
-import SideAreaWithButton from '../../components/basicPage/sideArea/sideAreaWithButton'
 
 import PageHeader from '../../components/basicPage/pageHeader/pageHeader'
 import Button     from '../../components/UI/button'
@@ -34,17 +33,20 @@ const FuelCard = () => {
           <TextAreaSpecial children='Топливная карта – незаменимый инструмент в
             управлении коммерческим автотранспортом.' />
 
-          <TextAreaText theme='first' children='Сейчас уже невозможно представить,
+          <TextAreaText>
+            Сейчас уже невозможно представить,
             что владельцы транспортных компаний могут не знать, где, когда и по
             какой цене заправляется их транспорт. Топливные карты являются частью
-            профессионального и грамотного управления затратами на топливо. ' />
-          <TextAreaText theme='middle' children='Компания «Инфорком» с 1991 года
+            профессионального и грамотного управления затратами на топливо.
+            <br/>
+            Компания «Инфорком» с 1991 года
             неизменно шла по пути разработки и совершенствования систем управления
             затратами на топливо и расширения сети АЗС, работающих с использованием
-            технологии компании «Инфорком».' />
-          <TextAreaText theme='last' children='Топливная карта – это результат
-            многолетнего опыта команды профессионалов, направленный на получение
-            качественного продукта.' />
+            технологии компании «Инфорком».
+            <br/>
+            Топливная карта – это результат многолетнего опыта команды профессионалов, 
+            направленный на получение качественного продукта.
+          </TextAreaText>
 
           <TextAreaSpecial children='Компания «Инфорком» – лидер рынка услуг по
             заправке топливом с использованием топливных карт.' />
@@ -109,15 +111,20 @@ const FuelCard = () => {
           <TextAreaList children='1% на информационном сопровождении: благодаря
             круглосуточной поддержке вы получите ответы на все вопросы в любое
             удобное для вас время;' />
-            <TextAreaList children='20% на возмещении НДС: пакет бухгалтерских
-              документов для уменьшения налоговых платежей. Отсутствие задержек
-              в выставлении отчетных документов.' />
+          <TextAreaList children='20% на возмещении НДС: пакет бухгалтерских
+            документов для уменьшения налоговых платежей. Отсутствие задержек
+            в выставлении отчетных документов.' />
         </div>
         <div className='s-a-width'>
-          <SideAreaWithButton head='Подберём тариф для вас и бесплатно доставим
-            карты' button='Начать' width='200px'/>
+          <SideArea head='Подберём тариф для вас и бесплатно доставим карты'>
+            <div className='flex flex-center'>
+              <Button children='Начать' width='200px'/>
+            </div>
+          </SideArea>
 
-          <SideArea head='Заказать карту' red='+7 (495) 785-24-44'/>
+          <SideArea head='Заказать карту'>
+            <h6 className='side-area-red'>+7 (495) 785-24-44</h6>
+          </SideArea>
           <SideAreaInfo item={[['10 000 АЗС','по всей Европе'],
             ['7 стран','широкая география работы'],
             [['0₽'],'сервисный сбор']]}/>

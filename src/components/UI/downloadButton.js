@@ -13,7 +13,7 @@ const DownloadButton = ( {name, href, color, src, children} ) => {
     style.backgroundColor = '#6977c9'
   }
   return (
-    <button type='button' onClick={() => window.open(href)} 
+    <div onClick={() => window.open(href)} 
       name={name} className={download} style={style}>
       <div className='flex flex-center'>
         <img className='load-icon' src={src}/>
@@ -22,7 +22,7 @@ const DownloadButton = ( {name, href, color, src, children} ) => {
           <p className={p}>{children}</p>
         </div>
       </div>
-    </button>
+    </div>
   );
 };
 

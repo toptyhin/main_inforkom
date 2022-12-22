@@ -94,6 +94,7 @@
   cursor: pointer;
 }
 .download-button {
+  cursor: pointer;
   border-radius: 30px;
   width: 224px;
   height: 57px;
@@ -101,6 +102,9 @@
   margin-bottom: auto;
   color: white;
   animation: wh-110-alt .5s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .download-button:hover {
   animation: wh-110 .5s;

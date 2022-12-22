@@ -13,10 +13,14 @@ const BasicPage = () => {
         <PageHeader head='Заголовок' children='Доп заголовок'/>
         <div className='basic-page flex'>
         <div className='text-area'>
-          <TextAreaHead children='Большой заголовок' />
-          <TextAreaText children='Самый обычный на свете текст, ничем не примечателен' />
-          <TextAreaSpecial children='Особый текст' />
-          <TextAreaHeadL children='Маленький заголовок' />
+          <TextAreaHead>
+            Большой заголовок
+          </TextAreaHead>
+          <TextAreaText>
+            Самый обычный на свете текст, ничем не примечателен
+          </TextAreaText>
+          <TextAreaSpecial>Особый текст</TextAreaSpecial>
+          <TextAreaHeadL>Маленький заголовок</TextAreaHeadL>
           <TextAreaList children='Пункт списка' />
         </div>
         <div className='back-grey side-area'>

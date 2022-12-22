@@ -6,8 +6,6 @@ const FormSelect = ( {value, text} ) => {
   return (
     <select className={class_select} >
       <option value={value[0]}>{text[0]}</option>
-      <option value={value[1]}>{text[1]}</option>
-      <option value={value[2]}>{text[2]}</option>
     </select>
   );
 };

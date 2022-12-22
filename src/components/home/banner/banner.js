@@ -11,6 +11,7 @@ import Man   from './../../../images/man.png'
 import Pcmap from './../../../images/pc-map.png'
 import Cars  from './../../../images/cars.png'
 import Card  from './../../../images/card.png'
+import Slide from './children/slide'
 import './banner.css'
 
 function Banner() {
@@ -42,11 +43,8 @@ function Banner() {
 
   return (
     <div>
-      <Slider {...settings}>
-      
-      <section className='city' onClick={() => navigate('/about/history')}>
-          <img className='city-back' alt='' src={BgCity} />
-          <img className='city-back-light' alt='' src={BgCityAdd} />
+      <Slider {...settings}>   
+        <Slide background={BgCity} light={BgCityAdd} header={b4}>
           <img className='city-back-light opacity' alt='' src={BgCityAdd} />
           <div class='city-img1'>
             <img class='gt-r' alt='' src={TankerRight}/>
@@ -56,40 +54,29 @@ function Banner() {
             <div class='bold-text'>31 год</div>
             <p class='city-p'>мы заправляем<br/>на дорогах</p>
           </div>
-          <h5>{b4}</h5>
-        </section>
+        </Slide>
 
-        <section className='city' onClick={() => navigate('/fuel-prices-interactive-map/special-offer')}>
-          <img className='city-back' alt='' src={BgCity} />
-          <img className='city-back-light' alt='' src={BgCityAdd} />
+        <Slide background={BgCity} light={BgCityAdd} header={b1}>
           <div className='city-img0'>
             <img className='gt-l-f' alt='' src={TankerFaded} />
             <img className='gt-l' alt='' src={TankerLeft} />
             <img className='m' alt='' src={Man} />
           </div>
-          <h5>{b1}</h5>
-        </section>
+        </Slide>
 
-        <section className='city' onClick={() => window.open('http://it.inforkom.ru/')}>
-          <img className='city-back' alt='' src={BgCity} />
-          <img className='city-back-light' alt='' src={BgCityAdd} />
+        <Slide background={BgCity} light={BgCityAdd} header={b2}>
           <img className='city-back-light opacity' alt='' src={BgCityAdd} />
           <div class='city-img1'>
             <img class='pc-m' alt='' src={Pcmap}/>
           </div>
-          <h5>{b2}</h5>
-        </section>
+        </Slide>
 
-        <section className='city' onClick={() => navigate('/fuel-cards/44-fz-goszakazy')}>
-          <img className='city-back' alt='' src={BgCity} />
-          <img className='city-back-light' alt='' src={BgCityAdd} />
+        <Slide background={BgCity} light={BgCityAdd} header={b3}>
           <img className='city-back-light opacity' alt='' src={BgCityAdd} />
           <div class='city-img1'>
             <img class='cars-img' alt='' src={Cars}/>
           </div>
-          <h5>{b3}</h5>
-        </section>
-
+        </Slide>
       </Slider>
     </div>
   );

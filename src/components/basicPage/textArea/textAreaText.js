@@ -1,19 +1,8 @@
 import './textArea.css'
-import Button from './../../UI/button'
 
-const TextAreaText = ({theme, children}) => {
-  let className = 'text-area-p';
-  if (theme=='first') {
-    className = 'text-area-p-first'
-  }
-  if (theme=='middle') {
-    className = 'text-area-p-middle'
-  }
-  if (theme=='last') {
-    className = 'text-area-p-last'
-  }
+const TextAreaText = ({children}) => {
   return (
-    <p className={className}>{children}</p>
+    <p className='text-area-p'>{children}</p>
   );
 }
 

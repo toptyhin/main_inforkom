@@ -1,10 +1,8 @@
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import './ui.css'
 
-const Button = ( props ) => {
-  const text = props.children;
-  const theme = props.theme;
-  const type = props.type;
+const Button = ( {children, theme, type, href, width, height, marginTop} ) => {
+  const navigate = useNavigate();
   let style = {};
   let button;
   button = 'button';
@@ -18,18 +16,18 @@ const Button = ( props ) => {
     button = 'map-button';
     style.height = '54px';
   };
-  if (props.width) {
-    style.width = props.width;
+  if (width) {
+    style.width = width;
   }
-  if (props.height) {
-    style.height = props.height;
+  if (height) {
+    style.height = height;
   }
-  if (props.marginTop) {
-    style.marginTop = props.marginTop;
+  if (marginTop) {
+    style.marginTop = marginTop;
   }
   return (
-    <button type={type} className={button} style={style}>
-      {text}
+    <button type={type} className={button} style={style} onClick={() => navigate(href)}>
+      {children}
     </button>
   );
 };
