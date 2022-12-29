@@ -1,0 +1,122 @@
+
+.ymaps-2-1-79-zoom {
+  height: 20px!important;
+  width: 40px!important;
+  border-radius: 10px;
+  box-shadow: 0 1px 2px 1px rgb(0 0 0 / 15%), 0 2px 5px -3px rgb(0 0 0 / 15%);
+  overflow: hidden;
+  
+}
+.ymaps-2-1-79-zoom__scale {
+  display: none;
+}
+.ymaps-2-1-79-controls__control {
+  right: 0!important;
+  left: auto!important;
+  top: 0!important;
+  bottom: auto!important;
+  padding: 25px;
+  height: 60px;
+  
+  
+}
+.ymaps-2-1-79-zoom__button {
+  width: 100%;
+  height: 50%!important;
+  border-radius: 0!important;
+  display: flex!important;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 0!important;
+}
+.ymaps-2-1-79-zoom__plus {
+  border-bottom: 1px solid #d27a33!important;
+}
+.ymaps-2-1-79-zoom__minus {
+  bottom: 0;
+  border-top: 2px solid #d27a33!important;
+}
+.ymaps-2-1-79-zoom-button {
+  box-shadow: 0 0 0 0 rgb(0 0 0 / 0%), 0 0 0 0 rgb(0 0 0 / 0%)!important;
+  padding-left: 0px!important;
+  
+}
+.ymaps-2-1-79-zoom__plus .ymaps-2-1-79-zoom__icon {
+  background-image: url('./../../../images/map/plus-map.png')!important;
+  width: 67%;
+  background-color: white!important;
+  margin-bottom: 0!important;
+}
+.ymaps-2-1-79-zoom__minus .ymaps-2-1-79-zoom__icon {
+  background-image: url('./../../../images/map/minus-map.png')!important;
+  width: 67%;
+  background-color: white!important;
+}
+.ymaps-2-1-79-search {
+  height: 35px!important;
+  width: 345px!important;
+  overflow: hidden;
+}
+.ymaps-2-1-79-searchbox__button-cell {
+  width: 50px;
+  height: 35px!important;
+  border-radius: 0 30px 30px 0;
+}
+.ymaps-2-1-79-searchbox-button {
+  height: 100%!important;
+  background-image: url('./../../../images/map/search.png')!important;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 0 30px 30px 0!important;
+  background-color: #f1efef!important;
+  border: 3px solid #a1a1a1!important;
+}
+.ymaps-2-1-79-searchbox__input-cell {
+  height: 35px!important;
+  width: calc(345px - 50px)!important;
+  
+}
+
+.ymaps-2-1-79-searchbox-input {
+  height: 100%;
+  background: #f1efef!important;
+  border-radius: 30px 0 0 30px;
+}
+input.ymaps-2-1-79-searchbox-input__input {
+  font-size: 17px!important;
+  height: 100%!important;
+}
+.ymaps-2-1-79-searchbox-button-text {
+  display: none!important;
+}
+.ymaps-2-1-79-_focused {
+  box-shadow:inset 0 0 0 2px #a1a1a1!important;
+}
+.ymaps-2-1-79-listbox {
+  display: flex!important;
+}
+
+.ymaps-2-1-79-listbox__button-arrow {
+  display: none!important;
+}
+.ymaps-2-1-79-listbox_opened_no .ymaps-2-1-79-listbox__panel {
+  margin-top: 7px!important;
+}
+
+.ymaps-2-1-79-listbox__list {
+  background: white;
+  padding: 20px;
+  padding-bottom: 2px;
+}
+.ymaps-2-1-79-listbox__list-item {
+  background: #f1efef!important;
+  margin: 8px;
+}
+
+.ymaps-2-1-79-_visible-arrow .ymaps-2-1-79-listbox__button-text {
+  padding-right: 12px!important;
+}
+.ymaps-2-1-79-_visible-arrow .ymaps-2-1-79-listbox__button-arrow,
+.ymaps-2-1-79-float-button-icon {
+  display: none!important;
+}

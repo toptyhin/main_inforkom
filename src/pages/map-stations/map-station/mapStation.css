@@ -55,7 +55,7 @@
   margin-bottom: 20px;
 }
 .map {
-  width: 72%;
+  width: 100%;
   background-color: #f1efef;
 }
 .map-point {
@@ -98,6 +98,136 @@
   transform: rotate(45deg);
   margin-bottom: -20px;
 }
+.ymaps-2-1-79-controls__bottom, .ymaps-2-1-79-controls__toolbar {
+  height: 100vh!important;
+}
+.ymaps-2-1-79-controls__toolbar_left {
+  display: flex;
+  flex-wrap: wrap;
+  width: 380px;
+  height: 100%!important;
+  background-color: white;
+  padding: 0 20px 0 20px;
+}
+.ymaps-2-1-79-controls__control_toolbar {
+  padding: 10px;
+  margin: 0!important;
+}
+.ymaps-2-1-79-route-panel-button__button .ymaps-2-1-79-float-button, 
+.ymaps-2-1-79-controls__control_toolbar .ymaps-2-1-79-float-button, 
+.ymaps-2-1-79-listbox .ymaps-2-1-79-listbox__button {
+  display: flex!important;
+  align-items: flex-end;
+  background-color: #f1efef!important;
+  height: 110px!important;
+  width: 170px!important;
+  max-width: none!important;
+  border-radius: 10px!important;
+  font-family: myriadpro-regular!important;
+  padding: 0;
+  color: #4a4848;
+  padding-bottom: 8px;
+  background-repeat: no-repeat;
+  background-position: center 9px;
+  box-shadow: 0 0 0 0 rgb(0 0 0 / 0%), 0 0 0 0 rgb(0 0 0 / 0%)!important;
+}
+.ymaps-2-1-79-listbox__button {
+  background-image: url('./../../../images/map/azs.png')!important;
+
+}
+.ymaps-2-1-79-route-panel-button__button .ymaps-2-1-79-float-button{
+  background-image: url('./../../../images/map/point.png')!important;
+  background-position: center 20px;
+}
+.ymaps-2-1-79-float-button-text, .ymaps-2-1-79-listbox__button-text {
+  width: 100%;
+  font-size: 16px!important;
+  text-align: center!important;
+  padding: 0!important;
+}
+.ymaps-2-1-79-listbox__panel {
+  padding: 0!important;
+  border: 0!important;
+  animation: list-alt .5s;
+  animation-fill-mode: forwards;
+}
+.ymaps-2-1-79-listbox__panel_animation_show {
+  animation: list .5s;
+  animation-fill-mode: forwards;
+}
+@keyframes list {
+  0% {
+    opacity: 0;
+    transform: scaleX(0);
+    transform-origin: left;
+  }
+  100% {
+    opacity: 1;
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+}
+@keyframes list-alt {
+  0% {
+    opacity: 1;
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+  100% {
+    opacity: 0;
+    transform: scaleX(0);
+    transform-origin: left;
+  }
+}
+.ymaps-2-1-79-search {
+  width: 345px;
+}
+.ymaps-2-1-79-searchbox-input {
+  background-color: #f1efef!important;
+  height: 35px!important;
+  width: calc(358px - 45px)!important;
+  border-radius: 30px 0 0 30px!important;
+}
+.ymaps-2-1-79-searchbox__normal-layout {
+  width: 358px!important;
+}
+.ymaps-2-1-79-searchbox__normal-layout:after {
+  box-shadow: 0 0 0 0 rgb(0 0 0 / 0%), 0 0 0 0 rgb(0 0 0 / 0%)!important;
+}
+.ymaps-2-1-79-searchbox-button-text {
+  display: none!important;
+}
+.ymaps-2-1-79-searchbox__button-cell {
+  height: 35px;
+  width: 45px!important;
+}
+input.ymaps-2-1-79-searchbox-input__input {
+  font-size: 17px!important;
+  height: 100%!important;
+}
+.ymaps-2-1-79-searchbox__normal-layout .ymaps-2-1-79-searchbox-button {
+  width: 45px!important;
+  height: 100%!important;
+  border-radius: 0 30px 30px 0;
+  background-color: #f1efef!important;
+  background-image: url('./../../../images/map/search.png')!important;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.ymaps-2-1-79-_focused {
+  box-shadow:inset 0 0 0 0 #a1a1a1!important;
+}
+.ymaps-2-1-79-float-button.ymaps-2-1-79-_hidden-icon {
+background-image: url('./../../../images/map/circules.png');
+background-position: center 27px;
+}
+.ymaps-2-1-79-_visible-arrow .ymaps-2-1-79-listbox__button-arrow,
+.ymaps-2-1-79-float-button-icon {
+  display: none!important;
+}
+.ymaps-2-1-79-zoom__scale {
+  display: none;
+}
 .ymaps-2-1-79-zoom {
   height: 20px!important;
   width: 40px!important;
@@ -105,81 +235,21 @@
   box-shadow: 0 1px 2px 1px rgb(0 0 0 / 15%), 0 2px 5px -3px rgb(0 0 0 / 15%);
   overflow: hidden;
 }
-.ymaps-2-1-79-zoom__scale {
-  display: none;
-}
-.ymaps-2-1-79-controls__control {
-  right: 0!important;
-  left: auto!important;
-  top: 0!important;
-  bottom: auto!important;
-  padding: 25px;
-  height: 60px;
-  
-}
-.ymaps-2-1-79-zoom__button {
+.ymaps-2-1-79-float-button {
+  height: 37px!important;
   width: 100%;
-  height: 50%!important;
-  border-radius: 0!important;
-  display: flex!important;
-  justify-content: center;
-  align-items: center;
+  padding-left: 0!important;
 }
 .ymaps-2-1-79-zoom__plus {
-  border-bottom: 1px solid #d27a33!important;
-}
-.ymaps-2-1-79-zoom__minus {
-  bottom: 0;
-  border-top: 2px solid #d27a33!important;
-}
-.ymaps-2-1-79-float-button {
-  box-shadow: 0 0 0 0 rgb(0 0 0 / 0%), 0 0 0 0 rgb(0 0 0 / 0%)!important;
-  padding-left: 0px!important;
-}
-.ymaps-2-1-79-zoom__plus .ymaps-2-1-79-zoom__icon {
   background-image: url('./../../../images/map/plus-map.png')!important;
-  width: 67%;
-}
-.ymaps-2-1-79-zoom__minus .ymaps-2-1-79-zoom__icon {
-  background-image: url('./../../../images/map/minus-map.png')!important;
-  width: 67%;
-}
-.ymaps-2-1-79-search {
-  height: 35px!important;
-  width: 345px!important;
-  overflow: hidden;
-}
-.ymaps-2-1-79-searchbox__button-cell {
-  width: 50px;
-  height: 35px!important;
-  border-radius: 0 30px 30px 0;
-}
-.ymaps-2-1-79-searchbox-button {
-  height: 100%!important;
-  background-image: url('./../../../images/map/search.png')!important;
   background-repeat: no-repeat;
   background-position: center;
-  border-radius: 0 30px 30px 0!important;
-  background-color: #f1efef!important;
-  border: 3px solid #a1a1a1!important;
+  background-color: white!important;
+  margin-bottom: 0!important;
 }
-.ymaps-2-1-79-searchbox__input-cell {
-  height: 35px!important;
-  width: calc(345px - 50px)!important;
-  
-}
-.ymaps-2-1-79-searchbox-input {
-  height: 100%;
-  background: #f1efef!important;
-  border-radius: 30px 0 0 30px;
-}
-input.ymaps-2-1-79-searchbox-input__input {
-  font-size: 17px!important;
-  height: 100%!important;
-}
-.ymaps-2-1-79-searchbox-button-text {
-  display: none!important;
-}
-.ymaps-2-1-79-_focused {
-  box-shadow:inset 0 0 0 2px #a1a1a1!important;
+.ymaps-2-1-79-zoom__minus {
+  background-image: url('./../../../images/map/minus-map.png')!important;
+  background-repeat: no-repeat;
+  background-color: white!important;
+  background-position: center;
 }

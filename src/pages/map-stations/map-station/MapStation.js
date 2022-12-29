@@ -6,10 +6,10 @@ import './mapStation.css';
 const MapStation = () => {
     return (
       <YMaps>
-      <div className='flex flex-space-b'>
-        <MapSide />
+      
+        
         <InforkomMap />
-      </div>
+      
       </YMaps>
     );
   }
