@@ -19,7 +19,7 @@ const MapStation = () => {
           products = {products}
           productsLoadStatus = {productsLoadStatus}
         />
-      
+        <MapSide/>
       </YMaps>
     );
   }

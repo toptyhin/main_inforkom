@@ -1,4 +1,5 @@
 .map-buttons {
+  z-index: 10;
   width: 24%;
   margin-left: 30px;
   margin-top: 10px;
@@ -14,12 +15,20 @@
   margin-bottom: 35px;
 }
 .map-item {
-  width: 47%;
+  width: 170px;
   height: 110px;
   background-color: #f1efef;
-  border-radius: 7px;
+  border-radius: 10px;
   font-size: 16px;
   text-align: center;
+  top: 210px;
+  position: absolute;
+  z-index: 2;
+}
+.map-calc {
+  position: absolute;
+  background-color: white;
+  z-index: 4;
 }
 .chosen {
   background-color: #d27a33;
@@ -33,16 +42,28 @@
 }
 .map-header {
   font-family: myriadpro-semibold;
-  margin-top: 24px;
+  top: 174px;
   font-size: 23px;
+  z-index: 2;
+  position: absolute;
 }
-.map-p {
-  display: flex;
+.map-p-1 {
+  position: absolute;
   text-align: center;
   font-size: 16px;
-  width: 62%;
-  margin-bottom: 12px;
+  width: 15%;
   color: #a1a1a1;
+  z-index: 2;
+  top: 485px;
+}
+.map-p-2 {
+  position: absolute;
+  text-align: center;
+  font-size: 16px;
+  width: 15%;
+  color: #a1a1a1;
+  z-index: 2;
+  top: 400px;
 }
 .map-p-margin {
   margin-top: 14px;
@@ -53,11 +74,19 @@
 .map-download {
   margin-top: 70px;
   margin-bottom: 20px;
+  
 }
+
 .map {
   width: 100%;
   height: 100vw;
   background-color: #f1efef;
+}
+
+.map-help {
+  position: absolute;
+  bottom: -120px;
+  width: 380px;
 }
 .map-point {
   background-color: white;
@@ -100,13 +129,15 @@
   margin-bottom: -20px;
 }
 .ymaps-2-1-79-controls__bottom, .ymaps-2-1-79-controls__toolbar {
-  height: 100vh!important;
+  height: 0!important;
+  margin-top: 0!important;
 }
 .ymaps-2-1-79-controls__toolbar_left {
   display: flex;
   flex-wrap: wrap;
+  align-content: flex-start;
   width: 380px;
-  height: 100%!important;
+  height: 100vh!important;
   background-color: white;
   padding: 0 20px 0 20px;
 }
@@ -182,6 +213,7 @@
 }
 .ymaps-2-1-79-search {
   width: 345px;
+  margin-bottom: 35px;
 }
 .ymaps-2-1-79-searchbox-input {
   background-color: #f1efef!important;
@@ -230,6 +262,9 @@ background-position: center 27px;
   display: none;
 }
 .ymaps-2-1-79-zoom {
+  position: absolute!important;
+  top: -90px;
+  left: 430px;
   height: 20px!important;
   width: 40px!important;
   border-radius: 10px;
@@ -253,4 +288,7 @@ background-position: center 27px;
   background-repeat: no-repeat;
   background-color: white!important;
   background-position: center;
+}
+.ymaps-2-1-79-map-copyrights-promo {
+  left: 420px!important;
 }

@@ -10,6 +10,10 @@ import Appstore from './../../../../images/map/appstore.png'
 import Google from './../../../../images/map/google.png'
 import ButtonC from '../../../../components/UI/button';
 import { useState, useEffect } from 'react';
+import MapMenuItem from './children/mapMenu/children/mapMenuItem'
+import HouseWhite  from './../../../../images/map/house-white.png'
+import House       from './../../../../images/map/house.png'
+
 
 const InforkomMap = props => {
   const {geoJson,stationsLoadStatus, products, productsLoadStatus} = props;
@@ -17,11 +21,10 @@ const InforkomMap = props => {
   
   const LoadingSpinner = () => stationsLoadStatus ? <div className='spinner'></div> : <></>;
   console.log('products', products);
-  const Filter = () => productsLoadStatus ? <div className='filter'></div> : <div className='filter_placeholder'></div>;
-    
+  const Filter = () => productsLoadStatus ? <div className='filter'></div> : <div className='filter_placeholder'></div>;  
+  
   return (
     <Map 
-      className={'map'}
       defaultState={{ 
         center: [55.75, 37.57],
         zoom: 9,
@@ -54,18 +57,29 @@ const InforkomMap = props => {
 
     <Filter/>
 
+      
       <ZoomControl options={{ float: "right" }} />
       <SearchControl options= {{ floatIndex: '5',
+                                 float: "left",
                                 placeholderContent: "Поиск", 
                               }} />
       
-
-      <ListBox  options={{ floatIndex: '3'}}
+      <Button options={{ floatIndex: '4',
+                         float: "left"
+                      }}
+              data= {{ content: "заглушка",
+                    }}
+              defaultState={{ selected: false }}
+      />
+      <ListBox  options={{ floatIndex: '3',
+                           float: "left"
+                          }}
                 data={{ content: "Фильтр по топливу" }} >
         <ListBoxItem data={{ content: "ГАЗ" }} />
         <ListBoxItem data={{ content: "ДТ" }} />
       </ListBox>
       <Button options={{ floatIndex: '2',
+                          float: "left"
                       }}
               data= {{ content: "Цвета сетей",
                     }}
