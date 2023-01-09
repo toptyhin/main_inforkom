@@ -9,20 +9,51 @@ import Search from './../../../../images/map/search.png'
 import Appstore from './../../../../images/map/appstore.png'
 import Google from './../../../../images/map/google.png'
 import ButtonC from '../../../../components/UI/button';
+import { useState, useEffect } from 'react';
 
-
-const InforkomMap = () => {
-  let Glass = <img src={Search}/>;
+const InforkomMap = props => {
+  const {geoJson,stationsLoadStatus, products, productsLoadStatus} = props;
+  const Glass = <img src={Search}/>;
+  
+  const LoadingSpinner = () => stationsLoadStatus ? <div className='spinner'></div> : <></>;
+  console.log('products', products);
+  const Filter = () => productsLoadStatus ? <div className='filter'></div> : <div className='filter_placeholder'></div>;
+    
   return (
     <Map 
       className={'map'}
       defaultState={{ 
-      center: [55.75, 37.57],
-      zoom: 9,
+        center: [55.75, 37.57],
+        zoom: 9,
       }}
       width="100%"
       height="100vh"
     >
+
+    <LoadingSpinner/>
+
+    <ObjectManager
+      options={{
+        clusterize: true,
+        gridSize: 50,
+      }}
+      objects={{
+        openBalloonOnClick: true,
+        preset: "islands#greenDotIcon",
+      }}
+      clusters={{
+        preset: "islands#orangeClusterIcons",
+      }}
+      // filter={(object) => object.id % 2 === 0}
+      defaultFeatures={geoJson}
+      modules={[
+        "objectManager.addon.objectsBalloon",
+        "objectManager.addon.objectsHint",
+      ]}
+    />
+
+    <Filter/>
+
       <ZoomControl options={{ float: "right" }} />
       <SearchControl options= {{ floatIndex: '5',
                                 placeholderContent: "Поиск", 
@@ -44,7 +75,7 @@ const InforkomMap = () => {
                               float: "left" }} 
                    data={{ content: "Построить маршрут" }}
       />
-      <div className='map-buttons'>
+      {/* <div className='map-buttons'>
         <p className='map-header'>Расчет маршрута</p>
           <MapCalc />
           <p className='map-p map-p-left'>Для дельной информации свяжитесь с менеджером</p>
@@ -53,7 +84,7 @@ const InforkomMap = () => {
             <img src={Appstore}/>
             <img src={Google}/>
           </div>
-        </div>
+        </div> */}
     </Map>
   );
 }
