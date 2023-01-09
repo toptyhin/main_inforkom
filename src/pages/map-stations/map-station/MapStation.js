@@ -9,7 +9,7 @@ const MapStation = () => {
       
         
         <InforkomMap />
-      
+        <MapSide/>
       </YMaps>
     );
   }

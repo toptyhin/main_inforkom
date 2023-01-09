@@ -9,13 +9,14 @@ import Search from './../../../../images/map/search.png'
 import Appstore from './../../../../images/map/appstore.png'
 import Google from './../../../../images/map/google.png'
 import ButtonC from '../../../../components/UI/button';
-
+import MapMenuItem from './children/mapMenu/children/mapMenuItem'
+import HouseWhite  from './../../../../images/map/house-white.png'
+import House       from './../../../../images/map/house.png'
 
 const InforkomMap = () => {
   let Glass = <img src={Search}/>;
   return (
     <Map 
-      className={'map'}
       defaultState={{ 
       center: [55.75, 37.57],
       zoom: 9,
@@ -23,18 +24,29 @@ const InforkomMap = () => {
       width="100%"
       height="100vh"
     >
+      
       <ZoomControl options={{ float: "right" }} />
       <SearchControl options= {{ floatIndex: '5',
+                                 float: "left",
                                 placeholderContent: "Поиск", 
                               }} />
       
-
-      <ListBox  options={{ floatIndex: '3'}}
+      <Button options={{ floatIndex: '4',
+                         float: "left"
+                      }}
+              data= {{ content: "заглушка",
+                    }}
+              defaultState={{ selected: false }}
+      />
+      <ListBox  options={{ floatIndex: '3',
+                           float: "left"
+                          }}
                 data={{ content: "Фильтр по топливу" }} >
         <ListBoxItem data={{ content: "ГАЗ" }} />
         <ListBoxItem data={{ content: "ДТ" }} />
       </ListBox>
       <Button options={{ floatIndex: '2',
+                          float: "left"
                       }}
               data= {{ content: "Цвета сетей",
                     }}
@@ -43,17 +55,7 @@ const InforkomMap = () => {
       <RouteButton options={{ floatIndex: '1', 
                               float: "left" }} 
                    data={{ content: "Построить маршрут" }}
-      />
-      <div className='map-buttons'>
-        <p className='map-header'>Расчет маршрута</p>
-          <MapCalc />
-          <p className='map-p map-p-left'>Для дельной информации свяжитесь с менеджером</p>
-          <ButtonC children='Звонок' theme='map' width='200px'/>
-          <div className='map-download flex flex-space-a'>
-            <img src={Appstore}/>
-            <img src={Google}/>
-          </div>
-        </div>
+      />       
     </Map>
   );
 }
