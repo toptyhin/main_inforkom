@@ -1,4 +1,4 @@
-import Slider     from 'react-slick';
+import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import { useNavigate } from "react-router-dom";
@@ -14,11 +14,7 @@ import Card  from './../../../images/card.png'
 import Slide from './children/slide'
 import './banner.css'
 
-function Banner() {
-  const b1 = 'Топливо по оптовой цене собственными бензовозами'
-  const b2 = 'Собственный процессинг топливных карт'
-  const b3 = 'Крупнейший независимый поставщик топлива по гос. контрактам'
-  const b4 = 'Профессиональный подход к заправке по топливным картам'
+function Banner({banner1, banner2, banner3, banner4}) {
   const navigate = useNavigate();
 
   let settings = {
@@ -44,7 +40,7 @@ function Banner() {
   return (
     <div>
       <Slider {...settings}>   
-        <Slide background={BgCity} light={BgCityAdd} header={b4}>
+        <Slide background={BgCity} light={BgCityAdd} header={banner4}>
           <img className='city-back-light opacity' alt='' src={BgCityAdd} />
           <div class='city-img1'>
             <img class='gt-r' alt='' src={TankerRight}/>
@@ -56,7 +52,7 @@ function Banner() {
           </div>
         </Slide>
 
-        <Slide background={BgCity} light={BgCityAdd} header={b1}>
+        <Slide background={BgCity} light={BgCityAdd} header={banner1}>
           <div className='city-img0'>
             <img className='gt-l-f' alt='' src={TankerFaded} />
             <img className='gt-l' alt='' src={TankerLeft} />
@@ -64,14 +60,14 @@ function Banner() {
           </div>
         </Slide>
 
-        <Slide background={BgCity} light={BgCityAdd} header={b2}>
+        <Slide background={BgCity} light={BgCityAdd} header={banner2}>
           <img className='city-back-light opacity' alt='' src={BgCityAdd} />
           <div class='city-img1'>
             <img class='pc-m' alt='' src={Pcmap}/>
           </div>
         </Slide>
 
-        <Slide background={BgCity} light={BgCityAdd} header={b3}>
+        <Slide background={BgCity} light={BgCityAdd} header={banner3}>
           <img className='city-back-light opacity' alt='' src={BgCityAdd} />
           <div class='city-img1'>
             <img class='cars-img' alt='' src={Cars}/>

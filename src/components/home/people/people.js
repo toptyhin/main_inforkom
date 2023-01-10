@@ -1,22 +1,15 @@
-import { Link } from 'react-router-dom';
 import Person  from './children/person'
-import Person1 from './images/person-1.png'
-import Person2 from './images/person-2.png'
-import Person3 from './images/person-3.png'
 import './people.css'
 
-const People = () => {
+const People = ({header_people, person_1, person_2, person_3}) => {
   return (
     <div className='main'>
       <section id='people'>
-        <h2 className='head-people'>Топливные карты для юридических лиц</h2>
+        <h2 className='head-people'>{header_people}</h2>
         <div className='tablePeople'>
-          <Person img={Person1} extra='yes' href='/fuel-cards/fuel-card' 
-            children='Заправляем коммерческий транспорт по топливным картам и талонам'/>
-          <Person img={Person2}  href='/fuel-cards/operation-online'
-            children='Управляй затратами на топливо в режиме Online'/>
-          <Person img={Person3} href='/fuel-cards/com-proposal'
-            children='Подходит для ИП и предприятий, где есть свой транспорт'/>
+          <Person img={person_1[1]} extra='yes' children={person_1[0]}/>
+          <Person img={person_2[1]} children={person_2[0]}/>
+          <Person img={person_3[1]} children={person_3[0]}/>
         </div>
       </section>
     </div>

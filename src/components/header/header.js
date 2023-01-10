@@ -11,13 +11,6 @@ const item_company = [[`/about/news`,'Новости компании'],
        [`/about/social`,'Социальная ответственность'],
        [`/about/projects`,'Наши проекты']];
 
-const item_tarif = [[`tarify/tatneft`,'Тариф Татнефть'],
-       [`tarify/gazprom`,'Тариф Газпром'],
-       [`tarify/max`,'Тариф Максимальный'],
-       [`tarify/universalny`,'Тариф Универсальный'],
-       [`tarify/svoi-region`,'Тариф Все регионы'],
-       [`tarify/agregator`,'Тариф Агрегатор']];
-
 const item_cards = [[`fuel-cards/fuel-card`,'Топливная карта'],
        [`fuel-cards/oil-talons`,'Топливные талоны'],
        [`fuel-cards/dkv-fuel-cards`,'Топливная карта DKV'],
@@ -40,7 +33,7 @@ const item_fuel = [[`/fuel-prices-interactive-map/fuel-prices`,'Цены на т
 const item_contacts = [[`/contacts/contacts`,'Контактная информация'],
                       [`/contacts/jobs`,'Вакансии']];
 
-const Header = () => {
+const Header = ({tariff}) => {
   const [popup, setPopup] = useState(false);
   return (
     <div className='menu-parent'>
@@ -53,7 +46,7 @@ const Header = () => {
               </Link>
             </li>
             <MenuItem mainName='О компании' item={item_company}/>
-            <MenuItem mainName='Тарифы' item={item_tarif}/>
+            <MenuItem mainName='Тарифы' item={tariff}/>
             <MenuItem mainName='Топливные карты' item={item_cards}/>
             <MenuItem mainName='Сеть АЗС' item={item_azs}/>
             <MenuItem mainName='Топливо' item={item_fuel}/>
@@ -67,7 +60,7 @@ const Header = () => {
               <ul className='menu-list flex'>
                 <div className='cross' onClick={() => setPopup(false)}>×</div>
                 <MobMenu mainName='О компании'      item={item_company}  setPopup={setPopup}/>
-                <MobMenu mainName='Тарифы'          item={item_tarif}    setPopup={setPopup}/>
+                <MobMenu mainName='Тарифы'          item={tariff}        setPopup={setPopup}/>
                 <MobMenu mainName='Топливные карты' item={item_cards}    setPopup={setPopup}/>
                 <MobMenu mainName='Сеть АЗС'        item={item_azs}      setPopup={setPopup}/>
                 <MobMenu mainName='Контакты'        item={item_contacts} setPopup={setPopup}/>
