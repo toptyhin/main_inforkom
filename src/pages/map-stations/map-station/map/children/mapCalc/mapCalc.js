@@ -1,4 +1,4 @@
-import Button from '../../../../../components/UI/button';
+import Button from '../../../../../../components/UI/button';
 import MapCalcSlider from './children/mapSlider';
 import MapFuelType from './children/mapFuelType';
 import { useState } from 'react';
@@ -12,12 +12,12 @@ const MapCalc = () => {
     return (
       <div>
       <div className={hide ? 'flex flex-center' : 'flex flex-center hidden'}>
-        <p className='map-p'>Рассчитайте, сколько сэкономит топливная карта Инфорком</p>
+        <p className='map-p-1'>Рассчитайте, сколько сэкономит топливная карта Инфорком</p>
       </div>
       <div className={hide ? '' : 'hidden'} onClick={() => setHide(false)}>
-        <Button children='Топливный калькулятор' theme='map' width='100%'/>
+        <Button children='Топливный калькулятор' theme='map-1' width='360px'/>
       </div>
-      <div className={hide ? 'hidden' : ''}>
+      <div className={hide ? 'map-calc hidden' : 'map-calc'}>
         <MapCalcSlider setSlider={setDistanceSlider}
                 getAriaLabel = {() => 'distance slider'}
                 header ='Расстояние'

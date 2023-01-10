@@ -1,13 +1,24 @@
 import MapSide from './map/mapSide';
-import Map from './map/map';
+import InforkomMap from './map/map';
+import { YMaps } from '@pbe/react-yandex-maps';
+import useStationsJSON from '../../../services/useStations';
+import useProducts from '../../../services/useProducts';
+import './mapStation.css';
 
 const MapStation = () => {
-    return (
-      <div className='flex flex-space-b'>
-        <MapSide />
-        <Map />
-      </div>
-    );
-  }
+  const {geoJson, stationsLoadStatus} = useStationsJSON();
+  const {products,productsLoadStatus} = useProducts();
+  return (
+    <YMaps>
+      <InforkomMap 
+        geoJson = {geoJson}
+        stationsLoadStatus = {stationsLoadStatus}
+        products = {products}
+        productsLoadStatus = {productsLoadStatus}
+      />
+      <MapSide/>
+    </YMaps>
+  );
+}
 
-  export default MapStation;
+export default MapStation;

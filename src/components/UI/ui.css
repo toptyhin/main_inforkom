@@ -83,7 +83,8 @@
 .calc-button:active {
   filter: brightness(110%)!important;
 }
-.map-button {
+.map-button-1 {
+  position: absolute;
   height: 54px;
   color: white;
   font-size: 16px;
@@ -92,6 +93,20 @@
   background-color: #d27a33;
   text-transform: uppercase;
   cursor: pointer;
+  z-index: 3;
+  top: 535px;
+}
+.map-button-2 {
+  position: absolute;
+  height: 54px;
+  color: white;
+  font-size: 16px;
+  border-radius: 0;
+  font-family: montserrat-regular;
+  background-color: #d27a33;
+  text-transform: uppercase;
+  cursor: pointer;
+  z-index: 3;
 }
 .download-button {
   cursor: pointer;
