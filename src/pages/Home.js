@@ -1,3 +1,4 @@
+import { API_URL } from '../appconfig';
 import Banner from '../components/home/banner/banner';
 import People from '../components/home/people/people';
 import Green  from '../components/home/green/green';
@@ -51,9 +52,10 @@ const Home = () => {
   const b3 = data?.main.data.attributes.banner.banner_3;
   const b4 = data?.main.data.attributes.banner.banner_4;
   
-  const person_1 = [data?.main.data.attributes.people[0].text, `https://bite2.inforkom.ru${pic_fix[0]}`];
-  const person_2 = [data?.main.data.attributes.people[1].text, `https://bite2.inforkom.ru${pic_fix[1]}`];
-  const person_3 = [data?.main.data.attributes.people[2].text, `https://bite2.inforkom.ru${pic_fix[2]}`];
+  const person_1 = [data?.main.data.attributes.people[0].text, API_URL+pic_fix[0]];
+  const person_2 = [data?.main.data.attributes.people[1].text, API_URL+pic_fix[1]];
+  const person_3 = [data?.main.data.attributes.people[2].text, API_URL+pic_fix[2]];  
+
   console.log(pic);
   
   const header_people = data?.main.data.attributes.header_people;
