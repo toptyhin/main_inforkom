@@ -14,12 +14,12 @@ import HouseWhite  from './../../../../images/map/house-white.png'
 import House       from './../../../../images/map/house.png'
 
 const InforkomMap = props => {
-  const {geoJson,stationsLoadStatus, products, productsLoadStatus} = props;
+  const {geoJson,stationsLoadStatus} = props;
   const Glass = <img src={Search}/>;
 
   const LoadingSpinner = () => stationsLoadStatus ? <div className='spinner'></div> : <></>;
-  console.log('products', products);
-  const Filter = () => productsLoadStatus ? <div className='filter'></div> : <div className='filter_placeholder'></div>;  
+  
+  
 
   return (
     <Map 
@@ -46,14 +46,14 @@ const InforkomMap = props => {
         preset: "islands#orangeClusterIcons",
       }}
       // filter={(object) => object.id % 2 === 0}
-      defaultFeatures={geoJson}
+      features={geoJson}
       modules={[
         "objectManager.addon.objectsBalloon",
         "objectManager.addon.objectsHint",
       ]}
     />
 
-    <Filter/>
+
 
 
       <ZoomControl options={{ float: "right" }} />

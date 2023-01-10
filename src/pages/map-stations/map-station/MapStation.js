@@ -13,10 +13,11 @@ const MapStation = () => {
       <InforkomMap 
         geoJson = {geoJson}
         stationsLoadStatus = {stationsLoadStatus}
-        products = {products}
-        productsLoadStatus = {productsLoadStatus}
       />
-      <MapSide/>
+      <MapSide
+        products = {products}
+        productsLoadStatus = {productsLoadStatus}      
+      />
     </YMaps>
   );
 }
