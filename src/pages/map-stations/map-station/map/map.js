@@ -1,3 +1,4 @@
+import { createRef } from 'react';
 import MapPoint from './children/mapPoint';
 import { Map, ObjectManager, ZoomControl, SearchControl, 
          ListBox, ListBoxItem, Button, RouteButton, } from '@pbe/react-yandex-maps';
@@ -8,18 +9,30 @@ import Search from './../../../../images/map/search.png'
 import Appstore from './../../../../images/map/appstore.png'
 import Google from './../../../../images/map/google.png'
 import ButtonC from '../../../../components/UI/button';
-import { useState, useEffect } from 'react';
 import MapMenuItem from './children/mapMenu/children/mapMenuItem'
 import HouseWhite  from './../../../../images/map/house-white.png'
 import House       from './../../../../images/map/house.png'
 
 const InforkomMap = props => {
+  
   const {geoJson,stationsLoadStatus} = props;
+
   const Glass = <img src={Search}/>;
 
   const LoadingSpinner = () => stationsLoadStatus ? <div className='spinner'></div> : <></>;
   
-  
+  const OMref = createRef();
+
+  const markerClick = (e) => {
+    if (OMref.current) {
+        const objectId = e.get('objectId');
+        const obj = OMref.current.objects.getById(objectId);
+        if (obj) {
+          OMref.current.objects.balloon.open(objectId)
+        }
+    }
+  }
+
 
   return (
     <Map 
@@ -34,23 +47,30 @@ const InforkomMap = props => {
     <LoadingSpinner/>
 
     <ObjectManager
+      instanceRef = {OMref}
+
       options={{
         clusterize: true,
         gridSize: 50,
       }}
+
       objects={{
         openBalloonOnClick: true,
         preset: "islands#greenDotIcon",
       }}
+
       clusters={{
         preset: "islands#orangeClusterIcons",
       }}
       // filter={(object) => object.id % 2 === 0}
+
       features={geoJson}
+
       modules={[
         "objectManager.addon.objectsBalloon",
         "objectManager.addon.objectsHint",
       ]}
+      onClick={markerClick}
     />
 
 
