@@ -53,7 +53,7 @@ const Azs = () => {
               <img src={ptk} alt='птк'/>
               <img src={tes} alt='tes'/>
             </div>
-            <div class='azs-button2'>
+            <div className='azs-button2'>
               <Button type='button' width='222px' marginTop='3vw' children='Сеть АЗС' href='/map-stations/map-station'/>
             </div>
           </div>

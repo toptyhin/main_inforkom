@@ -55,18 +55,18 @@ const MapCalc = styled(Slider)( ({ theme }) => ({
 
 function valueLabelFormat(value, unit) {
   const units = [unit];
-  let unitIndex = 0;
-  let Value = value;
+  const unitIndex = 0;
+  const Value = value;
   return `${Value} ${units[unitIndex]}`;
 }
 
-function MapCalcSlider({setSlider, header, unit, marks, ariaLabel, getAriaLabel, defaultValue, min,
+function MapCalcSlider({setslider, header, unit, marks, ariaLabel, getAriaLabel, defaultValue, min,
                      step, max, valueLabelDisplay}) {
   const [value, setValue] = React.useState(defaultValue);
   const fuel = valueLabelFormat(value);
   const handleChange = (event, newValue) => {
         setValue(newValue);
-        setSlider(newValue);
+        setslider(newValue);
 
   };
   let showValue;
@@ -80,7 +80,7 @@ function MapCalcSlider({setSlider, header, unit, marks, ariaLabel, getAriaLabel,
     <div className='map-header'>
       <span>{header}</span>
     </div>
-    <MapCalc setSlider = {value}
+    <MapCalc setslider = {value}
           value = {value}
           getAriaLabel = {getAriaLabel}
           aria-label = {ariaLabel}

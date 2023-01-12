@@ -18,7 +18,7 @@ const MapCalc = () => {
         <Button children='Топливный калькулятор' theme='map-1' width='360px'/>
       </div>
       <div className={hide ? 'map-calc hidden' : 'map-calc'}>
-        <MapCalcSlider setSlider={setDistanceSlider}
+        <MapCalcSlider setslider={setDistanceSlider}
                 getAriaLabel = {() => 'distance slider'}
                 header ='Расстояние'
                 unit = 'км'
@@ -30,11 +30,11 @@ const MapCalc = () => {
         <p className='map-header'>Вид топлива</p>
         <MapFuelType children='Бензин/ДТ' setFuel={setFuel1}/>
         <MapFuelType children='Газ' setFuel={setFuel2}/>
-        <MapCalcSlider  setSlider={setDiscountSlider}
+        <MapCalcSlider  setslider={setDiscountSlider}
                 ariaLabel ='discount slider'
                 header ='Размер скидки'
                 unit = '%'
-                defaultValue ='9'
+                defaultValue ={9}
                 min = {1}
                 max = {100}
                 valueLabelDisplay ='off'

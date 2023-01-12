@@ -1,8 +1,7 @@
-
 import './ui.css'
 
 const DownloadButton = ( {name, href, color, src, children} ) => {
-  let style = {};
+  const style = {};
   const download = 'download-button';
   const loadP = 'loadP'
   const p = 'download-p'

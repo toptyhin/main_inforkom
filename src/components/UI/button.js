@@ -3,7 +3,7 @@ import './ui.css'
 
 const Button = ( {children, theme, type, href, width, height, marginTop} ) => {
   const navigate = useNavigate();
-  let style = {};
+  const style = {};
   let button;
   button = 'button';
   if (theme==='unactive') {

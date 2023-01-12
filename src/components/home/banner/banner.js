@@ -1,3 +1,4 @@
+
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
@@ -14,10 +15,10 @@ import Card  from './../../../images/card.png'
 import Slide from './children/slide'
 import './banner.css'
 
-function Banner({banner1, banner2, banner3, banner4}) {
+function Banner({banner}) {
   const navigate = useNavigate();
 
-  let settings = {
+  const settings = {
     dots: true,
     arrows: true,
     infinite: true,
@@ -40,19 +41,19 @@ function Banner({banner1, banner2, banner3, banner4}) {
   return (
     <div>
       <Slider {...settings}>   
-        <Slide background={BgCity} light={BgCityAdd} header={banner4}>
+        <Slide background={BgCity} light={BgCityAdd} header={banner[0]}>
           <img className='city-back-light opacity' alt='' src={BgCityAdd} />
-          <div class='city-img1'>
-            <img class='gt-r' alt='' src={TankerRight}/>
-            <img class='card-img' alt='' src={Card}/>
+          <div className='city-img1'>
+            <img className='gt-r' alt='' src={TankerRight}/>
+            <img className='card-img' alt='' src={Card}/>
           </div>
-          <div class='flex city-bold-text'>
-            <div class='bold-text'>31 год</div>
-            <p class='city-p'>мы заправляем<br/>на дорогах</p>
+          <div className='flex city-bold-text'>
+            <div className='bold-text'>31 год</div>
+            <p className='city-p'>мы заправляем<br/>на дорогах</p>
           </div>
         </Slide>
 
-        <Slide background={BgCity} light={BgCityAdd} header={banner1}>
+        <Slide background={BgCity} light={BgCityAdd} header={banner[1]}>
           <div className='city-img0'>
             <img className='gt-l-f' alt='' src={TankerFaded} />
             <img className='gt-l' alt='' src={TankerLeft} />
@@ -60,17 +61,17 @@ function Banner({banner1, banner2, banner3, banner4}) {
           </div>
         </Slide>
 
-        <Slide background={BgCity} light={BgCityAdd} header={banner2}>
+        <Slide background={BgCity} light={BgCityAdd} header={banner[2]}>
           <img className='city-back-light opacity' alt='' src={BgCityAdd} />
-          <div class='city-img1'>
-            <img class='pc-m' alt='' src={Pcmap}/>
+          <div className='city-img1'>
+            <img className='pc-m' alt='' src={Pcmap}/>
           </div>
         </Slide>
 
-        <Slide background={BgCity} light={BgCityAdd} header={banner3}>
+        <Slide background={BgCity} light={BgCityAdd} header={banner[3]}>
           <img className='city-back-light opacity' alt='' src={BgCityAdd} />
-          <div class='city-img1'>
-            <img class='cars-img' alt='' src={Cars}/>
+          <div className='city-img1'>
+            <img className='cars-img' alt='' src={Cars}/>
           </div>
         </Slide>
       </Slider>

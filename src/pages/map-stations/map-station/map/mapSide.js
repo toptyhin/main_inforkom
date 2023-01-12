@@ -10,7 +10,6 @@ import HouseWhite  from './../../../../images/map/house-white.png'
 import House       from './../../../../images/map/house.png'
 
 const MapSide = () => {
-  let Glass = <img src={Search}/>;
     return (
       <div className='map-buttons'>
       <p className='map-header'>Расчет маршрута</p>

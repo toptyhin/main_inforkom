@@ -102,19 +102,19 @@ const Calc = styled(Slider)( ({ theme }) => ({
 
 function valueLabelFormat(value, unit) {
   const units = [unit];
-  let unitIndex = 0;
-  let Value = value;
+  const unitIndex = 0;
+  const Value = value;
   return `${Value} ${units[unitIndex]}`;
 }
 
-function CalcSlider({setSlider, header, unit, marks, ariaLabel, defaultValue, min,
+function CalcSlider({setslider, header, unit, marks, ariaLabel, defaultValue, min,
                      step, max, valueLabelDisplay}) {
   const [value, setValue] = React.useState(defaultValue);
   const fuel = valueLabelFormat(value);
   const handleChange = (event, newValue) => {
     if (typeof newValue === 'number') {
       setValue(newValue);
-      setSlider(newValue);
+      setslider(newValue);
     }
   };
 
@@ -124,7 +124,7 @@ function CalcSlider({setSlider, header, unit, marks, ariaLabel, defaultValue, mi
         <span className='flex-1 text-left'>{header}</span>
         <span className='CalcValue'>{valueLabelFormat(value,unit)}</span>
       </div>
-      <Calc setSlider = {value}
+      <Calc setslider = {value}
           value = {value}
           aria-label = {ariaLabel}
           marks = {marks}

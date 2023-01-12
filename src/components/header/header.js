@@ -57,7 +57,7 @@ const Header = ({tariff}) => {
           <div className='mob-menu-button' >
             <p onClick={() => setPopup(true)}>☰</p>
             <nav className={popup ? '':'hidden'}>
-              <ul className='menu-list flex'>
+              <ul className='menu-list'>
                 <div className='cross' onClick={() => setPopup(false)}>×</div>
                 <MobMenu mainName='О компании'      item={item_company}  setPopup={setPopup}/>
                 <MobMenu mainName='Тарифы'          item={tariff}        setPopup={setPopup}/>

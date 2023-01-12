@@ -5,26 +5,26 @@ import Oil    from './images/oil.png'
 import './red.css'
 
 const Red = () => {
-  let car = {
+  const car = {
     width: '160%',
     marginTop: '1vw',
   }
-  let oil = {
+  const oil = {
     width: '160%',
     marginTop: '6%',
     marginLeft: '-63%',
     transform: 'scale(-1, 1)',
   }
-  let tool = {
+  const tool = {
     width: '106%',
     marginLeft: '-12%',
     marginTop: '4%',
   }
-  let margin = {
+  const margin = {
     marginLeft: '3%',
     alignSelf: 'flex-end',
   }
-  let marginw = {
+  const marginw = {
     marginRight: '10%',
   }
   return (
@@ -34,7 +34,7 @@ const Red = () => {
           <div className='color-zone wrap flex flex-space-b '>
             <div className='flex red-head'>
               <h2>Инфорком <br/>техцентр</h2>
-              <p>Полезные продукты <br class='red-hide'/>и сервисы для Вашего <br class='red-hide'/>грузового автопарка</p>
+              <p>Полезные продукты <br className='red-hide'/>и сервисы для Вашего <br className='red-hide'/>грузового автопарка</p>
             </div>
             <div className='flex red-table'>
               <RedBox img={Car} href='https://inforkom-abcp.ru/' 
