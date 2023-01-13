@@ -1,7 +1,6 @@
 import React, {useContext} from "react";
 import FilterButton from "./filterButton";
 import { MapContext } from "../../../../reducer";
-import { isDragActive } from "framer-motion";
 import {v4 as uuidv4} from 'uuid';
 
 const ProductFilter = ({products}) => {
@@ -19,8 +18,8 @@ const ProductFilter = ({products}) => {
             if (e.catId !== 401207) {
             // skip services - take only products
             buttons.push(<FilterButton 
+                                key={uuidv4()}
                                 name={e.group} 
-                                key={uuidv4()} 
                                 active={isActive(e.id)}
                                 handle = {()=>{
                                     dispatch({
@@ -36,7 +35,7 @@ const ProductFilter = ({products}) => {
             }
       });
     });
-    return <div key={uuidv4()} style={{width:'100%', display: 'flex'}}>{buttons}</div>
+    return <div key={uuidv4()} style={{width:'100%', display: 'flex', position:'absolute',top:250, left:400}}>{buttons}</div>
   };
 
   export default ProductFilter;

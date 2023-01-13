@@ -1,5 +1,4 @@
 import { createRef } from 'react';
-import MapPoint from './children/mapPoint';
 import { Map, ObjectManager, ZoomControl, SearchControl, 
          ListBox, ListBoxItem, Button, RouteButton, } from '@pbe/react-yandex-maps';
 import MapMenu from './children/mapMenu/mapMenu';
@@ -28,6 +27,11 @@ const InforkomMap = props => {
         const objectId = e.get('objectId');
         const obj = OMref.current.objects.getById(objectId);
         if (obj) {
+          console.log(obj.properties);
+          const logo = obj.properties.logo ? `<img style="max-height:70px;position:absolute;right:10%;top:0;" src="${obj.properties.logo}">` : '';
+          const services = 'services: ' + obj.properties.infra.join(':');
+          const products = 'products: ' + obj.properties.products.join(':');
+          obj.properties.balloonContentBody = `<div style="position:relative"><div class="map-point"><div class="point-field"><div class="point-red"><p>20 км</p></div>${logo}<p>${obj.properties.name}</p><p class="point-p-extra">${services}</p><p class="point-p-extra">${products}</p></div><div><p class="address-p">${obj.properties.region} ${obj.properties.address} ${obj.properties.position}</p></div><div class="flex flex-center"><div class="tail"></div></div></div></div>`;
           OMref.current.objects.balloon.open(objectId)
         }
     }
@@ -45,7 +49,7 @@ const InforkomMap = props => {
     >
 
     <LoadingSpinner/>
-
+    
     <ObjectManager
       instanceRef = {OMref}
 
@@ -77,34 +81,22 @@ const InforkomMap = props => {
 
 
       <ZoomControl options={{ float: "right" }} />
-      <SearchControl options= {{ floatIndex: '5',
-                                 float: "left",
-                                placeholderContent: "Поиск", 
-                              }} />
+      <SearchControl options= {{ floatIndex: '5', float: "left", placeholderContent: "Поиск",}} />
 
-      <Button options={{ floatIndex: '4',
-                         float: "left"
-                      }}
-              data= {{ content: "заглушка",
-                    }}
+      <Button options={{ floatIndex: '4', float: "left" }}
+              data= {{ content: "заглушка" }}
               defaultState={{ selected: false }}
       />
-      <ListBox  options={{ floatIndex: '3',
-                           float: "left"
-                          }}
+      <ListBox  options={{ floatIndex: '3', float: "left" }}
                 data={{ content: "Фильтр по топливу" }} >
         <ListBoxItem data={{ content: "ГАЗ" }} />
         <ListBoxItem data={{ content: "ДТ" }} />
       </ListBox>
-      <Button options={{ floatIndex: '2',
-                          float: "left"
-                      }}
-              data= {{ content: "Цвета сетей",
-                    }}
+      <Button options={{ floatIndex: '2', float: "left" }}
+              data= {{ content: "Цвета сетей" }}
               defaultState={{ selected: false }}
       />
-      <RouteButton options={{ floatIndex: '1', 
-                              float: "left" }} 
+      <RouteButton options={{ floatIndex: '1', float: "left" }} 
                    data={{ content: "Построить маршрут" }}
       />
       {/* <div className='map-buttons'>

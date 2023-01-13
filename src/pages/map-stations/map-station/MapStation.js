@@ -14,11 +14,23 @@ const MapStation = () => {
   const {products,productsLoadStatus} = useProducts();
   const [state, dispatch] = useReducer(MapReducer, initialState);
 
+  const stations = () => {
+    if (!state.activeFilters.length) {
+      return geoJson
+    } else {
+      return {
+        type: geoJson.type,
+        features: geoJson.features.filter(e => e.properties.products.length && e.properties.products.filter( p => state.activeProducts.indexOf(p) !== -1).length > 0)
+      }
+    }
+
+  }
+
   return (
     <MapContext.Provider value={{dispatch, state}}>
       <YMaps>
         <InforkomMap 
-          geoJson = {geoJson}
+          geoJson = {stations()}
           stationsLoadStatus = {stationsLoadStatus}
         />
         <MapSide
