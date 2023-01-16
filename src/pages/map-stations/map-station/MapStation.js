@@ -1,4 +1,4 @@
-import { useReducer } from 'react';
+import { useReducer, useState } from 'react';
 import MapSide from './map/mapSide';
 import InforkomMap from './map/map';
 import { YMaps } from '@pbe/react-yandex-maps';
@@ -6,6 +6,7 @@ import useStationsJSON from '../../../services/useStations';
 import useProducts from '../../../services/useProducts';
 import { MapContext, MapReducer, initialState } from '../reducer';
 import './mapStation.css';
+import { YMAP_API_KEY } from '../../../appconfig';
 
 
 
@@ -13,6 +14,11 @@ const MapStation = () => {
   const {geoJson, stationsLoadStatus} = useStationsJSON();
   const {products,productsLoadStatus} = useProducts();
   const [state, dispatch] = useReducer(MapReducer, initialState);
+  const [mapCenter, setMapCenter] = useState([55.75, 37.57]);
+
+  const mapMove = (coords) => {
+    coords.length && setMapCenter(coords)
+  }
 
   const stations = () => {
     if (!state.activeFilters.length) {
@@ -26,16 +32,20 @@ const MapStation = () => {
 
   }
 
+  
+
   return (
     <MapContext.Provider value={{dispatch, state}}>
-      <YMaps>
+      <YMaps query={{apikey:YMAP_API_KEY}}>
         <InforkomMap 
           geoJson = {stations()}
           stationsLoadStatus = {stationsLoadStatus}
+          mapCenter = {mapCenter}
         />
         <MapSide
           products = {products}
-          productsLoadStatus = {productsLoadStatus}      
+          productsLoadStatus = {productsLoadStatus}
+          mapMove = {mapMove}
         />
       </YMaps>
     </MapContext.Provider>

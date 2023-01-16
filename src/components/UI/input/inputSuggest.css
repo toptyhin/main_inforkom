@@ -1,0 +1,56 @@
+.input_class {position: relative;}
+
+.suggestion_dropdown {
+  position: absolute;
+  background-color: white;
+  width: 100%;
+  box-shadow: 0px 5px 8px 0px rgba(34, 60, 80, 0.2);
+}
+
+.field {
+  text-align: left;
+  border: 1px solid #eaedf0;
+  outline-color: rgba(128,128,128,0.54902);
+  color: grey;
+  border-radius: 7px;
+  font-family: myriadpro-regular;
+  font-size: 1.2vw;
+  padding: 8px 16px;
+}
+.field_class {
+  border-radius: 20px;
+  background-color: rgb(234, 237, 240);
+  text-align: left;
+  padding-left: 54px;
+  font-size: 16px;
+}
+.input_class {
+  border-radius: 7px;
+  font-family: myriadpro-regular;
+  font-size: 1.2vw;
+  width: 100%;
+  height: 100%;
+}
+.suggestion_dropdown li {padding: 4px 0;}
+.suggestion_dropdown .itemTitle {font-size: 1.1vw;}
+.suggestion_dropdown .itemDescription {font-size: 1.0vw; color: #838383;}
+@media (min-width: 1921px) {
+  .field {
+    font-size: 27px;
+  }
+}
+@media (max-width: 1027px) {
+  .field {
+    font-size: 1.7vw;
+  }
+}
+@media (max-width: 881px) {
+  .field {
+    font-size: 2.3vw;
+  }
+}
+@media (max-width: 500px) {
+  .field {
+    font-size: 4vw;
+  }
+}

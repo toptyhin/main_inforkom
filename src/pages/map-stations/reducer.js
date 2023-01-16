@@ -34,6 +34,7 @@ export const MapReducer = (state, action) => {
                 ...setFilter(),
                 ...action.payload
             };
+
         default:
             return state
     }

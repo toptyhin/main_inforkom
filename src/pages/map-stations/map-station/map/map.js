@@ -14,24 +14,51 @@ import House       from './../../../../images/map/house.png'
 
 const InforkomMap = props => {
   
-  const {geoJson,stationsLoadStatus} = props;
+  const {geoJson,stationsLoadStatus,mapCenter} = props;
+
 
   const Glass = <img src={Search}/>;
 
   const LoadingSpinner = () => stationsLoadStatus ? <div className='spinner'></div> : <></>;
   
   const OMref = createRef();
+  
 
-  const markerClick = (e) => {
+
+  const baloonProducts = (products) => {
+    let list = '<table style="width: 100%;text-align: left;line-height: 1.4;">'
+    + '<tbody>'
+    + '<tr class="head" style="font-weight: 500;color: rgba(0,0,0,0.54);">'
+    + '<td>Тип топлива</td>'
+    + '<td>Розн. цена</td>'
+    + '<td>Действ. с</td>'
+    + '</tr>';
+
+    Object.keys(products).forEach((key) => {
+        if (products.hasOwnProperty(key)) {
+            list += '<tr>'
+            +'<td>' + products[key].PRODUCT + '</td>'
+            +'<td>' + products[key].PRICENAL + '  ' + products[key].CURRENCY + '</td>'
+            +'<td>' + products[key].PRICEDATE + '</td>'
+            +'</tr>'        
+        }
+    });    
+
+    list += '</tbody></table>';
+    return list;
+} 
+
+  const markerClick = async (e) => {
+    
     if (OMref.current) {
         const objectId = e.get('objectId');
         const obj = OMref.current.objects.getById(objectId);
         if (obj) {
-          console.log(obj.properties);
+          const fsPriceRequest = await fetch('https://data.inforkom.ru/api/v1/base/prices?sid=' + obj.properties.id)
+          const fsPriceList = await fsPriceRequest.json();
           const logo = obj.properties.logo ? `<img style="max-height:70px;position:absolute;right:10%;top:0;" src="${obj.properties.logo}">` : '';
-          const services = 'services: ' + obj.properties.infra.join(':');
-          const products = 'products: ' + obj.properties.products.join(':');
-          obj.properties.balloonContentBody = `<div style="position:relative"><div class="map-point"><div class="point-field"><div class="point-red"><p>20 км</p></div>${logo}<p>${obj.properties.name}</p><p class="point-p-extra">${services}</p><p class="point-p-extra">${products}</p></div><div><p class="address-p">${obj.properties.region} ${obj.properties.address} ${obj.properties.position}</p></div><div class="flex flex-center"><div class="tail"></div></div></div></div>`;
+          const products = baloonProducts(fsPriceList)
+          obj.properties.balloonContentBody = `<div style="position:relative"><div class="map-point"><div class="point-field"><div class="point-red"><p>20 км</p></div>${logo}<p>${obj.properties.name}</p>${products}</div><div><p class="address-p">${obj.properties.region} ${obj.properties.address} ${obj.properties.position}</p></div><div class="flex flex-center"><div class="tail"></div></div></div></div>`;
           OMref.current.objects.balloon.open(objectId)
         }
     }
@@ -40,8 +67,8 @@ const InforkomMap = props => {
 
   return (
     <Map 
-      defaultState={{ 
-        center: [55.75, 37.57],
+      state={{ 
+        center: mapCenter,
         zoom: 9,
       }}
       width="100%"

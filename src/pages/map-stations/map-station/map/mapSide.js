@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import MapMenu from './children/mapMenu/mapMenu';
-import Input from '../../../../components/UI/input/input';
+import InputSuggest from '../../../../components/UI/input/inputSuggest';
 import MapCalc from './children/mapCalc/mapCalc';
 import Search from './../../../../images/map/search.png'
 import Appstore from './../../../../images/map/appstore.png'
@@ -12,10 +12,11 @@ import House       from './../../../../images/map/house.png'
 import Azs from './../../../../images/map/azs.png'
 import AzsWhite from './../../../../images/map/azs-white.png'
 import ProductFilter from './children/productFilter/productFilter';
+import GeoSearchSuggestions from './children/search/searchSuggestions';
 
 const MapSide = (props) => {
 
-  const {products, productsLoadStatus} = props;
+  const {products, productsLoadStatus,mapMove} = props;
   const [filter, setFilter] = useState(false);
   
 
@@ -28,6 +29,9 @@ const MapSide = (props) => {
 
   return (
       <div className='map-buttons'>
+
+      <GeoSearchSuggestions mapMove={mapMove}/>  
+
       <p className='map-header'>Расчет маршрута</p>
 
       {/* <MapMenuItem children='Регион' img={House} whiteImg={HouseWhite}/> */}
