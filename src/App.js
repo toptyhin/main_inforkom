@@ -17,43 +17,15 @@ import { Tariff_gql } from './appconfig';
 
 function App() {
   const location = useLocation();
-  const GET_TEST = gql`
-  query { 
-    tarifs { 
-      data {
-        id
-        attributes {
-          head
-          description
-          address 
-        } 
-      } 
-    }
-  }`
-  const {data, error, loading} = useQuery(GET_TEST)
-  if(error) return `Oops there has been an error: ${error}`
-  let tariff_arr = data?.tarifs.data.map(({attributes}) => [`/tarify/${attributes.address}`,`Тариф ${attributes.head}`]);
   const cont = Tariff_gql();
-  
-  let tariff_fix;
-  if (cont.tariff===undefined) {
-    tariff_fix=[''];
-  } else tariff_fix=cont.tariff;
-  const tariff_routes = tariff_fix.map(function(tariff) {
-    return(
-    <Route key={tariff[0]} path={tariff[0]} element={
-      <Transition>
-        <Tariff head={tariff[1]} text={tariff[2]}/>
-      </Transition>} />)
-  }
-  )
+    
   return (
     <div>
       <Header tariff={cont.tariff}></Header>
       <AnimatePresence mode="wait">
         <Routes location={location} key={location.pathname}>
           <Route path='/' element={<Transition><Home /></Transition>} />
-          {tariff_routes}
+          {cont.tariff_routes}
           <Route path='/about/history' element={<Transition><History /></Transition>} />
           <Route path='/fuel-cards/fuel-card' element={<Transition><FuelCard /></Transition>} />
           <Route path='/fuel-cards/oil-talons' element={<Transition><OilTalons /></Transition>} />
