@@ -1,5 +1,8 @@
 import { createRef } from 'react';
-import { Map, ObjectManager, ZoomControl, SearchControl, 
+import { Map, 
+          ObjectManager, 
+          ZoomControl, 
+          // SearchControl, 
          ListBox, ListBoxItem, Button, RouteButton, } from '@pbe/react-yandex-maps';
 import MapMenu from './children/mapMenu/mapMenu';
 import Input from '../../../../components/UI/input/input';
@@ -71,7 +74,7 @@ const InforkomMap = props => {
         center: mapCenter,
         zoom: 9,
       }}
-      width="100%"
+      width="75%"
       height="100vh"
     >
 
@@ -108,24 +111,24 @@ const InforkomMap = props => {
 
 
       <ZoomControl options={{ float: "right" }} />
-      <SearchControl options= {{ floatIndex: '5', float: "left", placeholderContent: "Поиск",}} />
+      {/* <SearchControl options= {{ floatIndex: '5', float: "left", placeholderContent: "Поиск",}} /> */}
 
-      <Button options={{ floatIndex: '4', float: "left" }}
+      {/* <Button options={{ floatIndex: '4', float: "left" }}
               data= {{ content: "заглушка" }}
               defaultState={{ selected: false }}
-      />
-      <ListBox  options={{ floatIndex: '3', float: "left" }}
+      /> */}
+      {/* <ListBox  options={{ floatIndex: '3', float: "left" }}
                 data={{ content: "Фильтр по топливу" }} >
         <ListBoxItem data={{ content: "ГАЗ" }} />
         <ListBoxItem data={{ content: "ДТ" }} />
-      </ListBox>
-      <Button options={{ floatIndex: '2', float: "left" }}
+      </ListBox> */}
+      {/* <Button options={{ floatIndex: '2', float: "left" }}
               data= {{ content: "Цвета сетей" }}
               defaultState={{ selected: false }}
       />
       <RouteButton options={{ floatIndex: '1', float: "left" }} 
                    data={{ content: "Построить маршрут" }}
-      />
+      /> */}
       {/* <div className='map-buttons'>
         <p className='map-header'>Расчет маршрута</p>
           <MapCalc />

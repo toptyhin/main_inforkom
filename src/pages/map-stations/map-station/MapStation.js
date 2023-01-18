@@ -37,6 +37,7 @@ const MapStation = () => {
   return (
     <MapContext.Provider value={{dispatch, state}}>
       <YMaps query={{apikey:YMAP_API_KEY}}>
+        <div style={{display:'flex',flexDirection:'row-reverse',height:'100vh', width:'100%'}}>
         <InforkomMap 
           geoJson = {stations()}
           stationsLoadStatus = {stationsLoadStatus}
@@ -47,6 +48,7 @@ const MapStation = () => {
           productsLoadStatus = {productsLoadStatus}
           mapMove = {mapMove}
         />
+        </div>
       </YMaps>
     </MapContext.Provider>
   );

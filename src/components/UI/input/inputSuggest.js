@@ -39,7 +39,7 @@ const handleInput = async (ev) => {
 
   if (ev.target.value.length > 3) {
     const modelData = await model(ev.target.value);
-    console.log(modelData)
+    console.log('modelDTA', modelData)
     setSuggestions(modelData);
     setIsComponentVisible(true);
   } else {
@@ -48,15 +48,21 @@ const handleInput = async (ev) => {
 }
 
 const setSelected = (item) => {
-  console.log(item);
   setIsComponentVisible(false)
   setCurrentValue(item.title);
   callback(item.title);
 }
 
 const ListItem = (el) => {
-
-  return <li key={uuidv4()} id={el.id} onClick={()=>setSelected(el)}><p className='itemTitle'>{el.title}</p><p className='itemDescription'>{el.decsription}</p></li>
+console.log(el)
+  return (<li 
+            key={uuidv4()} 
+            id={el.id} 
+            onClick={()=>setSelected(el)}>
+            
+            <p className='itemTitle'>{el.title}</p>
+            {/* <p className='itemDescription'>{el.description}</p> */}
+          </li>)
 }
 
 const renderSuggestions = (list) => {

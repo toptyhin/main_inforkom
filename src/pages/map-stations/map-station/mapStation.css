@@ -1,8 +1,10 @@
 .map-buttons {
-  z-index: 10;
-  width: 24%;
-  margin-left: 30px;
-  margin-top: 10px;
+  
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  /* margin-left: 30px; */
+  padding: 10px;
   font-family: myriadpro-regular;
 }
 .map-menu {
@@ -21,9 +23,10 @@
   border-radius: 10px;
   font-size: 16px;
   text-align: center;
-  top: 210px;
+  margin: 8px;
+  /* top: 210px;
   position: absolute;
-  z-index: 2;
+  z-index: 2; */
 }
 .map-calc {
   position: absolute;
@@ -128,7 +131,7 @@
   transform: rotate(45deg);
   margin-bottom: -20px;
 }
-.ymaps-2-1-79-controls__bottom, .ymaps-2-1-79-controls__toolbar {
+/* .ymaps-2-1-79-controls__bottom, .ymaps-2-1-79-controls__toolbar {
   height: 0!important;
   margin-top: 0!important;
 }
@@ -254,17 +257,19 @@ input.ymaps-2-1-79-searchbox-input__input {
 background-image: url('./../../../images/map/circules.png');
 background-position: center 27px;
 }
+*/
 .ymaps-2-1-79-_visible-arrow .ymaps-2-1-79-listbox__button-arrow,
 .ymaps-2-1-79-float-button-icon {
   display: none!important;
 }
+
 .ymaps-2-1-79-zoom__scale {
   display: none;
 }
 .ymaps-2-1-79-zoom {
   position: absolute!important;
   top: -90px;
-  left: 430px;
+  left: 0;
   height: 20px!important;
   width: 40px!important;
   border-radius: 10px;
@@ -291,4 +296,4 @@ background-position: center 27px;
 }
 .ymaps-2-1-79-map-copyrights-promo {
   left: 420px!important;
-}
+} 

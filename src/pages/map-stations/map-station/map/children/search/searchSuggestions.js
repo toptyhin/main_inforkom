@@ -16,6 +16,7 @@ const GeoSearchSuggestions = (props) => {
             const GeoRequest = await ymaps.suggest(query);
             let list = [];
             GeoRequest.map((e,i)=> {
+                console.log(e);
                 list.push({id:i,title:e.displayName,description:e.value})
             });
             return list;
@@ -28,8 +29,6 @@ const GeoSearchSuggestions = (props) => {
         console.log('selected variant', value);
         if (ymaps) {
             const GeoRequest = await ymaps.geocode(value,{json:true});
-            // console.log(GeoRequest);
-            console.log(GeoRequest.geoObjects.get(0));
             const coords = GeoRequest.GeoObjectCollection.metaDataProperty.GeocoderResponseMetaData.Point.coordinates
             centerToPosition(coords.reverse());
         }
