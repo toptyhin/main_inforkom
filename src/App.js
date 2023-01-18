@@ -18,20 +18,32 @@ import { Tariff_gql } from './appconfig';
 function App() {
   const location = useLocation();
   const cont = Tariff_gql();
-    
+  
+  const routesMap = {
+    '/': Home,
+    '/about/history' : History,
+    '/fuel-cards/fuel-card' : FuelCard,
+    '/fuel-cards/oil-talons' : OilTalons,
+    '/fuel-cards/com-proposal' : ComProposal,
+    '/fuel-cards/44-fz-goszakazy' : Goszakaz,
+    '/map-stations/map-station': MapStation
+  };
+
+  //Вынести в отдельный компонент
+  const ErrorPage = (p) => <div>4040404040404</div>
+
+  const Page = ({path}) => {
+    const Component = routesMap[path] ? routesMap[path] : ErrorPage;
+    return <Transition><Component/></Transition>
+  }
+  
   return (
     <div>
       <Header tariff={cont.tariff}></Header>
       <AnimatePresence mode="wait">
         <Routes location={location} key={location.pathname}>
-          <Route path='/' element={<Transition><Home /></Transition>} />
+          <Route path={location.pathname} element={<Page path={location.pathname}/>} />
           {cont.tariff_routes}
-          <Route path='/about/history' element={<Transition><History /></Transition>} />
-          <Route path='/fuel-cards/fuel-card' element={<Transition><FuelCard /></Transition>} />
-          <Route path='/fuel-cards/oil-talons' element={<Transition><OilTalons /></Transition>} />
-          <Route path='/fuel-cards/com-proposal' element={<Transition><ComProposal /></Transition>} />
-          <Route path='/fuel-cards/44-fz-goszakazy' element={<Transition><Goszakaz /></Transition>} />
-          <Route path='/map-stations/map-station' element={<Transition><MapStation /></Transition>} />
         </Routes>  
       </AnimatePresence> 
       <Footer />
