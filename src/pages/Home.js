@@ -1,4 +1,4 @@
-import { Main_gql, Test_gql } from '../appconfig';
+import { Main_gql } from '../gql';
 import Banner from '../components/home/banner/banner';
 import People from '../components/home/people/people';
 import Green  from '../components/home/green/green';
@@ -9,11 +9,8 @@ import Red    from '../components/home/red/red';
 import Card   from '../components/home/card/card';
 import Azs    from '../components/home/azs/azs';
 
-
 const Home = () => {
-  
   const cont = Main_gql();
-  const test = Test_gql();
   return (
     <>
       <Banner banner={cont.banner}/>

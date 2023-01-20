@@ -6,7 +6,7 @@ import TextAreaSpecial from '../../components/basicPage/textArea/textAreaSpecial
 import SideAreaMenu from '../../components/basicPage/sideArea/sideAreaMenu'
 import PageHeader from '../../components/basicPage/pageHeader/pageHeader';
 import Button from '../../components/UI/button';
-import { Main_gql, Test_gql } from './../../appconfig';
+import { Test_gql } from './../../gql';
 import JsxParser from 'react-jsx-parser'
 
 const History = () => {
