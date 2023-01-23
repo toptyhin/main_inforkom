@@ -5,9 +5,7 @@ function NewsItemPage({path}) {
 
   const content = Post_gql(path.replace('/',''));
   
-  console.log('Single Item data', content)
-
-  if (!content.loading && content.data.posts) {
+    if (!content.loading && content.data.posts) {
     const data = content.data.posts.data[0].attributes;
     return (<>
     <div>{data.Title}</div>

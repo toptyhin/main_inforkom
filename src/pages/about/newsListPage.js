@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { Posts_gql } from "../../gql";
 import { API_URL } from "../../appconfig";
+import { v4 as uuidv4 } from "uuid";
 
 const NewsListPage = () => {
   const navigate = useNavigate();
@@ -19,10 +20,8 @@ const NewsListPage = () => {
     </div>
   );
 
-  const NewsList = ({rec}) => {
-    rec.posts.data.map(e => console.log(e))
-    return rec.posts.data.map( (el, index) => <Record key={'k'+index} item={el}/>)
-  }
+  const NewsList = ({rec}) => rec.posts.data.map( (el, index) => <Record key={uuidv4()} item={el}/>)
+  
 
   return !content.loading && content.data ? <NewsList rec={content.data}/> : <></>
 }
