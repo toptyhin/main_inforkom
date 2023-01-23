@@ -10,26 +10,26 @@ const MobMenu = ( {mainName, item, setPopup} ) => {
     item_fix = item;
   }
   const [submenu, setSubmenu] = useState(false);
-  let style1 = {
+  const style1 = {
     height: '0px',
     transitionProperty: 'height',
     transitionDuration: '1s',
     overflow:'hidden',
   }
-  let style2 = {
+  const style2 = {
     transitionProperty: 'height',
     transitionDuration: '1s',
     overflow:'hidden',
   }
   const count = item_fix.length * 37.4;
   style2.height = count;
-  let itemArr = item_fix.map(function(element, index) {
+  const itemArr = item_fix.map(function(element, index) {
     return (
-      <li className='menu-list-item' onClick={() => {setPopup(false)}}>
+      <ul key={element[1]} className='menu-list-item' onClick={() => {setPopup(false)}}>
         <Link to={element[0]}>
           {element[1]}
         </Link>
-      </li>
+      </ul>
     )
   });
 

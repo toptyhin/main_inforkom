@@ -9,7 +9,7 @@ const Charts = ({fuel, vat, discount, manage}) => {
   currencyDisplay: 'symbol',
 };
 
-  let chartOptions = {
+  const chartOptions = {
   tooltip: {
     trigger: 'item',
   },

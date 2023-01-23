@@ -74,7 +74,7 @@ select:not([multiple]) { /*new caret*/
   background-repeat: no-repeat;
   background-position: calc(100% - 0.9em) 0.75em;
   background-size: 0.55em auto;
-  background-image: url("images/caret.png");
+  background-image: url("https://bite2.inforkom.ru/uploads/caret_f9cb0e628e.png?updated_at=2023-01-13T10:14:08.178Z");
 }
 select::-ms-expand { /*hide caret in IE*/
   display: none;

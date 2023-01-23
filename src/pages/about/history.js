@@ -6,17 +6,26 @@ import TextAreaSpecial from '../../components/basicPage/textArea/textAreaSpecial
 import SideAreaMenu from '../../components/basicPage/sideArea/sideAreaMenu'
 import PageHeader from '../../components/basicPage/pageHeader/pageHeader';
 import Button from '../../components/UI/button';
+import { Test_gql } from './../../gql';
+import JsxParser from 'react-jsx-parser'
 
 const History = () => {
+  
+  const test = Test_gql();
     return (
       <div>
+        <JsxParser
+          components={{ PageHeader, TextAreaText, TextAreaSpecial }}
+          jsx={test}
+        />
         <PageHeader head='О компании'/>
         <div className='basic-page flex wrap'>
         <div className='text-area'>
+        
           <TextAreaHead>
           История компании «Инфорком»
           </TextAreaHead>
-
+          
           <TextAreaText>
             C 1991 года заправляем топливом коммерческий автопарк с использованием топливных карт и топливных 
             талонов на территории России, СНГ и Европы.

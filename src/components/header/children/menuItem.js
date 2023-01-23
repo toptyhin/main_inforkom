@@ -7,9 +7,9 @@ const MenuItem = ( {mainName, item} ) => {
   } else {
     item_fix = item;
   }
-  let itemArr = item_fix.map(function(element, index) {
+  const itemArr = item_fix.map(function(element, index) {
     return (
-      <Link to={element[0]}>
+      <Link to={element[0]} key={element[1]}>
         <li className='menu-list-item-big'>
           {element[1]}
           <hr className='dotted'/>

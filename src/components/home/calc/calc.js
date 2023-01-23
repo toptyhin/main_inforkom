@@ -91,23 +91,23 @@ const Calc = () => {
           <div id='main-calc'>
             <Geo setGeo1={setGeo1} setGeo2={setGeo2} setReady={setReady}/>
             <FuelType setFuelType={setFuelType}/>
-            <CalcSlider setSlider={setFuelSlider}
+            <CalcSlider setslider={setFuelSlider}
                       ariaLabel ='fuel slider'
                       header ='Потребление топлива'
                       unit = 'Л'
                       marks = {marksFuel}
-                      defaultValue ='3500'
+                      defaultValue ={3500}
                       min = {1000}
                       max = {10000}
                       step = {500}
                       valueLabelDisplay ='off'
                       />
-            <CalcSlider setSlider={setCarSlider}
+            <CalcSlider setslider={setCarSlider}
                       ariaLabel ='car slider'
                       header ='Ваш автопарк'
                       unit ='АВТО'
                       marks = {marksCars}
-                      defaultValue ='5'
+                      defaultValue = {5}
                       valueLabelDisplay ='off'
                       />
             <div className='flex flex-center'>
