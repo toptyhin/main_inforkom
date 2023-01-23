@@ -7,8 +7,8 @@ import Header from './components/header/header';
 import Footer from './components/footer/footer';
 import Home   from './pages/Home';
 
-import History  from './pages/about/history'
-import Newslist from './pages/about/newsList';
+// import History  from './pages/about/history'
+// import Newslist from './pages/about/newsList';
 // import News     from './pages/about/news';
 // import Posts from './pages/about/posts';
 import NewsWrapper from './pages/about/newsWrapper';
