@@ -216,3 +216,62 @@ export function Test_gql() {
   return layout;   
 }
 
+export const Posts_gql = () => useQuery(gql`
+query { 
+  posts {
+    data {
+      id
+      attributes {
+        Title
+        SubTitle
+        Content
+        seourl
+        MainImage {
+          data {
+            attributes {
+              url
+            }
+          }
+        }
+        Gallery {
+          data {
+            attributes {
+              url
+            }
+          }
+        }  
+        dateCreated
+      }
+    }
+  }
+}`);
+
+export const Post_gql = (url) => useQuery(gql`
+  query { 
+    posts (filters: {seourl:{eq:"${url}"}}){    
+      data {
+        id
+        attributes {
+          Title
+          SubTitle
+          Content
+          seourl
+          MainImage {
+            data {
+              attributes {
+                url
+              }
+            }
+          }
+          Gallery {
+            data {
+              attributes {
+                url
+              }
+            }
+          }  
+          dateCreated
+        }
+      }
+    }
+  }`);

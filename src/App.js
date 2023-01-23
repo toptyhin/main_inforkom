@@ -9,7 +9,9 @@ import Home   from './pages/Home';
 
 import History  from './pages/about/history'
 import Newslist from './pages/about/newsList';
-import News     from './pages/about/news';
+// import News     from './pages/about/news';
+// import Posts from './pages/about/posts';
+import NewsWrapper from './pages/about/newsWrapper';
 
 import FuelCard    from './pages/fuel-cards/fuel-card'
 import OilTalons   from './pages/fuel-cards/oil-talons'
@@ -26,7 +28,8 @@ function App() {
   const routesMap = {
     '/': Home,
     '/about/history' : History,
-    '/about/news' : Newslist,
+    // '/about/news' : Newslist,
+    '/about/news' : NewsWrapper,
     '/fuel-cards/fuel-card' : FuelCard,
     '/fuel-cards/oil-talons' : OilTalons,
     '/fuel-cards/com-proposal' : ComProposal,
@@ -38,18 +41,20 @@ function App() {
   const ErrorPage = (p) => <div>4040404040404</div>
   
   const Page = ({path}) => {
-    if (path.includes('/news/') === true) {
-      const news_cont = News_gql();    
-      index = news_cont.address.indexOf(path);
-      console.log(index);
-      if (index != -1) {
-        return news_cont.news_routes[index];
-      }
-    }
-    else if (tariff_cont.address.includes(path) === true) {
-      index = tariff_cont.address.indexOf(path);
-      true_content = tariff_cont.tariff[index];
-      return <Transition><News children = {true_content} /></Transition>
+    if (path.includes('/about/news') === true) {
+      return <Transition><NewsWrapper path={path}/></Transition>
+
+    //   const news_cont = News_gql();    
+    //   index = news_cont.address.indexOf(path);
+    //   console.log(index);
+    //   if (index != -1) {
+    //     return news_cont.news_routes[index];
+    //   }
+    // }
+    // else if (tariff_cont.address.includes(path) === true) {
+    //   index = tariff_cont.address.indexOf(path);
+    //   true_content = tariff_cont.tariff[index];
+    //   return <Transition><News children = {true_content} /></Transition>
     }
     else {
       const Component = routesMap[path] ? routesMap[path] : ErrorPage;
