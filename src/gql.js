@@ -218,7 +218,7 @@ export function Test_gql() {
 
 export const Posts_gql = () => useQuery(gql`
 query { 
-  posts {
+  posts (sort: ["dateCreated:desc"]) {
     data {
       id
       attributes {
