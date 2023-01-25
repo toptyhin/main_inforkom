@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import MapMenu from './children/mapMenu/mapMenu';
 import InputSuggest from '../../../../components/UI/input/inputSuggest';
 import MapCalc from './children/mapCalc/mapCalc';
@@ -22,6 +22,7 @@ const MapSide = (props) => {
   const {products, productsLoadStatus,mapMove} = props;
   const [filter, setFilter] = useState(false);
   const [router, setRouter] = useState(false);
+  const blockRef = useRef();
   
 
   const Glass = <img src={Search}/>;
@@ -34,41 +35,41 @@ const MapSide = (props) => {
   }
 
   return (
-    <>
+    <div ref={blockRef} style={{width:'25%'}}>
 
-    {filter && <ProductFilter products={products}/>}
-    {router && <MapRouter/>}
+      {filter && <ProductFilter products={products}/>}
+      {router && <MapRouter parent={blockRef}/>}
 
 
-    <div className='map-buttons'>
+      <div className='map-buttons' style={{width:'100%'}}>
 
-        <div style={{width:'90%', height:'45px'}}>
-          <GeoSearchSuggestions mapMove={mapMove}/>  
-        </div>  
-      
+          <div style={{width:'90%', height:'45px'}}>
+            <GeoSearchSuggestions onSelect={mapMove}/>  
+          </div>  
+        
 
-      <p className='map-header'>Сеть АЗС Инфорком</p>
-      <div style={{display:'flex', flexWrap:'wrap', justifyContent:'space-between', width:'90%'}}>
-        <MapMenuItem children='Регион' img={House} whiteImg={HouseWhite}/>
-              
-        <MapMenuItem handler={filterClickHandler} children='Фильтр по топливу' img={Azs} whiteImg={AzsWhite}/>
-       
+        <p className='map-header'>Сеть АЗС Инфорком</p>
+        <div style={{display:'flex', flexWrap:'wrap', justifyContent:'space-between', width:'90%'}}>
+          <MapMenuItem children='Регион' img={House} whiteImg={HouseWhite}/>
+                
+          <MapMenuItem handler={filterClickHandler} children='Фильтр по топливу' img={Azs} whiteImg={AzsWhite}/>
+        
 
-        <MapMenuItem children='Цвета' img={House} whiteImg={HouseWhite}/>
-        <MapMenuItem handler={routeClickHandler} children='Маршрут' img={Point} whiteImg={PointWhite}/>
-      </div>
-      <MapCalc />
-      
-      <p className='map-p-2 map-p-left'>Для дельной информации свяжитесь с менеджером</p>
-      <div className='map-help'>
-          <Button children='Звонок' theme='map-2' width='200px'/>
-          <div className='map-download flex flex-space-a'>
-            <img src={Appstore}/>
-            <img src={Google}/>
-          </div>
+          <MapMenuItem children='Цвета' img={House} whiteImg={HouseWhite}/>
+          <MapMenuItem handler={routeClickHandler} children='Маршрут' img={Point} whiteImg={PointWhite}/>
+        </div>
+        <MapCalc />
+        
+        <p className='map-p-2 map-p-left'>Для дельной информации свяжитесь с менеджером</p>
+        <div className='map-help'>
+            <Button children='Звонок' theme='map-2' width='200px'/>
+            <div className='map-download flex flex-space-a'>
+              <img src={Appstore}/>
+              <img src={Google}/>
+            </div>
+        </div>
       </div>
     </div>
-    </>
     );
   }
 
