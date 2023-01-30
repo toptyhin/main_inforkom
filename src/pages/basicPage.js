@@ -23,7 +23,7 @@ const BasicPage = () => {
           <TextAreaHeadL>Маленький заголовок</TextAreaHeadL>
           <TextAreaList children='Пункт списка' />
         </div>
-        <div className='back-grey side-area'>
+        <div className='s-a-width'>
           <SideAreaMenu head='Меню' item={[["","О компании"],
                                          [`/map-stations/map-station`,"Сеть АЗС"],
                                          ["","Цены на топливо"],

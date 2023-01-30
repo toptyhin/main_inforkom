@@ -10,34 +10,33 @@ import Moscow      from './../../../images/box-moscow.png'
 import Pointer     from './../../../images/pointer.png'
 import './boxes.css'
 
-const Boxes = () => {
+const Boxes = ({header, l_tariff_img, l_tariff, b_tariff, b_tariff_img}) => {
   return (
     <div  className='main'>
       <section id='boxes'>
         <div className='left-boxes'>
           <div className='raw'>
-            <LittleBox img={Regions} alt='Все регионы'/>
-            <LittleBox img={Gasprom} alt='Газпром'/>
-            <LittleBox img={Tatneft} alt='Татнефть'/>
+            <LittleBox img={l_tariff_img[0]} alt={l_tariff[0].name} />
+            <LittleBox img={l_tariff_img[1]} alt={l_tariff[1].name} />
+            <LittleBox img={l_tariff_img[2]} alt={l_tariff[2].name} />
           </div>
           <div className='raw'>
-            <LittleBox img={Moscow} alt='Москва+'/>
+            <LittleBox img={l_tariff_img[3]} alt={l_tariff[3].name} />
             <div className='box-note'>
-              <h2 className='point tarif'>Тарифные планы
-                <img className='pointer' alt='' src={Pointer}/>
+              <h2 className='point tarif'>{header}
               </h2>
             </div>
           </div>
           <div className='raw'>
-            <LittleBox img={IntNational} alt='Международный'/>
-            <LittleBox img={Max}         alt='Максимальный'/>
-            <LittleBox img={Universal}   alt='Универсальный'/>
+            <LittleBox img={l_tariff_img[4]} alt={l_tariff[4].name} />
+            <LittleBox img={l_tariff_img[5]} alt={l_tariff[5].name} />
+            <LittleBox img={l_tariff_img[6]} alt={l_tariff[6].name} />
           </div>
         </div>
         <div className='right-boxes'>
           <div className='big-box'>
-            <img className='agr' alt='Агрегатор скидок' src={Agregator}/>
-            <p>Подберем тариф на Ваших условиях!</p>
+            <img className='agr' alt={b_tariff.name} src={b_tariff_img}/>
+            <p>{b_tariff.text}</p>
           </div>
         </div>
       </section>

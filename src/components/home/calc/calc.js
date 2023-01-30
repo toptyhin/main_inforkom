@@ -57,7 +57,7 @@ const Count = async (setFuel, setDiscount, setVat, setManage,
   setVat(resVat.toFixed(2));
 };
 
-const Calc = () => {
+const Calc = ({calc, doc}) => {
   const [isHidden, setHidden] = useState(true);
   const [geo1, setGeo1] = useState();
   const [geo2, setGeo2] = useState();
@@ -78,12 +78,11 @@ const Calc = () => {
     <div className='w-100'>
       <div id='calc-hide' className='back-grey'>
         <div className='pb-4'>
-          <h4>Топливный калькулятор</h4>
-          <p className='point f-grey show-text' onClick={() => setHidden(false)}>
-            &#9660; Рассчитайте экономию с топливной картой Инфорком &#9660;
+          <h4>{calc.header}</h4>
+          <p className='point f-grey show-text' onClick={() => setHidden(false)} >
+            {calc.subtitle}
           </p>
-          <p className='point f-grey calc-head'>
-            Рассчитайте экономию<br/>&#9660; с топливной картой Инфорком &#9660;
+          <p className='point f-grey calc-head' dangerouslySetInnerHTML={{__html: calc.subtitle_mob}}>
           </p>
         </div>
 
@@ -139,7 +138,7 @@ const Calc = () => {
                     <span id='total_manage' className='amount'>{manage} &#8381;</span>
                   </span>
                 </div>
-                <form action='https://inforkom.ru/images/docs/kp_2.pdf' target='_blank'>
+                <form action={doc} target='_blank'>
                   <Button type='submit' children='Коммерческое предложение' theme='calc'/>
                 </form>
               </div>

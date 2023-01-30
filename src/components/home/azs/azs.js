@@ -14,7 +14,7 @@ import ptk        from './../../../images/logos-green/m-logo-ptk.png'
 import tes        from './../../../images/logos-green/m-logo-tes.png'
 import './azs.css'
 
-const Azs = () => {
+const Azs = ({azs, button, img, logos}) => {
   return (
     <div className='back-grey w-100'>
       <div className='main'>
@@ -22,39 +22,41 @@ const Azs = () => {
           <div className='flex azs-wrap flex-space-b'>
             <div>
               <div className='azs-head'>
-                <h2>Сеть АЗС Инфорком</h2>
-                <p className='azs-p'>по единой карте Инфорком по всей территории РФ.</p>
+                <h2>{azs.header}</h2>
+                <p className='azs-p'>{azs.text}</p>
               </div>
               <div className='azs-button1'>
-                <Button type='button' width='222px' marginTop='3vw' children='Сеть АЗС' href='/map-stations/map-station'/>
+                <Button type={button.type} width={button.width} marginTop={button.marginTop} 
+                        children={button.name} href={button.href} />
               </div>
             </div>
             <div>
               <div>
-                <p className='green-p'>10 000 АЗС (460 брендов)</p>
+                <p className='green-p'>{azs.colored_header}</p>
               </div>
               <div className='flex azs-pics'>
-                <img className='azs-pic' src={GasBash} alt=''/>
-                <img className='azs-pic' src={GasGasprom} alt=''/>
-                <img className='azs-pic' src={GasTat} alt=''/>
-                <img className='azs-pic' src={GasLukoil} alt=''/>
+                <img className='azs-pic' src={img[0]} alt=''/>
+                <img className='azs-pic' src={img[1]} alt=''/>
+                <img className='azs-pic' src={img[2]} alt=''/>
+                <img className='azs-pic' src={img[3]} alt=''/>
               </div>
             </div>
           </div>
           <div className='logos-change'>
             <div className='logos-bottom'>
-              <img src={gasprom} alt='газпром'/>
-              <img src={nm} alt='нефть-магистраль'/>
-              <img src={lukoil} alt='лукойл'/>
-              <img src={rosneft} alt='роснефть'/>
-              <img src={bashneft} alt='башнефть'/>
-              <img src={surgut} alt='сургутнефтегаз'/>
-              <img src={tatneft} alt='tatneft'/>
-              <img src={ptk} alt='птк'/>
-              <img src={tes} alt='tes'/>
+              <img src={logos[0]} alt=''/>
+              <img src={logos[1]} alt=''/>
+              <img src={logos[2]} alt=''/>
+              <img src={logos[3]} alt=''/>
+              <img src={logos[4]} alt=''/>
+              <img src={logos[5]} alt=''/>
+              <img src={logos[6]} alt=''/>
+              <img src={logos[7]} alt=''/>
+              <img src={logos[8]} alt=''/>
             </div>
             <div className='azs-button2'>
-              <Button type='button' width='222px' marginTop='3vw' children='Сеть АЗС' href='/map-stations/map-station'/>
+            <Button type={button.type} width={button.width}marginTop={button.marginTop} 
+                    children={button.name} href={button.href} />
             </div>
           </div>
         </section>

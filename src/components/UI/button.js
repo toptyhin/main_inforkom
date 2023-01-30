@@ -28,11 +28,19 @@ const Button = ( {children, theme, type, href, width, height, marginTop} ) => {
   if (marginTop) {
     style.marginTop = marginTop;
   }
-  return (
-    <button type={type} className={button} style={style} onClick={() => navigate(href)}>
-      {children}
-    </button>
-  );
+  if (href != undefined) {
+    return (
+      <button type={type} className={button} style={style} onClick={() => navigate(href)}>
+        {children}
+      </button>
+    );
+  } else {
+    return (
+      <button type={type} className={button} style={style}>
+        {children}
+      </button>
+    );
+  }
 };
 
 export default Button;

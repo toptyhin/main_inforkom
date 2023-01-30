@@ -1,5 +1,5 @@
 import { Routes, Route, useLocation } from 'react-router-dom';
-import { Tariff_gql, News_gql } from './gql';
+import { Tariff_gql } from './gql';
 import { AnimatePresence } from "framer-motion";
 import Transition from './components/UI/Transition';
 
@@ -8,8 +8,7 @@ import Footer from './components/footer/footer';
 import Home   from './pages/Home';
 
 import History  from './pages/about/history'
-import Newslist from './pages/about/newsList';
-import News     from './pages/about/news';
+import NewsWrapper from './pages/about/newsWrapper';
 
 import FuelCard    from './pages/fuel-cards/fuel-card'
 import OilTalons   from './pages/fuel-cards/oil-talons'
@@ -20,13 +19,12 @@ import MapStation  from './pages/map-stations/map-station/MapStation';
 import Tariff      from './pages/Tariff';
 
 function App() {
-  let index, true_content;
   const location = useLocation();
   const tariff_cont = Tariff_gql();
   const routesMap = {
     '/': Home,
     '/about/history' : History,
-    '/about/news' : Newslist,
+    '/about/news' : NewsWrapper,
     '/fuel-cards/fuel-card' : FuelCard,
     '/fuel-cards/oil-talons' : OilTalons,
     '/fuel-cards/com-proposal' : ComProposal,
@@ -38,18 +36,8 @@ function App() {
   const ErrorPage = (p) => <div>4040404040404</div>
   
   const Page = ({path}) => {
-    if (path.includes('/news/') === true) {
-      const news_cont = News_gql();    
-      index = news_cont.address.indexOf(path);
-      console.log(index);
-      if (index != -1) {
-        return news_cont.news_routes[index];
-      }
-    }
-    else if (tariff_cont.address.includes(path) === true) {
-      index = tariff_cont.address.indexOf(path);
-      true_content = tariff_cont.tariff[index];
-      return <Transition><News children = {true_content} /></Transition>
+    if (path.includes('/about/news') === true) {
+      return <Transition><NewsWrapper path={path}/></Transition>
     }
     else {
       const Component = routesMap[path] ? routesMap[path] : ErrorPage;
