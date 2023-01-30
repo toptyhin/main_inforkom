@@ -2,7 +2,7 @@ import { useYMaps } from "@pbe/react-yandex-maps";
 import InputSuggest from "../../../../../../components/UI/input/inputSuggest";
 
 
-const GeoSearchSuggestions = ({onSelect}) => {
+const GeoSearchSuggestions = ({onSelect,icon}) => {
 
 //   const centerToPosition = (coords) => {
 //     props.mapMove && props.mapMove(coords);
@@ -38,6 +38,7 @@ const GeoSearchSuggestions = ({onSelect}) => {
         placeholder={'Поиск'}
         model={model}
         callback={GeocodeSelected}
+        icon={icon}
     />
 };
 

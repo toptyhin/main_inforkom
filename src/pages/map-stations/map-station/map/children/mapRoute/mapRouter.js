@@ -13,8 +13,8 @@ const QueryForm = () => {
         })        
     };
     return (
-        <div>
-            <GeoSearchSuggestions onSelect={(coords,name)=>dispatcher({step:1,coords:coords,name:name})}/>
+        <div style={{cursor:'auto'}}>
+            <GeoSearchSuggestions icon={"auto"} onSelect={(coords,name)=>dispatcher({step:1,coords:coords,name:name})}/>
             <GeoSearchSuggestions onSelect={(coords,name)=>dispatcher({step:2,coords:coords,name:name})}/>
         </div>
     )

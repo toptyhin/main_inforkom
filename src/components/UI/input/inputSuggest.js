@@ -4,7 +4,7 @@ import { v4 as uuidv4 } from 'uuid'
 import { useState, useEffect, useDeferredValue, createRef } from 'react';
 import useComponentVisible from '../../../hooks/useComponentVisible';
 
-const InputSuggest = ( {plus, name, text, textAdd, theme, model, callback} ) => {
+const InputSuggest = ( {plus, name, text, textAdd, icon, theme, model, callback} ) => {
 
   const { ref, isComponentVisible,setIsComponentVisible } = useComponentVisible(false);
   const [currentValue, setCurrentValue] = useState('');
@@ -18,14 +18,6 @@ const InputSuggest = ( {plus, name, text, textAdd, theme, model, callback} ) => 
     field_class = 'field_class field w-100'
   };
 
-  // const model = () => [
-  //   {id:1,title:'name1', decsription:'Description 1'},
-  //   {id:2,title:'name2', decsription:'Description 2'},
-  //   {id:3,title:'name3', decsription:'Description 3'},
-  //   {id:4,title:'name4', decsription:'Description 4'},
-  //   {id:5,title:'name5', decsription:'Description 5'},
-  //   {id:6,title:'name6', decsription:'Description 6'},
-  // ];
 
 useEffect(()=>{
   if (inputRef.current) {
@@ -54,7 +46,7 @@ const setSelected = (item) => {
 }
 
 const ListItem = (el) => {
-console.log(el)
+
   return (<li 
             key={uuidv4()} 
             id={el.id} 
@@ -73,10 +65,20 @@ const renderSuggestions = (list) => {
   }
 }
 
+const SimpleInput = () => <>
+    <input ref={inputRef} className={field_class} type='text' name={name} placeholder={text} onChange={handleInput} onClick={handleInput} value={currentValue}/>
+  </>;
+
+const IconInput = () => <div>
+  <input ref={inputRef} className={field_class} type='text' name={name} placeholder={text} onChange={handleInput} onClick={handleInput} value={currentValue}/>
+  <div className='icon'></div>
+</div>;
+
+
   return (
     <div className='flex input_class'>
-      <input ref={inputRef} className={field_class} type='text' name={name} placeholder={text} onChange={handleInput} onClick={handleInput} value={currentValue}/>
-      <div className={plus}>{textAdd}</div>
+      {!icon ? <SimpleInput/> : <IconInput/>}
+      { textAdd ? <div className={plus}>{textAdd}</div> : <></>}
       <div ref={ref} className={'suggestion_dropdown'} style={{top:dropDownOffset}}>
         {isComponentVisible && renderSuggestions(deferredSuggestions)}
       </div>
