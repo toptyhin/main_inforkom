@@ -32,6 +32,9 @@
   font-family: montserrat-bold;
   cursor: pointer;
 }
+.menu-text p {
+  font-family: montserrat-bold;
+}
 .menu-decor-block {
   opacity: 0;
   height: 49px;

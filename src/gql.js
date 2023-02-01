@@ -268,22 +268,124 @@ export const Post_gql = (url) => useQuery(gql`
       data {
         attributes {
           main
-          text_1
-          header_1
-          list_1 {
-            item
-            
+          text {
+            ... on ComponentPagesText {
+                text
+            }
+            ... on ComponentPagesSpecialText {
+                special_text
+            }
+            ... on ComponentPagesColoredHeader {
+                colored_header
+            }
           }
-          header_2
-          list_2 {
-            item
-            
+          side {
+            ... on ComponentPagesSideText {
+              __typename
+              text
+              colored_text
+            }
+            ... on ComponentPagesSideButton {
+              text
+              colored_text
+              button {
+                name
+                href
+                theme
+                type
+                width
+                height
+                marginTop
+              }
+            }
+            ... on ComponentPagesSideImg {
+              text
+              img {
+                data {
+                  attributes {
+                    url
+                  }
+                }
+              }
+              side_img_param {
+                padding
+                margin
+                width
+                img_heigth
+              }
+            }
+            ... on ComponentPagesSideInfo {
+              __typename
+              side_info_item {
+                colored_text
+                text
+              }
+            }
           }
-          text_2
-          header_3
-          list_3 {
-            item
-            
+        }
+      }
+    }
+  }`)
+
+  export const History_gql = () => useQuery(gql`
+  query { 
+    history {
+      data {
+        attributes {
+          main
+          text {
+            ... on ComponentPagesText {
+                text
+            }
+            ... on ComponentPagesSpecialText {
+                special_text
+            }
+            ... on ComponentPagesColoredHeader {
+                colored_header
+            }
+          }
+          side {
+            ... on ComponentPagesSideText {
+              __typename
+              text
+              colored_text
+            }
+            ... on ComponentPagesSideButton {
+              text
+              colored_text
+              button {
+                name
+                href
+                theme
+                type
+                width
+                height
+                marginTop
+              }
+            }
+            ... on ComponentPagesSideImg {
+              text
+              img {
+                data {
+                  attributes {
+                    url
+                  }
+                }
+              }
+              side_img_param {
+                padding
+                margin
+                width
+                img_heigth
+              }
+            }
+            ... on ComponentPagesSideInfo {
+              __typename
+              side_info_item {
+                colored_text
+                text
+              }
+            }
           }
         }
       }

@@ -63,6 +63,7 @@ h6 {
 }
 p {
   margin: 0;
+  font-family: montserrat-regular;
 }
 select { /*hide caret*/
   -moz-appearance: none;

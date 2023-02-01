@@ -6,11 +6,11 @@ import Transition from './components/UI/Transition';
 import Header from './components/header/header';
 import Footer from './components/footer/footer';
 import Home   from './pages/Home';
+import { FuelCard, History }  from './pages/pages_test';
 
-import History  from './pages/about/history'
+import Social  from './pages/about/social'
 import NewsWrapper from './pages/about/newsWrapper';
 
-import FuelCard    from './pages/fuel-cards/fuel-card'
 import OilTalons   from './pages/fuel-cards/oil-talons'
 import ComProposal from './pages/fuel-cards/com-proposal'
 import Goszakaz    from './pages/fuel-cards/44-fz-goszakazy'
@@ -25,6 +25,7 @@ function App() {
     '/': Home,
     '/about/history' : History,
     '/about/news' : NewsWrapper,
+    '/about/social' : Social,
     '/fuel-cards/fuel-card' : FuelCard,
     '/fuel-cards/oil-talons' : OilTalons,
     '/fuel-cards/com-proposal' : ComProposal,

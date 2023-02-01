@@ -5,7 +5,8 @@ const SideArea = ({head, children}) => {
     return (
       <div className='back-grey side-area'>
           <h6>{head}</h6>
-          {children}
+          <h6 className='side-area-red'>{children}</h6>
+          
       </div>
     );
   }
