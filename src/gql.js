@@ -391,3 +391,69 @@ export const Post_gql = (url) => useQuery(gql`
       }
     }
   }`)
+
+  export const Pages_gql = () => useQuery(gql`
+  query { 
+    pages {
+      data {
+        attributes {
+          header
+          url
+          text {
+            ... on ComponentPagesText {
+                text
+            }
+            ... on ComponentPagesSpecialText {
+                special_text
+            }
+            ... on ComponentPagesColoredHeader {
+                colored_header
+            }
+          }
+          side {
+            ... on ComponentPagesSideText {
+              __typename
+              text
+              colored_text
+            }
+            ... on ComponentPagesSideButton {
+              text
+              colored_text
+              button {
+                name
+                href
+                theme
+                type
+                width
+                height
+                marginTop
+              }
+            }
+            ... on ComponentPagesSideImg {
+              text
+              img {
+                data {
+                  attributes {
+                    url
+                  }
+                }
+              }
+              side_img_param {
+                padding
+                margin
+                width
+                img_heigth
+              }
+            }
+            ... on ComponentPagesSideInfo {
+              __typename
+              side_info_item {
+                colored_text
+                text
+              }
+            }
+          }
+        }
+      }
+    }
+  }`)  

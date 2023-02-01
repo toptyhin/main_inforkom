@@ -6,7 +6,7 @@ import Transition from './components/UI/Transition';
 import Header from './components/header/header';
 import Footer from './components/footer/footer';
 import Home   from './pages/Home';
-import { FuelCard, History }  from './pages/pages_test';
+import { Pages_call }  from './pages/pages_call';
 
 import Social  from './pages/about/social'
 import NewsWrapper from './pages/about/newsWrapper';
@@ -23,14 +23,16 @@ function App() {
   const tariff_cont = Tariff_gql();
   const routesMap = {
     '/': Home,
-    '/about/history' : History,
     '/about/news' : NewsWrapper,
+    '/about/history': Pages_call,
     '/about/social' : Social,
-    '/fuel-cards/fuel-card' : FuelCard,
-    '/fuel-cards/oil-talons' : OilTalons,
+    '/fuel-cards/fuel-card' : Pages_call,
+    '/fuel-cards/oil-talons' : Pages_call,
     '/fuel-cards/com-proposal' : ComProposal,
     '/fuel-cards/44-fz-goszakazy' : Goszakaz,
     '/map-stations/map-station': MapStation,
+    
+    
   };
 
   //Вынести в отдельный компонент

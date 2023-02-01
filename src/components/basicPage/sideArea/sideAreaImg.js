@@ -1,4 +1,5 @@
 import './sideArea.css'
+import { v4 as uuidv4 } from "uuid";
 
 const SideAreaImg = ({head, item, padding, margin, width, pic_heigth}) => {
   let style={
@@ -11,7 +12,7 @@ const SideAreaImg = ({head, item, padding, margin, width, pic_heigth}) => {
   }
   let itemArr = item.map(function(element, index) {
     return (
-      <div style={style}>
+      <div key={uuidv4()} style={style}>
         <img style={img_style} src={element}/>
       </div>
     );
