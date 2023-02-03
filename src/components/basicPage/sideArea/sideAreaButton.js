@@ -1,7 +1,7 @@
 import Button from '../../UI/button'
 import './sideArea.css'
 
-const SideArea = ({head, children, button}) => {
+const SideAreaButton = ({head, children, button}) => {
     return (
       <div className='back-grey side-area'>
           <h6>{head}</h6>
@@ -13,4 +13,4 @@ const SideArea = ({head, children, button}) => {
     );
   }
 
-  export default SideArea;
+  export default SideAreaButton;

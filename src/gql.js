@@ -1,21 +1,6 @@
 import { gql }     from '@apollo/client'
 import {useQuery}  from '@apollo/client';
 
-export const Tariff_gql = () => useQuery(gql`
-  query { 
-    tarifs { 
-      data {
-        id
-        attributes {
-          head
-          description
-          address 
-        } 
-      } 
-    }
-  }`
-)
-
 export const Main_gql = () => useQuery(gql`
   query { 
     main { 
@@ -262,136 +247,6 @@ export const Post_gql = (url) => useQuery(gql`
     }
   }`);
 
-  export const FuelCard_gql = () => useQuery(gql`
-  query { 
-    fuelCard {
-      data {
-        attributes {
-          main
-          text {
-            ... on ComponentPagesText {
-                text
-            }
-            ... on ComponentPagesSpecialText {
-                special_text
-            }
-            ... on ComponentPagesColoredHeader {
-                colored_header
-            }
-          }
-          side {
-            ... on ComponentPagesSideText {
-              __typename
-              text
-              colored_text
-            }
-            ... on ComponentPagesSideButton {
-              text
-              colored_text
-              button {
-                name
-                href
-                theme
-                type
-                width
-                height
-                marginTop
-              }
-            }
-            ... on ComponentPagesSideImg {
-              text
-              img {
-                data {
-                  attributes {
-                    url
-                  }
-                }
-              }
-              side_img_param {
-                padding
-                margin
-                width
-                img_heigth
-              }
-            }
-            ... on ComponentPagesSideInfo {
-              __typename
-              side_info_item {
-                colored_text
-                text
-              }
-            }
-          }
-        }
-      }
-    }
-  }`)
-
-  export const History_gql = () => useQuery(gql`
-  query { 
-    history {
-      data {
-        attributes {
-          main
-          text {
-            ... on ComponentPagesText {
-                text
-            }
-            ... on ComponentPagesSpecialText {
-                special_text
-            }
-            ... on ComponentPagesColoredHeader {
-                colored_header
-            }
-          }
-          side {
-            ... on ComponentPagesSideText {
-              __typename
-              text
-              colored_text
-            }
-            ... on ComponentPagesSideButton {
-              text
-              colored_text
-              button {
-                name
-                href
-                theme
-                type
-                width
-                height
-                marginTop
-              }
-            }
-            ... on ComponentPagesSideImg {
-              text
-              img {
-                data {
-                  attributes {
-                    url
-                  }
-                }
-              }
-              side_img_param {
-                padding
-                margin
-                width
-                img_heigth
-              }
-            }
-            ... on ComponentPagesSideInfo {
-              __typename
-              side_info_item {
-                colored_text
-                text
-              }
-            }
-          }
-        }
-      }
-    }
-  }`)
-
   export const Pages_gql = () => useQuery(gql`
   query { 
     pages {
@@ -457,3 +312,69 @@ export const Post_gql = (url) => useQuery(gql`
       }
     }
   }`)  
+
+
+export const Tariff_gql = () => useQuery(gql`
+  query { 
+    tarifs { 
+      data {
+        attributes {
+          url
+          head
+          text
+          header_map
+          text_map_add
+          sales_header
+          table {
+            column_1
+            column_2
+          }
+          advantage
+          text_adv
+          note
+          side_button {
+            text
+              colored_text
+              button {
+                name
+                href
+                theme
+                type
+                width
+                height
+                marginTop
+              }
+          }
+          side_button_begin {
+            text
+              colored_text
+              button {
+                name
+                href
+                theme
+                type
+                width
+                height
+                marginTop
+              }
+            }
+          other_tariffs {
+            text
+            img {
+              data {
+                attributes {
+                  url
+                }
+              }
+            }
+            side_img_param {
+              padding
+              margin
+              width
+              img_heigth
+            }
+          }
+        }
+      }
+    } 
+  }`) 

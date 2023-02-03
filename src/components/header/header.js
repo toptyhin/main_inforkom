@@ -34,6 +34,13 @@ const item_contacts = [[`/contacts/contacts`,'Контактная информ�
                       [`/contacts/jobs`,'Вакансии']];
 
 const Header = ({tariff}) => {
+  let tariff_item;
+  console.log(tariff);
+  if (tariff != undefined) {
+    tariff_item = tariff.map (({attributes}) => 
+      [`${attributes.url}`, `${attributes.head}`]
+    )
+  }
   const [popup, setPopup] = useState(false);
   return (
     <div className='menu-parent'>
@@ -46,7 +53,7 @@ const Header = ({tariff}) => {
               </Link>
             </li>
             <MenuItem mainName='О компании' item={item_company}/>
-            <MenuItem mainName='Тарифы' item={tariff}/>
+            <MenuItem mainName='Тарифы' item={tariff_item}/>
             <MenuItem mainName='Топливные карты' item={item_cards}/>
             <MenuItem mainName='Сеть АЗС' item={item_azs}/>
             <MenuItem mainName='Топливо' item={item_fuel}/>
@@ -60,7 +67,7 @@ const Header = ({tariff}) => {
               <ul className='menu-list'>
                 <div className='cross' onClick={() => setPopup(false)}>×</div>
                 <MobMenu mainName='О компании'      item={item_company}  setPopup={setPopup}/>
-                <MobMenu mainName='Тарифы'          item={tariff}        setPopup={setPopup}/>
+                <MobMenu mainName='Тарифы'          item={tariff_item}        setPopup={setPopup}/>
                 <MobMenu mainName='Топливные карты' item={item_cards}    setPopup={setPopup}/>
                 <MobMenu mainName='Сеть АЗС'        item={item_azs}      setPopup={setPopup}/>
                 <MobMenu mainName='Контакты'        item={item_contacts} setPopup={setPopup}/>
