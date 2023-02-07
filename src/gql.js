@@ -378,3 +378,22 @@ export const Tariff_gql = () => useQuery(gql`
       }
     } 
   }`) 
+
+export const Menu_gql = () => useQuery(gql`
+  query { 
+    menus {
+      data {
+        attributes {
+          show
+          url_parent
+          name
+          menu_item {
+            name
+            url
+            show
+            component
+          }
+        }
+      }
+    }
+  }`)  

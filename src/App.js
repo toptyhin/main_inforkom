@@ -1,5 +1,5 @@
 import { Routes, Route, useLocation } from 'react-router-dom'
-import { Tariff_gql } from './gql'
+import { Tariff_gql, Menu_gql } from './gql'
 import { AnimatePresence } from "framer-motion"
 import Transition from './components/UI/Transition'
 
@@ -25,8 +25,28 @@ function App() {
   if (!content.loading && content.data) {
     tariff = content.data.tarifs.data;
   }
+
+  let url, head;
+  const routesMap = {}
+  const [key] = '';
+  const cont = Menu_gql();
+  if (!cont.loading && cont.data) {
+    cont.data.menus.data.forEach ((element, index) => {
+      url = `${element.attributes.url_parent}`;
+      if (element.attributes.name.includes('Главная')) 
+        routesMap[url] = Home;
+      element.attributes.menu_item.forEach ((elem, index) => {
+        head = `${elem.name}`;
+        if (head.includes('Тариф ')) 
+          routesMap[url+`${elem.url}`] = Tariff_call;
+        else routesMap[url+`${elem.url}`] = Pages_call;
+      });
+    }); 
   
-  const routesMap = {
+console.log(routesMap);
+  }
+
+  /*const routesMap = {
     '/': Home,
     '/about/news' : NewsWrapper,
     '/about/history': Pages_call,
@@ -38,7 +58,7 @@ function App() {
     '/map-stations/map-station': MapStation,
     
     
-  };
+  };*/
 
   //Вынести в отдельный компонент
   const ErrorPage = (p) => <div>4040404040404</div>
@@ -52,7 +72,7 @@ function App() {
     }
     else {
       const Component = routesMap[path] ? routesMap[path] : ErrorPage;
-      return <Transition><Component/></Transition>
+      return <Transition><Component path={path} content={content}/></Transition>
     }
   }
   
