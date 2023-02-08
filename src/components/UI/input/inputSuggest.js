@@ -14,7 +14,7 @@ const InputSuggest = ( {plus, name, text, textAdd, icon, theme, model, callback}
   const inputRef = createRef();
 
   let field_class = 'field w-100'
-  if (theme == 'search') {
+  if (theme === 'search') {
     field_class = 'field_class field w-100'
   };
 
@@ -23,12 +23,12 @@ useEffect(()=>{
   if (inputRef.current) {
     setDropdownOffset(inputRef.current.clientHeight)
   }
+  
 },[inputRef]);
 
 const handleInput = async (ev) => {
-  
-  setCurrentValue(ev.target.value)
 
+  setCurrentValue(ev.target.value);
   if (ev.target.value.length > 3) {
     const modelData = await model(ev.target.value);
     console.log('modelDTA', modelData)
@@ -37,6 +37,7 @@ const handleInput = async (ev) => {
   } else {
     setIsComponentVisible(false)
   }
+
 }
 
 const setSelected = (item) => {
@@ -52,32 +53,46 @@ const ListItem = (el) => {
             id={el.id} 
             onClick={()=>setSelected(el)}>
             
-            <p className='itemTitle'>{el.title}</p>
+            <p className='itemTitle' style={{borderBottom:'1px solid rgb(212, 212, 212)'}}>{el.title}</p>
             {/* <p className='itemDescription'>{el.description}</p> */}
           </li>)
 }
 
 const renderSuggestions = (list) => {
   if (list.length > 0) {
-    return <ul style={{listStyle:'none'}} children={list.map(el=>ListItem(el))}></ul>
+    return <ul style={{listStyle:'none',paddingLeft:18}} children={list.map(el=>ListItem(el))}></ul>
   } else {
     return <p>Ничего не найдено</p>
   }
 }
 
-const SimpleInput = () => <>
-    <input ref={inputRef} className={field_class} type='text' name={name} placeholder={text} onChange={handleInput} onClick={handleInput} value={currentValue}/>
-  </>;
-
-const IconInput = () => <div>
-  <input ref={inputRef} className={field_class} type='text' name={name} placeholder={text} onChange={handleInput} onClick={handleInput} value={currentValue}/>
-  <div className='icon'></div>
-</div>;
-
-
   return (
     <div className='flex input_class'>
-      {!icon ? <SimpleInput/> : <IconInput/>}
+    
+      {!icon 
+      ? <input
+          ref={inputRef}
+          className={field_class}
+          type='text' 
+          name={name}
+          placeholder={text}
+          onChange={handleInput}
+          onClick={handleInput} 
+          value={currentValue}
+        />   
+      : <div>
+          <input 
+            ref={inputRef} 
+            className={field_class} 
+            type='text' 
+            name={name} 
+            placeholder={text} 
+            onChange={handleInput} 
+            onClick={handleInput} 
+            value={currentValue}/>
+          <div className='icon'></div>
+        </div>
+      }
       { textAdd ? <div className={plus}>{textAdd}</div> : <></>}
       <div ref={ref} className={'suggestion_dropdown'} style={{top:dropDownOffset}}>
         {isComponentVisible && renderSuggestions(deferredSuggestions)}
