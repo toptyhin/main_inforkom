@@ -6,7 +6,7 @@ import Transition from './components/UI/Transition'
 import Header from './components/header/header'
 import Footer from './components/footer/footer'
 import Home   from './pages/Home'
-import { Pages_call }  from './pages/pages_call'
+import Pages   from './pages/pages'
 
 import Social  from './pages/about/social'
 import NewsWrapper from './pages/about/newsWrapper'
@@ -16,49 +16,44 @@ import ComProposal from './pages/fuel-cards/com-proposal'
 import Goszakaz    from './pages/fuel-cards/44-fz-goszakazy'
 import MapStation  from './pages/map-stations/map-station/MapStation'
 
-import { Tariff_call } from './pages/tariff/tariff_call'
+import Tariff from './pages/tariff/Tariff'
  
 function App() {
-  let tariff;
   const location = useLocation();
-  const content = Tariff_gql();
-  if (!content.loading && content.data) {
-    tariff = content.data.tarifs.data;
-  }
-
-  let url, head;
-  const routesMap = {}
-  const [key] = '';
-  const cont = Menu_gql();
-  if (!cont.loading && cont.data) {
-    cont.data.menus.data.forEach ((element, index) => {
-      url = `${element.attributes.url_parent}`;
-      if (element.attributes.name.includes('Главная')) 
-        routesMap[url] = Home;
-      element.attributes.menu_item.forEach ((elem, index) => {
-        head = `${elem.name}`;
-        if (head.includes('Тариф ')) 
-          routesMap[url+`${elem.url}`] = Tariff_call;
-        else routesMap[url+`${elem.url}`] = Pages_call;
-      });
-    }); 
-  
-console.log(routesMap);
-  }
-
-  /*const routesMap = {
+  let url;
+  let head = []
+  let full_url = []
+  let menu_info = []
+  let info = []
+  const cont = {}
+  const routesMap = {
     '/': Home,
     '/about/news' : NewsWrapper,
-    '/about/history': Pages_call,
     '/about/social' : Social,
-    '/fuel-cards/fuel-card' : Pages_call,
-    '/fuel-cards/oil-talons' : Pages_call,
-    '/fuel-cards/com-proposal' : ComProposal,
-    '/fuel-cards/44-fz-goszakazy' : Goszakaz,
-    '/map-stations/map-station': MapStation,
+  }
+  const content = Menu_gql();
+  if (!content.loading && content.data) {
+    content.data.menus.data.map ((element, j) => {
+      url = `${element.attributes.url_parent}`;
+      element.attributes.menu_item.map ((elem, i) => {
+        head[i] = `${elem.name}`;
+        full_url[i] = url+`${elem.url}`
+          
+        if (head[i].includes('Тариф ')) {
+          routesMap[full_url[i]] = Tariff;
+          cont[full_url[i]] = elem.tarif;
+          
+        }
+        else {
+          routesMap[full_url[i]] = Pages;
+          cont[full_url[i]] = elem.page;
+        }
+      });
+      
+      
+    }); 
     
-    
-  };*/
+  }
 
   //Вынести в отдельный компонент
   const ErrorPage = (p) => <div>4040404040404</div>
@@ -67,18 +62,15 @@ console.log(routesMap);
     if (path.includes('/about/news') === true) {
       return <Transition><NewsWrapper path={path}/></Transition>
     }
-    else if (path.includes('/tarify/') === true) {
-      return <Transition><Tariff_call path={path} content={content}/></Transition>
-    }
     else {
       const Component = routesMap[path] ? routesMap[path] : ErrorPage;
-      return <Transition><Component path={path} content={content}/></Transition>
+      return <Transition><Component path={path} content={cont[path]}/></Transition>
     }
   }
   
   return (
     <div>
-      <Header tariff={tariff}></Header>
+      <Header ></Header>
       <AnimatePresence mode="wait">
         <Routes location={location} key={location.pathname}>
           <Route path={location.pathname} element={<Page path={location.pathname}/>} />          

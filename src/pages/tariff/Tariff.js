@@ -9,7 +9,9 @@ import SideAreaButton from '../../components/basicPage/sideArea/sideAreaButton'
 import PageHeader from '../../components/basicPage/pageHeader/pageHeader';
 import Button from '../../components/UI/button';
 
-function Tariff({cont}) {
+function Tariff({content}) {
+  let cont;
+    cont = content.data.attributes;
     return (
       <div>
         <PageHeader head='тарифы' children='Доп заголовок'/>

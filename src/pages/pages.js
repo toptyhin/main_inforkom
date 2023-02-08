@@ -11,7 +11,11 @@ import SideAreaButton     from '../components/basicPage/sideArea/sideAreaButton'
 import PageHeader from '../components/basicPage/pageHeader/pageHeader'
 import Regions     from './../images/box-regions.png'
 
-const Pages = ({cont, side_cont}) => {
+const Pages = ({content}) => {
+  let cont, side_cont;
+  console.log(content.data)
+  cont = content.data.attributes.text;
+  side_cont = content.data.attributes.side;
   const TextAreaText = ({children}) => (
     <p className='text-area-p' dangerouslySetInnerHTML={{__html: children }}></p>
   )
